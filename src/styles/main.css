@@ -477,6 +477,7 @@ h2.sec-title.light em{color:var(--gold2)}
 h2.sec-title[style*="text-align:center"]{text-align:center!important}
 
 /* ═══ DIRECTIONS PICKER (bottom sheet) ════════════════════════ */
+body.dir-open{overflow:hidden}
 .dir-overlay{
   display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);
   z-index:9800;backdrop-filter:blur(3px)
@@ -488,7 +489,8 @@ h2.sec-title[style*="text-align:center"]{text-align:center!important}
   padding:12px 24px 36px;
   transform:translateY(100%);
   transition:transform .32s cubic-bezier(.32,1,.42,1);
-  box-shadow:0 -8px 40px rgba(0,0,0,.18)
+  box-shadow:0 -8px 40px rgba(0,0,0,.18);
+  max-height:85vh;overflow-y:auto
 }
 .dir-sheet.on{transform:translateY(0)}
 .dir-handle{

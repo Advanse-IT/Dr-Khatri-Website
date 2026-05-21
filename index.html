@@ -514,14 +514,14 @@
 <div class="mb-row">
 <a class="mb-btn" href="tel:+61755980322"><svg aria-hidden="true" class="mb-icon"><use href="#ic-phone"></use></svg>Call</a>
 <a class="mb-btn acc" href="#contact"><svg aria-hidden="true" class="mb-icon"><use href="#ic-calendar"></use></svg>Appointment</a>
-<a class="mb-btn" href="https://maps.google.com/?q=42+Inland+Drive+Tugun+QLD+4224" id="mb-directions" onclick="showDirectionsPicker(event)" rel="noopener" target="_blank"><svg aria-hidden="true" class="mb-icon"><use href="#ic-pin"></use></svg>Directions</a>
+<a class="mb-btn" href="https://maps.google.com/?q=42+Inland+Drive+Tugun+QLD+4224" id="mb-directions" onclick="showDirectionsPicker(event)" rel="noopener" target="_blank" aria-haspopup="dialog" aria-controls="dirSheet"><svg aria-hidden="true" class="mb-icon"><use href="#ic-pin"></use></svg>Directions</a>
 </div>
 </div>
 <!-- ═══ DIRECTIONS PICKER MODAL ══════════════════════════════ -->
 <div class="dir-overlay" id="dirOverlay" onclick="hideDirectionsPicker()"></div>
-<div class="dir-sheet" id="dirSheet">
+<div class="dir-sheet" id="dirSheet" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="dirTitle">
 <div class="dir-handle"></div>
-<div class="dir-title">Choose a Location</div>
+<div class="dir-title" id="dirTitle">Choose a Location</div>
 <p class="dir-sub">Which hospital or clinic would you like directions to?</p>
 <a class="dir-btn dir-btn--primary" href="https://maps.google.com/?q=John+Flynn+Private+Hospital,+42+Inland+Drive,+Tugun+QLD+4224" onclick="hideDirectionsPicker()" rel="noopener" target="_blank">
 <svg aria-hidden="true" style="width:28px;height:28px;color:var(--gold);flex-shrink:0"><use href="#ic-hospital"></use></svg>

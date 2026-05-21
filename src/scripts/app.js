@@ -168,18 +168,36 @@ function faq(q){
 }
 
 // ── Directions location picker
+// This file is loaded as an ES module by Vite, so functions are not global by default.
+// The mobile bottom-bar Directions button opens this bottom sheet with two choices.
+const dirOverlay = document.getElementById('dirOverlay');
+const dirSheet = document.getElementById('dirSheet');
+const dirTrigger = document.getElementById('mb-directions');
+
 function showDirectionsPicker(e){
-  e.preventDefault();
-  document.getElementById('dirOverlay').classList.add('on');
-  document.getElementById('dirSheet').classList.add('on');
-  document.body.style.overflow='hidden';
+  if(e) e.preventDefault();
+  if(!dirOverlay || !dirSheet) return;
+  dirOverlay.classList.add('on');
+  dirSheet.classList.add('on');
+  dirSheet.setAttribute('aria-hidden', 'false');
+  document.body.classList.add('dir-open');
 }
+
 function hideDirectionsPicker(){
-  document.getElementById('dirOverlay').classList.remove('on');
-  document.getElementById('dirSheet').classList.remove('on');
-  document.body.style.overflow='';
+  if(!dirOverlay || !dirSheet) return;
+  dirOverlay.classList.remove('on');
+  dirSheet.classList.remove('on');
+  dirSheet.setAttribute('aria-hidden', 'true');
+  document.body.classList.remove('dir-open');
 }
-// Close on overlay tap already handled by onclick on .dir-overlay
-// Also close on escape key
+
+// Keep inline handlers working after Vite bundles this module.
+window.showDirectionsPicker = showDirectionsPicker;
+window.hideDirectionsPicker = hideDirectionsPicker;
+
+// Also bind via JS so the behaviour works even if inline handlers are removed later.
+dirTrigger?.addEventListener('click', showDirectionsPicker);
+dirOverlay?.addEventListener('click', hideDirectionsPicker);
+dirSheet?.querySelectorAll('a,button').forEach(el=>el.addEventListener('click', hideDirectionsPicker));
 document.addEventListener('keydown',e=>{if(e.key==='Escape')hideDirectionsPicker()});
 
