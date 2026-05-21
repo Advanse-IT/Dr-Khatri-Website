@@ -1,7 +1,0 @@
-name = "khatri-site"
-main = "src/worker.js"
-compatibility_date = "2026-05-21"
-
-[assets]
-directory = "./public"
-binding = "ASSETS"

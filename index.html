@@ -1,889 +1,102 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Dr Shailesh Khatri | Senior Interventional Cardiologist | Gold Coast</title>
-<meta name="description" content="Dr Shailesh Khatri — Interventional Cardiologist, Gold Coast. Specialising in coronary angiography, angioplasty &amp; stenting, and TAVI. 25+ years, 15,000+ procedures, 24-hour service at Pindara Private Hospital &amp; John Flynn Private Hospital.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
-<style>
-html,body{overflow-x:hidden;width:100%;max-width:100%;}
-*,*::before,*::after{box-sizing:border-box;}
+<meta content="Dr Shailesh Khatri — Interventional Cardiologist, Gold Coast. Specialising in coronary angiography, angioplasty &amp; stenting, and TAVI. 25+ years, 15,000+ procedures, 24-hour service at Pindara Private Hospital &amp; John Flynn Private Hospital." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;family=Playfair+Display:ital,wght@0,600;0,700;1,500;1,600&amp;display=swap" rel="stylesheet"/>
 
-
-/* ═══ THEME — Navy & Gold ══════════════════════════════════════ */
-:root {
-  --navy:#0b2240; --navy2:#12326a; --navy3:#1a4280;
-  --gold:#c49a38; --gold2:#ddb85a; --gold3:#f5e4b0;
-  --bg:#f6f8fb;   --bg2:#edf1f7;   --bg3:#e2e9f3;
-  --white:#ffffff;
-  --text:#0b1a2e; --text2:#2d4560; --text3:#6b849a;
-  --border:#d4dde8;
-  --hero-bg:#070f1e;
-  --stat-bg:#0b2240;
-  --footer:#060d1a;
-  --ar:196,154,56;
-}
-
-/* Hero-specific button sizing — more compact than global .btn */
-.hero-btns .btn{padding:11px 22px;font-size:.87rem;min-height:40px;font-weight:600}
-/* ─── Scroll offset: nav=70px + 8px buffer ─── */
-html{scroll-behavior:smooth;scroll-padding-top:0;margin:0;padding:0}
-body{font-family:'Inter',sans-serif;font-size:16px;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;line-height:1.65;overflow-x:hidden;font-feature-settings:'cv11','ss01';margin:0;padding:0}
-#about,#services,#recognition,#pioneer,#reviews,#faq,#contact{
-  scroll-margin-top:78px
-}
-body{font-family:'Inter',sans-serif;font-size:16px;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;line-height:1.65}
-img{display:block;max-width:100%}
-a{text-decoration:none;color:inherit}
-ul{list-style:none}
-button{border:none;background:none;cursor:pointer;font-family:inherit}
-
-/* ═══ LAYOUT ═══════════════════════════════════════════════════ */
-.wrap{
-  max-width:1140px;
-  margin:0 auto;
-  padding:0 28px;
-  width:100%;
-  box-sizing:border-box;
-  overflow:visible;
-}
-.wrap > *{
-  min-width:0;
-}
-@media(max-width:768px){
-  .wrap{padding:0 18px}
-}
-.sec{padding:88px 0}
-.sec-sm{padding:56px 0}
-.bg-white{background:var(--white)}
-.bg2{background:var(--bg2)}
-
-.kicker{font-size:.82rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;display:flex;align-items:center;gap:10px}
-.kicker::before{content:'';display:block;width:22px;height:2px;background:var(--gold);flex-shrink:0}
-.kicker.light{color:var(--gold2)}
-.kicker.light::before{background:var(--gold2)}
-.kicker.center{justify-content:center}
-.kicker.center::before{display:none}
-h2.sec-title{font-size:clamp(2.1rem,3.5vw,3rem);font-weight:800;color:var(--navy);line-height:1.12;margin-bottom:20px;letter-spacing:-.03em}
-h2.sec-title em{color:var(--gold);font-style:normal}
-h2.sec-title.light{color:#fff}
-h2.sec-title.light em{color:var(--gold2)}
-.sec-lead{font-size:1.02rem;color:var(--text2);line-height:1.84;max-width:620px}
-.sec-lead.wide{max-width:none}
-.sec-lead.light{color:rgba(255,255,255,.62);max-width:none}
-
-/* ═══ BUTTONS ══════════════════════════════════════════════════ */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:700;padding:14px 28px;border-radius:7px;font-size:.92rem;transition:all .22s;letter-spacing:-.01em;line-height:1.2;min-height:48px}
-.btn-gold{background:var(--gold);color:#fff}
-.btn-gold:hover{background:var(--gold2);transform:translateY(-2px);box-shadow:0 8px 24px rgba(var(--ar),.35)}
-.btn-ghost{background:rgba(255,255,255,.1);color:#fff;border:1.5px solid rgba(255,255,255,.25)}
-.btn-ghost:hover{background:rgba(255,255,255,.18);border-color:rgba(255,255,255,.45)}
-.btn-navy{background:var(--navy);color:#fff}
-.btn-navy:hover{background:var(--navy2);transform:translateY(-1px)}
-.btn-outline{background:transparent;color:var(--navy);border:1.5px solid var(--border)}
-.btn-outline:hover{border-color:var(--gold);color:var(--gold)}
-
-/* ═══ ECG GRAPHICS ══════════════════════════════════════════════ */
-.ecg-path{fill:none;stroke-linecap:round;stroke-linejoin:round}
-.ecg-head,.ecg-head-glow{pointer-events:none}
-.ecg-stripe{overflow:hidden;line-height:0}
-.ecg-stripe svg{display:block;width:100%}
-.heart-bg{position:absolute;pointer-events:none;fill:currentColor;opacity:.035}
-
-/* ═══ NAVBAR ════════════════════════════════════════════════════ */
-.nav{position:fixed;inset:0 0 auto;z-index:9000;transition:background .35s,box-shadow .35s}
-.nav.up{background:rgba(255,255,255,.97);box-shadow:0 1px 24px rgba(0,0,0,.09);backdrop-filter:blur(14px)}
-.nav-inner{display:flex;align-items:center;justify-content:space-between;height:70px;max-width:1140px;margin:0 auto;padding:0 28px}
-
-.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
-.logo-txt span{display:block}
-.logo-name{font-size:.97rem;font-weight:800;color:#fff;line-height:1.1;letter-spacing:-.02em;transition:color .3s}
-.logo-role{font-size:.57rem;color:rgba(255,255,255,.45);letter-spacing:.13em;text-transform:uppercase;margin-top:2px;transition:color .3s}
-.nav.up .logo-name{color:var(--navy)}
-.nav.up .logo-role{color:var(--text3)}
-
-.nav-links{display:flex;align-items:center;gap:2px}
-.nl{padding:7px 11px;font-size:.84rem;font-weight:500;color:rgba(255,255,255,.82);border-radius:6px;transition:all .2s}
-.nl:hover{color:#fff;background:rgba(255,255,255,.1)}
-.nlbook{background:var(--gold)!important;color:#fff!important;font-weight:700!important;padding:8px 18px!important;border-radius:6px}
-.nlbook:hover{background:var(--gold2)!important}
-.nav.up .nl{color:var(--text2)}
-.nav.up .nl:hover{color:var(--navy);background:var(--bg2)}
-.nav.up .nlbook{color:#fff!important;background:var(--gold)!important}
-
-/* Hamburger */
-.hbg{display:none;flex-direction:column;justify-content:center;gap:5px;padding:8px;min-width:40px;min-height:40px}
-.hbg span{display:block;width:22px;height:2px;background:#fff;border-radius:2px;transition:all .3s;transform-origin:center}
-.nav.up .hbg span{background:var(--navy)}
-.hbg.on span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
-.hbg.on span:nth-child(2){opacity:0;transform:scaleX(0)}
-.hbg.on span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
-
-/* Mobile full-screen menu */
-.mob-nav{display:none;position:fixed;inset:70px 0 0;background:rgba(6,12,24,.97);backdrop-filter:blur(12px);z-index:8999;flex-direction:column;align-items:center;justify-content:center;gap:28px;padding:20px}
-.mob-nav.on{display:flex}
-.mob-nav a{font-size:1.55rem;font-weight:800;color:#fff;letter-spacing:-.02em;padding:8px 0;transition:color .2s}
-.mob-nav a:hover{color:var(--gold2)}
-.mob-cta{background:var(--gold);color:#fff!important;padding:16px 32px;border-radius:7px;font-size:1rem!important;font-weight:700!important;margin-top:8px;white-space:nowrap;min-width:220px;text-align:center;display:inline-flex;align-items:center;justify-content:center}
-
-/* ═══ HERO ══════════════════════════════════════════════════════ */
-.hero{background:var(--hero-bg);min-height:100svh;position:relative;overflow:hidden;display:flex;align-items:center;padding-top:70px}
-.hero-ecg{position:absolute;bottom:84px;left:0;right:0;pointer-events:none;z-index:1}
-.hero-ecg svg{display:block;width:100%;height:64px}
-
-.hero-in{position:relative;z-index:3;max-width:1140px;margin:0 auto;padding:52px 28px 100px;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
-.hero-tag{display:flex;align-items:center;gap:10px;margin-bottom:20px}
-.hero-tagline{width:28px;height:2px;background:var(--gold);flex-shrink:0}
-.hero-tagtext{font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
-.hero-title{font-size:clamp(2.8rem,5vw,4.7rem);font-weight:900;color:#fff;line-height:1;letter-spacing:-.04em;margin-bottom:10px}
-.hero-cred{font-size:.88rem;color:rgba(255,255,255,.5);letter-spacing:.04em;margin-bottom:22px;font-weight:500;line-height:1.5}
-.hero-desc{font-size:.97rem;color:rgba(255,255,255,.68);line-height:1.82;max-width:480px;margin-bottom:30px}
-.hero-btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:38px}
-.hero-strip{display:flex;border-top:1px solid rgba(255,255,255,.08);padding-top:26px;gap:28px;flex-wrap:wrap}
-.hsi{min-width:70px}
-.hsi-n{display:block;font-size:1.65rem;font-weight:900;color:#fff;letter-spacing:-.04em;line-height:1}
-.hsi-l{display:block;font-size:.6rem;color:rgba(255,255,255,.38);text-transform:uppercase;letter-spacing:.1em;margin-top:4px}
-
-/* Hero photo */
-.hero-photo{position:relative;display:flex;justify-content:center;align-items:center}
-.hero-frame{position:relative;max-width:420px;width:100%}
-.hero-img-border{position:absolute;inset:-12px 12px 12px -12px;border:1px solid rgba(var(--ar),.25);border-radius:6px;z-index:1}
-.hero-img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top;border-radius:6px;box-shadow:0 32px 80px rgba(0,0,0,.6);position:relative;z-index:2}
-
-.hero-award{position:absolute;bottom:-16px;left:50%;transform:translateX(-50%);z-index:10;cursor:default;user-select:none;white-space:nowrap}
-.hero-award-stars{display:flex;justify-content:center;gap:5px;padding-bottom:7px;opacity:0;pointer-events:none;position:relative;z-index:30;transition:opacity .2s ease}
-.hero-award:hover .hero-award-stars{opacity:1}
-.hero-award-stars span{color:var(--gold2);font-size:11px;display:inline-block;transform:scale(0)}
-.hero-award:hover .hero-award-stars span{animation:ha-star-pop .35s cubic-bezier(.34,1.56,.64,1) forwards}
-.hero-award:hover .hero-award-stars span:nth-child(1){animation-delay:.00s}
-.hero-award:hover .hero-award-stars span:nth-child(2){animation-delay:.06s}
-.hero-award:hover .hero-award-stars span:nth-child(3){animation-delay:.12s}
-.hero-award:hover .hero-award-stars span:nth-child(4){animation-delay:.18s}
-.hero-award:hover .hero-award-stars span:nth-child(5){animation-delay:.24s}
-@keyframes ha-star-pop{0%{transform:scale(0) rotate(-20deg)}70%{transform:scale(1.25) rotate(5deg)}100%{transform:scale(1) rotate(0deg)}}
-.hero-award-tooltip{position:relative;z-index:20;background:#fff;color:var(--navy);font-size:.71rem;font-weight:600;padding:9px 14px;border-radius:7px;text-align:center;line-height:1.5;box-shadow:0 8px 28px rgba(0,0,0,.28);opacity:0;transform:translateY(5px);pointer-events:none;transition:opacity .2s ease,transform .22s cubic-bezier(.34,1.56,.64,1);margin-bottom:8px}
-.hero-award-tooltip::after{content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);border:6px solid transparent;border-top-color:#fff}
-.hero-award-tooltip strong{display:block;color:var(--gold);font-size:.6rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-bottom:2px}
-.hero-award:hover .hero-award-tooltip{opacity:1;transform:translateY(0)}
-.hero-award-inner{position:relative;z-index:10;background:var(--gold);color:#fff;font-family:'Inter',sans-serif;padding:10px 18px;border-radius:6px;box-shadow:0 4px 20px rgba(0,0,0,.35);display:flex;align-items:center;gap:10px;transition:transform .25s cubic-bezier(.34,1.56,.64,1),box-shadow .25s ease,background .2s ease;overflow:hidden}
-.hero-award:hover .hero-award-inner{background:var(--gold2);transform:scale(1.06) translateY(-2px);box-shadow:0 12px 32px rgba(var(--ar),.4),0 4px 12px rgba(0,0,0,.25)}
-/* .hero-award-inner::after{content:'';position:absolute;top:-10%;left:-130%;width:80%;height:120%;background:linear-gradient(105deg,transparent 20%,rgba(255,255,255,.55) 50%,transparent 80%);animation:ha-shimmer 3s ease-in-out infinite;pointer-events:none} */
-.hero-award-inner::after{content:'';position:absolute;top:-10%;left:-130%;width:80%;height:120%;background:linear-gradient(105deg,transparent 15%,rgba(255,255,255,.85) 50%,transparent 85%);animation:ha-shimmer 2.5s ease-in-out infinite;pointer-events:none;z-index:20}
-@keyframes ha-shimmer{0%{left:-130%}45%,100%{left:150%}}
-.hero-award-text{display:flex;flex-direction:column;gap:1px}
-.hero-award-top{font-size:.58rem;font-weight:700;color:rgba(255,255,255,.72);letter-spacing:.14em;text-transform:uppercase;line-height:1}
-.hero-award-mid{font-size:.72rem;font-weight:800;color:#fff;letter-spacing:.04em;text-transform:uppercase;line-height:1.2}
-.hero-award-years{display:flex;align-items:center;gap:4px;padding-left:10px;border-left:1px solid rgba(255,255,255,.22);flex-shrink:0}
-.hero-award-pill{background:rgba(255,255,255,.18);color:#fff;font-size:.6rem;font-weight:800;padding:2px 7px;border-radius:3px;letter-spacing:.04em;animation:ha-pill-pulse 3s ease-in-out infinite}
-.hero-award-pill:nth-child(2){animation-delay:.5s}
-@keyframes ha-pill-pulse{0%,100%{background:rgba(255,255,255,.18)}50%{background:rgba(255,255,255,.3)}}
-.hero-award:hover .hero-award-pill{animation:none;background:rgba(255,255,255,.28)}
-
-.hero-glow{position:absolute;width:600px;height:600px;background:radial-gradient(circle,rgba(var(--ar),.07) 0%,transparent 70%);top:-220px;right:-80px;border-radius:50%;pointer-events:none}
-
-.h-wave{position:absolute;bottom:0;left:0;right:0;z-index:4;line-height:0}
-.h-wave svg{display:block;width:100%;height:70px}
-
-/* ═══ TIMELINE ══════════════════════════════════════════════════ */
-.tl-band{background:var(--navy);padding:44px 0;overflow:hidden;position:relative}
-.tl-title{text-align:center;font-size:.82rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(var(--ar),.85);margin-bottom:28px}
-.tl-track{display:flex;overflow-x:auto;-ms-overflow-style:none;scrollbar-width:none;position:relative;padding-bottom:4px}
-.tl-track::-webkit-scrollbar{display:none}
-.tl-track::before{content:'';position:absolute;top:9px;left:0;right:0;height:1px;background:rgba(255,255,255,.08)}
-.tl-item{flex:1;min-width:148px;padding:0 16px;text-align:center}
-.tl-dot{width:10px;height:10px;border-radius:50%;background:var(--gold);margin:0 auto 14px;position:relative;z-index:2;box-shadow:0 0 0 3px rgba(var(--ar),.2)}
-.tl-year{font-size:.82rem;font-weight:800;color:var(--gold2);margin-bottom:5px}
-.tl-txt{font-size:.73rem;color:rgba(255,255,255,.48);line-height:1.5}
-
-/* ECG stripe dividers */
-.ecg-stripe{overflow:hidden;line-height:0;height:32px}
-.ecg-stripe svg{height:32px}
-
-/* ═══ ABOUT ══════════════════════════════════════════════════════ */
-.about-grid{
-  display:grid;
-  grid-template-columns:minmax(0,1fr) minmax(0,1fr);
-  gap:40px;
-  align-items:start;
-  width:100%;
-}
-.ap-col,.at-col{
-  width:100%;
-  max-width:100%;
-  min-width:0;
-}
-.ap-col{display:flex;flex-direction:column;gap:12px}
-.ap-main{background:var(--bg2);border-radius:8px;overflow:hidden}
-.ap-main img{width:100%;height:auto;object-fit:contain;border-radius:8px;box-shadow:0 8px 32px rgba(0,0,0,.1);display:block}
-.ap-stats{background:var(--navy);border-radius:8px;padding:16px 20px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.as-i{text-align:center}
-.as-n{display:block;font-size:1.4rem;font-weight:900;color:var(--gold2);letter-spacing:-.03em;line-height:1}
-.as-l{display:block;font-size:.6rem;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.08em;margin-top:3px}
-.at-col .sec-lead{margin-bottom:14px}
-.at-col .sec-lead strong{color:var(--navy);font-weight:700}
-.creds-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:20px}
-.cred{background:var(--bg2);border:1px solid var(--border);border-radius:6px;padding:10px 12px;display:flex;align-items:flex-start;gap:8px}
-.cred:last-child:nth-child(odd){grid-column:span 2}
-.cred-a{font-size:.64rem;font-weight:800;color:var(--navy);background:rgba(0,0,0,.06);padding:2px 6px;border-radius:3px;white-space:nowrap;flex-shrink:0;margin-top:1px}
-.cred-f{font-size:.73rem;color:var(--text2);line-height:1.4}
-
-/* ═══ CORE STRENGTHS ════════════════════════════════════════════ */
-.strength-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px}
-.str-card{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:26px;transition:all .25s}
-.str-card:hover{box-shadow:0 8px 32px rgba(0,0,0,.08);transform:translateY(-3px);border-color:rgba(var(--ar),.3)}
-.str-ic{font-size:1.7rem;margin-bottom:13px}
-.str-h{font-size:.97rem;font-weight:800;color:var(--navy);margin-bottom:8px;letter-spacing:-.01em}
-.str-p{font-size:.85rem;color:var(--text2);line-height:1.68}
-
-/* ═══ STATS ══════════════════════════════════════════════════════ */
-.stats-band{background:var(--stat-bg);padding:76px 0;position:relative;overflow:hidden}
-.stats-ecg-bg{position:absolute;bottom:0;left:0;right:0;opacity:.07;pointer-events:none}
-.stats-heart{position:absolute;width:400px;left:50%;top:50%;transform:translate(-50%,-50%);opacity:.025;pointer-events:none;fill:#fff}
-.stats-top{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-bottom:44px}@media(max-width:768px){.stats-top{grid-template-columns:1fr;gap:28px}}
-.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;position:relative;z-index:2}
-.stat-c{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:9px;padding:30px 16px;text-align:center;transition:all .28s}
-.stat-c:hover{background:rgba(255,255,255,.07);transform:translateY(-4px)}
-.stat-ic{font-size:1.35rem;margin-bottom:11px}
-.stat-n{font-size:2.4rem;font-weight:900;color:#fff;letter-spacing:-.05em;line-height:1;display:block}
-.stat-l{font-size:.73rem;color:rgba(255,255,255,.42);margin-top:8px;line-height:1.4;display:block}
-
-/* ═══ SERVICES ═══════════════════════════════════════════════════ */
-.svc-head-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-bottom:44px}
-.svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.svc-c{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:24px;transition:all .25s;position:relative;overflow:hidden}
-.svc-c::after{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:transparent;transition:background .25s}
-.svc-c:hover{transform:translateY(-4px);box-shadow:0 12px 36px rgba(0,0,0,.09)}
-.svc-c:hover::after{background:var(--gold)}
-.svc-num{font-size:2.2rem;font-weight:900;color:rgba(0,0,0,.04);letter-spacing:-.06em;line-height:1;margin-bottom:11px}
-.svc-ic{font-size:1.35rem;margin-bottom:9px}
-.svc-h{font-size:.97rem;font-weight:800;color:var(--navy);margin-bottom:8px;letter-spacing:-.01em}
-.svc-p{font-size:.82rem;color:var(--text2);line-height:1.7}
-.svc-badge{display:inline-block;background:rgba(var(--ar),.1);border:1px solid rgba(var(--ar),.22);color:var(--navy2);font-size:.65rem;font-weight:700;padding:2px 8px;border-radius:3px;margin-top:8px;letter-spacing:.03em}
-
-/* ═══ JOURNEY STEPS ═════════════════════════════════════════════ */
-.journey-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px}
-.jstep{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:26px;position:relative}
-.jstep-n{display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:var(--navy);color:#fff;font-size:.84rem;font-weight:900;margin-bottom:14px;flex-shrink:0}
-.jstep-h{font-size:.97rem;font-weight:800;color:var(--navy);margin-bottom:8px;letter-spacing:-.01em}
-.jstep-p{font-size:.83rem;color:var(--text2);line-height:1.7}
-.jstep-arr{position:absolute;top:32px;right:-10px;width:20px;height:20px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:.58rem;font-weight:700;z-index:2;box-shadow:0 2px 8px rgba(0,0,0,.15)}
-.jstep:last-child .jstep-arr{display:none}
-
-/* ═══ RECOGNITION ═══════════════════════════════════════════════ */
-.rec-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:stretch}
-.rec-stack{display:flex;flex-direction:column;gap:13px}
-.rec-c{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:18px 20px;display:flex;gap:15px;align-items:flex-start;transition:all .25s}
-.rec-c:hover{box-shadow:0 6px 24px rgba(0,0,0,.07);transform:translateX(3px)}
-.rc-ic{font-size:1.7rem;flex-shrink:0;margin-top:1px}
-.rc-h{font-size:.95rem;font-weight:800;color:var(--navy);margin-bottom:4px;letter-spacing:-.01em}
-.rc-p{font-size:.82rem;color:var(--text2);line-height:1.62}
-.rc-tag{display:inline-block;background:var(--gold);color:#fff;font-size:.62rem;font-weight:800;padding:2px 8px;border-radius:3px;margin-top:5px}
-.fellowship{background:var(--navy);border-radius:8px;padding:22px;color:#fff}
-.fl-pre{font-size:.62rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold2);margin-bottom:8px}
-.fl-h{font-size:.97rem;font-weight:800;color:#fff;margin-bottom:8px;letter-spacing:-.01em;line-height:1.3}
-.fl-p{font-size:.82rem;color:rgba(255,255,255,.58);line-height:1.72}
-.rec-info{display:flex;flex-direction:column;gap:0;height:100%}
-.rec-info-text{margin-bottom:24px}
-.rec-photo{border-radius:8px;overflow:hidden;background:var(--bg2);flex:1;min-height:0}
-.rec-photo img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;min-height:260px}
-
-/* ═══ PIONEER ═══════════════════════════════════════════════════ */
-.pio-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}@media(max-width:768px){.pio-grid{grid-template-columns:1fr;gap:32px}}
-.pio-text .sec-lead{margin-bottom:13px;max-width:none}
-.pio-text .sec-lead strong{color:var(--navy);font-weight:700}
-.pio-pull{background:var(--navy);border-radius:8px;padding:20px 24px;margin-top:18px}
-.pio-mark{font-size:2.8rem;color:var(--gold);line-height:.3;opacity:.4;margin-bottom:12px;display:block}
-.pio-q{font-size:.96rem;color:rgba(255,255,255,.82);line-height:1.7;font-style:italic}
-.pio-vis{position:relative}
-.pio-img{
-  width:100%;
-  height:auto;
-  min-height:280px;
-  object-fit:cover;
-  object-position:top center;
-  border-radius:8px;
-  box-shadow:0 12px 44px rgba(0,0,0,.12)
-}
-.pio-badge{position:absolute;bottom:20px;right:20px;background:var(--gold);color:#fff;border-radius:7px;padding:13px 17px;text-align:center}
-.pb-n{font-size:1.6rem;font-weight:900;letter-spacing:-.04em;display:block;line-height:1}
-.pb-l{font-size:.62rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;opacity:.85;margin-top:3px;display:block}
-
-/* ═══ REVIEWS ═══════════════════════════════════════════════════ */
-.reviews-notice{display:flex;align-items:flex-start;gap:10px;background:rgba(var(--ar),.06);border:1px solid rgba(var(--ar),.18);border-radius:7px;padding:14px 18px;margin-bottom:32px}
-.rn-p{font-size:.78rem;color:var(--text2);line-height:1.6}
-.rn-p strong{color:var(--navy)}
-.rp-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:22px;align-items:stretch;width:100%;overflow:visible}@media(max-width:768px){.rp-grid{grid-template-columns:1fr;gap:16px}}
-/* Primary card — RateMDs */
-.rp-card{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:28px 24px;transition:all .25s;display:flex;flex-direction:column;align-items:flex-start;word-break:break-word;overflow-wrap:break-word;max-width:100%;width:100%;box-sizing:border-box;min-width:0}@media(max-width:480px){.rp-card{padding:20px 16px}}
-.rp-card:hover{transform:translateY(-4px);box-shadow:0 14px 40px rgba(0,0,0,.11);border-color:rgba(var(--ar),.35)}
-.rp-card.primary{border:2px solid rgba(var(--ar),.4);background:linear-gradient(135deg,var(--white) 0%,rgba(var(--ar),.03) 100%)}
-.rp-card.secondary{background:var(--bg2);border-style:dashed}
-.rp-logo{font-size:2rem;margin-bottom:12px}
-.rp-name{font-size:1.1rem;font-weight:800;color:var(--navy);margin-bottom:4px;letter-spacing:-.02em}
-.rp-tagline{font-size:.78rem;color:var(--text3);margin-bottom:12px;font-style:italic}
-.rp-stars{display:block;color:#f59e0b;font-size:1rem;letter-spacing:3px;margin-bottom:4px}
-.rp-score{font-size:.9rem;font-weight:700;color:var(--text);display:block;margin-bottom:6px}
-.rp-count{font-size:.74rem;color:var(--text3);display:block;margin-bottom:16px;flex:1}
-.rp-cta{display:inline-flex;align-items:center;gap:6px;font-size:.82rem;font-weight:700;color:var(--gold);background:rgba(var(--ar),.08);border:1px solid rgba(var(--ar),.2);padding:9px 16px;border-radius:6px;transition:all .2s;white-space:nowrap;align-self:flex-start;margin-top:auto}@media(max-width:768px){.rp-cta{font-size:.75rem;padding:8px 12px}}@media(max-width:480px){.rp-cta{font-size:.78rem;padding:10px 14px;width:100%;justify-content:center;box-sizing:border-box}}
-.rp-cta:hover{background:rgba(var(--ar),.14);border-color:rgba(var(--ar),.35)}
-.rp-card.secondary .rp-name{font-size:.97rem}
-.rp-card.secondary .rp-cta{font-size:.76rem;background:transparent;border-color:var(--border);color:var(--text2)}
-.reviews-bar{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;background:var(--white);border:1px solid var(--border);border-radius:8px;padding:16px 22px;box-sizing:border-box;width:100%;overflow:hidden}
-.rb-left strong{display:block;font-size:.9rem;font-weight:800;color:var(--navy);letter-spacing:-.01em;margin-bottom:3px}
-.rb-left span{font-size:.78rem;color:var(--text2)}
-
-/* ═══ FAQ ════════════════════════════════════════════════════════ */
-.faq-grid{display:grid;grid-template-columns:1fr 2fr;gap:60px;align-items:start}@media(max-width:768px){.faq-grid{grid-template-columns:1fr;gap:32px}}
-.faq-list{display:flex;flex-direction:column}
-.faq-item{border-bottom:1px solid var(--border)}
-.faq-item:first-child{border-top:1px solid var(--border)}
-.faq-q{display:flex;align-items:center;justify-content:space-between;padding:17px 0;cursor:pointer;font-size:.92rem;font-weight:600;color:var(--navy);gap:14px;letter-spacing:-.01em;transition:color .2s;user-select:none}
-.faq-q:hover{color:var(--gold)}
-.faq-arr{font-size:.62rem;color:var(--gold);font-weight:800;transition:transform .28s;flex-shrink:0}
-.faq-item.open .faq-arr{transform:rotate(180deg)}
-.faq-body{max-height:0;overflow:hidden;transition:max-height .32s ease}
-.faq-body-in{padding:0 0 16px;font-size:.87rem;color:var(--text2);line-height:1.78}
-.faq-item.open .faq-body{max-height:300px}
-
-/* ═══ CONTACT ════════════════════════════════════════════════════ */
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:start}@media(max-width:768px){.contact-grid{grid-template-columns:1fr;gap:32px}}
-.cl-left .sec-lead{margin-bottom:20px;max-width:none}
-.cc-stack{display:flex;flex-direction:column;gap:10px}
-.cc{display:flex;gap:13px;align-items:flex-start;background:var(--white);border:1px solid var(--border);border-radius:8px;padding:15px;transition:box-shadow .2s}
-.cc:hover{box-shadow:0 4px 16px rgba(0,0,0,.06)}
-.cc.hl{border-color:rgba(var(--ar),.35);background:rgba(var(--ar),.04)}
-.cc-ic{font-size:1.1rem;flex-shrink:0;margin-top:2px}
-.cc-lbl{font-size:.65rem;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:.1em;margin-bottom:4px}
-.cc-val{font-size:.83rem;color:var(--text2);line-height:1.65}
-.cc-lnk{color:var(--navy2);font-weight:700;text-decoration:underline;text-underline-offset:3px}
-.map-col{display:flex;flex-direction:column;gap:18px}
-.map-block{display:flex;flex-direction:column;gap:9px}
-.map-lbl{font-size:.67rem;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:.12em}
-.map-box{border-radius:8px;overflow:hidden;border:1px solid var(--border);height:240px}
-.map-box iframe{width:100%;height:100%;border:none;display:block}
-.map-cta{display:flex;align-items:center;justify-content:center;gap:8px;background:var(--navy);color:#fff;font-weight:700;font-size:.86rem;padding:12px;border-radius:7px;transition:background .2s}
-.map-cta:hover{background:var(--navy2)}
-.map-note{background:var(--white);border:1px solid var(--border);border-radius:7px;padding:13px;font-size:.79rem;color:var(--text2);line-height:1.68}
-
-/* ═══ AHPRA ══════════════════════════════════════════════════════ */
-.ahpra-bar{background:rgba(var(--ar),.06);border-top:1px solid rgba(var(--ar),.16);padding:11px 0}
-.ahpra-in{display:flex;align-items:flex-start;gap:9px;max-width:1140px;margin:0 auto;padding:0 28px}
-.ahpra-in p{font-size:.73rem;color:var(--text2);line-height:1.55}
-.ahpra-in strong{color:var(--navy)}
-
-/* ═══ FOOTER ══════════════════════════════════════════════════════ */
-.footer{background:var(--footer);padding:56px 0 30px}
-.footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:36px;margin-bottom:36px;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,.07)}
-.fg-brand h3{font-size:.97rem;font-weight:800;color:#fff;margin:11px 0 5px;letter-spacing:-.01em}
-.fg-brand p{font-size:.78rem;color:rgba(255,255,255,.35);line-height:1.65}
-.fg-col h4{font-size:.61rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;opacity:.9}
-.fg-col li{margin-bottom:7px}
-.fg-col a{font-size:.81rem;color:rgba(255,255,255,.42);transition:color .2s}
-.fg-col a:hover{color:var(--gold2)}
-.fg-col p{font-size:.79rem;color:rgba(255,255,255,.35);line-height:1.68}
-.footer-base{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
-.footer-base p{font-size:.73rem;color:rgba(255,255,255,.22)}
-
-/* ═══ MOBILE STICKY BAR ══════════════════════════════════════════ */
-.mob-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:8999;background:rgba(255,255,255,.98);border-top:1px solid var(--border);box-shadow:0 -3px 16px rgba(0,0,0,.09);backdrop-filter:blur(12px)}
-.mb-row{display:flex;height:60px}
-.mb-btn{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;padding:8px 4px;font-size:.63rem;font-weight:700;color:var(--text2);border-right:1px solid var(--border);transition:color .2s;text-align:center}
-.mb-btn:last-child{border:none}
-.mb-btn.acc{background:var(--gold);color:#fff}
-.mb-btn:active{opacity:.8}
-.mb-ic{font-size:1.05rem}
-
-/* ═══ PREMIUM POLISH ════════════════════════════════════════════ */
-/* font-feature-settings applied via main body rule above */
-/* Polished card hover - consistent across all cards */
-.str-card,.svc-c,.jstep,.rec-c,.rp-card{
-  box-shadow:0 1px 4px rgba(0,0,0,.04),0 2px 12px rgba(0,0,0,.04);
-}
-.str-card:hover,.svc-c:hover,.jstep:hover{
-  box-shadow:0 4px 16px rgba(0,0,0,.06),0 12px 40px rgba(0,0,0,.08);
-  border-color:rgba(var(--ar),.28);
-}
-/* Section alternation - cleaner bg */
-.bg2{background:linear-gradient(180deg,#edf1f7 0%,#e8eef6 100%)}
-/* Gold accent line above select sections */
-.sec-accent-top{border-top:3px solid var(--gold)}
-/* Shiny stat cards */
-.stat-c{
-  background:linear-gradient(145deg,rgba(255,255,255,.06) 0%,rgba(255,255,255,.03) 100%);
-  border:1px solid rgba(255,255,255,.09);
-}
-.stat-c:hover{
-  background:linear-gradient(145deg,rgba(255,255,255,.1) 0%,rgba(255,255,255,.05) 100%);
-  border-color:rgba(var(--ar),.3);
-  box-shadow:0 8px 32px rgba(var(--ar),.12);
-}
-/* Polished fellowship block */
-.fellowship{
-  background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 100%);
-  box-shadow:0 4px 20px rgba(11,34,64,.2);
-}
-/* Polished hero glow */
-.hero-glow{
-  background:radial-gradient(ellipse at 60% 40%,rgba(var(--ar),.1) 0%,transparent 65%);
-}
-/* Pioneer pull quote polish */
-.pio-pull{
-  background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 100%);
-  box-shadow:0 4px 20px rgba(11,34,64,.2);
-  border-left:3px solid var(--gold);
-}
-/* Better button sheen */
-.btn-gold{
-  background:linear-gradient(135deg,var(--gold) 0%,#d4aa48 100%);
-  box-shadow:0 2px 8px rgba(var(--ar),.3);
-}
-.btn-gold:hover{
-  background:linear-gradient(135deg,var(--gold2) 0%,var(--gold) 100%);
-  box-shadow:0 6px 20px rgba(var(--ar),.45);
-}
-/* Nav book button polish */
-.nlbook{
-  background:linear-gradient(135deg,var(--gold) 0%,#d4aa48 100%)!important;
-  box-shadow:0 2px 8px rgba(var(--ar),.25);
-}
-/* ═══ SVG ICONS & CARD WATERMARKS ══════════════════════════════════════ */
-.card-icon{display:block;width:40px;height:40px;color:var(--gold);margin-bottom:14px}
-.card-wm{position:absolute;bottom:-8px;right:-8px;width:96px;height:96px;color:var(--navy);opacity:.055;pointer-events:none;display:block}
-.stat-icon{display:block;width:38px;height:38px;color:rgba(255,255,255,.45);margin:0 auto 14px}
-.rec-icon{display:block;width:34px;height:34px;color:var(--gold);flex-shrink:0;margin-top:1px}
-.cc-icon{display:block;width:24px;height:24px;flex-shrink:0;margin-top:2px;color:var(--navy2)}
-.cc.hl .cc-icon{color:var(--gold)}
-.mb-icon{display:block;width:20px;height:20px;margin:0 auto 3px;color:inherit}
-.chip-icon{display:block;width:20px;height:20px;color:var(--gold2);flex-shrink:0}
-.ahpra-icon{display:block;width:18px;height:18px;color:var(--gold);flex-shrink:0;margin-top:2px}
-.rp-ico{display:block;width:36px;height:36px;margin-bottom:10px}
-.arr-ic{display:block;width:18px;height:18px;flex-shrink:0;opacity:.55}
-/* cards with watermarks need position:relative and overflow:hidden */
-.svc-c{position:relative;overflow:hidden}
-.str-card{position:relative;overflow:hidden}
-/* Recognition right column mobile fix */
-@media(max-width:1024px){
-  .rec-info{height:auto}
-  .rec-photo img{min-height:300px;max-height:420px}
-}
-@media(max-width:768px){
-  .rp-grid{grid-template-columns:1fr;gap:14px}
-  .rp-card{flex-direction:column;align-items:stretch;gap:12px;padding:16px;flex-wrap:wrap;word-break:break-word}
-  .rp-card .rp-logo{margin-bottom:0;font-size:1.8rem}
-  .rp-card .rp-count{margin-bottom:0;flex:none}
-  .rp-card .rp-cta{margin-top:8px;width:100%;justify-content:center}
-  .rec-photo img{min-height:200px;max-height:none;height:260px}
-}
-/* Text alignment: left-aligned throughout (professional standard for web readability) */
-.sec-lead,.str-p,.svc-p,.jstep-p,.rc-p,.fl-p,.pio-q,.faq-body-in,.cc-val,.fg-col p,.rn-p,.dir-btn-text span{
-  text-align:left
-}
-/* Centred only for stats labels, kicker labels, and short numeric displays */
-.sec-title,.kicker{text-align:left}
-.kicker.center{text-align:center}
-h2.sec-title[style*="text-align:center"]{text-align:center!important}
-
-/* ═══ DIRECTIONS PICKER (bottom sheet) ════════════════════════ */
-.dir-overlay{
-  display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);
-  z-index:9800;backdrop-filter:blur(3px)
-}
-.dir-overlay.on{display:block;animation:fadeIn .2s ease}
-.dir-sheet{
-  position:fixed;bottom:0;left:0;right:0;z-index:9900;
-  background:var(--white);border-radius:20px 20px 0 0;
-  padding:12px 24px 36px;
-  transform:translateY(100%);
-  transition:transform .32s cubic-bezier(.32,1,.42,1);
-  box-shadow:0 -8px 40px rgba(0,0,0,.18)
-}
-.dir-sheet.on{transform:translateY(0)}
-.dir-handle{
-  width:36px;height:4px;background:var(--border);
-  border-radius:2px;margin:0 auto 20px
-}
-.dir-title{
-  font-size:1.1rem;font-weight:800;color:var(--navy);
-  letter-spacing:-.02em;margin-bottom:6px;text-align:center
-}
-.dir-sub{
-  font-size:.84rem;color:var(--text3);text-align:center;margin-bottom:20px
-}
-.dir-btn{
-  display:flex;align-items:center;gap:14px;
-  background:var(--bg2);border:1.5px solid var(--border);
-  border-radius:10px;padding:16px 18px;margin-bottom:10px;
-  text-decoration:none;transition:all .2s;cursor:pointer
-}
-.dir-btn--primary{
-  background:linear-gradient(135deg,rgba(var(--ar),.08) 0%,rgba(var(--ar),.03) 100%);
-  border-color:rgba(var(--ar),.35)
-}
-.dir-btn:hover,.dir-btn:active{
-  border-color:var(--gold);background:rgba(var(--ar),.08)
-}
-.dir-btn-ic{font-size:1.5rem;flex-shrink:0}
-.dir-btn-text{flex:1;display:flex;flex-direction:column;gap:2px}
-.dir-btn-text strong{font-size:.92rem;font-weight:800;color:var(--navy);letter-spacing:-.01em}
-.dir-btn-text span{font-size:.75rem;color:var(--text3)}
-.dir-btn-arr{font-size:.85rem;color:var(--gold);font-weight:700;flex-shrink:0}
-.dir-cancel{
-  width:100%;padding:13px;border-radius:8px;margin-top:6px;
-  font-size:.9rem;font-weight:700;color:var(--text3);
-  background:transparent;border:1.5px solid var(--border);cursor:pointer;
-  transition:background .2s
-}
-.dir-cancel:hover{background:var(--bg2)}
-@keyframes fadeIn{from{opacity:0}to{opacity:1}}
-
-/* ═══ SCROLL ANIMATIONS ══════════════════════════════════════ */
-.a{opacity:0;transition:opacity .6s ease,transform .6s ease}
-.a.up{transform:translateY(22px)}
-.a.lft{transform:translateX(-28px)}
-.a.rgt{transform:translateX(28px)}
-.a.in{opacity:1;transform:none}
-.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
-.d4{transition-delay:.4s}.d5{transition-delay:.5s}
-
-
-/* ═══ GLOBAL OVERFLOW & TEXT WRAP FIXES ═══════════════════════ */
-section,
-div,
-p,
-h1,h2,h3,h4,h5,h6,
-span,
-a,
-li{
-  max-width:100%;
-}
-
-.sec-lead,
-.hero-desc,
-.rc-p,
-.svc-p,
-.str-p,
-.jstep-p,
-.cc-val,
-.rn-p,
-.fl-p,
-.faq-body-in,
-.footer p,
-.footer a{
-  overflow-wrap:anywhere;
-  word-break:normal;
-}
-
-.about-grid,
-.rec-grid,
-.contact-grid,
-.faq-grid,
-.svc-head-grid,
-.stats-top,
-.footer-grid,
-.rp-grid{
-  width:100%;
-  min-width:0;
-}
-
-.about-grid > *,
-.rec-grid > *,
-.contact-grid > *,
-.faq-grid > *,
-.svc-head-grid > *,
-.stats-top > *,
-.footer-grid > *,
-.rp-grid > *{
-  min-width:0;
-}
-
-@media(max-width:768px){
-  .about-grid,
-  .rec-grid,
-  .contact-grid,
-  .faq-grid,
-  .svc-head-grid,
-  .stats-top,
-  .footer-grid,
-  .rp-grid{
-    overflow:hidden;
-  }
-}
-
-/* ═══════════════════════════════════════════════════════════════
-   RESPONSIVE — TABLET (≤1024px)
-═══════════════════════════════════════════════════════════════ */
-@media(max-width:1024px){
-  .hero-in{grid-template-columns:1fr;gap:0;padding:48px 28px 96px}
-  .hero-photo{display:none}
-  .hero-title{font-size:clamp(2.5rem,6vw,3.8rem)}
-  .hero-desc{max-width:none}
-  .hero-btns{flex-wrap:nowrap}
-
-  .about-grid{grid-template-columns:1fr;gap:36px}
-  .ap-main img{max-height:380px;object-fit:cover;object-position:top}
-
-  .stats-top{grid-template-columns:1fr;gap:24px}
-  .stats-grid{grid-template-columns:repeat(2,1fr)}
-
-  .strength-grid{grid-template-columns:repeat(2,1fr)}
-
-  .svc-head-grid{grid-template-columns:1fr;gap:16px}
-  .svc-grid{grid-template-columns:repeat(2,1fr)}
-
-  .journey-steps{grid-template-columns:1fr;gap:16px}
-  .jstep-arr{display:none}
-
-  .rec-grid{grid-template-columns:1fr;gap:36px}
-
-  .pio-grid{grid-template-columns:1fr;gap:36px}
-
-  .faq-grid{grid-template-columns:1fr;gap:32px}
-
-  .contact-grid{grid-template-columns:1fr;gap:36px}
-
-  .footer-grid{grid-template-columns:1fr 1fr;gap:28px}
-}
-
-/* ═══════════════════════════════════════════════════════════════
-   RESPONSIVE — MOBILE (≤768px)
-═══════════════════════════════════════════════════════════════ */
-@media(max-width:768px){
-  /* base */
-  .wrap{padding:0 18px}
-  .sec{padding:60px 0}
-  .sec-sm{padding:40px 0}
-
-  /* nav */
-  .hbg{display:flex}
-  .nav-links{display:none}
-  .nav-inner{padding:0 18px}
-
-  /* body padding for mobile bar */
-  body{padding-bottom:0}@media(max-width:768px){body{padding-bottom:68px}}
-  .mob-bar{display:block}
-
-  /* hero */
-  .hero-in{padding:36px 18px 88px}
-  .hero-tag{margin-bottom:14px}
-  .hero-title{font-size:clamp(2.2rem,8vw,3rem);margin-bottom:8px}
-  .hero-cred{font-size:.78rem;margin-bottom:14px}
-  .hero-desc{font-size:.93rem;margin-bottom:22px}
-  .hero-btns{flex-wrap:wrap;gap:10px;margin-bottom:28px}
-  /* hero buttons stay natural size — only mob-cta (hamburger menu) gets full treatment */
-  .hero-strip{gap:0;padding-top:22px;flex-wrap:nowrap;overflow-x:auto;-ms-overflow-style:none;scrollbar-width:none;border-top:1px solid rgba(255,255,255,.08)}
-  .hero-strip::-webkit-scrollbar{display:none}
-  .hsi{min-width:80px;padding-right:20px;border-right:1px solid rgba(255,255,255,.08);margin-right:20px}
-  .hsi:last-child{border:none;margin-right:0}
-  .hsi-n{font-size:1.45rem}
-
-  /* timeline */
-  .tl-band{padding:36px 0}
-
-  /* about */
-  .creds-grid{grid-template-columns:1fr}
-
-  /* stats */
-  .stats-band{padding:56px 0}
-  .stats-grid{grid-template-columns:1fr 1fr}
-  .stat-n{font-size:2rem}
-
-  /* strengths */
-  .strength-grid{grid-template-columns:1fr}
-
-  /* services */
-  .svc-grid{grid-template-columns:1fr}
-
-  /* journey */
-  .journey-steps{grid-template-columns:1fr}
-
-  /* recognition */
-  .rec-photo img{height:260px;min-height:260px}
-  .rec-info{height:auto}
-
-  /* pioneer */
-  .pio-img{
-    min-height:220px;
-    max-height:320px;
-    object-position:top center;
-  }
-
-  /* reviews - stack on mobile */
-  .rp-grid{grid-template-columns:1fr}
-  .rp-card{flex-direction:column;align-items:flex-start}
-  .rp-cta{width:100%;justify-content:center;text-align:center}
-  .reviews-bar{flex-direction:column;gap:12px;align-items:stretch;width:100%;padding:16px}
-.reviews-bar .btn{width:100%;justify-content:center;box-sizing:border-box;padding:13px 16px;font-size:.85rem;white-space:normal;text-align:center;line-height:1.3}
-
-  /* faq */
-  .faq-q{font-size:.88rem}
-
-  /* contact */
-  .map-box{height:200px}
-  .cc-stack{gap:8px}
-
-  /* footer */
-  .footer-grid{grid-template-columns:1fr}
-  .footer{padding:44px 0 24px}
-  .footer-base{flex-direction:column;gap:6px}
-}
-
-/* ═══════════════════════════════════════════════════════════════
-   RESPONSIVE — SMALL MOBILE (≤480px)
-═══════════════════════════════════════════════════════════════ */
-@media(max-width:480px){
-  .wrap{padding:0 16px}
-  .nav-inner{padding:0 16px}
-
-  /* hero — tightest */
-  .hero-in{padding:28px 16px 80px}
-  .hero-title{font-size:clamp(1.95rem,9vw,2.5rem)}
-  .hero-cred{font-size:.72rem;line-height:1.6}
-  .hero-strip{gap:0}
-  .hsi{min-width:70px;margin-right:14px;padding-right:14px}
-  .hsi-n{font-size:1.25rem}
-
-  /* stats: still 2-col */
-  .stats-grid{grid-template-columns:1fr 1fr}
-  .stat-n{font-size:1.8rem}
-  .stat-c{padding:22px 12px}
-
-  /* services */
-  .svc-grid{grid-template-columns:1fr}
-
-  /* reviews: single col on small mobile */
-  .rp-grid{grid-template-columns:1fr}
-
-  /* about stats */
-  .as-n{font-size:1.25rem}
-
-  /* section titles - keep readable but slightly smaller */
-  h2.sec-title{font-size:1.75rem}
-
-  /* footer */
-  .footer-grid{grid-template-columns:1fr}
-}
-
-/* ═══════════════════════════════════════════════════════════════
-   RESPONSIVE — VERY SMALL (≤360px)
-═══════════════════════════════════════════════════════════════ */
-@media(max-width:360px){
-  .nav-inner{height:64px}
-  .logo-name{font-size:.86rem}
-  .logo-role{font-size:.52rem}
-  .hero-title{font-size:1.85rem}
-  .rp-grid{grid-template-columns:1fr}
-  .stats-grid{grid-template-columns:1fr 1fr}
-  .hsi{min-width:60px;margin-right:10px;padding-right:10px}
-}
-
-/* ═══════════════════════════════════════════════════════════════
-   RESPONSIVE — TABLET/IPAD LANDSCAPE (769–1024px)
-═══════════════════════════════════════════════════════════════ */
-@media(min-width:769px) and (max-width:1024px){
-  .strength-grid{grid-template-columns:repeat(3,1fr)}
-  .journey-steps{grid-template-columns:repeat(3,1fr)}
-  .jstep-arr{display:flex}
-  .svc-grid{grid-template-columns:repeat(2,1fr)}
-  .rp-grid{grid-template-columns:2fr 1fr}
-  .stats-grid{grid-template-columns:repeat(4,1fr)}
-  .footer-grid{grid-template-columns:1fr 1fr}
-}
-</style>
 </head>
 <body>
 <!-- ═ SVG ICONS ════════════════════════════════════════════════════ -->
-<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true"><defs>
-<symbol id="ic-heart" viewBox="0 0 24 24" fill="none"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-<symbol id="ic-ecg" viewBox="0 0 24 24" fill="none"><path d="M19.5 12.5C19.5 17 12 22 12 22S4.5 17 4.5 12.5a7.5 7.5 0 0 1 15 0z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M3 12h3l2-4 3 8 2-4 1 2h3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-<symbol id="ic-vessel" viewBox="0 0 24 24" fill="none"><path d="M5 5h14M5 19h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M5 5v14M19 5v14" stroke="currentColor" stroke-width="1.5"/><ellipse cx="12" cy="12" rx="4" ry="7" stroke="currentColor" stroke-width="1.5"/><path d="M12 7v10" stroke="currentColor" stroke-width="1" stroke-dasharray="2 2" opacity=".5"/></symbol>
-<symbol id="ic-pci" viewBox="0 0 24 24" fill="none"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M13.5 9l-3 4h4.5l-3 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-<symbol id="ic-valve" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M12 3v18M3 12h18" stroke="currentColor" stroke-width=".75" stroke-dasharray="2 2" opacity=".4"/><path d="M12 12L8.5 7.5Q12 5.5 15.5 7.5L12 12L15.5 16.5Q12 18.5 8.5 16.5Z" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linejoin="round"/></symbol>
-<symbol id="ic-globe" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/><path d="M2 12h20" stroke="currentColor" stroke-width="1" opacity=".5"/><path d="M12 2c-3.5 4-5 8-5 10s1.5 6 5 10M12 2c3.5 4 5 8 5 10s-1.5 6-5 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
-<symbol id="ic-chart" viewBox="0 0 24 24" fill="none"><path d="M18 20V10M12 20V4M6 20v-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M2 20h20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
-<symbol id="ic-clock" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/><path d="M12 6v6l3.5 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
-<symbol id="ic-cap" viewBox="0 0 24 24" fill="none"><path d="M22 10l-10-7-10 7 10 7 10-7z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M6 12.5v5C6 20 8.69 22 12 22s6-2 6-4.5v-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M22 10v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
-<symbol id="ic-care" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="6" r="4" stroke="currentColor" stroke-width="1.5"/><path d="M4 20v-1a8 8 0 0 1 16 0v1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M14.8 15.6a2 2 0 0 0-2.8 0 2 2 0 0 0 2.8 2.8L16 17.2a2 2 0 0 0 0-2.8 2 2 0 0 0-1.2.4z" stroke="currentColor" stroke-width="1" fill="none"/></symbol>
-<symbol id="ic-shield" viewBox="0 0 24 24" fill="none"><path d="M12 2L4 6v6c0 5 3.58 9.69 8 11 4.42-1.31 8-6 8-11V6l-8-4z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M12 9v6M9 12h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
-<symbol id="ic-trophy" viewBox="0 0 24 24" fill="none"><path d="M6 9H3V4h3M18 9h3V4h-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M6 4h12v7a6 6 0 0 1-12 0V4z" stroke="currentColor" stroke-width="1.5"/><path d="M12 17v4M9 21h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
-<symbol id="ic-pin" viewBox="0 0 24 24" fill="none"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="1.5"/></symbol>
-<symbol id="ic-calendar" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></symbol>
-<symbol id="ic-emergency" viewBox="0 0 24 24" fill="none"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 9v4M12 17h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
-<symbol id="ic-hospital" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="19" rx="1" stroke="currentColor" stroke-width="1.5"/><path d="M3 9h18M9 22V9M15 22V9" stroke="currentColor" stroke-width="1.5"/><path d="M12 4v4M10 6h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
-<symbol id="ic-phone" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.78a16 16 0 0 0 6 6l.85-.85a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.02z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-<symbol id="ic-star" viewBox="0 0 24 24" fill="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<svg aria-hidden="true" style="display:none" xmlns="http://www.w3.org/2000/svg"><defs>
+<symbol fill="none" id="ic-heart" viewbox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></symbol>
+<symbol fill="none" id="ic-ecg" viewbox="0 0 24 24"><path d="M19.5 12.5C19.5 17 12 22 12 22S4.5 17 4.5 12.5a7.5 7.5 0 0 1 15 0z" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path><path d="M3 12h3l2-4 3 8 2-4 1 2h3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></symbol>
+<symbol fill="none" id="ic-vessel" viewbox="0 0 24 24"><path d="M5 5h14M5 19h14" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path><path d="M5 5v14M19 5v14" stroke="currentColor" stroke-width="1.5"></path><ellipse cx="12" cy="12" rx="4" ry="7" stroke="currentColor" stroke-width="1.5"></ellipse><path d="M12 7v10" opacity=".5" stroke="currentColor" stroke-dasharray="2 2" stroke-width="1"></path></symbol>
+<symbol fill="none" id="ic-pci" viewbox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path><path d="M13.5 9l-3 4h4.5l-3 4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></symbol>
+<symbol fill="none" id="ic-valve" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"></circle><path d="M12 3v18M3 12h18" opacity=".4" stroke="currentColor" stroke-dasharray="2 2" stroke-width=".75"></path><path d="M12 12L8.5 7.5Q12 5.5 15.5 7.5L12 12L15.5 16.5Q12 18.5 8.5 16.5Z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5"></path></symbol>
+<symbol fill="none" id="ic-globe" viewbox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"></circle><path d="M2 12h20" opacity=".5" stroke="currentColor" stroke-width="1"></path><path d="M12 2c-3.5 4-5 8-5 10s1.5 6 5 10M12 2c3.5 4 5 8 5 10s-1.5 6-5 10" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path></symbol>
+<symbol fill="none" id="ic-chart" viewbox="0 0 24 24"><path d="M18 20V10M12 20V4M6 20v-6" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path><path d="M2 20h20" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path></symbol>
+<symbol fill="none" id="ic-clock" viewbox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"></circle><path d="M12 6v6l3.5 2" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path></symbol>
+<symbol fill="none" id="ic-cap" viewbox="0 0 24 24"><path d="M22 10l-10-7-10 7 10 7 10-7z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5"></path><path d="M6 12.5v5C6 20 8.69 22 12 22s6-2 6-4.5v-5" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path><path d="M22 10v5" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path></symbol>
+<symbol fill="none" id="ic-care" viewbox="0 0 24 24"><circle cx="12" cy="6" r="4" stroke="currentColor" stroke-width="1.5"></circle><path d="M4 20v-1a8 8 0 0 1 16 0v1" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path><path d="M14.8 15.6a2 2 0 0 0-2.8 0 2 2 0 0 0 2.8 2.8L16 17.2a2 2 0 0 0 0-2.8 2 2 0 0 0-1.2.4z" fill="none" stroke="currentColor" stroke-width="1"></path></symbol>
+<symbol fill="none" id="ic-shield" viewbox="0 0 24 24"><path d="M12 2L4 6v6c0 5 3.58 9.69 8 11 4.42-1.31 8-6 8-11V6l-8-4z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5"></path><path d="M12 9v6M9 12h6" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path></symbol>
+<symbol fill="none" id="ic-trophy" viewbox="0 0 24 24"><path d="M6 9H3V4h3M18 9h3V4h-3" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path><path d="M6 4h12v7a6 6 0 0 1-12 0V4z" stroke="currentColor" stroke-width="1.5"></path><path d="M12 17v4M9 21h6" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path></symbol>
+<symbol fill="none" id="ic-pin" viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="1.5"></path><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="1.5"></circle></symbol>
+<symbol fill="none" id="ic-calendar" viewbox="0 0 24 24"><rect height="18" rx="2" stroke="currentColor" stroke-width="1.5" width="18" x="3" y="4"></rect><path d="M16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01" stroke="currentColor" stroke-linecap="round" stroke-width="2.5"></path></symbol>
+<symbol fill="none" id="ic-emergency" viewbox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path><path d="M12 9v4M12 17h.01" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path></symbol>
+<symbol fill="none" id="ic-hospital" viewbox="0 0 24 24"><rect height="19" rx="1" stroke="currentColor" stroke-width="1.5" width="18" x="3" y="3"></rect><path d="M3 9h18M9 22V9M15 22V9" stroke="currentColor" stroke-width="1.5"></path><path d="M12 4v4M10 6h4" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path></symbol>
+<symbol fill="none" id="ic-phone" viewbox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.78a16 16 0 0 0 6 6l.85-.85a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.02z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></symbol>
+<symbol fill="none" id="ic-star" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></polygon></symbol>
 </defs></svg>
-
-
 <!-- ═══ NAV ══════════════════════════════════════════════════════ -->
 <nav class="nav" id="nav">
-  <div class="nav-inner">
-    <a href="#top" class="logo">
-      <div class="sk-seal" data-ecg-logo data-color="#c49a38" data-highlight="#ffd770" data-id="v1">
-        <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <filter id="glow-v1" x="-50%" y="-50%" width="200%" height="200%">
-              <feGaussianBlur stdDeviation="0.7" result="b1"/>
-              <feGaussianBlur in="SourceGraphic" stdDeviation="0.25" result="b2"/>
-              <feMerge><feMergeNode in="b1"/><feMergeNode in="b2"/><feMergeNode in="SourceGraphic"/></feMerge>
-            </filter>
-            <linearGradient id="trail-v1" gradientUnits="userSpaceOnUse" x1="10" y1="0" x2="10" y2="0">
-              <stop offset="0%" stop-color="#c49a38" stop-opacity="0"/>
-              <stop offset="55%" stop-color="#c49a38" stop-opacity=".55"/>
-              <stop offset="92%" stop-color="#ffd770" stop-opacity=".95"/>
-              <stop offset="100%" stop-color="#ffffff" stop-opacity="1"/>
-            </linearGradient>
-            <clipPath id="clip-v1"><rect x="8" y="18" width="30" height="20"/></clipPath>
-          </defs>
-          <circle cx="23" cy="23" r="21.5" stroke="#c49a38" stroke-width="1.2"/>
-          <circle cx="23" cy="23" r="17.5" stroke="#c49a38" stroke-opacity=".2" stroke-width=".6"/>
-          <path class="ecg-static" d="M10,30 L14,30 L15,29 L16,25 L17,35 L18,27 L19,30 L36,30" stroke="#c49a38" stroke-width="1.1" fill="none" stroke-linecap="round" opacity=".7"/>
-          <g class="ecg-live" clip-path="url(#clip-v1)" filter="url(#glow-v1)" style="display:none">
-            <line x1="10" y1="30" x2="36" y2="30" stroke="#c49a38" stroke-opacity=".15" stroke-width=".35"/>
-            <path class="ecg-trace" d="" stroke="url(#trail-v1)" stroke-width="1.15" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-            <circle class="ecg-dot" cx="10" cy="30" r=".85" fill="#ffd770"/>
-            <circle class="ecg-dot-glow" cx="10" cy="30" r="1.6" fill="#ffd770" fill-opacity=".25"/>
-          </g>
-          <text x="23" y="27" text-anchor="middle" font-family="Inter,sans-serif" font-size="12" font-weight="900" fill="#c49a38" letter-spacing="-1">SK</text>
-        </svg>
-      </div>
-      <div class="logo-txt">
-        <span class="logo-name">Dr Shailesh Khatri</span>
-        <span class="logo-role">Interventional Cardiologist · Gold Coast</span>
-      </div>
-    </a>
-
-    <nav class="nav-links">
-      <a href="#about" class="nl">About</a>
-      <a href="#services" class="nl">Services</a>
-      <a href="#recognition" class="nl">Recognition</a>
-      <a href="#reviews" class="nl">Reviews</a>
-      <a href="#faq" class="nl">FAQ</a>
-      <a href="#contact" class="nl">Contact</a>
-      <a href="#contact" class="nl nlbook">Book Appointment</a>
-    </nav>
-    <button class="hbg" id="hbg" aria-label="Open menu"><span></span><span></span><span></span></button>
-  </div>
+<div class="nav-inner">
+<a class="logo" href="#top">
+<div class="sk-seal" data-color="#c49a38" data-ecg-logo="" data-highlight="#ffd770" data-id="v1">
+<svg fill="none" height="46" viewbox="0 0 46 46" width="46" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<filter height="200%" id="glow-v1" width="200%" x="-50%" y="-50%">
+<fegaussianblur result="b1" stddeviation="0.7"></fegaussianblur>
+<fegaussianblur in="SourceGraphic" result="b2" stddeviation="0.25"></fegaussianblur>
+<femerge><femergenode in="b1"></femergenode><femergenode in="b2"></femergenode><femergenode in="SourceGraphic"></femergenode></femerge>
+</filter>
+<lineargradient gradientunits="userSpaceOnUse" id="trail-v1" x1="10" x2="10" y1="0" y2="0">
+<stop offset="0%" stop-color="#c49a38" stop-opacity="0"></stop>
+<stop offset="55%" stop-color="#c49a38" stop-opacity=".55"></stop>
+<stop offset="92%" stop-color="#ffd770" stop-opacity=".95"></stop>
+<stop offset="100%" stop-color="#ffffff" stop-opacity="1"></stop>
+</lineargradient>
+<clippath id="clip-v1"><rect height="20" width="30" x="8" y="18"></rect></clippath>
+</defs>
+<circle cx="23" cy="23" r="21.5" stroke="#c49a38" stroke-width="1.2"></circle>
+<circle cx="23" cy="23" r="17.5" stroke="#c49a38" stroke-opacity=".2" stroke-width=".6"></circle>
+<path class="ecg-static" d="M10,30 L14,30 L15,29 L16,25 L17,35 L18,27 L19,30 L36,30" fill="none" opacity=".7" stroke="#c49a38" stroke-linecap="round" stroke-width="1.1"></path>
+<g class="ecg-live" clip-path="url(#clip-v1)" filter="url(#glow-v1)" style="display:none">
+<line stroke="#c49a38" stroke-opacity=".15" stroke-width=".35" x1="10" x2="36" y1="30" y2="30"></line>
+<path class="ecg-trace" d="" fill="none" stroke="url(#trail-v1)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.15"></path>
+<circle class="ecg-dot" cx="10" cy="30" fill="#ffd770" r=".85"></circle>
+<circle class="ecg-dot-glow" cx="10" cy="30" fill="#ffd770" fill-opacity=".25" r="1.6"></circle>
+</g>
+<text fill="#c49a38" font-family="Inter,sans-serif" font-size="12" font-weight="900" letter-spacing="-1" text-anchor="middle" x="23" y="27">SK</text>
+</svg>
+</div>
+<div class="logo-txt">
+<span class="logo-name">Dr Shailesh Khatri</span>
+<span class="logo-role">Interventional Cardiologist · Gold Coast</span>
+</div>
+</a>
+<nav class="nav-links">
+<a class="nl" href="#about">About</a>
+<a class="nl" href="#services">Services</a>
+<a class="nl" href="#recognition">Recognition</a>
+<a class="nl" href="#reviews">Reviews</a>
+<a class="nl" href="#faq">FAQ</a>
+<a class="nl" href="#contact">Contact</a>
+<a class="nl nlbook" href="#contact">Book Appointment</a>
+</nav>
+<button aria-label="Open menu" class="hbg" id="hbg"><span></span><span></span><span></span></button>
+</div>
 </nav>
 <div class="mob-nav" id="mobNav">
-  <a href="#about">About</a>
-  <a href="#services">Services</a>
-  <a href="#recognition">Recognition</a>
-  <a href="#reviews">Reviews</a>
-  <a href="#faq">FAQ</a>
-  <a href="#contact">Contact</a>
-  <a href="#contact" class="mob-cta">Book Appointment</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#recognition">Recognition</a>
+<a href="#reviews">Reviews</a>
+<a href="#faq">FAQ</a>
+<a href="#contact">Contact</a>
+<a class="mob-cta" href="#contact">Book Appointment</a>
 </div>
-
 <!-- ═══ HERO ═══════════════════════════════════════════════════ -->
 <section class="hero" id="top">
-  <div class="hero-glow"></div>
-  <div class="hero-ecg">
-    <svg viewBox="0 0 1400 64" preserveAspectRatio="none">
-      <path class="ecg-path" stroke="rgba(196,154,56,.45)" stroke-width="1.8" fill="none" stroke-linecap="round"
-        d="M-50,32 L90,32 L108,32 L113,30 L118,8 L123,56 L128,22 L133,32
+<div class="hero-glow"></div>
+<div class="hero-ecg">
+<svg preserveaspectratio="none" viewbox="0 0 1400 64">
+<path class="ecg-path" d="M-50,32 L90,32 L108,32 L113,30 L118,8 L123,56 L128,22 L133,32
            L220,32 L238,32 L243,30 L248,6 L253,58 L258,20 L263,32
            L350,32 L368,32 L373,30 L378,8 L383,56 L388,22 L393,32
            L480,32 L498,32 L503,30 L508,6 L513,58 L518,20 L523,32
@@ -892,650 +105,442 @@ li{
            L870,32 L888,32 L893,30 L898,8 L903,56 L908,22 L913,32
            L1000,32 L1018,32 L1023,30 L1028,6 L1033,58 L1038,20 L1043,32
            L1130,32 L1148,32 L1153,30 L1158,8 L1163,56 L1168,22 L1173,32
-           L1260,32 L1278,32 L1283,30 L1288,6 L1293,58 L1298,20 L1303,32 L1450,32"/>
-    </svg>
-  </div>
-  <svg class="heart-bg" style="width:340px;right:-10px;bottom:60px;position:absolute" viewBox="0 0 200 180"><path d="M100 158C100 158 18 108 18 58C18 33 38 13 63 13C79 13 91 22 100 34C109 22 121 13 137 13C162 13 182 33 182 58C182 108 100 158 100 158Z" fill="#c49a38"/></svg>
-
-  <div class="hero-in">
-    <div>
-      <div class="hero-tag a up">
-        <div class="hero-tagline"></div>
-        <span class="hero-tagtext">Gold Coast · Est. 2000 · 24 / 7</span>
-      </div>
-      <h1 class="hero-title a up d1">Dr Shailesh Khatri</h1>
-      <p class="hero-cred a up d2">MBBS · FRACP · FCSANZ · SCAI · AMA · ACOR-Accredited TAVI Operator</p>
-      <p class="hero-desc a up d3">A highly experienced interventional cardiologist specialising in coronary angiography, angioplasty and stenting, and TAVI. Serving the Gold Coast community for over 25 years with a 24-hour cardiology service at both Pindara Private Hospital and John Flynn Private Hospital.</p>
-      <div class="hero-btns a up d4">
-        <a href="#contact" class="btn btn-gold">Book a Consultation</a>
-        <a href="#about" class="btn btn-ghost">About Dr Khatri</a>
-      </div>
-      <div class="hero-strip a up d5">
-        <div class="hsi"><span class="hsi-n">15,000+</span><span class="hsi-l">Procedures</span></div>
-        <div class="hsi"><span class="hsi-n">1,500+</span><span class="hsi-l">Primary PCI</span></div>
-        <div class="hsi"><span class="hsi-n">400+</span><span class="hsi-l">TAVI</span></div>
-        <div class="hsi"><span class="hsi-n">24/7</span><span class="hsi-l">Emergency</span></div>
-      </div>
-    </div>
-    <div class="hero-photo">
-      <div class="hero-frame a up d2">
-        <div class="hero-img-border"></div>
-        <img src="photo3.jpeg" alt="Dr Shailesh Khatri" class="hero-img" loading="eager">
+           L1260,32 L1278,32 L1283,30 L1288,6 L1293,58 L1298,20 L1303,32 L1450,32" fill="none" stroke="rgba(196,154,56,.45)" stroke-linecap="round" stroke-width="1.8"></path>
+</svg>
+</div>
+<svg class="heart-bg" style="width:340px;right:-10px;bottom:60px;position:absolute" viewbox="0 0 200 180"><path d="M100 158C100 158 18 108 18 58C18 33 38 13 63 13C79 13 91 22 100 34C109 22 121 13 137 13C162 13 182 33 182 58C182 108 100 158 100 158Z" fill="#c49a38"></path></svg>
+<div class="hero-in">
+<div>
+<div class="hero-tag a up">
+<div class="hero-tagline"></div>
+<span class="hero-tagtext">Gold Coast · Est. 2000 · 24 / 7</span>
+</div>
+<h1 class="hero-title a up d1">Dr Shailesh Khatri</h1>
+<p class="hero-cred a up d2">MBBS · FRACP · FCSANZ · SCAI · AMA · ACOR-Accredited TAVI Operator</p>
+<p class="hero-desc a up d3">A highly experienced interventional cardiologist specialising in coronary angiography, angioplasty and stenting, and TAVI. Serving the Gold Coast community for over 25 years with a 24-hour cardiology service at both Pindara Private Hospital and John Flynn Private Hospital.</p>
+<div class="hero-btns a up d4">
+<a class="btn btn-gold" href="#contact">Book a Consultation</a>
+<a class="btn btn-ghost" href="#about">About Dr Khatri</a>
+</div>
+<div class="hero-strip a up d5">
+<div class="hsi"><span class="hsi-n">15,000+</span><span class="hsi-l">Procedures</span></div>
+<div class="hsi"><span class="hsi-n">1,500+</span><span class="hsi-l">Primary PCI</span></div>
+<div class="hsi"><span class="hsi-n">400+</span><span class="hsi-l">TAVI</span></div>
+<div class="hsi"><span class="hsi-n">24/7</span><span class="hsi-l">Emergency</span></div>
+</div>
+</div>
+<div class="hero-photo">
+<div class="hero-frame a up d2">
+<div class="hero-img-border"></div>
+<img alt="Dr Shailesh Khatri" class="hero-img" loading="eager" src="/images/photo3.jpeg"/>
 <!----      <div class="hero-award">Best Cardiologist — Gold Coast 2024 &amp; 2025</div>     -->
-          <div class="hero-award" role="img" aria-label="Best Cardiologist Gold Coast 2024 and 2025">
-            <div class="hero-award-stars" aria-hidden="true">
-              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-            </div>
-            <div class="hero-award-tooltip" aria-hidden="true">
-              <strong>Recognised Excellence</strong>
+<div aria-label="Best Cardiologist Gold Coast 2024 and 2025" class="hero-award" role="img">
+<div aria-hidden="true" class="hero-award-stars">
+<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+</div>
+<div aria-hidden="true" class="hero-award-tooltip">
+<strong>Recognised Excellence</strong>
               Voted Best Cardiologist on the Gold Coast — two years running
             </div>
-            <div class="hero-award-inner">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <circle cx="12" cy="15" r="5"/>
-                <path d="M12 10V3"/>
-                <path d="M8.5 6.5L5 3h4l3 4-3 3z"/>
-                <path d="M15.5 6.5L19 3h-4l-3 4 3 3z"/>
-                <path d="M10 15h4M12 13v4"/>
-              </svg>
-              <div class="hero-award-text">
-                <span class="hero-award-top"><Strong>Best Cardiologist - Gold Coast</Strong></span>
-              </div>
-              <div class="hero-award-years">
-                <span class="hero-award-pill">2024</span>
-                <span class="hero-award-pill">2025</span>
-              </div>
-            </div>
-          </div>
-      </div>
-    </div>
-  </div>
-  <div class="h-wave"><svg viewBox="0 0 1440 70" preserveAspectRatio="none"><path d="M0,35 C480,70 960,0 1440,35 L1440,70 L0,70 Z" fill="var(--bg)"/></svg></div>
+<div class="hero-award-inner">
+<svg aria-hidden="true" fill="none" height="18" stroke="rgba(255,255,255,0.9)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="18">
+<circle cx="12" cy="15" r="5"></circle>
+<path d="M12 10V3"></path>
+<path d="M8.5 6.5L5 3h4l3 4-3 3z"></path>
+<path d="M15.5 6.5L19 3h-4l-3 4 3 3z"></path>
+<path d="M10 15h4M12 13v4"></path>
+</svg>
+<div class="hero-award-text">
+<span class="hero-award-top"><strong>Best Cardiologist - Gold Coast</strong></span>
+</div>
+<div class="hero-award-years">
+<span class="hero-award-pill">2024</span>
+<span class="hero-award-pill">2025</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="h-wave"><svg preserveaspectratio="none" viewbox="0 0 1440 70"><path d="M0,35 C480,70 960,0 1440,35 L1440,70 L0,70 Z" fill="var(--bg)"></path></svg></div>
 </section>
-
 <!-- ═══ CAREER TIMELINE ══════════════════════════════════════════ -->
 <div class="tl-band">
-  <div class="wrap">
-    <div class="tl-title">Career Milestones</div>
-    <div class="tl-track">
-      <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">1983</div><div class="tl-txt">Arrived in Australia from Fiji</div></div>
-      <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">1990</div><div class="tl-txt">MBBS — University of Queensland</div></div>
-      <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">1990s</div><div class="tl-txt">Cardiology training at Royal Brisbane, Prince Charles &amp; John Hunter Hospitals</div></div>
-      <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">2001</div><div class="tl-txt">Fellowship — St. Paul's Hospital, Vancouver under Prof. John Webb. 1,200+ procedures</div></div>
-      <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">2001+</div><div class="tl-txt">Established Gold Coast practice. Founded Tweed Hospital Primary PCI service</div></div>
-      <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">Today</div><div class="tl-txt">15,000+ procedures · Adjunct Professor, Bond University · Best Cardiologist 2024 &amp; 2025</div></div>
-    </div>
-  </div>
+<div class="wrap">
+<div class="tl-title">Career Milestones</div>
+<div class="tl-track">
+<div class="tl-item"><div class="tl-dot"></div><div class="tl-year">1983</div><div class="tl-txt">Arrived in Australia from Fiji</div></div>
+<div class="tl-item"><div class="tl-dot"></div><div class="tl-year">1990</div><div class="tl-txt">MBBS — University of Queensland</div></div>
+<div class="tl-item"><div class="tl-dot"></div><div class="tl-year">1990s</div><div class="tl-txt">Cardiology training at Royal Brisbane, Prince Charles &amp; John Hunter Hospitals</div></div>
+<div class="tl-item"><div class="tl-dot"></div><div class="tl-year">2001</div><div class="tl-txt">Fellowship — St. Paul's Hospital, Vancouver under Prof. John Webb. 1,200+ procedures</div></div>
+<div class="tl-item"><div class="tl-dot"></div><div class="tl-year">2001+</div><div class="tl-txt">Established Gold Coast practice. Founded Tweed Hospital Primary PCI service</div></div>
+<div class="tl-item"><div class="tl-dot"></div><div class="tl-year">Today</div><div class="tl-txt">15,000+ procedures · Adjunct Professor, Bond University · Best Cardiologist 2024 &amp; 2025</div></div>
 </div>
-
+</div>
+</div>
 <!-- ECG stripe -->
 <div class="ecg-stripe" style="background:var(--bg)">
-  <svg viewBox="0 0 1440 32" preserveAspectRatio="none">
-    <path d="M0,16 L180,16 L196,16 L200,14 L204,4 L208,28 L212,10 L216,16 L380,16 L396,16 L400,14 L404,4 L408,28 L412,10 L416,16 L580,16 L596,16 L600,14 L604,4 L608,28 L612,10 L616,16 L780,16 L796,16 L800,14 L804,4 L808,28 L812,10 L816,16 L980,16 L996,16 L1000,14 L1004,4 L1008,28 L1012,10 L1016,16 L1180,16 L1196,16 L1200,14 L1204,4 L1208,28 L1212,10 L1216,16 L1440,16"
-      stroke="var(--gold)" stroke-width="1.3" fill="none" stroke-linecap="round" opacity=".22"/>
-  </svg>
+<svg preserveaspectratio="none" viewbox="0 0 1440 32">
+<path d="M0,16 L180,16 L196,16 L200,14 L204,4 L208,28 L212,10 L216,16 L380,16 L396,16 L400,14 L404,4 L408,28 L412,10 L416,16 L580,16 L596,16 L600,14 L604,4 L608,28 L612,10 L616,16 L780,16 L796,16 L800,14 L804,4 L808,28 L812,10 L816,16 L980,16 L996,16 L1000,14 L1004,4 L1008,28 L1012,10 L1016,16 L1180,16 L1196,16 L1200,14 L1204,4 L1208,28 L1212,10 L1216,16 L1440,16" fill="none" opacity=".22" stroke="var(--gold)" stroke-linecap="round" stroke-width="1.3"></path>
+</svg>
 </div>
-
 <!-- ═══ ABOUT ══════════════════════════════════════════════════ -->
 <section class="sec bg-white" id="about">
-  <div class="wrap">
-    <div class="about-grid">
-      <div class="ap-col a lft">
-        <div class="ap-main"><img src="photo4.jpeg" alt="Dr Shailesh Khatri" loading="lazy"></div>
-        <div class="ap-stats">
-          <div class="as-i"><span class="as-n">15,000+</span><span class="as-l">Procedures</span></div>
-          <div class="as-i"><span class="as-n">400+</span><span class="as-l">TAVI</span></div>
-          <div class="as-i"><span class="as-n">1,500+</span><span class="as-l">Primary PCI</span></div>
-          <div class="as-i"><span class="as-n">25 yrs</span><span class="as-l">Gold Coast</span></div>
-        </div>
-        <div style="margin-top:20px">
-          <p class="sec-lead">Originally from Fiji, Dr Khatri migrated to Australia in 1983 where he completed his secondary education in Brisbane before obtaining his medical degree from the University of Queensland. He became a registered medical practitioner in 1990 and went on to complete his cardiology training across The Royal Brisbane Hospital and Prince Charles Hospital in Brisbane, and John Hunter Hospital in Newcastle.</p>
-          <p class="sec-lead">In 2001, Dr Khatri undertook a Fellowship in Interventional Cardiology at St Paul's Hospital in Vancouver under the mentorship of Professor John Webb, an internationally renowned interventional cardiologist. Following his return to Australia later that year, he settled on the Gold Coast and has since become an integral member of the region's interventional cardiology services, performing over 15,000 procedures. Dr Khatri is also accredited by ACOR to perform TAVI procedures.</p>
-        </div>
-      </div>
-      <div class="at-col a rgt">
-        <span class="kicker">About</span>
-        <h2 class="sec-title">Serving the Gold Coast <em>for Over 25 Years</em></h2>
-        <p class="sec-lead">Dr Shailesh Khatri is a highly experienced interventional cardiologist who has been serving the Gold Coast community for more than 25 years. He specialises in coronary angiography, angioplasty and stenting, and transcatheter aortic valve implantation (TAVI).</p>
-        <p class="sec-lead">Dr Khatri is dedicated to delivering high-quality, patient-centred care, and has provided a 24-hour cardiology service to the Gold Coast for over two decades. Recognising that cardiac emergencies can occur at any time, he prioritises care and timely access to treatment at both Pindara Private Hospital and John Flynn Private Hospital, where he holds admitting rights.</p>
-        <p class="sec-lead">Dr Khatri is passionate about improving both cardiovascular health and overall quality of life for his patients. His approach to patient care is holistic and comprehensive, encompassing appropriate investigations, evidence-based treatment, procedural intervention when required, cardiac rehabilitation, and lifestyle modification. He places strong emphasis on involving patients in decision-making and ensuring they feel supported throughout their cardiac care journey.</p>
-        <p class="sec-lead">Patients seeing Dr Khatri are initially assessed by his experienced cardiac nursing team, who play an important role in patient support and are always available to assist with heart-related concerns. They remain involved throughout each patient's hospital stay, providing a consistent and highly personalised level of care.</p>
-        <div class="creds-grid" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;width:100%">
-          <div class="cred"><span class="cred-a">FRACP</span><span class="cred-f">Fellow, Royal Australasian College of Physicians</span></div>
-          <div class="cred"><span class="cred-a">FCSANZ</span><span class="cred-f">Fellow, Cardiac Society of Australia &amp; New Zealand</span></div>
-          <div class="cred"><span class="cred-a">SCAI</span><span class="cred-f">Member, Society for Cardiovascular Angiography &amp; Interventions</span></div>
-          <div class="cred"><span class="cred-a">AMA</span><span class="cred-f">Member, Australian Medical Association</span></div>
-          <div class="cred" style="grid-column:1/-1"><span class="cred-a">ACOR</span><span class="cred-f">ACOR-Accredited TAVI Operator</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="wrap">
+<div class="about-grid">
+<div class="ap-col a lft">
+<div class="ap-main"><img alt="Dr Shailesh Khatri" loading="lazy" src="/images/photo4.jpeg"/></div>
+<div class="ap-stats">
+<div class="as-i"><span class="as-n">15,000+</span><span class="as-l">Procedures</span></div>
+<div class="as-i"><span class="as-n">400+</span><span class="as-l">TAVI</span></div>
+<div class="as-i"><span class="as-n">1,500+</span><span class="as-l">Primary PCI</span></div>
+<div class="as-i"><span class="as-n">25 yrs</span><span class="as-l">Gold Coast</span></div>
+</div>
+<div style="margin-top:20px">
+<p class="sec-lead">Originally from Fiji, Dr Khatri migrated to Australia in 1983 where he completed his secondary education in Brisbane before obtaining his medical degree from the University of Queensland. He became a registered medical practitioner in 1990 and went on to complete his cardiology training across The Royal Brisbane Hospital and Prince Charles Hospital in Brisbane, and John Hunter Hospital in Newcastle.</p>
+<p class="sec-lead">In 2001, Dr Khatri undertook a Fellowship in Interventional Cardiology at St Paul's Hospital in Vancouver under the mentorship of Professor John Webb, an internationally renowned interventional cardiologist. Following his return to Australia later that year, he settled on the Gold Coast and has since become an integral member of the region's interventional cardiology services, performing over 15,000 procedures. Dr Khatri is also accredited by ACOR to perform TAVI procedures.</p>
+</div>
+</div>
+<div class="at-col a rgt">
+<span class="kicker">About</span>
+<h2 class="sec-title">Serving the Gold Coast <em>for Over 25 Years</em></h2>
+<p class="sec-lead">Dr Shailesh Khatri is a highly experienced interventional cardiologist who has been serving the Gold Coast community for more than 25 years. He specialises in coronary angiography, angioplasty and stenting, and transcatheter aortic valve implantation (TAVI).</p>
+<p class="sec-lead">Dr Khatri is dedicated to delivering high-quality, patient-centred care, and has provided a 24-hour cardiology service to the Gold Coast for over two decades. Recognising that cardiac emergencies can occur at any time, he prioritises care and timely access to treatment at both Pindara Private Hospital and John Flynn Private Hospital, where he holds admitting rights.</p>
+<p class="sec-lead">Dr Khatri is passionate about improving both cardiovascular health and overall quality of life for his patients. His approach to patient care is holistic and comprehensive, encompassing appropriate investigations, evidence-based treatment, procedural intervention when required, cardiac rehabilitation, and lifestyle modification. He places strong emphasis on involving patients in decision-making and ensuring they feel supported throughout their cardiac care journey.</p>
+<p class="sec-lead">Patients seeing Dr Khatri are initially assessed by his experienced cardiac nursing team, who play an important role in patient support and are always available to assist with heart-related concerns. They remain involved throughout each patient's hospital stay, providing a consistent and highly personalised level of care.</p>
+<div class="creds-grid" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;width:100%">
+<div class="cred"><span class="cred-a">FRACP</span><span class="cred-f">Fellow, Royal Australasian College of Physicians</span></div>
+<div class="cred"><span class="cred-a">FCSANZ</span><span class="cred-f">Fellow, Cardiac Society of Australia &amp; New Zealand</span></div>
+<div class="cred"><span class="cred-a">SCAI</span><span class="cred-f">Member, Society for Cardiovascular Angiography &amp; Interventions</span></div>
+<div class="cred"><span class="cred-a">AMA</span><span class="cred-f">Member, Australian Medical Association</span></div>
+<div class="cred" style="grid-column:1/-1"><span class="cred-a">ACOR</span><span class="cred-f">ACOR-Accredited TAVI Operator</span></div>
+</div>
+</div>
+</div>
+</div>
 </section>
-
 <!-- ═══ CORE STRENGTHS ════════════════════════════════════════ -->
 <section class="sec-sm bg2">
-  <div class="wrap">
-    <div style="text-align:center;margin-bottom:6px"><span class="kicker center a up">Core Strengths</span></div>
-    <h2 class="sec-title a up d1" style="text-align:center;margin-bottom:0">What Sets Dr Khatri <em>Apart</em></h2>
-    <div class="strength-grid">
-      <div class="str-card a up d1"><svg class="card-icon" aria-hidden="true"><use href="#ic-globe"/></svg><svg class="card-wm" aria-hidden="true"><use href="#ic-globe"/></svg><div class="str-h">International Training Pedigree</div><p class="str-p">In 2001, Dr Khatri undertook a Fellowship at St Paul's Hospital, Vancouver under Professor John Webb, an internationally renowned interventional cardiologist — completing over 1,200 procedures. This world-class training underpins every procedure he performs today.</p></div>
-      <div class="str-card a up d2"><svg class="card-icon" aria-hidden="true"><use href="#ic-chart"/></svg><svg class="card-wm" aria-hidden="true"><use href="#ic-chart"/></svg><div class="str-h">High-Volume, High-Expertise Practice</div><p class="str-p">Over 15,000 procedures performed since settling on the Gold Coast in 2001 — including 400+ TAVI and 1,500+ emergency Primary PCI procedures. Experience at this volume translates directly into superior patient safety and outcomes.</p></div>
-      <div class="str-card a up d3"><svg class="card-icon" aria-hidden="true"><use href="#ic-clock"/></svg><svg class="card-wm" aria-hidden="true"><use href="#ic-clock"/></svg><div class="str-h">24-Hour Cardiology Service</div><p class="str-p">Dr Khatri has provided a 24-hour cardiology service to the Gold Coast for over two decades. Cardiac emergencies receive priority care and timely access to treatment at both Pindara Private Hospital and John Flynn Private Hospital.</p></div>
-      <div class="str-card a up d1"><svg class="card-icon" aria-hidden="true"><use href="#ic-cap"/></svg><svg class="card-wm" aria-hidden="true"><use href="#ic-cap"/></svg><div class="str-h">Education &amp; Professional Development</div><p class="str-p">Actively involved in postgraduate education and clinical audit programs on the Gold Coast. Dr Khatri regularly participates in professional development and training programs both within Australia and internationally.</p></div>
-      <div class="str-card a up d2"><svg class="card-icon" aria-hidden="true"><use href="#ic-care"/></svg><svg class="card-wm" aria-hidden="true"><use href="#ic-care"/></svg><div class="str-h">Holistic, Patient-Centred Care</div><p class="str-p">Dr Khatri's approach encompasses appropriate investigations, evidence-based treatment, procedural intervention, cardiac rehabilitation, and lifestyle modification. He places strong emphasis on patient involvement in decision-making throughout their care journey.</p></div>
-      <div class="str-card a up d3"><svg class="card-icon" aria-hidden="true"><use href="#ic-shield"/></svg><svg class="card-wm" aria-hidden="true"><use href="#ic-shield"/></svg><div class="str-h">Dedicated Cardiac Nursing Team</div><p class="str-p">Patients are initially assessed by Dr Khatri's experienced cardiac nursing team, who are always available for heart-related concerns and remain involved throughout each patient's hospital stay — providing a consistent, highly personalised standard of care.</p></div>
-    </div>
-  </div>
+<div class="wrap">
+<div style="text-align:center;margin-bottom:6px"><span class="kicker center a up">Core Strengths</span></div>
+<h2 class="sec-title a up d1" style="text-align:center;margin-bottom:0">What Sets Dr Khatri <em>Apart</em></h2>
+<div class="strength-grid">
+<div class="str-card a up d1"><svg aria-hidden="true" class="card-icon"><use href="#ic-globe"></use></svg><svg aria-hidden="true" class="card-wm"><use href="#ic-globe"></use></svg><div class="str-h">International Training Pedigree</div><p class="str-p">In 2001, Dr Khatri undertook a Fellowship at St Paul's Hospital, Vancouver under Professor John Webb, an internationally renowned interventional cardiologist — completing over 1,200 procedures. This world-class training underpins every procedure he performs today.</p></div>
+<div class="str-card a up d2"><svg aria-hidden="true" class="card-icon"><use href="#ic-chart"></use></svg><svg aria-hidden="true" class="card-wm"><use href="#ic-chart"></use></svg><div class="str-h">High-Volume, High-Expertise Practice</div><p class="str-p">Over 15,000 procedures performed since settling on the Gold Coast in 2001 — including 400+ TAVI and 1,500+ emergency Primary PCI procedures. Experience at this volume translates directly into superior patient safety and outcomes.</p></div>
+<div class="str-card a up d3"><svg aria-hidden="true" class="card-icon"><use href="#ic-clock"></use></svg><svg aria-hidden="true" class="card-wm"><use href="#ic-clock"></use></svg><div class="str-h">24-Hour Cardiology Service</div><p class="str-p">Dr Khatri has provided a 24-hour cardiology service to the Gold Coast for over two decades. Cardiac emergencies receive priority care and timely access to treatment at both Pindara Private Hospital and John Flynn Private Hospital.</p></div>
+<div class="str-card a up d1"><svg aria-hidden="true" class="card-icon"><use href="#ic-cap"></use></svg><svg aria-hidden="true" class="card-wm"><use href="#ic-cap"></use></svg><div class="str-h">Education &amp; Professional Development</div><p class="str-p">Actively involved in postgraduate education and clinical audit programs on the Gold Coast. Dr Khatri regularly participates in professional development and training programs both within Australia and internationally.</p></div>
+<div class="str-card a up d2"><svg aria-hidden="true" class="card-icon"><use href="#ic-care"></use></svg><svg aria-hidden="true" class="card-wm"><use href="#ic-care"></use></svg><div class="str-h">Holistic, Patient-Centred Care</div><p class="str-p">Dr Khatri's approach encompasses appropriate investigations, evidence-based treatment, procedural intervention, cardiac rehabilitation, and lifestyle modification. He places strong emphasis on patient involvement in decision-making throughout their care journey.</p></div>
+<div class="str-card a up d3"><svg aria-hidden="true" class="card-icon"><use href="#ic-shield"></use></svg><svg aria-hidden="true" class="card-wm"><use href="#ic-shield"></use></svg><div class="str-h">Dedicated Cardiac Nursing Team</div><p class="str-p">Patients are initially assessed by Dr Khatri's experienced cardiac nursing team, who are always available for heart-related concerns and remain involved throughout each patient's hospital stay — providing a consistent, highly personalised standard of care.</p></div>
+</div>
+</div>
 </section>
-
 <!-- ═══ STATS ══════════════════════════════════════════════════ -->
 <div class="stats-band">
-  <div class="stats-ecg-bg">
-    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" style="width:100%;height:60px;display:block">
-      <path d="M0,30 L140,30 L156,30 L161,28 L166,6 L171,54 L176,18 L181,30 L300,30 L316,30 L321,28 L326,6 L331,54 L336,18 L341,30 L460,30 L476,30 L481,28 L486,6 L491,54 L496,18 L501,30 L620,30 L636,30 L641,28 L646,6 L651,54 L656,18 L661,30 L780,30 L796,30 L801,28 L806,6 L811,54 L816,18 L821,30 L940,30 L956,30 L961,28 L966,6 L971,54 L976,18 L981,30 L1100,30 L1260,30 L1440,30"
-        stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-    </svg>
-  </div>
-  <svg class="stats-heart" viewBox="0 0 200 180"><path d="M100 158C100 158 18 108 18 58C18 33 38 13 63 13C79 13 91 22 100 34C109 22 121 13 137 13C162 13 182 33 182 58C182 108 100 158 100 158Z"/></svg>
-  <div class="wrap" style="position:relative;z-index:2">
-    <div class="stats-top">
-      <div>
-        <span class="kicker light a lft">Track Record</span>
-        <h2 class="sec-title light a lft d1">A Career Measured in <em>Lives Saved</em></h2>
-      </div>
-      <p class="sec-lead light a rgt">Since settling on the Gold Coast in 2001 following his international fellowship, Dr Khatri has become an integral member of the region's interventional cardiology services — providing a 24-hour cardiology service for over two decades at both Pindara Private Hospital and John Flynn Private Hospital.</p>
-    </div>
-    <div class="stats-grid">
-      <div class="stat-c a up d1"><svg class="stat-icon" aria-hidden="true"><use href="#ic-hospital"/></svg><span class="stat-n" data-target="15000">0+</span><span class="stat-l">Total Cardiac Procedures Performed</span></div>
-      <div class="stat-c a up d2"><svg class="stat-icon" aria-hidden="true"><use href="#ic-pci"/></svg><span class="stat-n" data-target="1500">0+</span><span class="stat-l">Primary PCI — Emergency Heart Attacks</span></div>
-      <div class="stat-c a up d3"><svg class="stat-icon" aria-hidden="true"><use href="#ic-valve"/></svg><span class="stat-n" data-target="400">0+</span><span class="stat-l">TAVI Procedures Performed</span></div>
-      <div class="stat-c a up d4"><svg class="stat-icon" aria-hidden="true"><use href="#ic-star"/></svg><span class="stat-n" data-target="25">0</span><span class="stat-l">Years Serving the Gold Coast</span></div>
-    </div>
-  </div>
+<div class="stats-ecg-bg">
+<svg preserveaspectratio="none" style="width:100%;height:60px;display:block" viewbox="0 0 1440 60">
+<path d="M0,30 L140,30 L156,30 L161,28 L166,6 L171,54 L176,18 L181,30 L300,30 L316,30 L321,28 L326,6 L331,54 L336,18 L341,30 L460,30 L476,30 L481,28 L486,6 L491,54 L496,18 L501,30 L620,30 L636,30 L641,28 L646,6 L651,54 L656,18 L661,30 L780,30 L796,30 L801,28 L806,6 L811,54 L816,18 L821,30 L940,30 L956,30 L961,28 L966,6 L971,54 L976,18 L981,30 L1100,30 L1260,30 L1440,30" fill="none" stroke="white" stroke-linecap="round" stroke-width="1.5"></path>
+</svg>
 </div>
-
+<svg class="stats-heart" viewbox="0 0 200 180"><path d="M100 158C100 158 18 108 18 58C18 33 38 13 63 13C79 13 91 22 100 34C109 22 121 13 137 13C162 13 182 33 182 58C182 108 100 158 100 158Z"></path></svg>
+<div class="wrap" style="position:relative;z-index:2">
+<div class="stats-top">
+<div>
+<span class="kicker light a lft">Track Record</span>
+<h2 class="sec-title light a lft d1">A Career Measured in <em>Lives Saved</em></h2>
+</div>
+<p class="sec-lead light a rgt">Since settling on the Gold Coast in 2001 following his international fellowship, Dr Khatri has become an integral member of the region's interventional cardiology services — providing a 24-hour cardiology service for over two decades at both Pindara Private Hospital and John Flynn Private Hospital.</p>
+</div>
+<div class="stats-grid">
+<div class="stat-c a up d1"><svg aria-hidden="true" class="stat-icon"><use href="#ic-hospital"></use></svg><span class="stat-n" data-target="15000">0+</span><span class="stat-l">Total Cardiac Procedures Performed</span></div>
+<div class="stat-c a up d2"><svg aria-hidden="true" class="stat-icon"><use href="#ic-pci"></use></svg><span class="stat-n" data-target="1500">0+</span><span class="stat-l">Primary PCI — Emergency Heart Attacks</span></div>
+<div class="stat-c a up d3"><svg aria-hidden="true" class="stat-icon"><use href="#ic-valve"></use></svg><span class="stat-n" data-target="400">0+</span><span class="stat-l">TAVI Procedures Performed</span></div>
+<div class="stat-c a up d4"><svg aria-hidden="true" class="stat-icon"><use href="#ic-star"></use></svg><span class="stat-n" data-target="25">0</span><span class="stat-l">Years Serving the Gold Coast</span></div>
+</div>
+</div>
+</div>
 <!-- ECG stripe -->
 <div class="ecg-stripe" style="background:var(--bg2)">
-  <svg viewBox="0 0 1440 32" preserveAspectRatio="none">
-    <path d="M0,16 L180,16 L196,16 L200,14 L204,4 L208,28 L212,10 L216,16 L380,16 L400,16 L600,16 L800,16 L1000,16 L1200,16 L1440,16"
-      stroke="var(--gold)" stroke-width="1.3" fill="none" stroke-linecap="round" opacity=".2"/>
-  </svg>
+<svg preserveaspectratio="none" viewbox="0 0 1440 32">
+<path d="M0,16 L180,16 L196,16 L200,14 L204,4 L208,28 L212,10 L216,16 L380,16 L400,16 L600,16 L800,16 L1000,16 L1200,16 L1440,16" fill="none" opacity=".2" stroke="var(--gold)" stroke-linecap="round" stroke-width="1.3"></path>
+</svg>
 </div>
-
 <!-- ═══ SERVICES ═══════════════════════════════════════════════ -->
 <section class="sec bg2" id="services">
-  <div class="wrap">
-    <div class="svc-head-grid">
-      <div class="a lft">
-        <span class="kicker">Specialisations</span>
-        <h2 class="sec-title">Interventional Cardiology <em>Services</em></h2>
-      </div>
-      <p class="sec-lead wide a rgt">A comprehensive suite of catheter-based cardiac procedures — each underpinned by 25 years of Gold Coast experience, international training, and a 15,000+ procedure track record.</p>
-    </div>
-    <div class="svc-grid">
-      <div class="svc-c a up d1"><div class="svc-num">01</div><svg class="card-icon" aria-hidden="true"><use href="#ic-ecg"/></svg><svg class="card-wm" aria-hidden="true"><use href="#ic-ecg"/></svg><div class="svc-h">Coronary Angiography</div><p class="svc-p">Catheter-based imaging to precisely map the coronary arteries, identify blockages, and guide optimal treatment planning. The gold standard for coronary artery disease diagnosis.</p></div>
-      <div class="svc-c a up d2"><div class="svc-num">02</div><svg class="card-icon" aria-hidden="true"><use href="#ic-vessel"/></svg><svg class="card-wm" aria-hidden="true"><use href="#ic-vessel"/></svg><div class="svc-h">Angioplasty &amp; Stenting</div><p class="svc-p">Minimally invasive restoration of coronary blood flow using balloon angioplasty and drug-eluting stents — achieving open-artery results without open-heart surgery.</p></div>
-      <div class="svc-c a up d3"><div class="svc-num">03</div><svg class="card-icon" aria-hidden="true"><use href="#ic-pci"/></svg><svg class="card-wm" aria-hidden="true"><use href="#ic-pci"/></svg><div class="svc-h">Primary PCI — Heart Attack</div><p class="svc-p">Emergency angioplasty for acute myocardial infarction — available 24 hours a day, 7 days a week. Rapid restoration of blood flow to limit heart muscle damage. <span class="svc-badge">1,500+ · 24/7</span></p></div>
-      <div class="svc-c a up d4"><div class="svc-num">04</div><svg class="card-icon" aria-hidden="true"><use href="#ic-valve"/></svg><svg class="card-wm" aria-hidden="true"><use href="#ic-valve"/></svg><div class="svc-h">TAVI</div><p class="svc-p">Transcatheter Aortic Valve Implantation — catheter-based valve replacement avoiding open-heart surgery. One of the most experienced TAVI operators on the Gold Coast. <span class="svc-badge">400+ procedures</span></p></div>
-    </div>
-  </div>
+<div class="wrap">
+<div class="svc-head-grid">
+<div class="a lft">
+<span class="kicker">Specialisations</span>
+<h2 class="sec-title">Interventional Cardiology <em>Services</em></h2>
+</div>
+<p class="sec-lead wide a rgt">A comprehensive suite of catheter-based cardiac procedures — each underpinned by 25 years of Gold Coast experience, international training, and a 15,000+ procedure track record.</p>
+</div>
+<div class="svc-grid">
+<div class="svc-c a up d1"><div class="svc-num">01</div><svg aria-hidden="true" class="card-icon"><use href="#ic-ecg"></use></svg><svg aria-hidden="true" class="card-wm"><use href="#ic-ecg"></use></svg><div class="svc-h">Coronary Angiography</div><p class="svc-p">Catheter-based imaging to precisely map the coronary arteries, identify blockages, and guide optimal treatment planning. The gold standard for coronary artery disease diagnosis.</p></div>
+<div class="svc-c a up d2"><div class="svc-num">02</div><svg aria-hidden="true" class="card-icon"><use href="#ic-vessel"></use></svg><svg aria-hidden="true" class="card-wm"><use href="#ic-vessel"></use></svg><div class="svc-h">Angioplasty &amp; Stenting</div><p class="svc-p">Minimally invasive restoration of coronary blood flow using balloon angioplasty and drug-eluting stents — achieving open-artery results without open-heart surgery.</p></div>
+<div class="svc-c a up d3"><div class="svc-num">03</div><svg aria-hidden="true" class="card-icon"><use href="#ic-pci"></use></svg><svg aria-hidden="true" class="card-wm"><use href="#ic-pci"></use></svg><div class="svc-h">Primary PCI — Heart Attack</div><p class="svc-p">Emergency angioplasty for acute myocardial infarction — available 24 hours a day, 7 days a week. Rapid restoration of blood flow to limit heart muscle damage. <span class="svc-badge">1,500+ · 24/7</span></p></div>
+<div class="svc-c a up d4"><div class="svc-num">04</div><svg aria-hidden="true" class="card-icon"><use href="#ic-valve"></use></svg><svg aria-hidden="true" class="card-wm"><use href="#ic-valve"></use></svg><div class="svc-h">TAVI</div><p class="svc-p">Transcatheter Aortic Valve Implantation — catheter-based valve replacement avoiding open-heart surgery. One of the most experienced TAVI operators on the Gold Coast. <span class="svc-badge">400+ procedures</span></p></div>
+</div>
+</div>
 </section>
-
 <!-- ═══ JOURNEY / HOW TO SEE DR KHATRI ══════════════════════ -->
 <section class="sec bg-white">
-  <div class="wrap">
-    <div style="text-align:center;margin-bottom:6px"><span class="kicker center a up">Your Care Pathway</span></div>
-    <h2 class="sec-title a up d1" style="text-align:center;margin-bottom:0">How to See <em>Dr Khatri</em></h2>
-    <div class="journey-steps">
-      <div class="jstep a up d1">
-        <div class="jstep-n">1</div>
-        <div class="jstep-h">See Your GP First</div>
-        <p class="jstep-p">A referral from your General Practitioner is required for all consultations. Your GP will assess your symptoms, arrange initial tests, and write a referral to Dr Shailesh Khatri.</p>
-        <div class="jstep-arr">→</div>
-      </div>
-      <div class="jstep a up d2">
-        <div class="jstep-n">2</div>
-        <div class="jstep-h">Book Your Appointment</div>
-        <p class="jstep-p">Contact Dr Khatri with your GP referral on <a href="tel:+61755980322" style="color:var(--navy2);font-weight:700">(07) 5598 0322</a> to schedule a consultation at John Flynn Specialist Suites, Level 3, Suites 301–303, 42 Inland Drive, Tugun QLD 4224.</p>
-        <div class="jstep-arr">→</div>
-      </div>
-      <div class="jstep a up d3">
-        <div class="jstep-n">3</div>
-        <div class="jstep-h">Your Consultation &amp; Ongoing Care</div>
-        <p class="jstep-p">You will initially be assessed by Dr Khatri's experienced cardiac nursing team. Dr Khatri will then review your history, explain your diagnosis, and plan your care — investigations, medication, procedural intervention, cardiac rehabilitation, or lifestyle modification. His nursing team remains involved throughout your hospital stay, providing personalised, ongoing support.</p>
-      </div>
-    </div>
-    <div class="a up d4" style="margin-top:18px;background:rgba(var(--ar),.06);border:1px solid rgba(var(--ar),.18);border-radius:7px;padding:14px 18px;display:flex;align-items:flex-start;gap:12px;max-width:680px;margin-left:auto;margin-right:auto">
-      <svg style="width:22px;height:22px;color:var(--gold);flex-shrink:0;margin-top:1px" aria-hidden="true"><use href="#ic-emergency"/></svg>
-      <p style="font-size:.84rem;color:var(--text2);line-height:1.6"><strong style="color:var(--navy)">Cardiac Emergency?</strong> Dr Khatri provides a genuine 24/7 emergency cardiac service. In a life-threatening emergency, call <strong style="color:var(--navy)">000</strong> immediately.</p>
-    </div>
-  </div>
+<div class="wrap">
+<div style="text-align:center;margin-bottom:6px"><span class="kicker center a up">Your Care Pathway</span></div>
+<h2 class="sec-title a up d1" style="text-align:center;margin-bottom:0">How to See <em>Dr Khatri</em></h2>
+<div class="journey-steps">
+<div class="jstep a up d1">
+<div class="jstep-n">1</div>
+<div class="jstep-h">See Your GP First</div>
+<p class="jstep-p">A referral from your General Practitioner is required for all consultations. Your GP will assess your symptoms, arrange initial tests, and write a referral to Dr Shailesh Khatri.</p>
+<div class="jstep-arr">→</div>
+</div>
+<div class="jstep a up d2">
+<div class="jstep-n">2</div>
+<div class="jstep-h">Book Your Appointment</div>
+<p class="jstep-p">Contact Dr Khatri with your GP referral on <a href="tel:+61755980322" style="color:var(--navy2);font-weight:700">(07) 5598 0322</a> to schedule a consultation at John Flynn Specialist Suites, Level 3, Suites 301–303, 42 Inland Drive, Tugun QLD 4224.</p>
+<div class="jstep-arr">→</div>
+</div>
+<div class="jstep a up d3">
+<div class="jstep-n">3</div>
+<div class="jstep-h">Your Consultation &amp; Ongoing Care</div>
+<p class="jstep-p">You will initially be assessed by Dr Khatri's experienced cardiac nursing team. Dr Khatri will then review your history, explain your diagnosis, and plan your care — investigations, medication, procedural intervention, cardiac rehabilitation, or lifestyle modification. His nursing team remains involved throughout your hospital stay, providing personalised, ongoing support.</p>
+</div>
+</div>
+<div class="a up d4" style="margin-top:18px;background:rgba(var(--ar),.06);border:1px solid rgba(var(--ar),.18);border-radius:7px;padding:14px 18px;display:flex;align-items:flex-start;gap:12px;max-width:680px;margin-left:auto;margin-right:auto">
+<svg aria-hidden="true" style="width:22px;height:22px;color:var(--gold);flex-shrink:0;margin-top:1px"><use href="#ic-emergency"></use></svg>
+<p style="font-size:.84rem;color:var(--text2);line-height:1.6"><strong style="color:var(--navy)">Cardiac Emergency?</strong> Dr Khatri provides a genuine 24/7 emergency cardiac service. In a life-threatening emergency, call <strong style="color:var(--navy)">000</strong> immediately.</p>
+</div>
+</div>
 </section>
-
 <!-- ═══ RECOGNITION ════════════════════════════════════════════ -->
 <section class="sec bg2" id="recognition">
-  <div class="wrap">
-    <div class="rec-grid">
-      <div class="rec-stack a lft">
-        <span class="kicker">Recognition</span>
-        <div class="rec-c"><svg class="rec-icon" aria-hidden="true"><use href="#ic-trophy"/></svg><div><div class="rc-h">Best Cardiologist — Gold Coast</div><p class="rc-p">Recognised as one of Gold Coast's finest cardiologists, reflecting 25 years of consistently excellent clinical outcomes, patient care and medical leadership.</p><span class="rc-tag">2024</span></div></div>
-        <div class="rec-c"><svg class="rec-icon" aria-hidden="true"><use href="#ic-trophy"/></svg><div><div class="rc-h">Best Cardiologist — Gold Coast</div><p class="rc-p">A second consecutive award confirming Dr Khatri's standing as one of the region's most accomplished and trusted interventional cardiologists.</p><span class="rc-tag">2025</span></div></div>
-        <div class="rec-c"><svg class="rec-icon" aria-hidden="true"><use href="#ic-cap"/></svg><div><div class="rc-h">Adjunct Professor — Bond University</div><p class="rc-p">Appointed to contribute to post-graduate medical education on the Gold Coast, mentoring and training the next generation of cardiologists.</p></div></div>
-        <div class="rec-c"><svg class="rec-icon" aria-hidden="true"><use href="#ic-shield"/></svg><div><div class="rc-h">Pioneer — Tweed Hospital Primary PCI</div><p class="rc-p">Established the emergency cardiac service at Tweed Hospital over 20 years ago, extending life-saving care to uninsured patients from the NSW Northern Rivers region.</p></div></div>
-        <div class="fellowship"><div class="fl-pre">International Fellowship · Vancouver, Canada · 2001</div><div class="fl-h">St. Paul's Hospital — Under Professor John Webb</div><p class="fl-p">Trained under one of the world's most celebrated interventional cardiologists, completing over 1,200 procedures. This international pedigree is the foundation of a world-class Gold Coast practice.</p></div>
-      </div>
-      <div class="rec-info a rgt">
-        <div class="rec-info-text">
-          <h2 class="sec-title">Recognised by Peers &amp; <em>The Community</em></h2>
-          <p class="sec-lead wide" style="margin-bottom:13px">Combining extensive clinical expertise with a compassionate and personalised approach to care, Dr Khatri remains committed to supporting the heart health and wellbeing of patients across the Gold Coast community.</p>
-          <p class="sec-lead wide" style="margin-bottom:13px">He holds admitting rights at both <strong>John Flynn Private Hospital</strong> (Tugun) and <strong>Pindara Private Hospital</strong> (Benowa) — ensuring patients across the Gold Coast have timely access to expert cardiac care at the hospital most convenient to them, at any time of day or night.</p>
-          <p class="sec-lead wide">Dr Khatri's 24-hour cardiology service — including over 1,500 emergency Primary PCI procedures for patients experiencing acute heart attacks — reflects over two decades of unwavering commitment to the Gold Coast community.</p>
-        </div>
-        <div class="rec-photo">
-          <img src="photo1.jpeg" alt="Dr Khatri with medical student" loading="lazy">
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="wrap">
+<div class="rec-grid">
+<div class="rec-stack a lft">
+<span class="kicker">Recognition</span>
+<div class="rec-c"><svg aria-hidden="true" class="rec-icon"><use href="#ic-trophy"></use></svg><div><div class="rc-h">Best Cardiologist — Gold Coast</div><p class="rc-p">Recognised as one of Gold Coast's finest cardiologists, reflecting 25 years of consistently excellent clinical outcomes, patient care and medical leadership.</p><span class="rc-tag">2024</span></div></div>
+<div class="rec-c"><svg aria-hidden="true" class="rec-icon"><use href="#ic-trophy"></use></svg><div><div class="rc-h">Best Cardiologist — Gold Coast</div><p class="rc-p">A second consecutive award confirming Dr Khatri's standing as one of the region's most accomplished and trusted interventional cardiologists.</p><span class="rc-tag">2025</span></div></div>
+<div class="rec-c"><svg aria-hidden="true" class="rec-icon"><use href="#ic-cap"></use></svg><div><div class="rc-h">Adjunct Professor — Bond University</div><p class="rc-p">Appointed to contribute to post-graduate medical education on the Gold Coast, mentoring and training the next generation of cardiologists.</p></div></div>
+<div class="rec-c"><svg aria-hidden="true" class="rec-icon"><use href="#ic-shield"></use></svg><div><div class="rc-h">Pioneer — Tweed Hospital Primary PCI</div><p class="rc-p">Established the emergency cardiac service at Tweed Hospital over 20 years ago, extending life-saving care to uninsured patients from the NSW Northern Rivers region.</p></div></div>
+<div class="fellowship"><div class="fl-pre">International Fellowship · Vancouver, Canada · 2001</div><div class="fl-h">St. Paul's Hospital — Under Professor John Webb</div><p class="fl-p">Trained under one of the world's most celebrated interventional cardiologists, completing over 1,200 procedures. This international pedigree is the foundation of a world-class Gold Coast practice.</p></div>
+</div>
+<div class="rec-info a rgt">
+<div class="rec-info-text">
+<h2 class="sec-title">Recognised by Peers &amp; <em>The Community</em></h2>
+<p class="sec-lead wide" style="margin-bottom:13px">Combining extensive clinical expertise with a compassionate and personalised approach to care, Dr Khatri remains committed to supporting the heart health and wellbeing of patients across the Gold Coast community.</p>
+<p class="sec-lead wide" style="margin-bottom:13px">He holds admitting rights at both <strong>John Flynn Private Hospital</strong> (Tugun) and <strong>Pindara Private Hospital</strong> (Benowa) — ensuring patients across the Gold Coast have timely access to expert cardiac care at the hospital most convenient to them, at any time of day or night.</p>
+<p class="sec-lead wide">Dr Khatri's 24-hour cardiology service — including over 1,500 emergency Primary PCI procedures for patients experiencing acute heart attacks — reflects over two decades of unwavering commitment to the Gold Coast community.</p>
+</div>
+<div class="rec-photo">
+<img alt="Dr Khatri with medical student" loading="lazy" src="/images/photo1.jpeg"/>
+</div>
+</div>
+</div>
+</div>
 </section>
-
 <!-- ═══ PIONEER STORY ══════════════════════════════════════════ -->
 <section class="sec bg-white" id="pioneer">
-  <div class="wrap">
-    <div class="pio-grid">
-      <div class="pio-text a lft">
-        <span class="kicker">A Pioneer's Legacy</span>
-        <h2 class="sec-title">The Service That Changed <em>Northern Rivers</em> Cardiac Care</h2>
-        <p class="sec-lead">Over 20 years ago, Dr Khatri identified a critical gap: patients experiencing heart attacks in the <strong>Northern Rivers region of NSW</strong> — many uninsured — had no access to emergency angioplasty close to home.</p>
-        <p class="sec-lead" style="margin-top:12px">Without mandate or financial incentive, he established the <strong>Primary PCI service at Tweed Hospital</strong> entirely for uninsured patients from across the NSW border. That service operates to this day, saving lives that would otherwise be lost.</p>
-        <p class="sec-lead" style="margin-top:12px">This is the measure of Dr Khatri's commitment — not just to his private patients, but to anyone in the community whose heart needs urgent care, regardless of circumstance.</p>
-        <div class="pio-pull">
-          <span class="pio-mark">"</span>
-          <p class="pio-q">Access to life-saving cardiac care should not depend on which side of a border you live on, or whether you hold private health insurance.</p>
-        </div>
-      </div>
-      <div class="pio-vis a rgt">
-        <img src="photo2.jpeg" alt="Dr Khatri in catheterisation laboratory" class="pio-img" loading="lazy">
-        <div class="pio-badge"><span class="pb-n">20+</span><span class="pb-l">Years of Service<br>Tweed Hospital</span></div>
-      </div>
-    </div>
-  </div>
+<div class="wrap">
+<div class="pio-grid">
+<div class="pio-text a lft">
+<span class="kicker">A Pioneer's Legacy</span>
+<h2 class="sec-title">The Service That Changed <em>Northern Rivers</em> Cardiac Care</h2>
+<p class="sec-lead">Over 20 years ago, Dr Khatri identified a critical gap: patients experiencing heart attacks in the <strong>Northern Rivers region of NSW</strong> — many uninsured — had no access to emergency angioplasty close to home.</p>
+<p class="sec-lead" style="margin-top:12px">Without mandate or financial incentive, he established the <strong>Primary PCI service at Tweed Hospital</strong> entirely for uninsured patients from across the NSW border. That service operates to this day, saving lives that would otherwise be lost.</p>
+<p class="sec-lead" style="margin-top:12px">This is the measure of Dr Khatri's commitment — not just to his private patients, but to anyone in the community whose heart needs urgent care, regardless of circumstance.</p>
+<div class="pio-pull">
+<span class="pio-mark">"</span>
+<p class="pio-q">Access to life-saving cardiac care should not depend on which side of a border you live on, or whether you hold private health insurance.</p>
+</div>
+</div>
+<div class="pio-vis a rgt">
+<img alt="Dr Khatri in catheterisation laboratory" class="pio-img" loading="lazy" src="/images/photo2.jpeg"/>
+<div class="pio-badge"><span class="pb-n">20+</span><span class="pb-l">Years of Service<br/>Tweed Hospital</span></div>
+</div>
+</div>
+</div>
 </section>
-
 <!-- ═══ REVIEWS — AHPRA COMPLIANT ════════════════════════════ -->
 <section class="sec bg2" id="reviews">
-  <div class="wrap">
-    <div style="text-align:center;margin-bottom:6px"><span class="kicker center a up">Patient Reviews</span></div>
-    <h2 class="sec-title a up d1" style="text-align:center;margin-bottom:6px">Read What Patients <em>Are Saying</em></h2>
-    <p class="sec-lead a up d2" style="text-align:center;margin:0 auto 28px">Dr Khatri is reviewed on independent third-party platforms. In line with AHPRA guidelines, we link to these platforms rather than displaying testimonials directly.</p>
-    <div class="reviews-notice a up d3">
-      <svg class="ahpra-icon" aria-hidden="true"><use href="#ic-shield"/></svg>
-      <p class="rn-p"><strong>AHPRA Compliance:</strong> In accordance with Australian Health Practitioner Regulation Agency advertising guidelines, patient testimonials are not reproduced on this website. Patient reviews are independently hosted on the third-party platforms below — follow the links to read unmoderated patient feedback directly.</p>
-    </div>
-    <div class="rp-grid">
-      <!-- PRIMARY: RateMDs -->
-      <a href="https://www.ratemds.com/doctor-ratings/114846/Dr-Shailesh-Khatri-Gold+Coast-QLD.html/" target="_blank" rel="noopener" class="rp-card primary a up d1">
-        <svg class="rp-ico" style="color:var(--gold)" aria-hidden="true"><use href="#ic-star"/></svg>
-        <div class="rp-name">RateMDs</div>
-        <div class="rp-tagline">Australia's leading independent doctor review platform</div>
-        <span class="rp-stars">★★★★★</span>
-        <span class="rp-score">4.7 / 5 — Verified Patient Reviews</span>
-        <span class="rp-count">Read independent, unmoderated patient reviews of Dr Khatri on RateMDs — Australia's most trusted doctor rating platform.</span>
-        <span class="rp-cta"><span class="rp-cta-text">Read Reviews on RateMDs</span><span class="rp-cta-arrow"> →</span></span>
-      </a>
-      <!-- SECONDARY: Google (being set up) -->
-      <div class="rp-card secondary a up d2">
-        <svg class="rp-ico" style="color:var(--text3)" aria-hidden="true"><use href="#ic-globe"/></svg>
-        <div class="rp-name">Google Reviews</div>
-        <div class="rp-tagline">Coming soon</div>
-        <span class="rp-count" style="margin-bottom:0;font-size:.8rem;color:var(--text2);line-height:1.65">Dr Khatri's Google Business profile is currently being set up. Patient reviews will be available here shortly.</span>
-      </div>
-    </div>
-    <div class="reviews-bar a up">
-      <div class="rb-left">
-        <strong>Independently reviewed on RateMDs</strong>
-        <span>Read genuine, unmoderated patient feedback at ratemds.com — in compliance with AHPRA advertising guidelines</span>
-      </div>
-      <a href="https://www.ratemds.com/doctor-ratings/114846/Dr-Shailesh-Khatri-Gold+Coast-QLD.html/" target="_blank" rel="noopener" class="btn btn-navy">Read Patient Reviews →</a>
-    </div>
-  </div>
+<div class="wrap">
+<div style="text-align:center;margin-bottom:6px"><span class="kicker center a up">Patient Reviews</span></div>
+<h2 class="sec-title a up d1" style="text-align:center;margin-bottom:6px">Read What Patients <em>Are Saying</em></h2>
+<p class="sec-lead a up d2" style="text-align:center;margin:0 auto 28px">Dr Khatri is reviewed on independent third-party platforms. In line with AHPRA guidelines, we link to these platforms rather than displaying testimonials directly.</p>
+<div class="reviews-notice a up d3">
+<svg aria-hidden="true" class="ahpra-icon"><use href="#ic-shield"></use></svg>
+<p class="rn-p"><strong>AHPRA Compliance:</strong> In accordance with Australian Health Practitioner Regulation Agency advertising guidelines, patient testimonials are not reproduced on this website. Patient reviews are independently hosted on the third-party platforms below — follow the links to read unmoderated patient feedback directly.</p>
+</div>
+<div class="rp-grid">
+<!-- PRIMARY: RateMDs -->
+<a class="rp-card primary a up d1" href="https://www.ratemds.com/doctor-ratings/114846/Dr-Shailesh-Khatri-Gold+Coast-QLD.html/" rel="noopener" target="_blank">
+<svg aria-hidden="true" class="rp-ico" style="color:var(--gold)"><use href="#ic-star"></use></svg>
+<div class="rp-name">RateMDs</div>
+<div class="rp-tagline">Australia's leading independent doctor review platform</div>
+<span class="rp-stars">★★★★★</span>
+<span class="rp-score">4.7 / 5 — Verified Patient Reviews</span>
+<span class="rp-count">Read independent, unmoderated patient reviews of Dr Khatri on RateMDs — Australia's most trusted doctor rating platform.</span>
+<span class="rp-cta"><span class="rp-cta-text">Read Reviews on RateMDs</span><span class="rp-cta-arrow"> →</span></span>
+</a>
+<!-- SECONDARY: Google (being set up) -->
+<div class="rp-card secondary a up d2">
+<svg aria-hidden="true" class="rp-ico" style="color:var(--text3)"><use href="#ic-globe"></use></svg>
+<div class="rp-name">Google Reviews</div>
+<div class="rp-tagline">Coming soon</div>
+<span class="rp-count" style="margin-bottom:0;font-size:.8rem;color:var(--text2);line-height:1.65">Dr Khatri's Google Business profile is currently being set up. Patient reviews will be available here shortly.</span>
+</div>
+</div>
+<div class="reviews-bar a up">
+<div class="rb-left">
+<strong>Independently reviewed on RateMDs</strong>
+<span>Read genuine, unmoderated patient feedback at ratemds.com — in compliance with AHPRA advertising guidelines</span>
+</div>
+<a class="btn btn-navy" href="https://www.ratemds.com/doctor-ratings/114846/Dr-Shailesh-Khatri-Gold+Coast-QLD.html/" rel="noopener" target="_blank">Read Patient Reviews →</a>
+</div>
+</div>
 </section>
-
 <!-- ═══ FAQ ════════════════════════════════════════════════════ -->
 <section class="sec bg-white" id="faq">
-  <div class="wrap">
-    <div class="faq-grid">
-      <div class="a lft">
-        <span class="kicker">FAQ</span>
-        <h2 class="sec-title">Common <em>Questions</em></h2>
-        <p class="sec-lead">Everything you need to know before your first appointment. Can't find your answer? <a href="#contact" style="color:var(--gold);font-weight:700">Get in touch</a>.</p>
-      </div>
-      <div class="faq-list a rgt">
-        <div class="faq-item"><div class="faq-q" onclick="faq(this)">Do I need a referral to see Dr Khatri?<span class="faq-arr">▼</span></div><div class="faq-body"><div class="faq-body-in">Yes — a GP referral is required for all consultations. Your GP will assess your symptoms, arrange initial tests, and write a referral to Dr Shailesh Khatri. Contact the rooms on (07) 5598 0322 with your referral to schedule an appointment at John Flynn Specialist Suites, Tugun.</div></div></div>
-        <div class="faq-item"><div class="faq-q" onclick="faq(this)">Where does Dr Khatri consult?<span class="faq-arr">▼</span></div><div class="faq-body"><div class="faq-body-in">Dr Khatri's consulting rooms are at John Flynn Specialist Suites, Level 3, Suites 301–303, 42 Inland Drive, Tugun QLD 4224. He holds admitting rights at <strong>John Flynn Private Hospital</strong> (Tugun) and <strong>Pindara Private Hospital</strong> (Benowa, QLD 4217), allowing patients across the Gold Coast to be admitted to the hospital most convenient to them.</div></div></div>
-        <div class="faq-item"><div class="faq-q" onclick="faq(this)">What is an interventional cardiologist?<span class="faq-arr">▼</span></div><div class="faq-body"><div class="faq-body-in">An interventional cardiologist uses catheter-based techniques to diagnose and treat heart conditions. Dr Khatri specialises in coronary angiography, angioplasty and stenting, and TAVI (transcatheter aortic valve implantation). He has performed over 15,000 procedures since establishing his Gold Coast practice in 2001.</div></div></div>
-        <div class="faq-item"><div class="faq-q" onclick="faq(this)">Is emergency cardiac care available after hours?<span class="faq-arr">▼</span></div><div class="faq-body"><div class="faq-body-in">Yes. Dr Khatri has provided a 24-hour cardiology service to the Gold Coast for over two decades. Recognising that cardiac emergencies can occur at any time, he prioritises care and timely access to treatment at both Pindara Private Hospital and John Flynn Private Hospital. He has personally performed over 1,500 Primary PCI procedures for patients experiencing acute heart attacks. In a life-threatening emergency, always call 000 first.</div></div></div>
-        <div class="faq-item"><div class="faq-q" onclick="faq(this)">What is TAVI and does Dr Khatri perform it?<span class="faq-arr">▼</span></div><div class="faq-body"><div class="faq-body-in">TAVI (Transcatheter Aortic Valve Implantation) is a minimally invasive procedure to replace the aortic valve via catheter, without open-heart surgery. Dr Khatri has performed over 400 TAVI procedures and is one of the most experienced TAVI operators on the Gold Coast.</div></div></div>
-        <div class="faq-item"><div class="faq-q" onclick="faq(this)">What are Dr Khatri's qualifications?<span class="faq-arr">▼</span></div><div class="faq-body"><div class="faq-body-in">Dr Khatri holds an MBBS from the University of Queensland (1990). He is a Fellow of the Royal Australasian College of Physicians (FRACP), a Fellow of the Cardiac Society of Australia and New Zealand (FCSANZ), a Member of the Society for Cardiovascular Angiography and Interventions (SCAI), and a Member of the Australian Medical Association (AMA). He is also accredited by ACOR to perform TAVI procedures.</div></div></div>
-      </div>
-    </div>
-  </div>
+<div class="wrap">
+<div class="faq-grid">
+<div class="a lft">
+<span class="kicker">FAQ</span>
+<h2 class="sec-title">Common <em>Questions</em></h2>
+<p class="sec-lead">Everything you need to know before your first appointment. Can't find your answer? <a href="#contact" style="color:var(--gold);font-weight:700">Get in touch</a>.</p>
+</div>
+<div class="faq-list a rgt">
+<div class="faq-item"><div class="faq-q" onclick="faq(this)">Do I need a referral to see Dr Khatri?<span class="faq-arr">▼</span></div><div class="faq-body"><div class="faq-body-in">Yes — a GP referral is required for all consultations. Your GP will assess your symptoms, arrange initial tests, and write a referral to Dr Shailesh Khatri. Contact the rooms on (07) 5598 0322 with your referral to schedule an appointment at John Flynn Specialist Suites, Tugun.</div></div></div>
+<div class="faq-item"><div class="faq-q" onclick="faq(this)">Where does Dr Khatri consult?<span class="faq-arr">▼</span></div><div class="faq-body"><div class="faq-body-in">Dr Khatri's consulting rooms are at John Flynn Specialist Suites, Level 3, Suites 301–303, 42 Inland Drive, Tugun QLD 4224. He holds admitting rights at <strong>John Flynn Private Hospital</strong> (Tugun) and <strong>Pindara Private Hospital</strong> (Benowa, QLD 4217), allowing patients across the Gold Coast to be admitted to the hospital most convenient to them.</div></div></div>
+<div class="faq-item"><div class="faq-q" onclick="faq(this)">What is an interventional cardiologist?<span class="faq-arr">▼</span></div><div class="faq-body"><div class="faq-body-in">An interventional cardiologist uses catheter-based techniques to diagnose and treat heart conditions. Dr Khatri specialises in coronary angiography, angioplasty and stenting, and TAVI (transcatheter aortic valve implantation). He has performed over 15,000 procedures since establishing his Gold Coast practice in 2001.</div></div></div>
+<div class="faq-item"><div class="faq-q" onclick="faq(this)">Is emergency cardiac care available after hours?<span class="faq-arr">▼</span></div><div class="faq-body"><div class="faq-body-in">Yes. Dr Khatri has provided a 24-hour cardiology service to the Gold Coast for over two decades. Recognising that cardiac emergencies can occur at any time, he prioritises care and timely access to treatment at both Pindara Private Hospital and John Flynn Private Hospital. He has personally performed over 1,500 Primary PCI procedures for patients experiencing acute heart attacks. In a life-threatening emergency, always call 000 first.</div></div></div>
+<div class="faq-item"><div class="faq-q" onclick="faq(this)">What is TAVI and does Dr Khatri perform it?<span class="faq-arr">▼</span></div><div class="faq-body"><div class="faq-body-in">TAVI (Transcatheter Aortic Valve Implantation) is a minimally invasive procedure to replace the aortic valve via catheter, without open-heart surgery. Dr Khatri has performed over 400 TAVI procedures and is one of the most experienced TAVI operators on the Gold Coast.</div></div></div>
+<div class="faq-item"><div class="faq-q" onclick="faq(this)">What are Dr Khatri's qualifications?<span class="faq-arr">▼</span></div><div class="faq-body"><div class="faq-body-in">Dr Khatri holds an MBBS from the University of Queensland (1990). He is a Fellow of the Royal Australasian College of Physicians (FRACP), a Fellow of the Cardiac Society of Australia and New Zealand (FCSANZ), a Member of the Society for Cardiovascular Angiography and Interventions (SCAI), and a Member of the Australian Medical Association (AMA). He is also accredited by ACOR to perform TAVI procedures.</div></div></div>
+</div>
+</div>
+</div>
 </section>
-
 <!-- ═══ CONTACT ════════════════════════════════════════════════ -->
 <section class="sec bg2" id="contact">
-  <div class="wrap">
-    <div class="contact-grid">
-      <div class="cl-left a lft">
-        <span class="kicker">Contact</span>
-        <h2 class="sec-title">Get in <em>Touch</em></h2>
-        <p class="sec-lead">Dr Khatri consults and holds admitting rights at <strong>John Flynn Private Hospital</strong> (Tugun) and <strong>Pindara Private Hospital</strong> (Benowa), ensuring patients across the Gold Coast have convenient access to expert cardiac care. A GP referral is required for consultations.</p>
-        <div class="cc-stack" style="margin-top:20px">
-  <!--        <div class="cc"><svg class="cc-icon" aria-hidden="true"><use href="#ic-pin"/></svg><div><div class="cc-lbl">Consulting Rooms</div><div class="cc-val">John Flynn Specialist Suites<br>Level 3, Suites 301–303<br>42 Inland Drive, Tugun QLD 4224</div></div></div> -->
-          <div class="cc"><svg class="cc-icon" aria-hidden="true"><use href="#ic-calendar"/></svg><div><div class="cc-lbl">Appointments</div><div class="cc-val">Phone <a href="tel:+61755980322" class="cc-lnk">(07) 5598 0322</a><br>GP referral required</div></div></div>
-          <div class="cc hl"><svg class="cc-icon" aria-hidden="true"><use href="#ic-emergency"/></svg><div><div class="cc-lbl">24 / 7 Cardiac Emergency</div><div class="cc-val">Round-the-clock emergency cardiology at both hospitals. <br><br>Life-threatening emergency: call <strong>000</strong> immediately.</div></div></div>
-          <div class="cc"><svg class="cc-icon" aria-hidden="true"><use href="#ic-hospital"/></svg><div><div class="cc-lbl">Admitting Hospitals</div><div class="cc-val"><strong>John Flynn Private Hospital</strong><br>42 Inland Drive, Tugun QLD 4224<br><br><strong>Pindara Private Hospital</strong><br>Allchurch Avenue, Benowa QLD 4217</div></div></div>
-        </div>
-      </div>
-      <div class="map-col a rgt">
-        <div class="map-block">
-          <div class="map-lbl">John Flynn Private Hospital · Tugun</div>
-          <div class="map-box">
-            <iframe src="https://www.google.com/maps?q=John+Flynn+Private+Hospital,+42+Inland+Drive,+Tugun+QLD+4224&z=16&output=embed" title="John Flynn Private Hospital" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-          <a href="https://maps.google.com/?q=John+Flynn+Private+Hospital+Tugun+QLD+4224" class="map-cta" target="_blank" rel="noopener"><svg style="width:16px;height:16px;flex-shrink:0" aria-hidden="true"><use href="#ic-pin"/></svg> Get Directions — John Flynn, Tugun</a>
-        </div>
-        <div class="map-block">
-          <div class="map-lbl">Pindara Private Hospital · Benowa</div>
-          <div class="map-box">
-            <iframe src="https://www.google.com/maps?q=Pindara+Private+Hospital,+Allchurch+Avenue,+Benowa+QLD+4217&z=16&output=embed" title="Pindara Private Hospital" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-          <a href="https://maps.google.com/?q=Pindara+Private+Hospital+Benowa+QLD+4217" class="map-cta" target="_blank" rel="noopener"><svg style="width:16px;height:16px;flex-shrink:0" aria-hidden="true"><use href="#ic-pin"/></svg> Get Directions — Pindara, Benowa</a>
-        </div>
-      </div>
-    </div>
-    <div align="center" style="margin-top:20px" class="map-note">Consulting rooms are within the John Flynn and Pindara precincts. Use the maps above for directions to either admitting hospital.</div>
-  </div>
+<div class="wrap">
+<div class="contact-grid">
+<div class="cl-left a lft">
+<span class="kicker">Contact</span>
+<h2 class="sec-title">Get in <em>Touch</em></h2>
+<p class="sec-lead">Dr Khatri consults and holds admitting rights at <strong>John Flynn Private Hospital</strong> (Tugun) and <strong>Pindara Private Hospital</strong> (Benowa), ensuring patients across the Gold Coast have convenient access to expert cardiac care. A GP referral is required for consultations.</p>
+<div class="cc-stack" style="margin-top:20px">
+<!--        <div class="cc"><svg class="cc-icon" aria-hidden="true"><use href="#ic-pin"/></svg><div><div class="cc-lbl">Consulting Rooms</div><div class="cc-val">John Flynn Specialist Suites<br>Level 3, Suites 301–303<br>42 Inland Drive, Tugun QLD 4224</div></div></div> -->
+<div class="cc"><svg aria-hidden="true" class="cc-icon"><use href="#ic-calendar"></use></svg><div><div class="cc-lbl">Appointments</div><div class="cc-val">Phone <a class="cc-lnk" href="tel:+61755980322">(07) 5598 0322</a><br/>GP referral required</div></div></div>
+<div class="cc hl"><svg aria-hidden="true" class="cc-icon"><use href="#ic-emergency"></use></svg><div><div class="cc-lbl">24 / 7 Cardiac Emergency</div><div class="cc-val">Round-the-clock emergency cardiology at both hospitals. <br/><br/>Life-threatening emergency: call <strong>000</strong> immediately.</div></div></div>
+<div class="cc"><svg aria-hidden="true" class="cc-icon"><use href="#ic-hospital"></use></svg><div><div class="cc-lbl">Admitting Hospitals</div><div class="cc-val"><strong>John Flynn Private Hospital</strong><br/>42 Inland Drive, Tugun QLD 4224<br/><br/><strong>Pindara Private Hospital</strong><br/>Allchurch Avenue, Benowa QLD 4217</div></div></div>
+</div>
+</div>
+<div class="map-col a rgt">
+<div class="map-block">
+<div class="map-lbl">John Flynn Private Hospital · Tugun</div>
+<div class="map-box">
+<iframe allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=John+Flynn+Private+Hospital,+42+Inland+Drive,+Tugun+QLD+4224&amp;z=16&amp;output=embed" title="John Flynn Private Hospital"></iframe>
+</div>
+<a class="map-cta" href="https://maps.google.com/?q=John+Flynn+Private+Hospital+Tugun+QLD+4224" rel="noopener" target="_blank"><svg aria-hidden="true" style="width:16px;height:16px;flex-shrink:0"><use href="#ic-pin"></use></svg> Get Directions — John Flynn, Tugun</a>
+</div>
+<div class="map-block">
+<div class="map-lbl">Pindara Private Hospital · Benowa</div>
+<div class="map-box">
+<iframe allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Pindara+Private+Hospital,+Allchurch+Avenue,+Benowa+QLD+4217&amp;z=16&amp;output=embed" title="Pindara Private Hospital"></iframe>
+</div>
+<a class="map-cta" href="https://maps.google.com/?q=Pindara+Private+Hospital+Benowa+QLD+4217" rel="noopener" target="_blank"><svg aria-hidden="true" style="width:16px;height:16px;flex-shrink:0"><use href="#ic-pin"></use></svg> Get Directions — Pindara, Benowa</a>
+</div>
+</div>
+</div>
+<div align="center" class="map-note" style="margin-top:20px">Consulting rooms are within the John Flynn and Pindara precincts. Use the maps above for directions to either admitting hospital.</div>
+</div>
 </section>
-
 <!-- AHPRA -->
 <div class="ahpra-bar">
-  <div class="ahpra-in">
-    <p><strong>AHPRA Compliance:</strong> This website complies with Australian Health Practitioner Regulation Agency advertising guidelines. Patient testimonials are not displayed on this site. Reviews are linked to independent third-party platforms only. All information is factual and verifiable under the <em>Health Practitioner Regulation National Law</em>.</p>
-  </div>
+<div class="ahpra-in">
+<p><strong>AHPRA Compliance:</strong> This website complies with Australian Health Practitioner Regulation Agency advertising guidelines. Patient testimonials are not displayed on this site. Reviews are linked to independent third-party platforms only. All information is factual and verifiable under the <em>Health Practitioner Regulation National Law</em>.</p>
 </div>
-
+</div>
 <!-- ═══ FOOTER ══════════════════════════════════════════════════ -->
 <footer class="footer">
-  <div class="wrap">
-    <div class="footer-grid">
-      <div class="fg-brand">
-        <div class="sk-seal" data-ecg-logo data-color="#c49a38" data-highlight="#ffd770" data-id="f1">
-          <svg width="42" height="42" viewBox="0 0 46 46" fill="none">
-            <defs>
-              <filter id="glow-f1" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="0.7" result="b1"/><feGaussianBlur in="SourceGraphic" stdDeviation="0.25" result="b2"/><feMerge><feMergeNode in="b1"/><feMergeNode in="b2"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-              <linearGradient id="trail-f1" gradientUnits="userSpaceOnUse" x1="10" y1="0" x2="10" y2="0"><stop offset="0%" stop-color="#c49a38" stop-opacity="0"/><stop offset="55%" stop-color="#c49a38" stop-opacity=".55"/><stop offset="92%" stop-color="#ffd770" stop-opacity=".95"/><stop offset="100%" stop-color="#ffffff" stop-opacity="1"/></linearGradient>
-              <clipPath id="clip-f1"><rect x="8" y="18" width="30" height="20"/></clipPath>
-            </defs>
-            <circle cx="23" cy="23" r="21.5" stroke="#c49a38" stroke-width="1.2"/>
-            <path class="ecg-static" d="M10,30 L14,30 L15,29 L16,25 L17,35 L18,27 L19,30 L36,30" stroke="#c49a38" stroke-width="1.1" fill="none" stroke-linecap="round" opacity=".7"/>
-            <g class="ecg-live" clip-path="url(#clip-f1)" filter="url(#glow-f1)" style="display:none">
-              <line x1="10" y1="30" x2="36" y2="30" stroke="#c49a38" stroke-opacity=".15" stroke-width=".35"/>
-              <path class="ecg-trace" d="" stroke="url(#trail-f1)" stroke-width="1.15" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-              <circle class="ecg-dot" cx="10" cy="30" r=".85" fill="#ffd770"/>
-              <circle class="ecg-dot-glow" cx="10" cy="30" r="1.6" fill="#ffd770" fill-opacity=".25"/>
-            </g>
-            <text x="23" y="27" text-anchor="middle" font-family="Inter,sans-serif" font-size="12" font-weight="900" fill="#c49a38" letter-spacing="-1">SK</text>
-          </svg>
-        </div>
-        <h3>Dr Shailesh Khatri</h3>
-        <p>Interventional Cardiologist — Coronary Angiography, Angioplasty &amp; Stenting, TAVI<br>Serving the Gold Coast community for over 25 years</p>
-      </div>
-      <div class="fg-col"><h4>Navigation</h4><ul>
-        <li><a href="#top">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#recognition">Recognition</a></li>
-        <li><a href="#reviews">Patient Reviews</a></li>
-        <li><a href="#faq">FAQ</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul></div>
-      <div class="fg-col"><h4>Location</h4>
-        <p><strong style="color:rgba(255,255,255,.7);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase">Consulting Rooms</strong><br>
-        John Flynn Specialist Suites<br>Level 3, Suites 301–303<br>42 Inland Drive, Tugun QLD 4224<br><br>
-        <strong style="color:rgba(255,255,255,.7);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase">Admitting Hospitals</strong><br>
-        John Flynn Private Hospital, Tugun<br>Pindara Private Hospital, Benowa<br><br>
-        <a href="tel:+61755980322" style="color:var(--gold2);font-weight:600">(07) 5598 0322</a></p>
-      </div>
-      <div class="fg-col"><h4>Emergency</h4><p>Dr Khatri has provided a 24-hour cardiology service to the Gold Coast for over two decades. Cardiac emergencies are prioritised at both hospitals at any time.<br><br>Life-threatening emergency: call <strong style="color:#fff">000</strong> immediately.</p></div>
-    </div>
-    <div class="footer-base">
-      <p>© 2025 Dr Shailesh Khatri — Interventional Cardiologist. All rights reserved. AHPRA compliant.</p>
-      <p>For informational purposes only. Consult your GP for medical advice.</p>
-    </div>
-  </div>
+<div class="wrap">
+<div class="footer-grid">
+<div class="fg-brand">
+<div class="sk-seal" data-color="#c49a38" data-ecg-logo="" data-highlight="#ffd770" data-id="f1">
+<svg fill="none" height="42" viewbox="0 0 46 46" width="42">
+<defs>
+<filter height="200%" id="glow-f1" width="200%" x="-50%" y="-50%"><fegaussianblur result="b1" stddeviation="0.7"></fegaussianblur><fegaussianblur in="SourceGraphic" result="b2" stddeviation="0.25"></fegaussianblur><femerge><femergenode in="b1"></femergenode><femergenode in="b2"></femergenode><femergenode in="SourceGraphic"></femergenode></femerge></filter>
+<lineargradient gradientunits="userSpaceOnUse" id="trail-f1" x1="10" x2="10" y1="0" y2="0"><stop offset="0%" stop-color="#c49a38" stop-opacity="0"></stop><stop offset="55%" stop-color="#c49a38" stop-opacity=".55"></stop><stop offset="92%" stop-color="#ffd770" stop-opacity=".95"></stop><stop offset="100%" stop-color="#ffffff" stop-opacity="1"></stop></lineargradient>
+<clippath id="clip-f1"><rect height="20" width="30" x="8" y="18"></rect></clippath>
+</defs>
+<circle cx="23" cy="23" r="21.5" stroke="#c49a38" stroke-width="1.2"></circle>
+<path class="ecg-static" d="M10,30 L14,30 L15,29 L16,25 L17,35 L18,27 L19,30 L36,30" fill="none" opacity=".7" stroke="#c49a38" stroke-linecap="round" stroke-width="1.1"></path>
+<g class="ecg-live" clip-path="url(#clip-f1)" filter="url(#glow-f1)" style="display:none">
+<line stroke="#c49a38" stroke-opacity=".15" stroke-width=".35" x1="10" x2="36" y1="30" y2="30"></line>
+<path class="ecg-trace" d="" fill="none" stroke="url(#trail-f1)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.15"></path>
+<circle class="ecg-dot" cx="10" cy="30" fill="#ffd770" r=".85"></circle>
+<circle class="ecg-dot-glow" cx="10" cy="30" fill="#ffd770" fill-opacity=".25" r="1.6"></circle>
+</g>
+<text fill="#c49a38" font-family="Inter,sans-serif" font-size="12" font-weight="900" letter-spacing="-1" text-anchor="middle" x="23" y="27">SK</text>
+</svg>
+</div>
+<h3>Dr Shailesh Khatri</h3>
+<p>Interventional Cardiologist — Coronary Angiography, Angioplasty &amp; Stenting, TAVI<br/>Serving the Gold Coast community for over 25 years</p>
+</div>
+<div class="fg-col"><h4>Navigation</h4><ul>
+<li><a href="#top">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#recognition">Recognition</a></li>
+<li><a href="#reviews">Patient Reviews</a></li>
+<li><a href="#faq">FAQ</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul></div>
+<div class="fg-col"><h4>Location</h4>
+<p><strong style="color:rgba(255,255,255,.7);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase">Consulting Rooms</strong><br/>
+        John Flynn Specialist Suites<br/>Level 3, Suites 301–303<br/>42 Inland Drive, Tugun QLD 4224<br/><br/>
+<strong style="color:rgba(255,255,255,.7);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase">Admitting Hospitals</strong><br/>
+        John Flynn Private Hospital, Tugun<br/>Pindara Private Hospital, Benowa<br/><br/>
+<a href="tel:+61755980322" style="color:var(--gold2);font-weight:600">(07) 5598 0322</a></p>
+</div>
+<div class="fg-col"><h4>Emergency</h4><p>Dr Khatri has provided a 24-hour cardiology service to the Gold Coast for over two decades. Cardiac emergencies are prioritised at both hospitals at any time.<br/><br/>Life-threatening emergency: call <strong style="color:#fff">000</strong> immediately.</p></div>
+</div>
+<div class="footer-base">
+<p>© 2025 Dr Shailesh Khatri — Interventional Cardiologist. All rights reserved. AHPRA compliant.</p>
+<p>For informational purposes only. Consult your GP for medical advice.</p>
+</div>
+</div>
 </footer>
-
 <!-- ═══ MOBILE STICKY BAR ══════════════════════════════════════ -->
 <div class="mob-bar">
-  <div class="mb-row">
-    <a href="tel:+61755980322" class="mb-btn"><svg class="mb-icon" aria-hidden="true"><use href="#ic-phone"/></svg>Call</a>
-    <a href="#contact" class="mb-btn acc"><svg class="mb-icon" aria-hidden="true"><use href="#ic-calendar"/></svg>Appointment</a>
-    <a href="https://maps.google.com/?q=42+Inland+Drive+Tugun+QLD+4224" target="_blank" rel="noopener" class="mb-btn" id="mb-directions" onclick="showDirectionsPicker(event)"><svg class="mb-icon" aria-hidden="true"><use href="#ic-pin"/></svg>Directions</a>
-  </div>
+<div class="mb-row">
+<a class="mb-btn" href="tel:+61755980322"><svg aria-hidden="true" class="mb-icon"><use href="#ic-phone"></use></svg>Call</a>
+<a class="mb-btn acc" href="#contact"><svg aria-hidden="true" class="mb-icon"><use href="#ic-calendar"></use></svg>Appointment</a>
+<a class="mb-btn" href="https://maps.google.com/?q=42+Inland+Drive+Tugun+QLD+4224" id="mb-directions" onclick="showDirectionsPicker(event)" rel="noopener" target="_blank"><svg aria-hidden="true" class="mb-icon"><use href="#ic-pin"></use></svg>Directions</a>
 </div>
-
+</div>
 <!-- ═══ DIRECTIONS PICKER MODAL ══════════════════════════════ -->
 <div class="dir-overlay" id="dirOverlay" onclick="hideDirectionsPicker()"></div>
 <div class="dir-sheet" id="dirSheet">
-  <div class="dir-handle"></div>
-  <div class="dir-title">Choose a Location</div>
-  <p class="dir-sub">Which hospital or clinic would you like directions to?</p>
-  <a href="https://maps.google.com/?q=John+Flynn+Private+Hospital,+42+Inland+Drive,+Tugun+QLD+4224"
-     target="_blank" rel="noopener" class="dir-btn dir-btn--primary" onclick="hideDirectionsPicker()">
-    <svg style="width:28px;height:28px;color:var(--gold);flex-shrink:0" aria-hidden="true"><use href="#ic-hospital"/></svg>
-    <div class="dir-btn-text">
-      <strong>John Flynn Private Hospital</strong>
-      <span>42 Inland Drive, Tugun QLD 4224</span>
-    </div>
-    <svg class="arr-ic" aria-hidden="true" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-  </a>
-  <a href="https://maps.google.com/?q=Pindara+Private+Hospital,+Allchurch+Avenue,+Benowa+QLD+4217"
-     target="_blank" rel="noopener" class="dir-btn" onclick="hideDirectionsPicker()">
-    <svg style="width:28px;height:28px;color:var(--gold);flex-shrink:0" aria-hidden="true"><use href="#ic-hospital"/></svg>
-    <div class="dir-btn-text">
-      <strong>Pindara Private Hospital</strong>
-      <span>Allchurch Avenue, Benowa QLD 4217</span>
-    </div>
-    <svg class="arr-ic" aria-hidden="true" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-  </a>
-  <button class="dir-cancel" onclick="hideDirectionsPicker()">Cancel</button>
+<div class="dir-handle"></div>
+<div class="dir-title">Choose a Location</div>
+<p class="dir-sub">Which hospital or clinic would you like directions to?</p>
+<a class="dir-btn dir-btn--primary" href="https://maps.google.com/?q=John+Flynn+Private+Hospital,+42+Inland+Drive,+Tugun+QLD+4224" onclick="hideDirectionsPicker()" rel="noopener" target="_blank">
+<svg aria-hidden="true" style="width:28px;height:28px;color:var(--gold);flex-shrink:0"><use href="#ic-hospital"></use></svg>
+<div class="dir-btn-text">
+<strong>John Flynn Private Hospital</strong>
+<span>42 Inland Drive, Tugun QLD 4224</span>
+</div>
+<svg aria-hidden="true" class="arr-ic" fill="none" viewbox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</a>
+<a class="dir-btn" href="https://maps.google.com/?q=Pindara+Private+Hospital,+Allchurch+Avenue,+Benowa+QLD+4217" onclick="hideDirectionsPicker()" rel="noopener" target="_blank">
+<svg aria-hidden="true" style="width:28px;height:28px;color:var(--gold);flex-shrink:0"><use href="#ic-hospital"></use></svg>
+<div class="dir-btn-text">
+<strong>Pindara Private Hospital</strong>
+<span>Allchurch Avenue, Benowa QLD 4217</span>
+</div>
+<svg aria-hidden="true" class="arr-ic" fill="none" viewbox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</a>
+<button class="dir-cancel" onclick="hideDirectionsPicker()">Cancel</button>
 </div>
 
-<script>
-// ── Nav scroll
-const nav=document.getElementById('nav');
-window.addEventListener('scroll',()=>nav.classList.toggle('up',scrollY>56),{passive:true});
-
-// ── Mobile menu
-const hbg=document.getElementById('hbg'),mn=document.getElementById('mobNav');
-hbg.addEventListener('click',()=>{hbg.classList.toggle('on');mn.classList.toggle('on');document.body.style.overflow=mn.classList.contains('on')?'hidden':''});
-mn.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{hbg.classList.remove('on');mn.classList.remove('on');document.body.style.overflow=''}));
-
-// ── Animated logo ECG (from original)
-function initAnimatedLogos(){
-  const X0=10,X1=36,BASELINE=30,AMP=6,bpm=72,sweepMs=2400;
-  const cycleMs=60000/bpm;
-  const ecg=(t)=>{
-    const p=((t%1)+1)%1;
-    if(p<0.12)return 0;
-    if(p<0.20)return Math.sin(((p-0.12)/0.08)*Math.PI)*0.16;
-    if(p<0.26)return 0;
-    if(p<0.275)return -((p-0.26)/0.015)*0.22;
-    if(p<0.295)return -0.22+((p-0.275)/0.020)*1.25;
-    if(p<0.315)return 1.03-((p-0.295)/0.020)*1.38;
-    if(p<0.335)return -0.35+((p-0.315)/0.020)*0.35;
-    if(p<0.46)return 0;
-    if(p<0.66)return Math.sin(((p-0.46)/0.20)*Math.PI)*0.38;
-    return 0;
-  };
-  document.querySelectorAll('[data-ecg-logo]').forEach(root=>{
-    const svg=root.querySelector('svg');if(!svg)return;
-    const staticPath=svg.querySelector('.ecg-static');
-    const live=svg.querySelector('.ecg-live');
-    const tracePath=svg.querySelector('.ecg-trace');
-    const dot=svg.querySelector('.ecg-dot');
-    const dotGlow=svg.querySelector('.ecg-dot-glow');
-    const grad=svg.querySelector('linearGradient');
-    if(!staticPath||!live||!tracePath||!dot||!dotGlow||!grad)return;
-    let raf=0,start=0;
-    const render=(ts)=>{
-      if(!start)start=ts;
-      const elapsed=ts-start;
-      const sweep=(elapsed%sweepMs)/sweepMs;
-      const headX=X0+(X1-X0)*sweep;
-      const tailX=Math.max(X0,headX-(X1-X0)*0.9);
-      grad.setAttribute('x1',tailX.toFixed(2));
-      grad.setAttribute('x2',headX.toFixed(2));
-      const N=96;let d='',hy=BASELINE;
-      for(let i=0;i<=N;i++){
-        const x=X0+((headX-X0)*i)/N;
-        const frac=(x-X0)/(X1-X0);
-        const ageMs=(sweep-frac)*sweepMs;
-        const drawnAt=elapsed-ageMs;
-        const t=drawnAt/cycleMs;
-        const y=BASELINE-ecg(t)*AMP;
-        d+=(i===0?'M':'L')+x.toFixed(2)+','+y.toFixed(2);
-        if(i===N)hy=y;
-      }
-      tracePath.setAttribute('d',d);
-      dot.setAttribute('cx',headX.toFixed(2));dot.setAttribute('cy',hy.toFixed(2));
-      dotGlow.setAttribute('cx',headX.toFixed(2));dotGlow.setAttribute('cy',hy.toFixed(2));
-      raf=requestAnimationFrame(render);
-    };
-    root.addEventListener('mouseenter',()=>{
-      staticPath.style.display='none';live.style.display='block';
-      cancelAnimationFrame(raf);start=0;raf=requestAnimationFrame(render);
-    });
-    root.addEventListener('mouseleave',()=>{
-      cancelAnimationFrame(raf);raf=0;start=0;
-      tracePath.setAttribute('d','');
-      dot.setAttribute('cx',String(X0));dot.setAttribute('cy',String(BASELINE));
-      dotGlow.setAttribute('cx',String(X0));dotGlow.setAttribute('cy',String(BASELINE));
-      live.style.display='none';staticPath.style.display='block';
-    });
-  });
-}
-initAnimatedLogos();
-
-// ── Hero ECG live sweep
-function initHeroECG(){
-  const ecg=(t)=>{
-    const p=((t%1)+1)%1;
-    if(p<0.12)return 0;
-    if(p<0.20)return Math.sin(((p-0.12)/0.08)*Math.PI)*0.16;
-    if(p<0.26)return 0;
-    if(p<0.275)return -((p-0.26)/0.015)*0.22;
-    if(p<0.295)return -0.22+((p-0.275)/0.020)*1.25;
-    if(p<0.315)return 1.03-((p-0.295)/0.020)*1.38;
-    if(p<0.335)return -0.35+((p-0.315)/0.020)*0.35;
-    if(p<0.46)return 0;
-    if(p<0.66)return Math.sin(((p-0.46)/0.20)*Math.PI)*0.38;
-    return 0;
-  };
-  document.querySelectorAll('.hero-ecg svg').forEach((svg,idx)=>{
-    const path=svg.querySelector('.ecg-path');if(!path)return;
-    const vb=(svg.getAttribute('viewBox')||'0 0 1400 64').split(/\s+/).map(Number);
-    const X0=(vb[0]||0)-50,X1=(vb[0]||0)+(vb[2]||1400)+50;
-    const BASELINE=(vb[3]||64)/2,AMP=Math.max(5.4,(vb[3]||64)*0.24);
-    const cycleMs=60000/68,sweepMs=6200;
-    const id='ht'+idx;
-    let defs=svg.querySelector('defs');
-    if(!defs){defs=document.createElementNS('http://www.w3.org/2000/svg','defs');svg.insertBefore(defs,svg.firstChild)}
-    const g=document.createElementNS('http://www.w3.org/2000/svg','linearGradient');
-    g.setAttribute('id',id);g.setAttribute('gradientUnits','userSpaceOnUse');
-    g.setAttribute('x1',String(X0));g.setAttribute('y1','0');g.setAttribute('x2',String(X0));g.setAttribute('y2','0');
-    const c=path.getAttribute('stroke')||'rgba(196,154,56,.45)';
-    g.innerHTML='<stop offset="0%" stop-color="'+c+'" stop-opacity="0"/><stop offset="58%" stop-color="'+c+'" stop-opacity=".42"/><stop offset="92%" stop-color="'+c+'" stop-opacity=".8"/><stop offset="100%" stop-color="#ffffff" stop-opacity="1"/>';
-    defs.appendChild(g);
-    path.setAttribute('stroke','url(#'+id+')');path.setAttribute('stroke-width','2');
-    const bl=document.createElementNS('http://www.w3.org/2000/svg','line');
-    bl.setAttribute('x1',String(X0));bl.setAttribute('x2',String(X1));
-    bl.setAttribute('y1',String(BASELINE));bl.setAttribute('y2',String(BASELINE));
-    bl.setAttribute('stroke',c);bl.setAttribute('stroke-opacity','.10');bl.setAttribute('stroke-width','.8');
-    svg.insertBefore(bl,path);
-    const glow=document.createElementNS('http://www.w3.org/2000/svg','circle');
-    glow.setAttribute('r','4.2');glow.setAttribute('fill','#fff');glow.setAttribute('fill-opacity','.12');
-    const dot=document.createElementNS('http://www.w3.org/2000/svg','circle');
-    dot.setAttribute('r','1.6');dot.setAttribute('fill','#fff');
-    svg.appendChild(glow);svg.appendChild(dot);
-    const start=performance.now(),N=320;
-    const render=(ts)=>{
-      const elapsed=ts-start;
-      const sweep=(elapsed%sweepMs)/sweepMs;
-      const headX=X0+(X1-X0)*sweep;
-      const tailX=Math.max(X0,headX-(X1-X0)*0.9);
-      g.setAttribute('x1',tailX.toFixed(2));g.setAttribute('x2',headX.toFixed(2));
-      let d='',hy=BASELINE;
-      for(let i=0;i<=N;i++){
-        const x=X0+((headX-X0)*i)/N;
-        const frac=(x-X0)/(X1-X0);
-        const ageMs=(sweep-frac)*sweepMs;
-        const t=(elapsed-ageMs)/cycleMs;
-        const y=BASELINE-ecg(t)*AMP;
-        d+=(i===0?'M':'L')+x.toFixed(2)+','+y.toFixed(2);
-        if(i===N)hy=y;
-      }
-      path.setAttribute('d',d);
-      dot.setAttribute('cx',headX.toFixed(2));dot.setAttribute('cy',hy.toFixed(2));
-      glow.setAttribute('cx',headX.toFixed(2));glow.setAttribute('cy',hy.toFixed(2));
-      requestAnimationFrame(render);
-    };
-    requestAnimationFrame(render);
-  });
-}
-initHeroECG();
-
-// ── Scroll reveal
-const obs=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target)}});
-},{threshold:.08,rootMargin:'0px 0px -28px 0px'});
-document.querySelectorAll('.a').forEach(el=>obs.observe(el));
-
-// ── Animated counters
-document.querySelectorAll('[data-target]').forEach(el=>{
-  const co=new IntersectionObserver(entries=>{
-    if(!entries[0].isIntersecting)return;
-    const t=parseInt(el.dataset.target),suf=t===25?' yrs':'+';
-    let v=0,inc=t/(2400/16);
-    const run=()=>{v+=inc;el.textContent=(v>=t?t:Math.floor(v)).toLocaleString()+suf;if(v<t)requestAnimationFrame(run)};
-    run();co.disconnect();
-  },{threshold:.35});
-  co.observe(el);
-});
-
-// ── FAQ accordion
-function faq(q){
-  const item=q.parentElement;
-  document.querySelectorAll('.faq-item.open').forEach(i=>{if(i!==item)i.classList.remove('open')});
-  item.classList.toggle('open');
-}
-
-// ── Directions location picker
-function showDirectionsPicker(e){
-  e.preventDefault();
-  document.getElementById('dirOverlay').classList.add('on');
-  document.getElementById('dirSheet').classList.add('on');
-  document.body.style.overflow='hidden';
-}
-function hideDirectionsPicker(){
-  document.getElementById('dirOverlay').classList.remove('on');
-  document.getElementById('dirSheet').classList.remove('on');
-  document.body.style.overflow='';
-}
-// Close on overlay tap already handled by onclick on .dir-overlay
-// Also close on escape key
-document.addEventListener('keydown',e=>{if(e.key==='Escape')hideDirectionsPicker()});
-</script>
-</body>
+<script src="/src/main.js" type="module"></script></body>
 </html>

@@ -1,8 +1,0 @@
-<!-- V1 Logo: Circular seal with ECG underline -->
-  <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="23" cy="23" r="21.5" stroke="#c49a38" stroke-width="1.2"/>
-    <circle cx="23" cy="23" r="17.5" stroke="rgba(196,154,56,.2)" stroke-width=".6"/>
-    <!-- ECG pulse on circle bottom -->
-    <path d="M10,30 L14,30 L15,29 L16,25 L17,35 L18,27 L19,30 L36,30" stroke="#c49a38" stroke-width="1.1" fill="none" stroke-linecap="round" opacity=".7"/>
-    <text x="23" y="27" text-anchor="middle" font-family="Inter,sans-serif" font-size="12" font-weight="900" fill="#c49a38" letter-spacing="-1">SK</text>
-  </svg>
