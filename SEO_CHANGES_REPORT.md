@@ -15,8 +15,9 @@ This report outlines the SEO improvements implemented for the Dr Shailesh Khatri
   - Name, Image, and URL.
   - Dual location support (Tugun and Benowa) with GeoCoordinates.
   - Opening hours and medical specialty (Cardiology).
-  - Social media profiles (Facebook, LinkedIn).
-- **FAQPage Schema:** Implemented `FAQPage` schema to enable rich snippets in search results for common patient questions.
+  - Social media profiles (Facebook, LinkedIn, RateMDs).
+  - Added `knowsAbout` for medical procedures and `memberOf` for professional bodies.
+- **FAQPage Schema:** Implemented comprehensive `FAQPage` schema with 6 detailed entries to enable rich snippets and improve search coverage for common patient questions.
 
 ### 1.3 Social Integration (Open Graph & Twitter Cards)
 - **Open Graph:** Added OG tags for Facebook/LinkedIn sharing, including title, description, and a high-quality preview image.
