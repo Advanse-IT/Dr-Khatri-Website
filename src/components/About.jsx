@@ -21,6 +21,7 @@ const markup = `
 <div class="at-col a rgt">
 <span class="kicker">About</span>
 <h2 class="sec-title">Serving the Gold Coast <em>for Over 25 Years</em></h2>
+    <h3 style="display:none">Expert Cardiac Care Gold Coast by Dr Shailesh Khatri</h3>
 <p class="sec-lead">Dr Shailesh Khatri is a highly experienced interventional cardiologist who has been serving the Gold Coast community for more than 25 years. He specialises in coronary angiography, angioplasty and stenting, and transcatheter aortic valve implantation (TAVI).</p>
 <p class="sec-lead">Dr Khatri is dedicated to delivering high-quality, patient-centred care, and has provided a 24-hour cardiology service to the Gold Coast for over two decades. Recognising that cardiac emergencies can occur at any time, he prioritises care and timely access to treatment at both Pindara Private Hospital and John Flynn Private Hospital, where he holds admitting rights.</p>
 <p class="sec-lead">Dr Khatri is passionate about improving both cardiovascular health and overall quality of life for his patients. His approach to patient care is holistic and comprehensive, encompassing appropriate investigations, evidence-based treatment, procedural intervention when required, cardiac rehabilitation, and lifestyle modification. He places strong emphasis on involving patients in decision-making and ensuring they feel supported throughout their cardiac care journey.</p>
