@@ -866,3 +866,35 @@ li{
     height: 38px;
   }
 }
+
+
+
+/* Mobile sticky bottom action bar fix */
+@media (max-width: 760px) {
+  .mobile-bottom-bar,
+  .bottom-nav,
+  .mobile-sticky-bar,
+  .mobile-actions,
+  [data-mobile-bottom-bar] {
+    position: fixed !important;
+    left: max(12px, env(safe-area-inset-left)) !important;
+    right: max(12px, env(safe-area-inset-right)) !important;
+    bottom: max(12px, env(safe-area-inset-bottom)) !important;
+    z-index: 9998 !important;
+    transform: none !important;
+    will-change: auto;
+  }
+
+  body {
+    padding-bottom: calc(104px + env(safe-area-inset-bottom));
+  }
+
+  .footer {
+    padding-bottom: calc(140px + env(safe-area-inset-bottom)) !important;
+  }
+
+  #footer,
+  footer {
+    scroll-margin-bottom: calc(120px + env(safe-area-inset-bottom));
+  }
+}
