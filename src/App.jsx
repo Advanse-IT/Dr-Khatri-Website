@@ -15,6 +15,8 @@ import Contact from './components/Contact.jsx';
 import Footer from './components/Footer.jsx';
 import MobileBottomBar from './components/MobileBottomBar.jsx';
 import DirectionsPicker from './components/DirectionsPicker.jsx';
+import LegalInformation from './components/LegalInformation.jsx';
+import CookieConsent from './components/CookieConsent.jsx';
 import useSiteEffects from './hooks/useSiteEffects.js';
 
 export default function App() {
@@ -36,9 +38,11 @@ export default function App() {
       <Reviews />
       <Faq />
       <Contact />
+      <LegalInformation />
       <Footer />
       <MobileBottomBar />
       <DirectionsPicker />
+      <CookieConsent />
     </>
   );
 }

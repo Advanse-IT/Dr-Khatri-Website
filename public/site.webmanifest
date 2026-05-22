@@ -1,5 +1,5 @@
 {
-  "name": "Dr S Khatri",
+  "name": "Dr Shailesh Khatri",
   "short_name": "Dr Khatri",
   "icons": [
     {
@@ -13,7 +13,7 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#ffffff",
+  "theme_color": "#060d1a",
   "background_color": "#ffffff",
   "display": "standalone"
 }

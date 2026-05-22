@@ -783,8 +783,149 @@ li{
 }
 
 
-.footer-legal-title {
-  font-weight: 600;
-  letter-spacing: 0.01em;
-  margin-top: 0.75rem;
+/* Legal, privacy and cookie notice */
+.legal-info {
+  padding: 72px 0;
+  background:
+    radial-gradient(circle at 15% 0%, rgba(196,154,56,.12), transparent 36%),
+    linear-gradient(180deg, #ffffff 0%, #f7f5ef 100%);
+}
+
+.legal-card {
+  background: rgba(255,255,255,.92);
+  border: 1px solid rgba(196,154,56,.22);
+  border-radius: 28px;
+  padding: 34px;
+  box-shadow: 0 24px 60px rgba(6,13,26,.08);
+}
+
+.legal-card h2 {
+  color: var(--ink);
+  margin: 8px 0 12px;
+  font-size: clamp(1.6rem, 3vw, 2.35rem);
+  letter-spacing: -.04em;
+}
+
+.legal-intro {
+  max-width: 840px;
+  color: var(--muted);
+  line-height: 1.75;
+  margin-bottom: 26px;
+}
+
+.legal-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.legal-grid article {
+  background: #fff;
+  border: 1px solid rgba(6,13,26,.08);
+  border-radius: 20px;
+  padding: 22px;
+}
+
+.legal-grid h3 {
+  color: var(--ink);
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.legal-grid p,
+.legal-note {
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: .94rem;
+}
+
+.legal-note {
+  margin-top: 22px;
+  font-size: .86rem;
+}
+
+.cookie-consent {
+  position: fixed;
+  left: 18px;
+  right: 18px;
+  bottom: 18px;
+  z-index: 99999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 16px 18px;
+  background: rgba(6,13,26,.96);
+  color: #fff;
+  border: 1px solid rgba(196,154,56,.35);
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.24);
+}
+
+.cookie-consent strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #fff;
+}
+
+.cookie-consent p {
+  margin: 0;
+  color: rgba(255,255,255,.78);
+  font-size: .9rem;
+  line-height: 1.45;
+}
+
+.cookie-actions {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.cookie-actions button {
+  border: 0;
+  border-radius: 999px;
+  padding: 10px 16px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.cookie-primary {
+  background: var(--gold);
+  color: #111;
+}
+
+.cookie-secondary {
+  background: rgba(255,255,255,.12);
+  color: #fff;
+}
+
+@media (max-width: 760px) {
+  .legal-info {
+    padding: 50px 0;
+  }
+
+  .legal-card {
+    padding: 24px 18px;
+    border-radius: 22px;
+  }
+
+  .legal-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cookie-consent {
+    flex-direction: column;
+    align-items: flex-start;
+    bottom: 86px;
+  }
+
+  .cookie-actions {
+    width: 100%;
+  }
+
+  .cookie-actions button {
+    flex: 1;
+  }
 }

@@ -35,6 +35,7 @@ const markup = `
 <li><a href="#reviews">Patient Reviews</a></li>
 <li><a href="#faq">FAQ</a></li>
 <li><a href="#contact">Contact</a></li>
+<li><a href="#legal-information">Privacy Policy, Terms of Use &amp; Medical Disclaimer</a></li>
 </ul></div>
 <div class="fg-col"><h4>Location</h4>
 <p><strong style="color:rgba(255,255,255,.7);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase">Consulting Rooms</strong><br/>
@@ -47,12 +48,10 @@ const markup = `
 </div>
 <div class="footer-base">
 <p>© 2025 Dr Shailesh Khatri — Interventional Cardiologist. All rights reserved. AHPRA compliant.</p>
-<p>For informational purposes only. Consult your GP for medical advice.</p>
+<p><a href="#legal-information">Privacy Policy, Terms of Use &amp; Medical Disclaimer</a></p>
 </div>
 </div>
-
-        <p className="footer-legal-title">Privacy Policy, Terms of Use & Medical Disclaimer</p>
-      </footer>
+</footer>
 `;
 
 export default function Footer() {
