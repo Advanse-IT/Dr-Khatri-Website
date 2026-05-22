@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://drskhatri.com.au/sitemap.xml
