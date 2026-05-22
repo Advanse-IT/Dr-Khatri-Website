@@ -46,15 +46,19 @@ const markup = `
 <div class="fg-col"><h4>Emergency</h4><p>Dr Khatri has provided a 24-hour cardiology service to the Gold Coast for over two decades. Cardiac emergencies are prioritised at both hospitals at any time.<br/><br/>Life-threatening emergency: call <strong style="color:#fff">000</strong> immediately.</p></div>
 </div>
 <div class="footer-base">
-<p>© 2025 Dr Shailesh Khatri — Interventional Cardiologist. All rights reserved. AHPRA compliant.</p>
+<p>© 2026 Dr Shailesh Khatri — Interventional Cardiologist. All rights reserved. AHPRA compliant.</p>
 <p>For informational purposes only. Consult your GP for medical advice.</p>
 </div>
 </div>
-  <p>© 2026 Dr Shailesh Khatri. All rights reserved.</p>
+  
+
+  <div class="footer-credit-center">
     <a class="site-credit" href="https://ausprostudios.com.au" target="_blank" rel="noopener noreferrer" aria-label="Auspro Studios website">
       <img src="/images/auspro-logo.svg" alt="Auspro Studios" />
       <span>Digital experience crafted by <strong>Auspro Studios</strong></span>
     </a>
+  </div>
+
 </footer>
 `;
 

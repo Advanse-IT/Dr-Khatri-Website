@@ -784,24 +784,58 @@ li{
 
 
 
-/* Auspro Studios credit line */
-.site-credit {
-  display: inline-flex;
+
+
+
+
+/* Centre-aligned copyright and Auspro Studios credit */
+.footer-bottom {
+  text-align: center;
+  justify-content: center;
   align-items: center;
   gap: 10px;
-  margin-top: 10px;
-  color: inherit;
-  font-size: 0.82rem;
+}
+
+.footer-bottom,
+.footer-bottom p {
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.footer-credit-center {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 26px;
+  text-align: center;
+}
+
+.site-credit {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 0.92rem;
+  line-height: 1.5;
   text-decoration: none;
-  opacity: 0.76;
+  opacity: 0.95;
   transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
 .site-credit img {
-  height: 22px;
+  display: block;
+  height: 42px;
   width: auto;
-  max-width: 115px;
+  max-width: 150px;
   object-fit: contain;
+}
+
+.site-credit span {
+  display: block;
+  color: rgba(255, 255, 255, 0.62);
 }
 
 .site-credit strong {
@@ -815,9 +849,20 @@ li{
 }
 
 @media (max-width: 760px) {
+  .footer-bottom {
+    flex-direction: column;
+  }
+
+  .footer-credit-center {
+    margin-top: 22px;
+  }
+
   .site-credit {
-    justify-content: center;
-    flex-wrap: wrap;
-    text-align: center;
+    font-size: 0.86rem;
+    gap: 12px;
+  }
+
+  .site-credit img {
+    height: 38px;
   }
 }
