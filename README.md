@@ -1,15 +1,15 @@
 # Dr Khatri Website
 
-Modern React + Vite project configured for Cloudflare Pages.
+React + Vite static website configured for Cloudflare Pages.
 
-## Local development
+## Local setup
 
 ```bash
 npm install
 npm run dev
 ```
 
-## Production build
+## Build
 
 ```bash
 npm run build
@@ -18,8 +18,9 @@ npm run build
 ## Cloudflare Pages settings
 
 - Framework preset: Vite
-- Build command: `npm run build`
-- Build output directory: `dist`
+- Build command: npm run build
+- Output directory: dist
 - Deploy command: leave blank
+- Environment variable: NODE_VERSION = 20
 
-This project intentionally does not include `wrangler.toml` or Worker deploy config because it is a static React/Vite site intended for Cloudflare Pages.
+Do not use `npx wrangler deploy` for this project.
