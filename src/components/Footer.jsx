@@ -35,9 +35,6 @@ const markup = `
 <li><a href="#reviews">Patient Reviews</a></li>
 <li><a href="#faq">FAQ</a></li>
 <li><a href="#contact">Contact</a></li>
-<li><a href="#privacy-policy">Privacy Policy</a></li>
-<li><a href="#terms-conditions">Terms</a></li>
-<li><a href="#medical-disclaimer">Medical Disclaimer</a></li>
 </ul></div>
 <div class="fg-col"><h4>Location</h4>
 <p><strong style="color:rgba(255,255,255,.7);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase">Consulting Rooms</strong><br/>
@@ -53,7 +50,9 @@ const markup = `
 <p>For informational purposes only. Consult your GP for medical advice.</p>
 </div>
 </div>
-</footer>
+
+        <p className="footer-legal-title">Privacy Policy, Terms of Use & Medical Disclaimer</p>
+      </footer>
 `;
 
 export default function Footer() {
