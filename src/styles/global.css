@@ -929,3 +929,62 @@ li{
     flex: 1;
   }
 }
+
+
+
+/* Auspro Studios footer credit */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.10);
+  margin-top: 34px;
+  padding-top: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.site-credit {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: rgba(255, 255, 255, 0.70);
+  font-size: 0.82rem;
+  text-decoration: none;
+  transition: color 0.2s ease, opacity 0.2s ease, transform 0.2s ease;
+}
+
+.site-credit img {
+  height: 22px;
+  width: auto;
+  max-width: 115px;
+  object-fit: contain;
+  opacity: 0.82;
+  filter: brightness(0) invert(1) sepia(1) saturate(2.2) hue-rotate(350deg);
+}
+
+.site-credit strong {
+  color: #C49A38;
+  font-weight: 700;
+}
+
+.site-credit:hover {
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.site-credit:hover img {
+  opacity: 1;
+}
+
+@media (max-width: 760px) {
+  .footer-bottom {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .site-credit {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
