@@ -1,3 +1,4 @@
+import { createPortal } from 'react-dom';
 import RawHtml from './RawHtml.jsx';
 
 const markup = `
@@ -12,5 +13,10 @@ const markup = `
 `;
 
 export default function MobileBottomBar() {
-  return <RawHtml html={markup} />;
+  if (typeof document === 'undefined') return null;
+
+  return createPortal(
+    <RawHtml html={markup} />,
+    document.body
+  );
 }
