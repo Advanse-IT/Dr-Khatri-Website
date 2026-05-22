@@ -2,7 +2,7 @@ import RawHtml from './RawHtml.jsx';
 
 const markup = `
 <!-- ═══ MOBILE STICKY BAR ══════════════════════════════════════ -->
-<div class="mob-bar">
+<div class="mob-bar" data-mobile-bottom-bar="true">
 <div class="mb-row">
 <a class="mb-btn" href="tel:+61755980322"><svg aria-hidden="true" class="mb-icon"><use href="#ic-phone"></use></svg>Call</a>
 <a class="mb-btn acc" href="#contact"><svg aria-hidden="true" class="mb-icon"><use href="#ic-calendar"></use></svg>Appointment</a>
