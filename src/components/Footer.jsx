@@ -38,10 +38,10 @@ const markup = `
 <li><a href="#legal-information">Privacy Policy, Terms of Use &amp; Medical Disclaimer</a></li>
 </ul></div>
 <div class="fg-col"><h4>Location</h4>
-<p><strong style="color:rgba(255,255,255,.7);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase">Consulting Rooms</strong><br/>
-        John Flynn Specialist Suites<br/>Level 3, Suites 301–303<br/>42 Inland Drive, Tugun QLD 4224<br/><br/>
-<strong style="color:rgba(255,255,255,.7);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase">Admitting Hospitals</strong><br/>
-        John Flynn Private Hospital, Tugun<br/>Pindara Private Hospital, Benowa<br/><br/>
+<p><strong style="color:rgba(255,255,255,.7);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase">Tugun Consulting Rooms</strong><br/>
+John Flynn Specialist Suites, Level 3, Suites 301–303<br/>42 Inland Drive, Tugun QLD 4224<br/><br/>
+<strong style="color:rgba(255,255,255,.7);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase">Benowa Admitting Rights</strong><br/>
+Pindara Private Hospital, Allchurch Avenue, Benowa QLD 4217<br/><br/>
 <a href="tel:+61755980322" style="color:var(--gold2);font-weight:600">(07) 5598 0322</a></p>
 </div>
 <div class="fg-col"><h4>Emergency</h4><p>Dr Khatri has provided a 24-hour cardiology service to the Gold Coast for over two decades. Cardiac emergencies are prioritised at both hospitals at any time.<br/><br/>Life-threatening emergency: call <strong style="color:#fff">000</strong> immediately.</p></div>

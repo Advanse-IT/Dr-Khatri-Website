@@ -173,8 +173,15 @@ export default function useSiteEffects() {
 
     window.faq = (q) => {
       const item = q.parentElement;
-      document.querySelectorAll('.faq-item.open').forEach((i) => { if (i !== item) i.classList.remove('open'); });
-      item.classList.toggle('open');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach((i) => {
+        i.classList.remove('open');
+        i.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        q.setAttribute('aria-expanded', 'true');
+      }
     };
     window.showDirectionsPicker = (e) => {
       e?.preventDefault();
