@@ -231,9 +231,11 @@ h2.sec-title.light em{color:var(--gold2)}
 /* ═══ STATS ══════════════════════════════════════════════════════ */
 .stats-band{background:var(--stat-bg);padding:76px 0;position:relative;overflow:hidden;border-top:none}
 .stats-ecg-bg{position:absolute;bottom:0;left:0;right:0;opacity:.07;pointer-events:none}
+.stats-ecg-bg::before, .stats-ecg-bg::after { content: none !important; display: none !important; }
+.no-extra-line { border: none !important; outline: none !important; }
 .stats-heart{position:absolute;width:400px;left:50%;top:50%;transform:translate(-50%,-50%);opacity:.025;pointer-events:none;fill:#fff}
 .stats-top{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-bottom:44px}@media(max-width:768px){.stats-top{grid-template-columns:1fr;gap:28px}}
-.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;position:relative;z-index:2}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;position:relative;z-index:2;border-bottom:none}
 .stat-c{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:9px;padding:30px 16px;text-align:center;transition:all .28s}
 .stat-c:hover{background:rgba(255,255,255,.07);transform:translateY(-4px)}
 .stat-ic{font-size:1.35rem;margin-bottom:11px}
