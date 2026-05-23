@@ -1,4 +1,5 @@
 import RawHtml from './RawHtml.jsx';
+import { articles } from '../data/siteData.js';
 
 const serviceLinks = [
   ['Services Overview', '/services'],
@@ -13,14 +14,13 @@ const serviceLinks = [
   ['Cardiac Testing', '/echocardiography-cardiac-testing'],
 ];
 
-const locationLinks = [
-  ['Gold Coast', '/cardiologist-gold-coast'],
-  ['Tugun', '/cardiologist-tugun'],
-  ['Benowa', '/cardiologist-benowa'],
+const educationLinks = [
+  ['Education Overview', '/patient-education'],
+  ...articles.map(article => [article.title, `/patient-education/${article.slug}`]),
 ];
 
 const serviceMenu = serviceLinks.map(([label, href]) => `<a href="${href}">${label}</a>`).join('');
-const locationMenu = locationLinks.map(([label, href]) => `<a href="${href}">${label}</a>`).join('');
+const educationMenu = educationLinks.map(([label, href]) => `<a href="${href}">${label}</a>`).join('');
 
 const markup = `
 <!-- ═══ NAV ══════════════════════════════════════════════════════ -->
@@ -63,16 +63,14 @@ const markup = `
     </a>
 
     <div class="nav-links" aria-label="Main menu">
-      <a class="nl" href="/">Home</a>
       <a class="nl" href="/#about">About</a>
       <div class="nav-dd">
-        <a class="nl nav-dd-trigger" href="/services" aria-haspopup="true">Services <span aria-hidden="true">▾</span></a>
+        <a class="nl nav-dd-trigger" href="/services" aria-haspopup="true" aria-expanded="false">Services <span aria-hidden="true">▾</span></a>
         <div class="nav-dd-menu nav-dd-wide" aria-label="Services submenu">${serviceMenu}</div>
       </div>
-      <a class="nl" href="/patient-education">Patient Education</a>
       <div class="nav-dd">
-        <a class="nl nav-dd-trigger" href="/cardiologist-gold-coast" aria-haspopup="true">Locations <span aria-hidden="true">▾</span></a>
-        <div class="nav-dd-menu" aria-label="Locations submenu">${locationMenu}</div>
+        <a class="nl nav-dd-trigger" href="/patient-education" aria-haspopup="true" aria-expanded="false">Patient Education <span aria-hidden="true">▾</span></a>
+        <div class="nav-dd-menu nav-dd-education" aria-label="Patient education submenu">${educationMenu}</div>
       </div>
       <a class="nl" href="/#recognition">Recognition</a>
       <a class="nl" href="/#contact">Contact</a>
@@ -84,16 +82,14 @@ const markup = `
 </nav>
 
 <div class="mob-nav" id="mobNav" aria-hidden="true">
-  <a href="/">Home</a>
   <a href="/#about">About Dr Khatri</a>
   <div class="mob-group">
     <a class="mob-parent" href="/services">Services</a>
     <div class="mob-sub">${serviceMenu}</div>
   </div>
-  <a href="/patient-education">Patient Education</a>
   <div class="mob-group">
-    <a class="mob-parent" href="/cardiologist-gold-coast">Locations</a>
-    <div class="mob-sub">${locationMenu}</div>
+    <a class="mob-parent" href="/patient-education">Patient Education</a>
+    <div class="mob-sub">${educationMenu}</div>
   </div>
   <a href="/#recognition">Recognition</a>
   <a href="/#contact">Contact</a>
