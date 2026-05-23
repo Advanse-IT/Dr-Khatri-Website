@@ -27,13 +27,14 @@ const markup = `
 <span class="hero-tagtext">Gold Coast · Est. 2000 · 24 / 7</span>
 </div>
 <h1 class="hero-title a up d1">Dr Shailesh Khatri</h1>
-<p class="hero-cred a up d2">MBBS · FRACP · FCSANZ · SCAI · AMA · ACOR-Accredited TAVI Operator</p>
-<p class="hero-desc a up d3">A highly experienced interventional cardiologist specialising in coronary angiography, angioplasty and stenting, and TAVI. Serving the Gold Coast community for over 25 years with a 24-hour cardiology service at both Pindara Private Hospital and John Flynn Private Hospital.</p>
-<div class="hero-btns a up d4">
+<h2 class="hero-subtitle a up d2">Interventional Cardiologist &mdash; Gold Coast</h2>
+<p class="hero-cred a up d3">MBBS · FRACP · FCSANZ · SCAI · AMA · ACOR-Accredited TAVI Operator</p>
+<p class="hero-desc a up d4">A highly experienced interventional cardiologist specialising in coronary angiography, angioplasty and stenting, and TAVI. Serving the Gold Coast community for over 25 years with a 24-hour cardiology service at both Pindara Private Hospital and John Flynn Private Hospital.</p>
+<div class="hero-btns a up d5">
 <a class="btn btn-gold" href="#contact">Book a Consultation</a>
 <a class="btn btn-ghost" href="#about">About Dr Khatri</a>
 </div>
-<div class="hero-strip a up d5">
+<div class="hero-strip a up d6">
 <div class="hsi"><span class="hsi-n">15,000+</span><span class="hsi-l">Procedures</span></div>
 <div class="hsi"><span class="hsi-n">1,500+</span><span class="hsi-l">Primary PCI</span></div>
 <div class="hsi"><span class="hsi-n">400+</span><span class="hsi-l">TAVI</span></div>

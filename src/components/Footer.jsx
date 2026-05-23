@@ -41,10 +41,10 @@ const markup = `
 </ul></nav></div>
 <div class="fg-col"><h4>Location</h4>
 <p><strong style="color:rgba(255,255,255,.7);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase">Consulting Rooms</strong><br/>
-        John Flynn Specialist Suites<br/>Level 3, Suites 301–303<br/>42 Inland Drive, Tugun QLD 4224<br/><br/>
+        <address style="font-style:normal">John Flynn Specialist Suites<br/>Level 3, Suites 301–303<br/>42 Inland Drive, Tugun QLD 4224<br/><br/>
 <strong style="color:rgba(255,255,255,.7);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase">Admitting Hospitals</strong><br/>
         John Flynn Private Hospital, Tugun<br/>Pindara Private Hospital, Benowa<br/><br/>
-<a href="tel:+61755980322" style="color:var(--gold2);font-weight:600">(07) 5598 0322</a></p>
+<a href="tel:+61755980322" style="color:var(--gold2);font-weight:600">(07) 5598 0322</a></address></p>
 </div>
 <div class="fg-col"><h4>Emergency</h4><p>Dr Khatri has provided a 24-hour cardiology service to the Gold Coast for over two decades. Cardiac emergencies are prioritised at both hospitals at any time.<br/><br/>Life-threatening emergency: call <strong style="color:#fff">000</strong> immediately.</p></div>
 </div>
@@ -56,7 +56,7 @@ const markup = `
 
   <div class="footer-credit-center">
     <a class="site-credit" href="https://ausprostudios.com.au" target="_blank" rel="noopener noreferrer" aria-label="Auspro Studios website">
-      <img src="/images/auspro-logo.svg" alt="Auspro Studios" />
+      <img src="/images/auspro-logo.svg" alt="Auspro Studios" loading="lazy" width="120" height="32"/>
       <span>Digital experience crafted by <strong>Auspro Studios</strong></span>
     </a>
   </div>

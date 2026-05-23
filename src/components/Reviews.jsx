@@ -13,7 +13,7 @@ const markup = `
 </div>
 <div class="rp-grid">
 <!-- PRIMARY: RateMDs -->
-<a class="rp-card primary a up d1" href="https://www.ratemds.com/doctor-ratings/114846/Dr-Shailesh-Khatri-Gold+Coast-QLD.html/" rel="noopener" target="_blank">
+<a class="rp-card primary a up d1" href="https://www.ratemds.com/doctor-ratings/114846/Dr-Shailesh-Khatri-Gold+Coast-QLD.html/" rel="noopener noreferrer" target="_blank">
 <svg aria-hidden="true" class="rp-ico" style="color:var(--gold)"><use href="#ic-star"></use></svg>
 <div class="rp-name">RateMDs</div>
 <div class="rp-tagline">Australia's leading independent doctor review platform</div>
@@ -35,7 +35,7 @@ const markup = `
 <strong>Independently reviewed on RateMDs</strong>
 <span>Read genuine, unmoderated patient feedback at ratemds.com — in compliance with AHPRA advertising guidelines</span>
 </div>
-<a class="btn btn-navy" href="https://www.ratemds.com/doctor-ratings/114846/Dr-Shailesh-Khatri-Gold+Coast-QLD.html/" rel="noopener" target="_blank">Read Patient Reviews →</a>
+<a class="btn btn-navy" href="https://www.ratemds.com/doctor-ratings/114846/Dr-Shailesh-Khatri-Gold+Coast-QLD.html/" rel="noopener noreferrer" target="_blank">Read Patient Reviews →</a>
 </div>
 </div>
 </section>

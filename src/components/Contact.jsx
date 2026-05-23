@@ -22,14 +22,14 @@ const markup = `
 <div class="map-box">
 <iframe allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=John+Flynn+Private+Hospital,+42+Inland+Drive,+Tugun+QLD+4224&amp;z=16&amp;output=embed" title="John Flynn Private Hospital"></iframe>
 </div>
-<a class="map-cta" href="https://maps.google.com/?q=John+Flynn+Private+Hospital+Tugun+QLD+4224" rel="noopener" target="_blank"><svg aria-hidden="true" style="width:16px;height:16px;flex-shrink:0"><use href="#ic-pin"></use></svg> Get Directions — John Flynn, Tugun</a>
+<a class="map-cta" href="https://maps.google.com/?q=John+Flynn+Private+Hospital+Tugun+QLD+4224" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" style="width:16px;height:16px;flex-shrink:0"><use href="#ic-pin"></use></svg> Get Directions — John Flynn, Tugun</a>
 </div>
 <div class="map-block">
 <div class="map-lbl">Pindara Private Hospital · Benowa</div>
 <div class="map-box">
 <iframe allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Pindara+Private+Hospital,+Allchurch+Avenue,+Benowa+QLD+4217&amp;z=16&amp;output=embed" title="Pindara Private Hospital"></iframe>
 </div>
-<a class="map-cta" href="https://maps.google.com/?q=Pindara+Private+Hospital+Benowa+QLD+4217" rel="noopener" target="_blank"><svg aria-hidden="true" style="width:16px;height:16px;flex-shrink:0"><use href="#ic-pin"></use></svg> Get Directions — Pindara, Benowa</a>
+<a class="map-cta" href="https://maps.google.com/?q=Pindara+Private+Hospital+Benowa+QLD+4217" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" style="width:16px;height:16px;flex-shrink:0"><use href="#ic-pin"></use></svg> Get Directions — Pindara, Benowa</a>
 </div>
 </div>
 </div>

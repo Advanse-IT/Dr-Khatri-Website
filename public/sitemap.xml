@@ -3,91 +3,33 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
-  <!-- Primary page -->
   <url>
     <loc>https://drskhatri.com.au/</loc>
-    <lastmod>2025-05-01</lastmod>
+    <lastmod>2025-05-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en-AU" href="https://drskhatri.com.au/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://drskhatri.com.au/"/>
     <image:image>
       <image:loc>https://drskhatri.com.au/images/photo3.jpeg</image:loc>
-      <image:title>Dr Shailesh Khatri — Interventional Cardiologist Gold Coast</image:title>
-      <image:caption>Dr Shailesh Khatri FRACP FCSANZ — Senior Interventional Cardiologist, Gold Coast</image:caption>
+      <image:title>Dr Shailesh Khatri FRACP FCSANZ — Interventional Cardiologist Gold Coast</image:title>
+      <image:caption>Dr Shailesh Khatri — Senior Interventional Cardiologist, Gold Coast, consulting at John Flynn Specialist Suites, Tugun QLD</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://drskhatri.com.au/images/photo4.jpeg</image:loc>
-      <image:title>Dr Shailesh Khatri — Cardiology Consultation</image:title>
-      <image:caption>Dr Khatri — Providing expert cardiology care to the Gold Coast since 2001</image:caption>
+      <image:title>Dr Shailesh Khatri — Cardiology Consultation Gold Coast</image:title>
+      <image:caption>Dr Khatri during a cardiology consultation — providing expert cardiac care on the Gold Coast since 2001</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://drskhatri.com.au/images/photo1.jpeg</image:loc>
-      <image:title>Dr Khatri with medical student — Bond University Adjunct Professor</image:title>
-      <image:caption>Dr Khatri with medical student — dedicated to teaching the next generation of cardiologists</image:caption>
+      <image:title>Dr Khatri Medical Education Gold Coast</image:title>
+      <image:caption>Dr Khatri with a medical student — reflecting his commitment to postgraduate medical education and professional development</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://drskhatri.com.au/images/photo2.jpeg</image:loc>
-      <image:title>Dr Khatri in catheterisation laboratory</image:title>
-      <image:caption>Dr Khatri performing an interventional cardiology procedure in the cath lab</image:caption>
+      <image:title>Dr Khatri Catheterisation Laboratory — Primary PCI TAVI Angioplasty Gold Coast</image:title>
+      <image:caption>Dr Khatri in the catheterisation laboratory — pioneer of emergency cardiac services for Northern Rivers NSW patients</image:caption>
     </image:image>
-  </url>
-
-  <!-- Section anchor URLs — help Google understand on-page content depth -->
-  <url>
-    <loc>https://drskhatri.com.au/#about</loc>
-    <lastmod>2025-05-01</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://drskhatri.com.au/#services</loc>
-    <lastmod>2025-05-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://drskhatri.com.au/#patient-journey</loc>
-    <lastmod>2025-05-01</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://drskhatri.com.au/#recognition</loc>
-    <lastmod>2025-05-01</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://drskhatri.com.au/#pioneer</loc>
-    <lastmod>2025-05-01</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://drskhatri.com.au/#reviews</loc>
-    <lastmod>2025-05-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://drskhatri.com.au/#faq</loc>
-    <lastmod>2025-05-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://drskhatri.com.au/#contact</loc>
-    <lastmod>2025-05-01</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.9</priority>
   </url>
 
 </urlset>

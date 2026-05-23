@@ -7,6 +7,25 @@ export default function useSiteEffects() {
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
 
+    // ── Scroll-spy: highlight active nav link ──────────────────────────────
+    const sections = ['about','services','patient-journey','recognition','reviews','faq','contact'];
+    const navLinks = document.querySelectorAll('.nav-links a[href^="#"], .mob-nav a[href^="#"]');
+    const setActiveNav = () => {
+      let current = '';
+      sections.forEach(id => {
+        const el = document.getElementById(id);
+        if (el && window.scrollY >= el.offsetTop - 120) current = id;
+      });
+      navLinks.forEach(a => {
+        const match = a.getAttribute('href') === '#' + current;
+        a.classList.toggle('active', match);
+        if (match) a.setAttribute('aria-current', 'true');
+        else a.removeAttribute('aria-current');
+      });
+    };
+    window.addEventListener('scroll', setActiveNav, { passive: true });
+    setActiveNav();
+
     const hbg = document.getElementById('hbg');
     const mn = document.getElementById('mobNav');
     const closeMobileMenu = () => {
@@ -173,8 +192,15 @@ export default function useSiteEffects() {
 
     window.faq = (q) => {
       const item = q.parentElement;
-      document.querySelectorAll('.faq-item.open').forEach((i) => { if (i !== item) i.classList.remove('open'); });
-      item.classList.toggle('open');
+      const willOpen = !item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach((i) => {
+        if (i !== item) {
+          i.classList.remove('open');
+          i.querySelector('[aria-expanded]')?.setAttribute('aria-expanded', 'false');
+        }
+      });
+      item.classList.toggle('open', willOpen);
+      q.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
     };
     window.showDirectionsPicker = (e) => {
       e?.preventDefault();
@@ -192,6 +218,7 @@ export default function useSiteEffects() {
 
     return () => {
       window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('scroll', setActiveNav);
       hbg?.removeEventListener('click', toggleMobileMenu);
       mn?.querySelectorAll('a').forEach((a) => a.removeEventListener('click', closeMobileMenu));
       document.removeEventListener('keydown', onKeyDown);
