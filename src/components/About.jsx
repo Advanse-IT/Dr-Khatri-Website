@@ -6,7 +6,7 @@ const markup = `
 <div class="wrap">
 <div class="about-grid">
 <div class="ap-col a lft">
-<div class="ap-main"><img alt="Dr Shailesh Khatri" loading="lazy" src="/images/photo4.webp"/></div>
+<div class="ap-main"><picture><source type="image/avif" srcset="/images/photo4-480.avif 480w, /images/photo4-768.avif 768w, /images/photo4-1024.avif 1024w" sizes="(max-width: 760px) 92vw, 560px"><source type="image/webp" srcset="/images/photo4-480.webp 480w, /images/photo4-768.webp 768w, /images/photo4-1024.webp 1024w" sizes="(max-width: 760px) 92vw, 560px"><img alt="Dr Shailesh Khatri professional portrait" width="1200" height="1246" loading="lazy" decoding="async" src="/images/photo4-768.webp"/></picture></div>
 <div class="ap-stats">
 <div class="as-i"><span class="as-n">15,000+</span><span class="as-l">Procedures</span></div>
 <div class="as-i"><span class="as-n">400+</span><span class="as-l">TAVI</span></div>

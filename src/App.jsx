@@ -27,7 +27,7 @@ import LocationPage from './pages/LocationPage.jsx';
 import EducationPage from './pages/EducationPage.jsx';
 import NotFoundPage from './pages/NotFoundPage.jsx';
 import { servicePages, articles } from './data/siteData.js';
-import { baseSchema, breadcrumbSchema, faqSchema, findRoute, injectSchema, medicalWebPageSchema, articleSchema, setMeta } from './utils/seo.js';
+import { baseSchema, breadcrumbSchema, faqSchema, findRoute, injectSchema, medicalWebPageSchema, articleSchema, serviceSchema, locationSchema, reviewPolicySchema, setMeta } from './utils/seo.js';
 
 function HomePage() {
   return <>
@@ -83,26 +83,26 @@ export default function App() {
   useEffect(() => {
     if (route.type === 'home') {
       setMeta({ title:'Dr Shailesh Khatri | Senior Interventional Cardiologist Gold Coast', description:'Senior Interventional Cardiologist on the Gold Coast specialising in coronary angiography, angioplasty, stenting, TAVI and 24-hour emergency cardiac care.', path:'/' });
-      injectSchema([baseSchema(), faqSchema([['Do I need a referral to see Dr Khatri?','Yes. A GP referral is required for routine consultations.'],['Where does Dr Khatri consult?','Dr Khatri consults and has admitting rights through John Flynn Private Hospital in Tugun and Pindara Private Hospital in Benowa.'],['What does an interventional cardiologist do?','An interventional cardiologist diagnoses and treats heart artery and valve conditions using catheter-based procedures such as angiography, angioplasty, stenting and TAVI.']]), breadcrumbSchema([{name:'Home',path:'/'}])]);
+      injectSchema([baseSchema(), reviewPolicySchema(), faqSchema([['Do I need a referral to see Dr Khatri?','Yes. A GP referral is required for routine consultations.'],['Where does Dr Khatri consult?','Dr Khatri consults and has admitting rights through John Flynn Private Hospital in Tugun and Pindara Private Hospital in Benowa.'],['What does an interventional cardiologist do?','An interventional cardiologist diagnoses and treats heart artery and valve conditions using catheter-based procedures such as angiography, angioplasty, stenting and TAVI.']]), breadcrumbSchema([{name:'Home',path:'/'}])]);
     }
     if (route.type === 'service') {
       const p = route.data; const url = `/${p.slug}`;
       setMeta({ title:p.title, description:p.summary, path:url });
-      injectSchema([baseSchema(), medicalWebPageSchema({ title:p.title, description:p.summary, path:url }), faqSchema(p.faqs), breadcrumbSchema([{name:'Home',path:'/'},{name:'Services',path:'/coronary-angiography'},{name:p.h1,path:url}])]);
+      injectSchema([baseSchema(), medicalWebPageSchema({ title:p.title, description:p.summary, path:url, about:p.h1 }), serviceSchema(p), faqSchema(p.faqs), breadcrumbSchema([{name:'Home',path:'/'},{name:'Services',path:'/coronary-angiography'},{name:p.h1,path:url}])]);
     }
     if (route.type === 'location') {
       const p = route.data; const url = `/${p.slug}`;
       setMeta({ title:p.title, description:p.summary, path:url });
-      injectSchema([baseSchema(), medicalWebPageSchema({ title:p.title, description:p.summary, path:url }), breadcrumbSchema([{name:'Home',path:'/'},{name:p.h1,path:url}])]);
+      injectSchema([baseSchema(), medicalWebPageSchema({ title:p.title, description:p.summary, path:url, about:`Cardiology care for ${p.area}` }), locationSchema(p), breadcrumbSchema([{name:'Home',path:'/'},{name:p.h1,path:url}])]);
     }
     if (route.type === 'education') {
       setMeta({ title:'Heart Health Patient Education Gold Coast', description:'Patient education articles about cardiology symptoms, procedures, angiograms, angioplasty, stents and when to see a cardiologist.', path:'/patient-education' });
-      injectSchema([baseSchema(), breadcrumbSchema([{name:'Home',path:'/'},{name:'Patient Education',path:'/patient-education'}])]);
+      injectSchema([baseSchema(), medicalWebPageSchema({ title:'Heart Health Patient Education Gold Coast', description:'Patient education articles about cardiology symptoms, procedures, angiograms, angioplasty, stents and when to see a cardiologist.', path:'/patient-education', about:'Patient cardiac education' }), breadcrumbSchema([{name:'Home',path:'/'},{name:'Patient Education',path:'/patient-education'}])]);
     }
     if (route.type === 'article') {
       const a = route.data; const url = `/patient-education/${a.slug}`;
       setMeta({ title:a.title, description:a.description, path:url, type:'article' });
-      injectSchema([baseSchema(), articleSchema(a, url), faqSchema(a.faqs), breadcrumbSchema([{name:'Home',path:'/'},{name:'Patient Education',path:'/patient-education'},{name:a.title,path:url}])]);
+      injectSchema([baseSchema(), medicalWebPageSchema({ title:a.title, description:a.description, path:url, about:'Cardiology patient education' }), articleSchema(a, url), faqSchema(a.faqs), breadcrumbSchema([{name:'Home',path:'/'},{name:'Patient Education',path:'/patient-education'},{name:a.title,path:url}])]);
     }
   }, [route]);
 

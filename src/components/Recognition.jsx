@@ -21,7 +21,7 @@ const markup = `
 <p class="sec-lead wide">Dr Khatri's 24-hour cardiology service — including over 1,500 emergency Primary PCI procedures for patients experiencing acute heart attacks — reflects over two decades of unwavering commitment to the Gold Coast community.</p>
 </div>
 <div class="rec-photo">
-<img alt="Dr Khatri with medical student" loading="lazy" src="/images/photo1.jpeg"/>
+<picture><source type="image/avif" srcset="/images/photo1-480.avif 480w" sizes="(max-width: 760px) 92vw, 520px"><source type="image/webp" srcset="/images/photo1-480.webp 480w" sizes="(max-width: 760px) 92vw, 520px"><img alt="Dr Khatri supporting medical education and training" width="601" height="363" loading="lazy" decoding="async" src="/images/photo1-480.webp"/></picture>
 </div>
 </div>
 </div>

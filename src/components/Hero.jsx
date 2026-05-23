@@ -42,7 +42,11 @@ const markup = `
 <div class="hero-photo">
 <div class="hero-frame a up d2">
 <div class="hero-img-border"></div>
-<img alt="Dr Shailesh Khatri" class="hero-img" loading="eager" src="/images/photo3.webp"/>
+<picture>
+<source type="image/avif" srcset="/images/photo3-480.avif 480w, /images/photo3-768.avif 768w, /images/photo3-1024.avif 1024w, /images/photo3-1400.avif 1400w" sizes="(max-width: 760px) 88vw, 520px">
+<source type="image/webp" srcset="/images/photo3-480.webp 480w, /images/photo3-768.webp 768w, /images/photo3-1024.webp 1024w, /images/photo3-1400.webp 1400w" sizes="(max-width: 760px) 88vw, 520px">
+<img alt="Dr Shailesh Khatri, Senior Interventional Cardiologist Gold Coast" class="hero-img" fetchpriority="high" width="1400" height="1482" loading="eager" decoding="async" src="/images/photo3-768.webp"/>
+</picture>
 <!----      <div class="hero-award">Best Cardiologist — Gold Coast 2024 &amp; 2025</div>     -->
 <div aria-label="Best Cardiologist Gold Coast 2024 and 2025" class="hero-award" role="img">
 <div aria-hidden="true" class="hero-award-stars">

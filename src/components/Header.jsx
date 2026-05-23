@@ -47,10 +47,10 @@ const markup = `
 <a class="nl" href="/#contact">Contact</a>
 <a class="nl nlbook" href="/#contact">Book Appointment</a>
 </nav>
-<button aria-label="Open menu" class="hbg" id="hbg"><span></span><span></span><span></span></button>
+<button aria-label="Open menu" aria-controls="mobNav" aria-expanded="false" class="hbg" id="hbg" type="button"><span></span><span></span><span></span></button>
 </div>
 </nav>
-<div class="mob-nav" id="mobNav">
+<div class="mob-nav" id="mobNav" aria-hidden="true">
 <a href="/#about">About</a>
 <a href="/coronary-angiography">Services</a>
 <a href="/#recognition">Recognition</a>

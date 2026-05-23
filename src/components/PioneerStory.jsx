@@ -17,7 +17,7 @@ const markup = `
 </div>
 </div>
 <div class="pio-vis a rgt">
-<img alt="Dr Khatri in catheterisation laboratory" class="pio-img" loading="lazy" src="/images/photo2.jpeg"/>
+<picture><source type="image/avif" srcset="/images/photo2-480.avif 480w, /images/photo2-768.avif 768w" sizes="(max-width: 760px) 92vw, 520px"><source type="image/webp" srcset="/images/photo2-480.webp 480w, /images/photo2-768.webp 768w" sizes="(max-width: 760px) 92vw, 520px"><img alt="Dr Khatri in a cardiac catheterisation laboratory" class="pio-img" width="768" height="1024" loading="lazy" decoding="async" src="/images/photo2-480.webp"/></picture>
 <div class="pio-badge"><span class="pb-n">20+</span><span class="pb-l">Years of Service<br/>Tweed Hospital</span></div>
 </div>
 </div>

@@ -5,8 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "build": "vite build && node scripts/generate-static-routes.mjs && node scripts/validate-seo.mjs",
+    "preview": "vite preview",
+    "seo:validate": "node scripts/validate-seo.mjs"
   },
   "dependencies": {
     "react": "latest",

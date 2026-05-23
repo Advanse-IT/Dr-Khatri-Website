@@ -11,14 +11,22 @@ export default function useSiteEffects() {
     const mn = document.getElementById('mobNav');
     const closeMobileMenu = () => {
       hbg?.classList.remove('on');
+      hbg?.setAttribute('aria-expanded', 'false');
       mn?.classList.remove('on');
+      mn?.setAttribute('aria-hidden', 'true');
       document.body.style.overflow = '';
     };
     const toggleMobileMenu = () => {
       hbg?.classList.toggle('on');
       mn?.classList.toggle('on');
-      document.body.style.overflow = mn?.classList.contains('on') ? 'hidden' : '';
+      const open = Boolean(mn?.classList.contains('on'));
+      hbg?.setAttribute('aria-expanded', String(open));
+      mn?.setAttribute('aria-hidden', String(!open));
+      document.body.style.overflow = open ? 'hidden' : '';
     };
+    hbg?.setAttribute('aria-controls', 'mobNav');
+    hbg?.setAttribute('aria-expanded', 'false');
+    mn?.setAttribute('aria-hidden', 'true');
     hbg?.addEventListener('click', toggleMobileMenu);
     mn?.querySelectorAll('a').forEach((a) => a.addEventListener('click', closeMobileMenu));
 
@@ -83,7 +91,8 @@ export default function useSiteEffects() {
     }
 
     function initHeroECG() {
-      const rafs = [];
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return () => {};
+      const rafs = new Set();
       const ecg = (t) => {
         const p = ((t % 1) + 1) % 1;
         if (p < 0.12) return 0;
@@ -144,11 +153,11 @@ export default function useSiteEffects() {
           dot.setAttribute('cx', headX.toFixed(2)); dot.setAttribute('cy', hy.toFixed(2));
           glow.setAttribute('cx', headX.toFixed(2)); glow.setAttribute('cy', hy.toFixed(2));
           const id = requestAnimationFrame(render);
-          rafs.push(id);
+          rafs.add(id);
         };
-        rafs.push(requestAnimationFrame(render));
+        rafs.add(requestAnimationFrame(render));
       });
-      return () => rafs.forEach((id) => cancelAnimationFrame(id));
+      return () => { rafs.forEach((id) => cancelAnimationFrame(id)); rafs.clear(); };
     }
 
     const logoCleanup = initAnimatedLogos();
