@@ -229,7 +229,11 @@ h2.sec-title.light em{color:var(--gold2)}
 .str-p{font-size:.85rem;color:var(--text2);line-height:1.68}
 
 /* ═══ STATS ══════════════════════════════════════════════════════ */
-.stats-band{background:var(--stat-bg);padding:76px 0;position:relative;overflow:hidden;border-top:none}
+.stats-band{background:var(--stat-bg);padding:76px 0;position:relative;overflow:hidden;border:none !important}
+.stats-band * { border: none !important; box-shadow: none !important; }
+.stats-band *::before, .stats-band *::after { display: none !important; content: none !important; }
+.stats-grid { border: none !important; }
+.stat-c { border: 1px solid rgba(255,255,255,0.09) !important; }
 .stats-band .kicker::before { display: none !important; }
 .stats-ecg-bg{position:absolute;bottom:0;left:0;right:0;opacity:.07;pointer-events:none}
 .stats-ecg-bg::before, .stats-ecg-bg::after { content: none !important; display: none !important; }

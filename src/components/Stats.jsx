@@ -3,12 +3,12 @@ import RawHtml from './RawHtml.jsx';
 const markup = `
 <!-- ═══ STATS ══════════════════════════════════════════════════ -->
 <div class="stats-band">
-<!-- ECG Graphic Removed for Debugging -->
+<!-- ECG Removed -->
 <img src="/images/anatomical-heart.svg" class="stats-heart" style="position:absolute;width:380px;right:0px;bottom:-10px;opacity:0.08;pointer-events:none;z-index:1" alt="" />
 <div class="wrap" style="position:relative;z-index:2">
 <div class="stats-top">
 <div>
-<span class="kicker light a lft" style="display:inline-block">Track Record</span>
+<div style="font-size:.82rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold2);margin-bottom:14px">Track Record</div>
 <h2 class="sec-title light a lft d1">A Career Measured in <em>Lives Saved</em></h2>
 <h3 style="display:none">Experienced Gold Coast Cardiologist Track Record</h3>
 </div>
