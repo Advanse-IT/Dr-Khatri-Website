@@ -119,11 +119,7 @@ export default function useSiteEffects() {
         g.innerHTML = '<stop offset="0%" stop-color="' + c + '" stop-opacity="0"/><stop offset="58%" stop-color="' + c + '" stop-opacity=".42"/><stop offset="92%" stop-color="' + c + '" stop-opacity=".8"/><stop offset="100%" stop-color="#ffffff" stop-opacity="1"/>';
         defs.appendChild(g);
         path.setAttribute('stroke', 'url(#' + id + ')'); path.setAttribute('stroke-width', '2');
-        const bl = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-        bl.setAttribute('x1', String(X0)); bl.setAttribute('x2', String(X1));
-        bl.setAttribute('y1', String(BASELINE)); bl.setAttribute('y2', String(BASELINE));
-        bl.setAttribute('stroke', c); bl.setAttribute('stroke-opacity', '.10'); bl.setAttribute('stroke-width', '.8');
-        svg.insertBefore(bl, path);
+        // Baseline line removed per design requirement
         const glow = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
         glow.setAttribute('r', '4.2'); glow.setAttribute('fill', '#fff'); glow.setAttribute('fill-opacity', '.12');
         const dot = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
