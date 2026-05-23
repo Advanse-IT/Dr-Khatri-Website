@@ -1066,3 +1066,16 @@ a.svc-c:focus-visible,.article-card:focus-visible,.authority-links a:focus-visib
 .answer-box strong{display:block;color:var(--navy);font-weight:900;margin-bottom:8px;letter-spacing:.01em}.answer-box p{margin:0!important;color:var(--text2)}
 .entity-links{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 24px}.entity-links a{display:inline-flex;align-items:center;border:1px solid var(--border);background:var(--bg2);color:var(--navy);font-weight:800;text-decoration:none;border-radius:999px;padding:10px 14px;line-height:1.2}.entity-links a:hover,.entity-links a:focus-visible{border-color:rgba(var(--ar),.5);color:var(--gold);outline:3px solid rgba(var(--ar),.22);outline-offset:3px}
 img{max-width:100%;height:auto}picture{display:contents}.hero-frame picture{display:block;width:100%;height:100%}.hero-img{aspect-ratio:1400/1482}.ap-main picture,.pio-img picture{display:block}
+
+
+/* ═══ SERVICES HUB CONSISTENCY PATCH ════════════════════════════ */
+.section-cta-row{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:34px}
+.section-cta-row .btn{min-width:180px}
+.services-route .route-hero{background:var(--hero-bg);color:#fff}
+.service-hub-hero .route-title{max-width:900px}
+.service-directory-grid{grid-template-columns:repeat(3,1fr)}
+.service-directory-card .svc-p{min-height:110px}
+.services-route .content-main h2,.services-route .content-side h2{font-family:'Inter',sans-serif;font-weight:900;color:var(--navy);letter-spacing:-.03em}
+.services-route .content-side{background:linear-gradient(180deg,#edf1f7 0%,#e8eef6 100%)}
+@media(max-width:1024px){.service-directory-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:768px){.service-directory-grid{grid-template-columns:1fr}.service-directory-card .svc-p{min-height:0}.section-cta-row .btn{width:100%;justify-content:center}}

@@ -40,7 +40,7 @@ const markup = `
 </a>
 <nav class="nav-links">
 <a class="nl" href="/#about">About</a>
-<a class="nl" href="/coronary-angiography">Services</a>
+<a class="nl" href="/services">Services</a>
 <a class="nl" href="/#recognition">Recognition</a>
 <a class="nl" href="/#reviews">Reviews</a>
 <a class="nl" href="/#faq">FAQ</a>
@@ -52,7 +52,7 @@ const markup = `
 </nav>
 <div class="mob-nav" id="mobNav" aria-hidden="true">
 <a href="/#about">About</a>
-<a href="/coronary-angiography">Services</a>
+<a href="/services">Services</a>
 <a href="/#recognition">Recognition</a>
 <a href="/#reviews">Reviews</a>
 <a href="/#faq">FAQ</a>

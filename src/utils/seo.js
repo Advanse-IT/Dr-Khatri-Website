@@ -246,6 +246,7 @@ export function injectSchema(schemas) {
 export function findRoute(path) {
   const clean = path.replace(/\/$/, '') || '/';
   if (clean === '/') return { type: 'home' };
+  if (clean === '/services') return { type: 'servicesIndex' };
   const service = servicePages.find(p => `/${p.slug}` === clean); if (service) return { type: 'service', data: service };
   const location = locationPages.find(p => `/${p.slug}` === clean); if (location) return { type: 'location', data: location };
   if (clean === '/patient-education') return { type: 'education' };

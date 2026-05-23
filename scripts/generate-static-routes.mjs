@@ -35,6 +35,21 @@ function routeDetails(route) {
     };
   }
 
+  if (route === '/services') {
+    const title = 'Interventional Cardiology Services Gold Coast';
+    const description = 'Explore specialist cardiology services from Dr Shailesh Khatri including coronary angiography, angioplasty, stents, TAVI, chest pain care, prevention and heart disease management.';
+    return {
+      title,
+      description,
+      type: 'website',
+      schemas: [
+        ...baseSchema(),
+        medicalWebPageSchema({ title, description, path: route, about: 'Interventional cardiology services' }),
+        breadcrumbSchema([{ name: 'Home', path: '/' }, { name: 'Services', path: '/services' }])
+      ]
+    };
+  }
+
   const service = servicePages.find(p => `/${p.slug}` === route);
   if (service) {
     return {
@@ -46,7 +61,7 @@ function routeDetails(route) {
         medicalWebPageSchema({ title: service.title, description: service.summary, path: route, about: service.h1 }),
         serviceSchema(service),
         faqSchema(service.faqs),
-        breadcrumbSchema([{ name: 'Home', path: '/' }, { name: 'Services', path: '/coronary-angiography' }, { name: service.h1, path: route }])
+        breadcrumbSchema([{ name: 'Home', path: '/' }, { name: 'Services', path: '/services' }, { name: service.h1, path: route }])
       ]
     };
   }

@@ -22,6 +22,7 @@ import DirectionsPicker from './components/DirectionsPicker.jsx';
 import LegalInformation from './components/LegalInformation.jsx';
 import CookieConsent from './components/CookieConsent.jsx';
 import useSiteEffects from './hooks/useSiteEffects.js';
+import ServicesIndexPage from './pages/ServicesIndexPage.jsx';
 import ServicePage from './pages/ServicePage.jsx';
 import LocationPage from './pages/LocationPage.jsx';
 import EducationPage from './pages/EducationPage.jsx';
@@ -85,6 +86,10 @@ export default function App() {
       setMeta({ title:'Dr Shailesh Khatri | Senior Interventional Cardiologist Gold Coast', description:'Senior Interventional Cardiologist on the Gold Coast specialising in coronary angiography, angioplasty, stenting, TAVI and 24-hour emergency cardiac care.', path:'/' });
       injectSchema([baseSchema(), reviewPolicySchema(), faqSchema([['Do I need a referral to see Dr Khatri?','Yes. A GP referral is required for routine consultations.'],['Where does Dr Khatri consult?','Dr Khatri consults and has admitting rights through John Flynn Private Hospital in Tugun and Pindara Private Hospital in Benowa.'],['What does an interventional cardiologist do?','An interventional cardiologist diagnoses and treats heart artery and valve conditions using catheter-based procedures such as angiography, angioplasty, stenting and TAVI.']]), breadcrumbSchema([{name:'Home',path:'/'}])]);
     }
+    if (route.type === 'servicesIndex') {
+      setMeta({ title:'Interventional Cardiology Services Gold Coast', description:'Explore specialist cardiology services from Dr Shailesh Khatri including coronary angiography, angioplasty, stents, TAVI, chest pain care, prevention and heart disease management.', path:'/services' });
+      injectSchema([baseSchema(), medicalWebPageSchema({ title:'Interventional Cardiology Services Gold Coast', description:'A structured directory of specialist interventional cardiology services available through Dr Shailesh Khatri on the Gold Coast.', path:'/services', about:'Interventional cardiology services' }), breadcrumbSchema([{name:'Home',path:'/'},{name:'Services',path:'/services'}])]);
+    }
     if (route.type === 'service') {
       const p = route.data; const url = `/${p.slug}`;
       setMeta({ title:p.title, description:p.summary, path:url });
@@ -106,6 +111,7 @@ export default function App() {
     }
   }, [route]);
 
+  if (route.type === 'servicesIndex') return <ServicesIndexPage />;
   if (route.type === 'service') return <ServicePage page={route.data} />;
   if (route.type === 'location') return <LocationPage page={route.data} />;
   if (route.type === 'education') return <EducationPage />;
