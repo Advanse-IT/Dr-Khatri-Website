@@ -1,4 +1,4 @@
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { useEffect } from 'react';
 import SvgIcons from './components/SvgIcons.jsx';
@@ -27,7 +27,8 @@ function HomePage() {
   useSiteEffects();
 
   useEffect(() => {
-    // Scroll to top on home page load
+    // Ensure we're on the root path and scroll to top
+    console.log('HomePage loaded - Current path:', window.location.pathname);
     window.scrollTo(0, 0);
   }, []);
 
@@ -71,6 +72,9 @@ function SectionPage({ sectionId, title, description, path }) {
   useSiteEffects();
 
   useEffect(() => {
+    // Log the section page load
+    console.log('SectionPage loaded - Section ID:', sectionId, 'Path:', path);
+    
     // Scroll to the target section after a short delay to ensure DOM is ready
     const timer = setTimeout(() => {
       const element = document.getElementById(sectionId);
@@ -85,6 +89,7 @@ function SectionPage({ sectionId, title, description, path }) {
         });
       } else {
         // If section not found, scroll to top
+        console.warn('Section not found:', sectionId);
         window.scrollTo(0, 0);
       }
     }, 50);
@@ -129,6 +134,11 @@ function SectionPage({ sectionId, title, description, path }) {
 export default function App() {
   const location = useLocation();
 
+  // Log all route changes for debugging
+  useEffect(() => {
+    console.log('Route changed to:', location.pathname);
+  }, [location.pathname]);
+
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
@@ -139,8 +149,8 @@ export default function App() {
       <Route path="/faq" element={<SectionPage sectionId="faq" title="FAQ | Dr Shailesh Khatri | Cardiologist Gold Coast" description="Frequently asked questions about cardiology, procedures, referrals, and Dr Khatri's practice." path="/faq" />} />
       <Route path="/contact" element={<SectionPage sectionId="contact" title="Contact & Appointments | Dr Shailesh Khatri" description="Book an appointment with Dr Shailesh Khatri. Consulting at John Flynn and Pindara Private Hospitals." path="/contact" />} />
       <Route path="/legal" element={<SectionPage sectionId="legal-information" title="Legal Information | Dr Shailesh Khatri" description="Website information, privacy policy, terms of use, and AHPRA compliance details." path="/legal" />} />
-      {/* Catch-all for undefined routes */}
-      <Route path="*" element={<HomePage />} />
+      {/* Catch-all for undefined routes - redirect to home */}
+      <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );
 }
