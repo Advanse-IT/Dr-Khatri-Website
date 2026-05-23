@@ -264,12 +264,7 @@ Recognised Excellence
 </div>
 </div>
 </div>
-<!-- ECG stripe -->
-<div class="ecg-stripe" style="background:var(--bg2)">
-<svg preserveaspectratio="none" viewbox="0 0 1440 32">
-<path d="M0,16 L180,16 L196,16 L200,14 L204,4 L208,28 L212,10 L216,16 L380,16 L400,16 L600,16 L800,16 L1000,16 L1200,16 L1440,16" fill="none" opacity=".2" stroke="var(--gold)" stroke-linecap="round" stroke-width="1.3"></path>
-</svg>
-</div>
+
 `;function fi(){return(0,j.jsx)(M,{html:di})}var pi=`
 <!-- ═══ SERVICES ═══════════════════════════════════════════════ -->
 <section class="sec bg2" id="services">
