@@ -8,6 +8,12 @@ export default defineConfig({
     assetsDir: 'assets',
   },
   server: {
-    middlewareMode: true,
+    host: true,
+    port: 3000,
+  },
+  preview: {
+    host: true,
+    port: 3000,
+    allowedHosts: true
   },
 });
