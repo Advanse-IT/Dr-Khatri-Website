@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-export default function useSiteEffects() {
+export default function useSiteEffects(routeKey = window.location.pathname) {
   useEffect(() => {
     const nav = document.getElementById('nav');
     const onScroll = () => nav?.classList.toggle('up', window.scrollY > 56);
@@ -212,5 +212,5 @@ export default function useSiteEffects() {
       delete window.showDirectionsPicker;
       delete window.hideDirectionsPicker;
     };
-  }, []);
+  }, [routeKey]);
 }

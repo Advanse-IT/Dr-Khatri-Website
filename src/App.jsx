@@ -62,7 +62,7 @@ function HomePage() {
 export default function App() {
   const [path, setPath] = useState(window.location.pathname);
   const route = useMemo(() => findRoute(path), [path]);
-  useSiteEffects();
+  useSiteEffects(path);
 
   useEffect(() => {
     const onClick = (e) => {
@@ -93,7 +93,7 @@ export default function App() {
     if (route.type === 'service') {
       const p = route.data; const url = `/${p.slug}`;
       setMeta({ title:p.title, description:p.summary, path:url });
-      injectSchema([baseSchema(), medicalWebPageSchema({ title:p.title, description:p.summary, path:url, about:p.h1 }), serviceSchema(p), faqSchema(p.faqs), breadcrumbSchema([{name:'Home',path:'/'},{name:'Services',path:'/coronary-angiography'},{name:p.h1,path:url}])]);
+      injectSchema([baseSchema(), medicalWebPageSchema({ title:p.title, description:p.summary, path:url, about:p.h1 }), serviceSchema(p), faqSchema(p.faqs), breadcrumbSchema([{name:'Home',path:'/'},{name:'Services',path:'/services'},{name:p.h1,path:url}])]);
     }
     if (route.type === 'location') {
       const p = route.data; const url = `/${p.slug}`;

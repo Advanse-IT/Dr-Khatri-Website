@@ -1,10 +1,32 @@
 import RawHtml from './RawHtml.jsx';
 
+const serviceLinks = [
+  ['All Services', '/services'],
+  ['Coronary Angiography', '/coronary-angiography'],
+  ['Angioplasty & Stenting', '/angioplasty-stenting'],
+  ['Chest Pain Assessment', '/chest-pain'],
+  ['TAVI Aortic Valve Care', '/tavi-aortic-valve'],
+  ['Preventive Cardiology', '/preventive-cardiology'],
+  ['Hypertension Care', '/hypertension'],
+  ['Heart Disease Management', '/heart-disease-management'],
+  ['Arrhythmia & Palpitations', '/arrhythmia-palpitations'],
+  ['Cardiac Testing', '/echocardiography-cardiac-testing'],
+];
+
+const locationLinks = [
+  ['Gold Coast', '/cardiologist-gold-coast'],
+  ['Tugun', '/cardiologist-tugun'],
+  ['Benowa', '/cardiologist-benowa'],
+];
+
+const serviceMenu = serviceLinks.map(([label, href]) => `<a href="${href}">${label}</a>`).join('');
+const locationMenu = locationLinks.map(([label, href]) => `<a href="${href}">${label}</a>`).join('');
+
 const markup = `
 <!-- ═══ NAV ══════════════════════════════════════════════════════ -->
 <nav class="nav" id="nav">
 <div class="nav-inner">
-<a class="logo" href="/">
+<a class="logo" href="/" aria-label="Dr Shailesh Khatri homepage">
 <div class="sk-seal" data-color="#c49a38" data-ecg-logo="" data-highlight="#ffd770" data-id="v1">
 <svg fill="none" height="46" viewbox="0 0 46 46" width="46" xmlns="http://www.w3.org/2000/svg">
 <defs>
@@ -38,12 +60,23 @@ const markup = `
 <span class="logo-role">Interventional Cardiologist · Gold Coast</span>
 </div>
 </a>
-<nav class="nav-links">
+<nav class="nav-links" aria-label="Primary navigation">
+<a class="nl" href="/">Home</a>
 <a class="nl" href="/#about">About</a>
-<a class="nl" href="/services">Services</a>
+<div class="nav-item has-menu">
+<a class="nl menu-trigger" href="/services" aria-haspopup="true" aria-expanded="false">Services <span aria-hidden="true">▾</span></a>
+<div class="nav-menu nav-menu-wide" aria-label="Services menu">
+${serviceMenu}
+</div>
+</div>
+<a class="nl" href="/patient-education">Patient Education</a>
+<div class="nav-item has-menu">
+<a class="nl menu-trigger" href="/cardiologist-gold-coast" aria-haspopup="true" aria-expanded="false">Locations <span aria-hidden="true">▾</span></a>
+<div class="nav-menu" aria-label="Locations menu">
+${locationMenu}
+</div>
+</div>
 <a class="nl" href="/#recognition">Recognition</a>
-<a class="nl" href="/#reviews">Reviews</a>
-<a class="nl" href="/#faq">FAQ</a>
 <a class="nl" href="/#contact">Contact</a>
 <a class="nl nlbook" href="/#contact">Book Appointment</a>
 </nav>
@@ -51,11 +84,12 @@ const markup = `
 </div>
 </nav>
 <div class="mob-nav" id="mobNav" aria-hidden="true">
-<a href="/#about">About</a>
-<a href="/services">Services</a>
+<a href="/">Home</a>
+<a href="/#about">About Dr Khatri</a>
+<div class="mob-group"><a class="mob-parent" href="/services">Services</a><div class="mob-sub">${serviceMenu}</div></div>
+<a href="/patient-education">Patient Education</a>
+<div class="mob-group"><a class="mob-parent" href="/cardiologist-gold-coast">Locations</a><div class="mob-sub">${locationMenu}</div></div>
 <a href="/#recognition">Recognition</a>
-<a href="/#reviews">Reviews</a>
-<a href="/#faq">FAQ</a>
 <a href="/#contact">Contact</a>
 <a class="mob-cta" href="/#contact">Book Appointment</a>
 </div>
