@@ -18,7 +18,7 @@ const markup = `
            L1260,32 L1278,32 L1283,30 L1288,6 L1293,58 L1298,20 L1303,32 L1450,32" fill="none" stroke="rgba(196,154,56,.45)" stroke-linecap="round" stroke-width="1.8"></path>
 </svg>
 </div>
-<img src="/images/anatomical-heart.svg" class="heart-bg" style="width:650px;right:-80px;bottom:20px;position:absolute;opacity:0.4;pointer-events:none;z-index:1" alt="" />
+<img src="/images/anatomical-heart.svg" class="heart-bg" style="width:400px;right:20px;bottom:40px;position:absolute;opacity:0.08;pointer-events:none;z-index:1" alt="" />
 <div class="hero-in">
 <div>
 <div class="hero-tag a up">
