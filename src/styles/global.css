@@ -236,7 +236,8 @@ h2.sec-title.light em{color:var(--gold2)}
 .stat-c { border: 1px solid rgba(255,255,255,0.09) !important; box-shadow: none !important; }
 .stats-top { border: none !important; box-shadow: none !important; }
 .stats-top::before, .stats-top::after { display: none !important; content: none !important; }
-.stats-band * { border-top: none !important; border-bottom: none !important; }
+.stats-band * { border-top: none !important; border-bottom: none !important; border-left: none !important; border-right: none !important; }
+.stats-heart { border: none !important; outline: none !important; box-shadow: none !important; }
 .stats-band .stat-c { border: 1px solid rgba(255,255,255,0.09) !important; }
 .stats-band .kicker::before { display: none !important; }
 .stats-ecg-bg{position:absolute;bottom:0;left:0;right:0;opacity:.07;pointer-events:none}

@@ -241,11 +241,7 @@ Recognised Excellence
 `;function ui(){return(0,j.jsx)(M,{html:li})}var di=`
 <!-- ═══ STATS ══════════════════════════════════════════════════ -->
 <div class="stats-band" style="border:none !important;box-shadow:none !important">
-<div class="stats-ecg-bg" style="opacity:0.07;pointer-events:none;position:absolute;bottom:0;left:0;right:0;border:none !important">
-<svg preserveaspectratio="none" style="width:100%;height:60px;display:block;border:none !important" viewbox="0 0 1440 60">
-<path d="M156,30 L161,28 L166,6 L171,54 L176,18 L181,30 M316,30 L321,28 L326,6 L331,54 L336,18 L341,30 M476,30 L481,28 L486,6 L491,54 L496,18 L501,30 M636,30 L641,28 L646,6 L651,54 L656,18 L661,30 M796,30 L801,28 L806,6 L811,54 L816,18 L821,30 M956,30 L961,28 L966,6 L971,54 L976,18 L981,30" fill="none" stroke="white" stroke-linecap="round" stroke-width="1.5" style="border:none !important"></path>
-</svg>
-</div>
+<!-- ECG Removed -->
 <img src="/images/anatomical-heart.svg" class="stats-heart" style="position:absolute;width:380px;right:0px;bottom:-10px;opacity:0.08;pointer-events:none;z-index:1;border:none !important;box-shadow:none !important" alt="" />
 <div class="wrap" style="position:relative;z-index:2;border:none !important">
 <div class="stats-top">
