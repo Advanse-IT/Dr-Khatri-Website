@@ -1,13 +1,5 @@
-# Cloudflare Pages Redirects for Clean URLs
-# This file ensures that all routes are handled by the React Router
+# Cloudflare Pages SPA Configuration
+# This rule ensures that all routes are handled by the React Router on the client side
+# The 200 status code means "rewrite silently" - the URL stays the same but serves index.html
 
-# Redirect all requests to index.html for client-side routing
 /* /index.html 200
-
-# Legacy hash-based URLs redirect to clean URLs (optional, for backward compatibility)
-/#about /about 301
-/#services /services 301
-/#recognition /recognition 301
-/#faq /faq 301
-/#contact /contact 301
-/#legal /legal 301
