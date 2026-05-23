@@ -66,13 +66,14 @@ function SectionPage({ sectionId, title, description, path }) {
   useSiteEffects();
 
   useEffect(() => {
-    // Scroll to section on mount
-    const element = document.getElementById(sectionId);
-    if (element) {
-      setTimeout(() => {
+    // Small delay to ensure DOM is ready, then scroll to section
+    const timer = setTimeout(() => {
+      const element = document.getElementById(sectionId);
+      if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
-      }, 100);
-    }
+      }
+    }, 100);
+    return () => clearTimeout(timer);
   }, [sectionId]);
 
   return (
@@ -119,9 +120,10 @@ export default function App() {
       <Route path="/about" element={<SectionPage sectionId="about" title="About Dr Shailesh Khatri | Gold Coast Cardiologist" description="Learn about Dr Shailesh Khatri's background, training, and commitment to cardiac care on the Gold Coast." path="/about" />} />
       <Route path="/services" element={<SectionPage sectionId="services" title="Cardiac Services | Dr Shailesh Khatri | Gold Coast" description="Explore Dr Khatri's specialist services including TAVI, coronary angiography, angioplasty, and 24/7 emergency cardiac care." path="/services" />} />
       <Route path="/recognition" element={<SectionPage sectionId="recognition" title="Recognition & Credentials | Dr Shailesh Khatri" description="Dr Shailesh Khatri's professional achievements, awards, and international training credentials." path="/recognition" />} />
+      <Route path="/reviews" element={<SectionPage sectionId="reviews" title="Patient Reviews | Dr Shailesh Khatri | Gold Coast Cardiologist" description="Read independent patient reviews of Dr Shailesh Khatri on RateMDs and other trusted medical review platforms." path="/reviews" />} />
       <Route path="/faq" element={<SectionPage sectionId="faq" title="FAQ | Dr Shailesh Khatri | Cardiologist Gold Coast" description="Frequently asked questions about cardiology, procedures, referrals, and Dr Khatri's practice." path="/faq" />} />
       <Route path="/contact" element={<SectionPage sectionId="contact" title="Contact & Appointments | Dr Shailesh Khatri" description="Book an appointment with Dr Shailesh Khatri. Consulting at John Flynn and Pindara Private Hospitals." path="/contact" />} />
-      <Route path="/legal" element={<SectionPage sectionId="legal" title="Legal Information | Dr Shailesh Khatri" description="Website information, privacy policy, terms of use, and AHPRA compliance details." path="/legal" />} />
+      <Route path="/legal" element={<SectionPage sectionId="legal-information" title="Legal Information | Dr Shailesh Khatri" description="Website information, privacy policy, terms of use, and AHPRA compliance details." path="/legal" />} />
       {/* Catch-all for undefined routes */}
       <Route path="*" element={<HomePage />} />
     </Routes>

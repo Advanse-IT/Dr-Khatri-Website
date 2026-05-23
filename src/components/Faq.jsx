@@ -8,7 +8,7 @@ const markup = `
 <div class="a lft">
 <span class="kicker">FAQ</span>
 <h2 class="sec-title">Common <em>Questions</em></h2>
-<p class="sec-lead">Everything you need to know before your first appointment. Can't find your answer? <a href="#contact" style="color:var(--gold);font-weight:700">Get in touch</a>.</p>
+<p class="sec-lead">Everything you need to know before your first appointment. Can't find your answer? <a href="/contact" style="color:var(--gold);font-weight:700">Get in touch</a>.</p>
 </div>
 <div class="faq-list a rgt">
 <div class="faq-item"><button class="faq-q" onclick="faq(this)" aria-expanded="false">Do I need a referral to see Dr Khatri?<span class="faq-arr">▼</span></button><div class="faq-body"><div class="faq-body-in">Yes — a GP referral is required for all consultations. Your GP will assess your symptoms, arrange initial tests, and write a referral to Dr Shailesh Khatri. Contact the rooms on (07) 5598 0322 with your referral to schedule an appointment at John Flynn Specialist Suites, Tugun.</div></div></div>

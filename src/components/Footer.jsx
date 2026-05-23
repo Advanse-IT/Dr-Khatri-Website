@@ -28,14 +28,14 @@ const markup = `
 <p>Interventional Cardiologist — Coronary Angiography, Angioplasty &amp; Stenting, TAVI<br/>Serving the Gold Coast community for over 25 years</p>
 </div>
 <div class="fg-col"><h4>Navigation</h4><ul>
-<li><a href="#top">Home</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#services">Services</a></li>
-<li><a href="#recognition">Recognition</a></li>
-<li><a href="#reviews">Patient Reviews</a></li>
-<li><a href="#faq">FAQ</a></li>
-<li><a href="#contact">Contact</a></li>
-<li><a href="#legal-information">Privacy Policy, Terms of Use &amp; Medical Disclaimer</a></li>
+<li><a href="/">Home</a></li>
+<li><a href="/about">About</a></li>
+<li><a href="/services">Services</a></li>
+<li><a href="/recognition">Recognition</a></li>
+<li><a href="/reviews">Patient Reviews</a></li>
+<li><a href="/faq">FAQ</a></li>
+<li><a href="/contact">Contact</a></li>
+<li><a href="/legal">Privacy Policy, Terms of Use &amp; Medical Disclaimer</a></li>
 </ul></div>
 <div class="fg-col"><h4>Location</h4>
 <p><strong style="color:rgba(255,255,255,.7);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase">Consulting & Admitting Rooms</strong><br/>
@@ -47,7 +47,7 @@ const markup = `
 </div>
 <div class="footer-base">
 <p>© 2026 Dr Shailesh Khatri — Interventional Cardiologist. All rights reserved. AHPRA compliant.</p>
-<p><a href="#legal-information">Privacy Policy, Terms of Use &amp; Medical Disclaimer</a></p>
+<p><a href="/legal">Privacy Policy, Terms of Use &amp; Medical Disclaimer</a></p>
 </div>
 </div>
 
