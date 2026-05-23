@@ -399,6 +399,8 @@ h2.sec-title.light em{color:var(--gold2)}
 .mb-btn{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;padding:8px 4px;font-size:.63rem;font-weight:700;color:var(--text2);border-right:1px solid var(--border);transition:color .2s;text-align:center}
 .mb-btn:last-child{border:none}
 .mb-btn.acc{background:var(--gold);color:#fff}
+.mb-btn.stt{display:none;background:var(--navy);color:#fff;border-right:none}
+.mb-btn.stt .mb-icon{transform:rotate(-90deg);margin-bottom:-1px}
 .mb-btn:active{opacity:.8}
 .mb-ic{font-size:1.05rem}
 

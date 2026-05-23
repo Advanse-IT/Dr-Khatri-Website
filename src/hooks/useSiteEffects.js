@@ -3,7 +3,13 @@ import { useEffect } from 'react';
 export default function useSiteEffects() {
   useEffect(() => {
     const nav = document.getElementById('nav');
-    const onScroll = () => nav?.classList.toggle('up', window.scrollY > 56);
+    const onScroll = () => {
+      nav?.classList.toggle('up', window.scrollY > 56);
+      const stt = document.getElementById('mobSTT');
+      if (stt) {
+        stt.style.display = window.scrollY > 300 ? 'flex' : 'none';
+      }
+    };
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
 
