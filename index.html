@@ -11,14 +11,14 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://drskhatri.com.au/" />
     <meta property="og:title" content="Dr Shailesh Khatri | Senior Interventional Cardiologist | Gold Coast" />
-    <meta property="og:description" content="Senior Interventional Cardiologist in Gold Coast with 25+ years experience. Specialising in TAVI, Angioplasty, and 24/7 emergency cardiac care." />
+    <meta property="og:description" content="Senior Interventional Cardiologist in Gold Coast with 25+ years experience. Specialising in TAVI and Angioplasty with admitting rights at John Flynn and Pindara Private Hospitals." />
     <meta property="og:image" content="https://drskhatri.com.au/images/photo3.jpeg" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://drskhatri.com.au/" />
     <meta property="twitter:title" content="Dr Shailesh Khatri | Senior Interventional Cardiologist | Gold Coast" />
-    <meta property="twitter:description" content="Senior Interventional Cardiologist in Gold Coast with 25+ years experience. Specialising in TAVI, Angioplasty, and 24/7 emergency cardiac care." />
+    <meta property="twitter:description" content="Senior Interventional Cardiologist in Gold Coast with 25+ years experience. Specialising in TAVI and Angioplasty with admitting rights at John Flynn and Pindara Private Hospitals." />
     <meta property="twitter:image" content="https://drskhatri.com.au/images/photo3.jpeg" />
 
     <!-- Structured Data -->
@@ -171,6 +171,14 @@
 </head>
 <body>
   <div id="root"></div>
+  <!-- Client-side routing fallback for SPA on Cloudflare Pages -->
+  <script>
+    // Ensure the root path always loads correctly
+    if (window.location.pathname === '/' || window.location.pathname === '') {
+      // We're at the root - React Router will handle it
+      console.log('Loading home page');
+    }
+  </script>
   <script type="module" src="/src/main.jsx"></script>
 </body>
 </html>

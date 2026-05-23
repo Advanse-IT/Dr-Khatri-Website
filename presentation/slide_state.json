@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "title": "Dr. Shailesh Khatri: SEO Excellence Strategy",
+    "created": 1779530315.673,
+    "last_updated": 1779530372.141,
+    "total_slides": 7
+  },
+  "slides": [
+    {
+      "id": "front_page",
+      "state": "edited",
+      "pageNum": 1
+    },
+    {
+      "id": "executive_summary",
+      "state": "edited",
+      "pageNum": 2
+    },
+    {
+      "id": "technical_infrastructure",
+      "state": "edited",
+      "pageNum": 3
+    },
+    {
+      "id": "on_page_excellence",
+      "state": "edit_pending",
+      "pageNum": 4
+    },
+    {
+      "id": "ai_readiness",
+      "state": "edit_pending",
+      "pageNum": 5
+    },
+    {
+      "id": "keyword_scorecard",
+      "state": "edit_pending",
+      "pageNum": 6
+    },
+    {
+      "id": "final_recommendations",
+      "state": "edit_pending",
+      "pageNum": 7
+    }
+  ],
+  "outline": [
+    {
+      "id": "front_page",
+      "title": "Dr. Shailesh Khatri: SEO Excellence Strategy",
+      "summary": "Title slide introducing the SEO summary and strategy for Dr. Shailesh Khatri's medical practice."
+    },
+    {
+      "id": "executive_summary",
+      "title": "Executive Summary",
+      "summary": "Overview of the 100% SEO excellence goal and the current status of the project."
+    },
+    {
+      "id": "technical_infrastructure",
+      "title": "Technical SEO Infrastructure",
+      "summary": "Detailed breakdown of the technical foundations including canonicalization, schema, and performance."
+    },
+    {
+      "id": "on_page_excellence",
+      "title": "On-Page Semantic Excellence",
+      "summary": "Analysis of heading hierarchy, keyword density, and authority signals (E-E-A-T)."
+    },
+    {
+      "id": "ai_readiness",
+      "title": "AI & Next-Gen Search Readiness",
+      "summary": "Explaining the entity linking and FAQ strategy for dominance in AI search results."
+    },
+    {
+      "id": "keyword_scorecard",
+      "title": "Keyword Optimization Scorecard",
+      "summary": "A rating and breakdown of optimization strength for core and long-tail keywords."
+    },
+    {
+      "id": "final_recommendations",
+      "title": "Final Recommendations",
+      "summary": "Actionable steps for deployment and ongoing maintenance of the site's SEO superiority."
+    }
+  ]
+}

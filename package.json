@@ -10,7 +10,9 @@
   },
   "dependencies": {
     "react": "latest",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "react-helmet-async": "^3.0.0",
+    "react-router-dom": "^7.15.1"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "latest",

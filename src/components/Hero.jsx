@@ -27,10 +27,10 @@ const markup = `
 </div>
 <h1 class="hero-title a up d1">Dr Shailesh Khatri</h1>
 <p class="hero-cred a up d2">MBBS · FRACP · FCSANZ · SCAI · AMA · ACOR-Accredited TAVI Operator</p>
-<p class="hero-desc a up d3">A leading <strong>Cardiologist on the Gold Coast</strong>, Dr Shailesh Khatri is a highly experienced <strong>Heart Specialist</strong> and Senior <strong>Interventional Cardiologist</strong> specialising in coronary angiography, angioplasty, stenting, and <strong>TAVI</strong>. He provides consultations and holds admitting rights at both <strong>John Flynn Private Hospital</strong> (Tugun) and <strong>Pindara Private Hospital</strong> (Benowa), offering a 24-hour emergency cardiology service across the Gold Coast.</p>
+<p class="hero-desc a up d3">A leading Cardiologist on the Gold Coast, Dr Shailesh Khatri is a highly experienced Heart Specialist and Senior Interventional Cardiologist specialising in coronary angiography, angioplasty, stenting, and TAVI. He provides consultations and holds admitting rights at both John Flynn Private Hospital (Tugun) and Pindara Private Hospital (Benowa), offering a 24-hour emergency cardiology service across the Gold Coast.</p>
 <div class="hero-btns a up d4">
-<a class="btn btn-gold" href="#contact">Book a Consultation</a>
-<a class="btn btn-ghost" href="#about">About Dr Khatri</a>
+<a class="btn btn-gold" href="/contact">Book a Consultation</a>
+<a class="btn btn-ghost" href="/about">About Dr Khatri</a>
 </div>
 <div class="hero-strip a up d5">
 <div class="hsi"><span class="hsi-n">15,000+</span><span class="hsi-l">Procedures</span></div>
@@ -49,7 +49,7 @@ const markup = `
 <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
 </div>
 <div aria-hidden="true" class="hero-award-tooltip">
-<strong>Recognised Excellence</strong>
+Recognised Excellence
               Voted Best Cardiologist on the Gold Coast — two years running
             </div>
 <div class="hero-award-inner">
@@ -61,7 +61,7 @@ const markup = `
 <path d="M10 15h4M12 13v4"></path>
 </svg>
 <div class="hero-award-text">
-<span class="hero-award-top"><strong>Best Cardiologist - Gold Coast</strong></span>
+<span class="hero-award-top">Best Cardiologist - Gold Coast</span>
 </div>
 <div class="hero-award-years">
 <span class="hero-award-pill">2024</span>
