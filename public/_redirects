@@ -1,6 +1,0 @@
-# Cloudflare Pages SPA Configuration
-# Redirect all non-file requests to the root index.html for client-side routing
-# This allows React Router to handle all navigation
-
-/index.html 200
-/* / 200

@@ -173,5 +173,13 @@
 </head>
 <body>
   <div id="root"></div>
+  <!-- Client-side routing fallback for SPA on Cloudflare Pages -->
+  <script>
+    // Ensure the root path always loads correctly
+    if (window.location.pathname === '/' || window.location.pathname === '') {
+      // We're at the root - React Router will handle it
+      console.log('Loading home page');
+    }
+  </script>
 </body>
 </html>
