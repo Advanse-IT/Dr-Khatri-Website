@@ -5,6 +5,7 @@ const markup = `
 <div class="tl-band">
 <div class="wrap">
 <div class="tl-title">Career Milestones</div>
+<h3 style="display:none">Dr Shailesh Khatri Career History and Medical Qualifications</h3>
 <div class="tl-track">
 <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">1983</div><div class="tl-txt">Arrived in Australia from Fiji</div></div>
 <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">1990</div><div class="tl-txt">MBBS — University of Queensland</div></div>

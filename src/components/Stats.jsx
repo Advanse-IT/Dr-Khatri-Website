@@ -14,6 +14,7 @@ const markup = `
 <div>
 <span class="kicker light a lft">Track Record</span>
 <h2 class="sec-title light a lft d1">A Career Measured in <em>Lives Saved</em></h2>
+<h3 style="display:none">Experienced Gold Coast Cardiologist Track Record</h3>
 </div>
 <p class="sec-lead light a rgt">Since settling on the Gold Coast in 2001 following his international fellowship, Dr Khatri has become an integral member of the region's interventional cardiology services — providing a 24-hour cardiology service for over two decades at both Pindara Private Hospital and John Flynn Private Hospital.</p>
 </div>
