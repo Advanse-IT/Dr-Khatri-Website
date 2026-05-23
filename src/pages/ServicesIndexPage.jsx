@@ -1,6 +1,7 @@
 import Header from '../components/Header.jsx';
 import Footer from '../components/Footer.jsx';
 import MobileBottomBar from '../components/MobileBottomBar.jsx';
+import DirectionsPicker from '../components/DirectionsPicker.jsx';
 import Contact from '../components/Contact.jsx';
 import LegalInformation from '../components/LegalInformation.jsx';
 import CookieConsent from '../components/CookieConsent.jsx';
@@ -81,6 +82,7 @@ export default function ServicesIndexPage() {
     </main>
     <Footer />
     <MobileBottomBar />
+    <DirectionsPicker />
     <CookieConsent />
   </>;
 }
