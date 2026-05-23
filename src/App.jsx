@@ -1,4 +1,5 @@
 import { Routes, Route, useLocation } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { useEffect } from 'react';
 import SvgIcons from './components/SvgIcons.jsx';
 import Header from './components/Header.jsx';
@@ -20,18 +21,23 @@ import DirectionsPicker from './components/DirectionsPicker.jsx';
 import LegalInformation from './components/LegalInformation.jsx';
 import CookieConsent from './components/CookieConsent.jsx';
 import useSiteEffects from './hooks/useSiteEffects.js';
-import useSEOMeta from './hooks/useSEOMeta.js';
 
 // Full page component (home)
 function HomePage() {
-  useSEOMeta(
-    'Dr Shailesh Khatri | Senior Interventional Cardiologist | Gold Coast',
-    'Senior Interventional Cardiologist in Gold Coast with 25+ years experience. Specialising in TAVI and Angioplasty with admitting rights at John Flynn and Pindara Private Hospitals.'
-  );
   useSiteEffects();
 
   return (
     <>
+      <Helmet>
+        <title>Dr Shailesh Khatri | Senior Interventional Cardiologist | Gold Coast</title>
+        <meta name="description" content="Senior Interventional Cardiologist in Gold Coast with 25+ years experience. Specialising in TAVI and Angioplasty with admitting rights at John Flynn and Pindara Private Hospitals." />
+        <meta property="og:title" content="Dr Shailesh Khatri | Senior Interventional Cardiologist | Gold Coast" />
+        <meta property="og:description" content="Senior Interventional Cardiologist in Gold Coast with 25+ years experience. Specialising in TAVI and Angioplasty with admitting rights at John Flynn and Pindara Private Hospitals." />
+        <meta property="og:url" content="https://drskhatri.com.au/" />
+        <meta property="twitter:title" content="Dr Shailesh Khatri | Senior Interventional Cardiologist | Gold Coast" />
+        <meta property="twitter:description" content="Senior Interventional Cardiologist in Gold Coast with 25+ years experience. Specialising in TAVI and Angioplasty with admitting rights at John Flynn and Pindara Private Hospitals." />
+        <link rel="canonical" href="https://drskhatri.com.au/" />
+      </Helmet>
       <SvgIcons />
       <Header />
       <Hero />
@@ -56,8 +62,7 @@ function HomePage() {
 }
 
 // Section-specific pages (render full page but scroll to section)
-function SectionPage({ sectionId, title, description }) {
-  useSEOMeta(title, description, `/${sectionId}`);
+function SectionPage({ sectionId, title, description, path }) {
   useSiteEffects();
 
   useEffect(() => {
@@ -72,6 +77,16 @@ function SectionPage({ sectionId, title, description }) {
 
   return (
     <>
+      <Helmet>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:url" content={`https://drskhatri.com.au${path}`} />
+        <meta property="twitter:title" content={title} />
+        <meta property="twitter:description" content={description} />
+        <link rel="canonical" href={`https://drskhatri.com.au${path}`} />
+      </Helmet>
       <SvgIcons />
       <Header />
       <Hero />
@@ -101,12 +116,12 @@ export default function App() {
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
-      <Route path="/about" element={<SectionPage sectionId="about" title="About Dr Shailesh Khatri | Gold Coast Cardiologist" description="Learn about Dr Shailesh Khatri's background, training, and commitment to cardiac care on the Gold Coast." />} />
-      <Route path="/services" element={<SectionPage sectionId="services" title="Cardiac Services | Dr Shailesh Khatri | Gold Coast" description="Explore Dr Khatri's specialist services including TAVI, coronary angiography, angioplasty, and 24/7 emergency cardiac care." />} />
-      <Route path="/recognition" element={<SectionPage sectionId="recognition" title="Recognition & Credentials | Dr Shailesh Khatri" description="Dr Shailesh Khatri's professional achievements, awards, and international training credentials." />} />
-      <Route path="/faq" element={<SectionPage sectionId="faq" title="FAQ | Dr Shailesh Khatri | Cardiologist Gold Coast" description="Frequently asked questions about cardiology, procedures, referrals, and Dr Khatri's practice." />} />
-      <Route path="/contact" element={<SectionPage sectionId="contact" title="Contact & Appointments | Dr Shailesh Khatri" description="Book an appointment with Dr Shailesh Khatri. Consulting at John Flynn and Pindara Private Hospitals." />} />
-      <Route path="/legal" element={<SectionPage sectionId="legal" title="Legal Information | Dr Shailesh Khatri" description="Website information, privacy policy, terms of use, and AHPRA compliance details." />} />
+      <Route path="/about" element={<SectionPage sectionId="about" title="About Dr Shailesh Khatri | Gold Coast Cardiologist" description="Learn about Dr Shailesh Khatri's background, training, and commitment to cardiac care on the Gold Coast." path="/about" />} />
+      <Route path="/services" element={<SectionPage sectionId="services" title="Cardiac Services | Dr Shailesh Khatri | Gold Coast" description="Explore Dr Khatri's specialist services including TAVI, coronary angiography, angioplasty, and 24/7 emergency cardiac care." path="/services" />} />
+      <Route path="/recognition" element={<SectionPage sectionId="recognition" title="Recognition & Credentials | Dr Shailesh Khatri" description="Dr Shailesh Khatri's professional achievements, awards, and international training credentials." path="/recognition" />} />
+      <Route path="/faq" element={<SectionPage sectionId="faq" title="FAQ | Dr Shailesh Khatri | Cardiologist Gold Coast" description="Frequently asked questions about cardiology, procedures, referrals, and Dr Khatri's practice." path="/faq" />} />
+      <Route path="/contact" element={<SectionPage sectionId="contact" title="Contact & Appointments | Dr Shailesh Khatri" description="Book an appointment with Dr Shailesh Khatri. Consulting at John Flynn and Pindara Private Hospitals." path="/contact" />} />
+      <Route path="/legal" element={<SectionPage sectionId="legal" title="Legal Information | Dr Shailesh Khatri" description="Website information, privacy policy, terms of use, and AHPRA compliance details." path="/legal" />} />
       {/* Catch-all for undefined routes */}
       <Route path="*" element={<HomePage />} />
     </Routes>
