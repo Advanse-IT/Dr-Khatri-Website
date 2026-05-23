@@ -243,7 +243,7 @@ Recognised Excellence
 <div class="stats-band">
 <div class="stats-ecg-bg">
 <svg preserveaspectratio="none" style="width:100%;height:60px;display:block" viewbox="0 0 1440 60">
-<path d="M0,30 L140,30 L156,30 L161,28 L166,6 L171,54 L176,18 L181,30 L300,30 L316,30 L321,28 L326,6 L331,54 L336,18 L341,30 L460,30 L476,30 L481,28 L486,6 L491,54 L496,18 L501,30 L620,30 L636,30 L641,28 L646,6 L651,54 L656,18 L661,30 L780,30 L796,30 L801,28 L806,6 L811,54 L816,18 L821,30 L940,30 L956,30 L961,28 L966,6 L971,54 L976,18 L981,30 L1100,30 L1260,30 L1440,30" fill="none" stroke="white" stroke-linecap="round" stroke-width="1.5"></path>
+<path d="M140,30 L156,30 L161,28 L166,6 L171,54 L176,18 L181,30 M300,30 L316,30 L321,28 L326,6 L331,54 L336,18 L341,30 M460,30 L476,30 L481,28 L486,6 L491,54 L496,18 L501,30 M620,30 L636,30 L641,28 L646,6 L651,54 L656,18 L661,30 M780,30 L796,30 L801,28 L806,6 L811,54 L816,18 L821,30 M940,30 L956,30 L961,28 L966,6 L971,54 L976,18 L981,30" fill="none" stroke="white" stroke-linecap="round" stroke-width="1.5"></path>
 </svg>
 </div>
 <img src="/images/anatomical-heart.svg" class="stats-heart" style="position:absolute;width:380px;right:0px;bottom:-10px;opacity:0.08;pointer-events:none;z-index:1" alt="" />
