@@ -25,8 +25,8 @@ const markup = `
 <p class="jstep-p">You will initially be assessed by Dr Khatri's experienced cardiac nursing team. Dr Khatri will then review your history, explain your diagnosis, and plan your care — investigations, medication, procedural intervention, cardiac rehabilitation, or lifestyle modification. His nursing team remains involved throughout your hospital stay, providing personalised, ongoing support.</p>
 </div>
 </div>
-<div class="a up d4" style="margin-top:18px;background:rgba(var(--ar),.06);border:1px solid rgba(var(--ar),.18);border-radius:7px;padding:14px 18px;display:flex;align-items:flex-start;gap:12px;max-width:680px;margin-left:auto;margin-right:auto">
-<svg aria-hidden="true" style="width:22px;height:22px;color:var(--gold);flex-shrink:0;margin-top:1px"><use href="#ic-emergency"></use></svg>
+<div class="a up d4" style="margin-top:18px;background:rgba(var(--ar),.06);border:1px solid rgba(var(--ar),.18);border-radius:7px;padding:14px 18px;display:flex;align-items:center;gap:12px;max-width:680px;margin-left:auto;margin-right:auto">
+<svg aria-hidden="true" style="width:22px;height:22px;color:var(--gold);flex-shrink:0;margin-top:0"><use href="#ic-emergency"></use></svg>
 <p style="font-size:.84rem;color:var(--text2);line-height:1.6"><strong style="color:var(--navy)">Cardiac Emergency?</strong> Dr Khatri provides a genuine 24/7 emergency cardiac service. In a life-threatening emergency, call <strong style="color:var(--navy)">000</strong> immediately.</p>
 </div>
 </div>
