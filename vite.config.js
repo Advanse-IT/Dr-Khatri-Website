@@ -5,13 +5,8 @@ export default defineConfig({
   plugins: [react()],
   build: {
     target: 'es2020',
-    minify: 'esbuild',
-    esbuildOptions: {
-      drop: ['console', 'debugger'],
-    },
     rollupOptions: {
       output: {
-        // Vite 8 / Rolldown requires manualChunks as a function
         manualChunks(id) {
           if (id.includes('node_modules/react') || id.includes('node_modules/react-dom')) {
             return 'vendor';
@@ -25,8 +20,5 @@ export default defineConfig({
     sourcemap: false,
     chunkSizeWarningLimit: 600,
     assetsInlineLimit: 4096,
-  },
-  optimizeDeps: {
-    include: ['react', 'react-dom'],
   },
 });
