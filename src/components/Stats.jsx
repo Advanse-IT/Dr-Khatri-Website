@@ -12,7 +12,7 @@ const markup = `
 <div class="wrap" style="position:relative;z-index:2">
 <div class="stats-top">
 <div>
-<span class="kicker light a lft">Track Record</span>
+<span class="kicker light a lft" style="display:inline-block">Track Record</span>
 <h2 class="sec-title light a lft d1">A Career Measured in <em>Lives Saved</em></h2>
 <h3 style="display:none">Experienced Gold Coast Cardiologist Track Record</h3>
 </div>

@@ -230,6 +230,7 @@ h2.sec-title.light em{color:var(--gold2)}
 
 /* ═══ STATS ══════════════════════════════════════════════════════ */
 .stats-band{background:var(--stat-bg);padding:76px 0;position:relative;overflow:hidden;border-top:none}
+.stats-band .kicker::before { display: none !important; }
 .stats-ecg-bg{position:absolute;bottom:0;left:0;right:0;opacity:.07;pointer-events:none}
 .stats-ecg-bg::before, .stats-ecg-bg::after { content: none !important; display: none !important; }
 .no-extra-line { border: none !important; outline: none !important; }
