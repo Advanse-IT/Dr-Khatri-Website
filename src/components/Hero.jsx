@@ -25,12 +25,12 @@ const markup = `
 <div class="hero-tagline"></div>
 <span class="hero-tagtext">Gold Coast · Est. 2000 · 24 / 7</span>
 </div>
-<h1 class="hero-title a up d1">Dr Shailesh Khatri</h1>
-<p class="hero-cred a up d2">MBBS · FRACP · FCSANZ · SCAI · AMA · ACOR-Accredited TAVI Operator</p>
+<h1 class="hero-title a up d1">Senior Interventional Cardiologist Gold Coast</h1>
+<p class="hero-cred a up d2">Dr Shailesh Khatri · MBBS · FRACP · FCSANZ · SCAI · AMA · ACOR-Accredited TAVI Operator</p>
 <p class="hero-desc a up d3">A highly experienced interventional cardiologist specialising in coronary angiography, angioplasty and stenting, and TAVI. Serving the Gold Coast community for over 25 years with a 24-hour cardiology service at both Pindara Private Hospital and John Flynn Private Hospital.</p>
 <div class="hero-btns a up d4">
-<a class="btn btn-gold" href="#contact">Book a Consultation</a>
-<a class="btn btn-ghost" href="#about">About Dr Khatri</a>
+<a class="btn btn-gold" href="/#contact">Book a Consultation</a>
+<a class="btn btn-ghost" href="/#about">About Dr Khatri</a>
 </div>
 <div class="hero-strip a up d5">
 <div class="hsi"><span class="hsi-n">15,000+</span><span class="hsi-l">Procedures</span></div>
@@ -42,7 +42,7 @@ const markup = `
 <div class="hero-photo">
 <div class="hero-frame a up d2">
 <div class="hero-img-border"></div>
-<img alt="Dr Shailesh Khatri" class="hero-img" loading="eager" src="/images/photo3.jpeg"/>
+<img alt="Dr Shailesh Khatri" class="hero-img" loading="eager" src="/images/photo3.webp"/>
 <!----      <div class="hero-award">Best Cardiologist — Gold Coast 2024 &amp; 2025</div>     -->
 <div aria-label="Best Cardiologist Gold Coast 2024 and 2025" class="hero-award" role="img">
 <div aria-hidden="true" class="hero-award-stars">

@@ -1,4 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://drskhatri.com.au/</loc><priority>1.0</priority></url>
+  <url><loc>https://drskhatri.com.au</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://drskhatri.com.au/coronary-angiography</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://drskhatri.com.au/angioplasty-stenting</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://drskhatri.com.au/tavi-aortic-valve</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://drskhatri.com.au/chest-pain</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://drskhatri.com.au/preventive-cardiology</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://drskhatri.com.au/hypertension</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://drskhatri.com.au/heart-disease-management</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://drskhatri.com.au/arrhythmia-palpitations</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://drskhatri.com.au/echocardiography-cardiac-testing</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://drskhatri.com.au/cardiologist-gold-coast</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://drskhatri.com.au/cardiologist-tugun</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://drskhatri.com.au/cardiologist-benowa</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://drskhatri.com.au/patient-education</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://drskhatri.com.au/patient-education/when-to-see-a-cardiologist</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://drskhatri.com.au/patient-education/angiogram-vs-angioplasty</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://drskhatri.com.au/patient-education/warning-signs-of-heart-disease</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>
