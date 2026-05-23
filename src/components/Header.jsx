@@ -42,7 +42,7 @@ const markup = `
 <a class="nl" href="/about">About</a>
 <a class="nl" href="/services">Services</a>
 <a class="nl" href="/recognition">Recognition</a>
-<a class="nl" href="#reviews">Reviews</a>
+<a class="nl" href="/reviews">Reviews</a>
 <a class="nl" href="/faq">FAQ</a>
 <a class="nl" href="/contact">Contact</a>
 <a class="nl nlbook" href="/contact">Book Appointment</a>
@@ -54,7 +54,7 @@ const markup = `
 <a href="/about">About</a>
 <a href="/services">Services</a>
 <a href="/recognition">Recognition</a>
-<a href="#reviews">Reviews</a>
+<a href="/reviews">Reviews</a>
 <a href="/faq">FAQ</a>
 <a href="/contact">Contact</a>
 <a class="mob-cta" href="/contact">Book Appointment</a>

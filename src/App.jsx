@@ -26,6 +26,11 @@ import useSiteEffects from './hooks/useSiteEffects.js';
 function HomePage() {
   useSiteEffects();
 
+  useEffect(() => {
+    // Scroll to top on home page load
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <Helmet>
@@ -66,13 +71,23 @@ function SectionPage({ sectionId, title, description, path }) {
   useSiteEffects();
 
   useEffect(() => {
-    // Small delay to ensure DOM is ready, then scroll to section
+    // Scroll to the target section after a short delay to ensure DOM is ready
     const timer = setTimeout(() => {
       const element = document.getElementById(sectionId);
       if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+        // Scroll to the element with a slight offset for fixed headers
+        const headerOffset = 80;
+        const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+        const offsetPosition = elementPosition - headerOffset;
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      } else {
+        // If section not found, scroll to top
+        window.scrollTo(0, 0);
       }
-    }, 100);
+    }, 50);
     return () => clearTimeout(timer);
   }, [sectionId]);
 
