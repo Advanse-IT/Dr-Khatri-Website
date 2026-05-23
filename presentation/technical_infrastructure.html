@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Inter:wght@300&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1"></script>
+    <style>
+      body { margin: 0; }
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        box-sizing: border-box;
+        background: #F8F9FA;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #2D3748;
+        font-family: 'Inter', sans-serif;
+      }
+      .content-wrapper {
+        width: 1040px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .rule {
+        width: 100%;
+        height: 1px;
+        background: #2B6CB0;
+      }
+      .header-rule { margin-bottom: 40px; }
+      .footer-rule { margin-top: 40px; }
+      
+      .title {
+        font-family: 'Playfair Display', serif;
+        font-size: 48px;
+        color: #1A365D;
+        font-weight: 500;
+        margin-bottom: 40px;
+        line-height: 1.2;
+        text-align: center;
+      }
+      .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        width: 100%;
+        align-items: center;
+      }
+      .feature-list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .feature-item {
+        padding-top: 10px;
+      }
+      .feature-title {
+        font-family: 'Playfair Display', serif;
+        font-size: 22px;
+        color: #1A365D;
+        margin-bottom: 5px;
+      }
+      .feature-desc {
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 1.5;
+      }
+      .chart-container {
+        height: 350px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="content-wrapper">
+            <div class="rule header-rule"></div>
+            <h2 class="title">Technical SEO Infrastructure</h2>
+            <div class="grid-container">
+                <div class="feature-list">
+                    <div class="feature-item">
+                        <h3 class="feature-title">Crawl & Indexing</h3>
+                        <p class="feature-desc">Dynamic sitemap.xml and optimized robots.txt ensure 100% crawl efficiency.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3 class="feature-title">Schema Architecture</h3>
+                        <p class="feature-desc">Advanced JSON-LD (Physician & FAQPage) with dual-location GeoCoordinates.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3 class="feature-title">Performance Polish</h3>
+                        <p class="feature-desc">Preconnect hints for Google Fonts and RateMDs for ultra-fast load times.</p>
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <canvas id="techChart"></canvas>
+                </div>
+            </div>
+            <div class="rule footer-rule"></div>
+        </div>
+    </div>
+    <script>
+        const ctx = document.getElementById('techChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'radar',
+            data: {
+                labels: ['Canonicalization', 'Crawl Efficiency', 'Schema Markup', 'Social Meta', 'Performance'],
+                datasets: [{
+                    label: 'Optimization Score',
+                    data: [100, 100, 100, 100, 100],
+                    fill: true,
+                    backgroundColor: 'rgba(43, 108, 176, 0.2)',
+                    borderColor: '#2B6CB0',
+                    pointBackgroundColor: '#1A365D',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: '#2B6CB0'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    r: {
+                        angleLines: { display: false },
+                        suggestedMin: 0,
+                        suggestedMax: 100,
+                        ticks: { display: false }
+                    }
+                },
+                plugins: {
+                    legend: { display: false }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

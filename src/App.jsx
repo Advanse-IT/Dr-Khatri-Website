@@ -1,3 +1,5 @@
+import { Routes, Route, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 import SvgIcons from './components/SvgIcons.jsx';
 import Header from './components/Header.jsx';
 import Hero from './components/Hero.jsx';
@@ -18,8 +20,14 @@ import DirectionsPicker from './components/DirectionsPicker.jsx';
 import LegalInformation from './components/LegalInformation.jsx';
 import CookieConsent from './components/CookieConsent.jsx';
 import useSiteEffects from './hooks/useSiteEffects.js';
+import useSEOMeta from './hooks/useSEOMeta.js';
 
-export default function App() {
+// Full page component (home)
+function HomePage() {
+  useSEOMeta(
+    'Dr Shailesh Khatri | Senior Interventional Cardiologist | Gold Coast',
+    'Senior Interventional Cardiologist in Gold Coast with 25+ years experience. Specialising in TAVI and Angioplasty with admitting rights at John Flynn and Pindara Private Hospitals.'
+  );
   useSiteEffects();
 
   return (
@@ -44,5 +52,63 @@ export default function App() {
       <DirectionsPicker />
       <CookieConsent />
     </>
+  );
+}
+
+// Section-specific pages (render full page but scroll to section)
+function SectionPage({ sectionId, title, description }) {
+  useSEOMeta(title, description, `/${sectionId}`);
+  useSiteEffects();
+
+  useEffect(() => {
+    // Scroll to section on mount
+    const element = document.getElementById(sectionId);
+    if (element) {
+      setTimeout(() => {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    }
+  }, [sectionId]);
+
+  return (
+    <>
+      <SvgIcons />
+      <Header />
+      <Hero />
+      <CareerTimeline />
+      <About />
+      <CoreStrengths />
+      <Stats />
+      <Services />
+      <PatientJourney />
+      <Recognition />
+      <PioneerStory />
+      <Reviews />
+      <Faq />
+      <Contact />
+      <LegalInformation />
+      <Footer />
+      <MobileBottomBar />
+      <DirectionsPicker />
+      <CookieConsent />
+    </>
+  );
+}
+
+export default function App() {
+  const location = useLocation();
+
+  return (
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/about" element={<SectionPage sectionId="about" title="About Dr Shailesh Khatri | Gold Coast Cardiologist" description="Learn about Dr Shailesh Khatri's background, training, and commitment to cardiac care on the Gold Coast." />} />
+      <Route path="/services" element={<SectionPage sectionId="services" title="Cardiac Services | Dr Shailesh Khatri | Gold Coast" description="Explore Dr Khatri's specialist services including TAVI, coronary angiography, angioplasty, and 24/7 emergency cardiac care." />} />
+      <Route path="/recognition" element={<SectionPage sectionId="recognition" title="Recognition & Credentials | Dr Shailesh Khatri" description="Dr Shailesh Khatri's professional achievements, awards, and international training credentials." />} />
+      <Route path="/faq" element={<SectionPage sectionId="faq" title="FAQ | Dr Shailesh Khatri | Cardiologist Gold Coast" description="Frequently asked questions about cardiology, procedures, referrals, and Dr Khatri's practice." />} />
+      <Route path="/contact" element={<SectionPage sectionId="contact" title="Contact & Appointments | Dr Shailesh Khatri" description="Book an appointment with Dr Shailesh Khatri. Consulting at John Flynn and Pindara Private Hospitals." />} />
+      <Route path="/legal" element={<SectionPage sectionId="legal" title="Legal Information | Dr Shailesh Khatri" description="Website information, privacy policy, terms of use, and AHPRA compliance details." />} />
+      {/* Catch-all for undefined routes */}
+      <Route path="*" element={<HomePage />} />
+    </Routes>
   );
 }

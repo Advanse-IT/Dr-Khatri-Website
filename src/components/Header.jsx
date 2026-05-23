@@ -4,7 +4,7 @@ const markup = `
 <!-- ═══ NAV ══════════════════════════════════════════════════════ -->
 <nav class="nav" id="nav">
 <div class="nav-inner">
-<a class="logo" href="#top">
+<a class="logo" href="/">
 <div class="sk-seal" data-color="#c49a38" data-ecg-logo="" data-highlight="#ffd770" data-id="v1">
 <svg fill="none" height="46" viewbox="0 0 46 46" width="46" xmlns="http://www.w3.org/2000/svg">
 <defs>
@@ -39,25 +39,25 @@ const markup = `
 </div>
 </a>
 <nav class="nav-links">
-<a class="nl" href="#about">About</a>
-<a class="nl" href="#services">Services</a>
-<a class="nl" href="#recognition">Recognition</a>
+<a class="nl" href="/about">About</a>
+<a class="nl" href="/services">Services</a>
+<a class="nl" href="/recognition">Recognition</a>
 <a class="nl" href="#reviews">Reviews</a>
-<a class="nl" href="#faq">FAQ</a>
-<a class="nl" href="#contact">Contact</a>
-<a class="nl nlbook" href="#contact">Book Appointment</a>
+<a class="nl" href="/faq">FAQ</a>
+<a class="nl" href="/contact">Contact</a>
+<a class="nl nlbook" href="/contact">Book Appointment</a>
 </nav>
 <button aria-label="Open menu" class="hbg" id="hbg"><span></span><span></span><span></span></button>
 </div>
 </nav>
 <div class="mob-nav" id="mobNav">
-<a href="#about">About</a>
-<a href="#services">Services</a>
-<a href="#recognition">Recognition</a>
+<a href="/about">About</a>
+<a href="/services">Services</a>
+<a href="/recognition">Recognition</a>
 <a href="#reviews">Reviews</a>
-<a href="#faq">FAQ</a>
-<a href="#contact">Contact</a>
-<a class="mob-cta" href="#contact">Book Appointment</a>
+<a href="/faq">FAQ</a>
+<a href="/contact">Contact</a>
+<a class="mob-cta" href="/contact">Book Appointment</a>
 </div>
 `;
 
