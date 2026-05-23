@@ -807,10 +807,12 @@ li{
 }
 
 .legal-intro {
-  max-width: 840px;
+  max-width: 100%;
   color: var(--muted);
   line-height: 1.75;
   margin-bottom: 26px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .legal-grid {
