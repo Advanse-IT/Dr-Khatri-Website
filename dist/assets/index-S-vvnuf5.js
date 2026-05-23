@@ -242,7 +242,7 @@ Recognised Excellence
 <!-- ═══ STATS ══════════════════════════════════════════════════ -->
 <div class="stats-band">
 <!-- ECG Removed -->
-<img src="/images/anatomical-heart.svg" class="stats-heart" style="position:absolute;width:380px;right:0px;bottom:-10px;opacity:0.08;pointer-events:none;z-index:1" alt="" />
+<img src="/images/anatomical-heart.svg" class="stats-heart" style="position:absolute;width:380px;right:0px;bottom:-10px;opacity:0.08;pointer-events:none;z-index:1;border:none !important;box-shadow:none !important" alt="" />
 <div class="wrap" style="position:relative;z-index:2">
 <div class="stats-top">
 <div>
