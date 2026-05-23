@@ -6,6 +6,9 @@ import About from './components/About.jsx';
 import CoreStrengths from './components/CoreStrengths.jsx';
 import Stats from './components/Stats.jsx';
 import Services from './components/Services.jsx';
+import MedicalAuthority from './components/MedicalAuthority.jsx';
+import Conditions from './components/Conditions.jsx';
+import Education from './components/Education.jsx';
 import PatientJourney from './components/PatientJourney.jsx';
 import Recognition from './components/Recognition.jsx';
 import PioneerStory from './components/PioneerStory.jsx';
@@ -32,6 +35,9 @@ export default function App() {
       <CoreStrengths />
       <Stats />
       <Services />
+      <Conditions />
+      <MedicalAuthority />
+      <Education />
       <PatientJourney />
       <Recognition />
       <PioneerStory />
