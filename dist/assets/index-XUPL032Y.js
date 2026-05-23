@@ -29,6 +29,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
 <symbol fill="none" id="ic-hospital" viewbox="0 0 24 24"><rect height="19" rx="1" stroke="currentColor" stroke-width="1.5" width="18" x="3" y="3"></rect><path d="M3 9h18M9 22V9M15 22V9" stroke="currentColor" stroke-width="1.5"></path><path d="M12 4v4M10 6h4" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path></symbol>
 <symbol fill="none" id="ic-phone" viewbox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.78a16 16 0 0 0 6 6l.85-.85a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.02z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></symbol>
 <symbol fill="none" id="ic-star" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></polygon></symbol>
+<symbol fill="none" id="ic-arrow-up" viewbox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></symbol>
 </defs></svg>
 `;function ei(){return(0,j.jsx)(M,{html:$r})}var ti=`
 <!-- ═══ NAV ══════════════════════════════════════════════════════ -->
@@ -526,7 +527,7 @@ Recognised Excellence
 </footer>
 `;function Oi(){return(0,j.jsx)(M,{html:Di})}var ki=c(m(),1),Ai=`
 <!-- ═══ MOBILE STICKY BAR ══════════════════════════════════════ -->
-<button class="stt-float" onclick="window.scrollTo({top:0,behavior:'smooth'})" id="mobSTT" aria-label="Scroll to top"><svg aria-hidden="true" style="width:20px;height:20px;transform:rotate(-90deg);display:block"><use href="#ic-chevron"></use></svg></button>
+<button class="stt-float" onclick="window.scrollTo({top:0,behavior:'smooth'})" id="mobSTT" aria-label="Scroll to top"><svg aria-hidden="true" style="width:20px;height:20px;display:block;color:#fff" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
 <div class="mob-bar" data-mobile-bottom-bar="true">
 <div class="mb-row">
 <a class="mb-btn" href="tel:+61755980322"><svg aria-hidden="true" class="mb-icon"><use href="#ic-phone"></use></svg>Call</a>
