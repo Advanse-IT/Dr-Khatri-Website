@@ -229,7 +229,7 @@ h2.sec-title.light em{color:var(--gold2)}
 .str-p{font-size:.85rem;color:var(--text2);line-height:1.68}
 
 /* ═══ STATS ══════════════════════════════════════════════════════ */
-.stats-band{background:var(--stat-bg);padding:76px 0;position:relative;overflow:hidden}
+.stats-band{background:var(--stat-bg);padding:76px 0;position:relative;overflow:hidden;border-top:none}
 .stats-ecg-bg{position:absolute;bottom:0;left:0;right:0;opacity:.07;pointer-events:none}
 .stats-heart{position:absolute;width:400px;left:50%;top:50%;transform:translate(-50%,-50%);opacity:.025;pointer-events:none;fill:#fff}
 .stats-top{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-bottom:44px}@media(max-width:768px){.stats-top{grid-template-columns:1fr;gap:28px}}
