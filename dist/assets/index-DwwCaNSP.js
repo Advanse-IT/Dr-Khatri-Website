@@ -107,7 +107,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
            L1260,32 L1278,32 L1283,30 L1288,6 L1293,58 L1298,20 L1303,32 L1450,32" fill="none" stroke="rgba(196,154,56,.45)" stroke-linecap="round" stroke-width="1.8"></path>
 </svg>
 </div>
-<img src="/images/anatomical-heart.svg" class="heart-bg" style="width:550px;right:-20px;bottom:20px;position:absolute;opacity:0.12;pointer-events:none;z-index:1" alt="" />
+<img src="/images/anatomical-heart.svg" class="heart-bg" style="width:500px;right:-30px;bottom:30px;position:absolute;opacity:0.15;pointer-events:none;z-index:1" alt="" />
 <div class="hero-in">
 <div>
 <div class="hero-tag a up">
@@ -246,7 +246,7 @@ Recognised Excellence
 <path d="M0,30 L140,30 L156,30 L161,28 L166,6 L171,54 L176,18 L181,30 L300,30 L316,30 L321,28 L326,6 L331,54 L336,18 L341,30 L460,30 L476,30 L481,28 L486,6 L491,54 L496,18 L501,30 L620,30 L636,30 L641,28 L646,6 L651,54 L656,18 L661,30 L780,30 L796,30 L801,28 L806,6 L811,54 L816,18 L821,30 L940,30 L956,30 L961,28 L966,6 L971,54 L976,18 L981,30 L1100,30 L1260,30 L1440,30" fill="none" stroke="white" stroke-linecap="round" stroke-width="1.5"></path>
 </svg>
 </div>
-<img src="/images/anatomical-heart.svg" class="stats-heart" style="position:absolute;width:450px;right:-10px;bottom:-30px;opacity:0.1;pointer-events:none;z-index:1" alt="" />
+<img src="/images/anatomical-heart.svg" class="stats-heart" style="position:absolute;width:400px;right:-20px;bottom:-20px;opacity:0.12;pointer-events:none;z-index:1" alt="" />
 <div class="wrap" style="position:relative;z-index:2">
 <div class="stats-top">
 <div>
