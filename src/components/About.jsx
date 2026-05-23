@@ -2,11 +2,11 @@ import RawHtml from './RawHtml.jsx';
 
 const markup = `
 <!-- ═══ ABOUT ══════════════════════════════════════════════════ -->
-<section class="sec bg-white" id="about">
+<section class="sec bg-white" id="about" aria-labelledby="about-title">
 <div class="wrap">
 <div class="about-grid">
 <div class="ap-col a lft">
-<div class="ap-main"><picture><source type="image/avif" srcset="/images/photo4-480.avif 480w, /images/photo4-768.avif 768w, /images/photo4-1024.avif 1024w" sizes="(max-width: 760px) 92vw, 560px"><source type="image/webp" srcset="/images/photo4-480.webp 480w, /images/photo4-768.webp 768w, /images/photo4-1024.webp 1024w" sizes="(max-width: 760px) 92vw, 560px"><img alt="Dr Shailesh Khatri professional portrait" width="1200" height="1246" loading="lazy" decoding="async" src="/images/photo4-768.webp"/></picture></div>
+<div class="ap-main"><img alt="Dr Shailesh Khatri — Interventional Cardiologist at his Gold Coast consulting rooms, John Flynn Specialist Suites Tugun" loading="lazy" width="560" height="420" src="/images/photo4.jpeg"/></div>
 <div class="ap-stats">
 <div class="as-i"><span class="as-n">15,000+</span><span class="as-l">Procedures</span></div>
 <div class="as-i"><span class="as-n">400+</span><span class="as-l">TAVI</span></div>
@@ -20,7 +20,7 @@ const markup = `
 </div>
 <div class="at-col a rgt">
 <span class="kicker">About</span>
-<h2 class="sec-title">Serving the Gold Coast <em>for Over 25 Years</em></h2>
+<h2 class="sec-title" id="about-title">Serving the Gold Coast <em>for Over 25 Years</em></h2>
 <p class="sec-lead">Dr Shailesh Khatri is a highly experienced interventional cardiologist who has been serving the Gold Coast community for more than 25 years. He specialises in coronary angiography, angioplasty and stenting, and transcatheter aortic valve implantation (TAVI).</p>
 <p class="sec-lead">Dr Khatri is dedicated to delivering high-quality, patient-centred care, and has provided a 24-hour cardiology service to the Gold Coast for over two decades. Recognising that cardiac emergencies can occur at any time, he prioritises care and timely access to treatment at both Pindara Private Hospital and John Flynn Private Hospital, where he holds admitting rights.</p>
 <p class="sec-lead">Dr Khatri is passionate about improving both cardiovascular health and overall quality of life for his patients. His approach to patient care is holistic and comprehensive, encompassing appropriate investigations, evidence-based treatment, procedural intervention when required, cardiac rehabilitation, and lifestyle modification. He places strong emphasis on involving patients in decision-making and ensuring they feel supported throughout their cardiac care journey.</p>

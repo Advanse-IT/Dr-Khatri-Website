@@ -2,12 +2,12 @@ import RawHtml from './RawHtml.jsx';
 
 const markup = `
 <!-- ═══ CONTACT ════════════════════════════════════════════════ -->
-<section class="sec bg2" id="contact">
+<section class="sec bg2" id="contact" aria-labelledby="contact-title">
 <div class="wrap">
 <div class="contact-grid">
 <div class="cl-left a lft">
 <span class="kicker">Contact</span>
-<h2 class="sec-title">Get in <em>Touch</em></h2>
+<h2 class="sec-title" id="contact-title">Get in <em>Touch</em></h2>
 <p class="sec-lead">Dr Khatri consults and holds admitting rights at <strong>John Flynn Private Hospital</strong> (Tugun) and <strong>Pindara Private Hospital</strong> (Benowa), ensuring patients across the Gold Coast have convenient access to expert cardiac care. A GP referral is required for consultations.</p>
 <div class="cc-stack" style="margin-top:20px">
 <!--        <div class="cc"><svg class="cc-icon" aria-hidden="true"><use href="#ic-pin"/></svg><div><div class="cc-lbl">Consulting Rooms</div><div class="cc-val">John Flynn Specialist Suites<br>Level 3, Suites 301–303<br>42 Inland Drive, Tugun QLD 4224</div></div></div> -->

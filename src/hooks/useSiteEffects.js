@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-export default function useSiteEffects(routeKey = window.location.pathname) {
+export default function useSiteEffects() {
   useEffect(() => {
     const nav = document.getElementById('nav');
     const onScroll = () => nav?.classList.toggle('up', window.scrollY > 56);
@@ -11,22 +11,14 @@ export default function useSiteEffects(routeKey = window.location.pathname) {
     const mn = document.getElementById('mobNav');
     const closeMobileMenu = () => {
       hbg?.classList.remove('on');
-      hbg?.setAttribute('aria-expanded', 'false');
       mn?.classList.remove('on');
-      mn?.setAttribute('aria-hidden', 'true');
       document.body.style.overflow = '';
     };
     const toggleMobileMenu = () => {
       hbg?.classList.toggle('on');
       mn?.classList.toggle('on');
-      const open = Boolean(mn?.classList.contains('on'));
-      hbg?.setAttribute('aria-expanded', String(open));
-      mn?.setAttribute('aria-hidden', String(!open));
-      document.body.style.overflow = open ? 'hidden' : '';
+      document.body.style.overflow = mn?.classList.contains('on') ? 'hidden' : '';
     };
-    hbg?.setAttribute('aria-controls', 'mobNav');
-    hbg?.setAttribute('aria-expanded', 'false');
-    mn?.setAttribute('aria-hidden', 'true');
     hbg?.addEventListener('click', toggleMobileMenu);
     mn?.querySelectorAll('a').forEach((a) => a.addEventListener('click', closeMobileMenu));
 
@@ -91,8 +83,7 @@ export default function useSiteEffects(routeKey = window.location.pathname) {
     }
 
     function initHeroECG() {
-      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return () => {};
-      const rafs = new Set();
+      const rafs = [];
       const ecg = (t) => {
         const p = ((t % 1) + 1) % 1;
         if (p < 0.12) return 0;
@@ -153,11 +144,11 @@ export default function useSiteEffects(routeKey = window.location.pathname) {
           dot.setAttribute('cx', headX.toFixed(2)); dot.setAttribute('cy', hy.toFixed(2));
           glow.setAttribute('cx', headX.toFixed(2)); glow.setAttribute('cy', hy.toFixed(2));
           const id = requestAnimationFrame(render);
-          rafs.add(id);
+          rafs.push(id);
         };
-        rafs.add(requestAnimationFrame(render));
+        rafs.push(requestAnimationFrame(render));
       });
-      return () => { rafs.forEach((id) => cancelAnimationFrame(id)); rafs.clear(); };
+      return () => rafs.forEach((id) => cancelAnimationFrame(id));
     }
 
     const logoCleanup = initAnimatedLogos();
@@ -212,5 +203,5 @@ export default function useSiteEffects(routeKey = window.location.pathname) {
       delete window.showDirectionsPicker;
       delete window.hideDirectionsPicker;
     };
-  }, [routeKey]);
+  }, []);
 }

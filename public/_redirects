@@ -1,1 +1,23 @@
+# Cloudflare Pages _redirects
+# Dr Shailesh Khatri — drskhatri.com.au
+
+# Force HTTPS (handled by Cloudflare, but belt-and-suspenders)
+# http://drskhatri.com.au/* https://drskhatri.com.au/:splat 301
+
+# www → non-www canonical redirect
+https://www.drskhatri.com.au/* https://drskhatri.com.au/:splat 301
+
+# Common URL normalisation
+/home /  301
+/index.html / 301
+/index / 301
+/contact-us /#contact 301
+/about-us /#about 301
+/services /#services 301
+/faqs /#faq 301
+/faq /#faq 301
+/reviews /#reviews 301
+/cardiologist-gold-coast /#about 301
+
+# SPA fallback — serve index.html for all routes
 /* /index.html 200

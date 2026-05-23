@@ -2,7 +2,8 @@ import RawHtml from './RawHtml.jsx';
 
 const markup = `
 <!-- ═══ FOOTER ══════════════════════════════════════════════════ -->
-<footer class="footer">
+</main>
+<footer class="footer" role="contentinfo" aria-label="Site footer">
 <div class="wrap">
 <div class="footer-grid">
 <div class="fg-brand">
@@ -27,16 +28,17 @@ const markup = `
 <h3>Dr Shailesh Khatri</h3>
 <p>Interventional Cardiologist — Coronary Angiography, Angioplasty &amp; Stenting, TAVI<br/>Serving the Gold Coast community for over 25 years</p>
 </div>
-<div class="fg-col"><h4>Navigation</h4><ul>
+<div class="fg-col"><h4>Navigation</h4><nav aria-label="Footer navigation"><ul>
 <li><a href="/">Home</a></li>
-<li><a href="/#about">About</a></li>
-<li><a href="/coronary-angiography">Services</a></li>
-<li><a href="/#recognition">Recognition</a></li>
-<li><a href="/#reviews">Patient Reviews</a></li>
-<li><a href="/#faq">FAQ</a></li>
-<li><a href="/#contact">Contact</a></li>
-<li><a href="/#legal-information">Privacy Policy, Terms of Use &amp; Medical Disclaimer</a></li>
-<li><a href="/angioplasty-stenting">Angioplasty &amp; Stenting</a></li><li><a href="/tavi-aortic-valve">TAVI</a></li><li><a href="/patient-education">Patient Education</a></li></ul></div>
+<li><a href="#about">About Dr Khatri</a></li>
+<li><a href="#services">Cardiology Services</a></li>
+<li><a href="#patient-journey">For Patients</a></li>
+<li><a href="#recognition">Recognition</a></li>
+<li><a href="#reviews">Patient Reviews</a></li>
+<li><a href="#faq">FAQ</a></li>
+<li><a href="#contact">Contact &amp; Location</a></li>
+<li><a href="#legal-information">Privacy Policy, Terms &amp; Disclaimer</a></li>
+</ul></nav></div>
 <div class="fg-col"><h4>Location</h4>
 <p><strong style="color:rgba(255,255,255,.7);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase">Consulting Rooms</strong><br/>
         John Flynn Specialist Suites<br/>Level 3, Suites 301–303<br/>42 Inland Drive, Tugun QLD 4224<br/><br/>
@@ -48,7 +50,7 @@ const markup = `
 </div>
 <div class="footer-base">
 <p>© 2026 Dr Shailesh Khatri — Interventional Cardiologist. All rights reserved. AHPRA compliant.</p>
-<p><a href="/#legal-information">Privacy Policy, Terms of Use &amp; Medical Disclaimer</a></p>
+<p><a href="#legal-information">Privacy Policy, Terms of Use &amp; Medical Disclaimer</a></p>
 </div>
 </div>
 

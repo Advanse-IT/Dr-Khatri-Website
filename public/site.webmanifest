@@ -1,19 +1,69 @@
 {
-  "name": "Dr Shailesh Khatri",
-  "short_name": "Dr Khatri",
+  "name": "Dr Shailesh Khatri — Interventional Cardiologist Gold Coast",
+  "short_name": "Dr S Khatri",
+  "description": "Gold Coast's leading Interventional Cardiologist. TAVI, Coronary Angiography, Angioplasty & 24/7 Emergency Care.",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#060d1a",
+  "theme_color": "#060d1a",
+  "lang": "en-AU",
+  "dir": "ltr",
+  "scope": "/",
+  "categories": ["medical", "health"],
+  "prefer_related_applications": false,
   "icons": [
+    {
+      "src": "/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any"
+    },
     {
       "src": "/android-chrome-192x192.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "maskable any"
     },
     {
       "src": "/android-chrome-512x512.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
     }
   ],
-  "theme_color": "#060d1a",
-  "background_color": "#ffffff",
-  "display": "standalone"
+  "shortcuts": [
+    {
+      "name": "Book Appointment",
+      "short_name": "Book",
+      "description": "Book a consultation with Dr Khatri",
+      "url": "/#contact",
+      "icons": [{"src": "/favicon-96x96.png", "sizes": "96x96"}]
+    },
+    {
+      "name": "Call Rooms",
+      "short_name": "Call",
+      "description": "Call (07) 5598 0322",
+      "url": "tel:+61755980322",
+      "icons": [{"src": "/favicon-96x96.png", "sizes": "96x96"}]
+    }
+  ]
 }

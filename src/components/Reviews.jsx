@@ -2,10 +2,10 @@ import RawHtml from './RawHtml.jsx';
 
 const markup = `
 <!-- ═══ REVIEWS — AHPRA COMPLIANT ════════════════════════════ -->
-<section class="sec bg2" id="reviews">
+<section class="sec bg2" id="reviews" aria-labelledby="reviews-title">
 <div class="wrap">
 <div style="text-align:center;margin-bottom:6px"><span class="kicker center a up">Patient Reviews</span></div>
-<h2 class="sec-title a up d1" style="text-align:center;margin-bottom:6px">Read What Patients <em>Are Saying</em></h2>
+<h2 class="sec-title a up d1" id="reviews-title" style="text-align:center;margin-bottom:6px">Read What Patients <em>Are Saying</em></h2>
 <p class="sec-lead a up d2" style="text-align:center;margin:0 auto 28px">Dr Khatri is reviewed on independent third-party platforms. In line with AHPRA guidelines, we link to these platforms rather than displaying testimonials directly.</p>
 <div class="reviews-notice a up d3">
 <svg aria-hidden="true" class="ahpra-icon"><use href="#ic-shield"></use></svg>

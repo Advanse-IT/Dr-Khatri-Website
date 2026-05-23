@@ -2,7 +2,8 @@ import RawHtml from './RawHtml.jsx';
 
 const markup = `
 <!-- ═══ HERO ═══════════════════════════════════════════════════ -->
-<section class="hero" id="top">
+<main id="main-content">
+<section class="hero" id="top" aria-label="Dr Shailesh Khatri — Interventional Cardiologist Gold Coast">
 <div class="hero-glow"></div>
 <div class="hero-ecg">
 <svg preserveaspectratio="none" viewbox="0 0 1400 64">
@@ -25,12 +26,12 @@ const markup = `
 <div class="hero-tagline"></div>
 <span class="hero-tagtext">Gold Coast · Est. 2000 · 24 / 7</span>
 </div>
-<h1 class="hero-title a up d1">Senior Interventional Cardiologist Gold Coast</h1>
-<p class="hero-cred a up d2">Dr Shailesh Khatri · MBBS · FRACP · FCSANZ · SCAI · AMA · ACOR-Accredited TAVI Operator</p>
+<h1 class="hero-title a up d1">Dr Shailesh Khatri</h1>
+<p class="hero-cred a up d2">MBBS · FRACP · FCSANZ · SCAI · AMA · ACOR-Accredited TAVI Operator</p>
 <p class="hero-desc a up d3">A highly experienced interventional cardiologist specialising in coronary angiography, angioplasty and stenting, and TAVI. Serving the Gold Coast community for over 25 years with a 24-hour cardiology service at both Pindara Private Hospital and John Flynn Private Hospital.</p>
 <div class="hero-btns a up d4">
-<a class="btn btn-gold" href="/#contact">Book a Consultation</a>
-<a class="btn btn-ghost" href="/#about">About Dr Khatri</a>
+<a class="btn btn-gold" href="#contact">Book a Consultation</a>
+<a class="btn btn-ghost" href="#about">About Dr Khatri</a>
 </div>
 <div class="hero-strip a up d5">
 <div class="hsi"><span class="hsi-n">15,000+</span><span class="hsi-l">Procedures</span></div>
@@ -42,11 +43,7 @@ const markup = `
 <div class="hero-photo">
 <div class="hero-frame a up d2">
 <div class="hero-img-border"></div>
-<picture>
-<source type="image/avif" srcset="/images/photo3-480.avif 480w, /images/photo3-768.avif 768w, /images/photo3-1024.avif 1024w, /images/photo3-1400.avif 1400w" sizes="(max-width: 760px) 88vw, 520px">
-<source type="image/webp" srcset="/images/photo3-480.webp 480w, /images/photo3-768.webp 768w, /images/photo3-1024.webp 1024w, /images/photo3-1400.webp 1400w" sizes="(max-width: 760px) 88vw, 520px">
-<img alt="Dr Shailesh Khatri, Senior Interventional Cardiologist Gold Coast" class="hero-img" fetchpriority="high" width="1400" height="1482" loading="eager" decoding="async" src="/images/photo3-768.webp"/>
-</picture>
+<img alt="Dr Shailesh Khatri FRACP FCSANZ — Senior Interventional Cardiologist, Gold Coast, Queensland" class="hero-img" loading="eager" fetchpriority="high" width="420" height="560" src="/images/photo3.jpeg"/>
 <!----      <div class="hero-award">Best Cardiologist — Gold Coast 2024 &amp; 2025</div>     -->
 <div aria-label="Best Cardiologist Gold Coast 2024 and 2025" class="hero-award" role="img">
 <div aria-hidden="true" class="hero-award-stars">

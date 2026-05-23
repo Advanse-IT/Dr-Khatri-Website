@@ -2,7 +2,7 @@ import RawHtml from './RawHtml.jsx';
 
 const markup = `
 <!-- ═══ RECOGNITION ════════════════════════════════════════════ -->
-<section class="sec bg2" id="recognition">
+<section class="sec bg2" id="recognition" aria-labelledby="recognition-title">
 <div class="wrap">
 <div class="rec-grid">
 <div class="rec-stack a lft">
@@ -15,13 +15,13 @@ const markup = `
 </div>
 <div class="rec-info a rgt">
 <div class="rec-info-text">
-<h2 class="sec-title">Recognised by Peers &amp; <em>The Community</em></h2>
+<h2 class="sec-title" id="recognition-title">Recognised by Peers &amp; <em>The Community</em></h2>
 <p class="sec-lead wide" style="margin-bottom:13px">Combining extensive clinical expertise with a compassionate and personalised approach to care, Dr Khatri remains committed to supporting the heart health and wellbeing of patients across the Gold Coast community.</p>
 <p class="sec-lead wide" style="margin-bottom:13px">He holds admitting rights at both <strong>John Flynn Private Hospital</strong> (Tugun) and <strong>Pindara Private Hospital</strong> (Benowa) — ensuring patients across the Gold Coast have timely access to expert cardiac care at the hospital most convenient to them, at any time of day or night.</p>
 <p class="sec-lead wide">Dr Khatri's 24-hour cardiology service — including over 1,500 emergency Primary PCI procedures for patients experiencing acute heart attacks — reflects over two decades of unwavering commitment to the Gold Coast community.</p>
 </div>
 <div class="rec-photo">
-<picture><source type="image/avif" srcset="/images/photo1-480.avif 480w" sizes="(max-width: 760px) 92vw, 520px"><source type="image/webp" srcset="/images/photo1-480.webp 480w" sizes="(max-width: 760px) 92vw, 520px"><img alt="Dr Khatri supporting medical education and training" width="601" height="363" loading="lazy" decoding="async" src="/images/photo1-480.webp"/></picture>
+<img alt="Dr Khatri mentoring a medical student — reflecting his commitment to Gold Coast postgraduate medical education" loading="lazy" width="480" height="360" src="/images/photo1.jpeg"/>
 </div>
 </div>
 </div>

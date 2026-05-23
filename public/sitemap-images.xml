@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://drskhatri.com.au/</loc>
+    <image:image>
+      <image:loc>https://drskhatri.com.au/images/photo3.jpeg</image:loc>
+      <image:title>Dr Shailesh Khatri — Interventional Cardiologist Gold Coast</image:title>
+      <image:caption>Dr Shailesh Khatri FRACP FCSANZ — Senior Interventional Cardiologist based at John Flynn Specialist Suites, Tugun, Gold Coast</image:caption>
+      <image:geo_location>Tugun, QLD, Australia</image:geo_location>
+      <image:license>https://drskhatri.com.au/</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://drskhatri.com.au/images/photo4.jpeg</image:loc>
+      <image:title>Dr Shailesh Khatri Cardiology Consultation</image:title>
+      <image:caption>Dr Khatri during a cardiology consultation — providing expert cardiac care on the Gold Coast since 2001</image:caption>
+      <image:geo_location>Tugun, QLD, Australia</image:geo_location>
+    </image:image>
+    <image:image>
+      <image:loc>https://drskhatri.com.au/images/photo1.jpeg</image:loc>
+      <image:title>Dr Khatri Teaching Medical Education Gold Coast</image:title>
+      <image:caption>Dr Khatri with a medical student, reflecting his commitment to postgraduate medical education</image:caption>
+      <image:geo_location>Gold Coast, QLD, Australia</image:geo_location>
+    </image:image>
+    <image:image>
+      <image:loc>https://drskhatri.com.au/images/photo2.jpeg</image:loc>
+      <image:title>Dr Khatri Catheterisation Laboratory TAVI Angioplasty</image:title>
+      <image:caption>Dr Khatri in the catheterisation laboratory performing an interventional cardiology procedure</image:caption>
+      <image:geo_location>Gold Coast, QLD, Australia</image:geo_location>
+    </image:image>
+  </url>
+</urlset>
