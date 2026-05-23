@@ -16,7 +16,7 @@ const markup = `
 <div class="jstep a up d2">
 <div class="jstep-n">2</div>
 <div class="jstep-h">Book Your Appointment</div>
-<p class="jstep-p">Contact Dr Khatri with your GP referral on <a href="tel:+61755980322" style="color:var(--navy2);font-weight:700">(07) 5598 0322</a> to schedule a consultation at John Flynn Specialist Suites, Level 3, Suites 301–303, 42 Inland Drive, Tugun QLD 4224.</p>
+<p class="jstep-p">Contact Dr Khatri with your GP referral on <a href="tel:+61755980322" style="color:var(--navy2);font-weight:700">(07) 5598 0322</a> to schedule a consultation. His consulting rooms are at John Flynn Specialist Suites, Level 3, Suites 301–303, 42 Inland Drive, Tugun QLD 4224. Dr Khatri also holds admitting rights at Pindara Private Hospital (Benowa), allowing you to choose the location most convenient to you.</p>
 <div class="jstep-arr">→</div>
 </div>
 <div class="jstep a up d3">
