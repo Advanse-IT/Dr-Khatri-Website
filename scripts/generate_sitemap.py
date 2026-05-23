@@ -4,12 +4,13 @@ def generate_sitemap():
     base_url = "https://drskhatri.com.au/"
     pages = [
         {"loc": "", "priority": "1.0", "changefreq": "monthly"},
-        {"loc": "#about", "priority": "0.8", "changefreq": "monthly"},
-        {"loc": "#services", "priority": "0.9", "changefreq": "monthly"},
-        {"loc": "#recognition", "priority": "0.8", "changefreq": "monthly"},
-        {"loc": "#reviews", "priority": "0.8", "changefreq": "monthly"},
-        {"loc": "#faq", "priority": "0.7", "changefreq": "monthly"},
-        {"loc": "#contact", "priority": "0.9", "changefreq": "monthly"},
+        {"loc": "about", "priority": "0.8", "changefreq": "monthly"},
+        {"loc": "services", "priority": "0.9", "changefreq": "monthly"},
+        {"loc": "recognition", "priority": "0.8", "changefreq": "monthly"},
+        {"loc": "reviews", "priority": "0.8", "changefreq": "monthly"},
+        {"loc": "faq", "priority": "0.7", "changefreq": "monthly"},
+        {"loc": "contact", "priority": "0.9", "changefreq": "monthly"},
+        {"loc": "legal", "priority": "0.5", "changefreq": "monthly"},
     ]
 
     now = datetime.datetime.now().strftime("%Y-%m-%d")
