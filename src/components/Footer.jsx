@@ -30,14 +30,14 @@ const markup = `
 </div>
 <div class="fg-col"><h3>Navigation</h3><nav aria-label="Footer navigation"><ul>
 <li><a href="/">Home</a></li>
-<li><a href="#about">About Dr Khatri</a></li>
-<li><a href="#services">Cardiology Services</a></li>
-<li><a href="#patient-journey">For Patients</a></li>
-<li><a href="#recognition">Recognition</a></li>
-<li><a href="#reviews">Patient Reviews</a></li>
-<li><a href="#faq">FAQ</a></li>
-<li><a href="#contact">Contact &amp; Location</a></li>
-<li><a href="#legal-information">Privacy Policy, Terms &amp; Disclaimer</a></li>
+<li><a href="/about">About Dr Khatri</a></li>
+<li><a href="/services">Cardiology Services</a></li>
+<li><a href="/patient-journey">For Patients</a></li>
+<li><a href="/recognition">Recognition</a></li>
+<li><a href="/reviews">Patient Reviews</a></li>
+<li><a href="/faq">FAQ</a></li>
+<li><a href="/contact">Contact &amp; Location</a></li>
+<li><a href="/legal">Privacy Policy, Terms &amp; Disclaimer</a></li>
 </ul></nav></div>
 <div class="fg-col"><h3>Location</h3>
 <p><strong style="color:rgba(255,255,255,.7);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase">Consulting Rooms</strong><br/>
@@ -50,7 +50,7 @@ const markup = `
 </div>
 <div class="footer-base">
 <p>© 2026 Dr Shailesh Khatri — Interventional Cardiologist. All rights reserved. AHPRA compliant.</p>
-<p><a href="#legal-information">Privacy Policy, Terms of Use &amp; Medical Disclaimer</a></p>
+<p><a href="/legal">Privacy Policy, Terms of Use &amp; Medical Disclaimer</a></p>
 </div>
 </div>
 

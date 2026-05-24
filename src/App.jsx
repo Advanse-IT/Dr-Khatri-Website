@@ -1,3 +1,4 @@
+import { BrowserRouter, Routes, Route, useEffect } from 'react-router-dom';
 import SvgIcons from './components/SvgIcons.jsx';
 import Header from './components/Header.jsx';
 import Hero from './components/Hero.jsx';
@@ -19,8 +20,21 @@ import LegalInformation from './components/LegalInformation.jsx';
 import CookieConsent from './components/CookieConsent.jsx';
 import useSiteEffects from './hooks/useSiteEffects.js';
 
-export default function App() {
+function PageContent({ scrollTo }) {
   useSiteEffects();
+  
+  useEffect(() => {
+    if (scrollTo) {
+      const el = document.getElementById(scrollTo);
+      if (el) {
+        setTimeout(() => {
+          el.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [scrollTo]);
 
   return (
     <>
@@ -44,5 +58,28 @@ export default function App() {
       <DirectionsPicker />
       <CookieConsent />
     </>
+  );
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<PageContent />} />
+        <Route path="/about" element={<PageContent scrollTo="about" />} />
+        <Route path="/career-timeline" element={<PageContent scrollTo="career-timeline" />} />
+        <Route path="/core-strengths" element={<PageContent scrollTo="core-strengths" />} />
+        <Route path="/stats" element={<PageContent scrollTo="stats" />} />
+        <Route path="/services" element={<PageContent scrollTo="services" />} />
+        <Route path="/patient-journey" element={<PageContent scrollTo="patient-journey" />} />
+        <Route path="/recognition" element={<PageContent scrollTo="recognition" />} />
+        <Route path="/pioneer-story" element={<PageContent scrollTo="pioneer-story" />} />
+        <Route path="/reviews" element={<PageContent scrollTo="reviews" />} />
+        <Route path="/faq" element={<PageContent scrollTo="faq" />} />
+        <Route path="/contact" element={<PageContent scrollTo="contact" />} />
+        <Route path="/legal" element={<PageContent scrollTo="legal-information" />} />
+        <Route path="*" element={<PageContent />} />
+      </Routes>
+    </BrowserRouter>
   );
 }

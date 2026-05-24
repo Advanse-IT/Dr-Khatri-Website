@@ -31,8 +31,8 @@ const markup = `
 <p class="hero-cred a up d3">MBBS · FRACP · FCSANZ · SCAI · AMA · ACOR-Accredited TAVI Operator</p>
 <p class="hero-desc a up d4">A highly experienced interventional cardiologist specialising in coronary angiography, angioplasty and stenting, and TAVI. Serving the Gold Coast community for over 25 years with a 24-hour cardiology service at both Pindara Private Hospital and John Flynn Private Hospital.</p>
 <div class="hero-btns a up d5">
-<a class="btn btn-gold" href="#contact">Book a Consultation</a>
-<a class="btn btn-ghost" href="#about">About Dr Khatri</a>
+<a class="btn btn-gold" href="/contact">Book a Consultation</a>
+<a class="btn btn-ghost" href="/about">About Dr Khatri</a>
 </div>
 <div class="hero-strip a up d6">
 <div class="hsi"><span class="hsi-n">15,000+</span><span class="hsi-l">Procedures</span></div>

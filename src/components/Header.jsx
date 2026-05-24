@@ -42,27 +42,27 @@ const markup = `
 </div>
 </a>
 <nav class="nav-links" role="menubar" aria-label="Site sections">
-<a class="nl" href="#about" role="menuitem">About</a>
-<a class="nl" href="#services" role="menuitem">Services</a>
-<a class="nl" href="#patient-journey" role="menuitem">For Patients</a>
-<a class="nl" href="#recognition" role="menuitem">Recognition</a>
-<a class="nl" href="#reviews" role="menuitem">Reviews</a>
-<a class="nl" href="#faq" role="menuitem">FAQ</a>
-<a class="nl" href="#contact" role="menuitem">Contact</a>
-<a class="nl nlbook" href="#contact" role="menuitem" aria-label="Book a consultation with Dr Khatri">Book a Consultation</a>
+<a class="nl" href="/about" role="menuitem">About</a>
+<a class="nl" href="/services" role="menuitem">Services</a>
+<a class="nl" href="/patient-journey" role="menuitem">For Patients</a>
+<a class="nl" href="/recognition" role="menuitem">Recognition</a>
+<a class="nl" href="/reviews" role="menuitem">Reviews</a>
+<a class="nl" href="/faq" role="menuitem">FAQ</a>
+<a class="nl" href="/contact" role="menuitem">Contact</a>
+<a class="nl nlbook" href="/contact" role="menuitem" aria-label="Book a consultation with Dr Khatri">Book a Consultation</a>
 </nav>
 <button aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobNav" class="hbg" id="hbg"><span></span><span></span><span></span></button>
 </div>
 </nav>
 <div class="mob-nav" id="mobNav" role="dialog" aria-label="Mobile navigation" aria-modal="true">
-<a href="#about">About Dr Khatri</a>
-<a href="#services">Services</a>
-<a href="#patient-journey">For Patients</a>
-<a href="#recognition">Recognition</a>
-<a href="#reviews">Patient Reviews</a>
-<a href="#faq">FAQ</a>
-<a href="#contact">Contact &amp; Location</a>
-<a class="mob-cta" href="#contact">Book a Consultation</a>
+<a href="/about">About Dr Khatri</a>
+<a href="/services">Services</a>
+<a href="/patient-journey">For Patients</a>
+<a href="/recognition">Recognition</a>
+<a href="/reviews">Patient Reviews</a>
+<a href="/faq">FAQ</a>
+<a href="/contact">Contact &amp; Location</a>
+<a class="mob-cta" href="/contact">Book a Consultation</a>
 </div>
 `;
 
