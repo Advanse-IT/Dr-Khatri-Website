@@ -2,9 +2,9 @@ import RawHtml from './RawHtml.jsx';
 
 const markup = `
 <!-- ═══ CAREER TIMELINE ══════════════════════════════════════════ -->
-<div class="tl-band">
+<section class="tl-band" id="career-timeline" aria-labelledby="career-title">
 <div class="wrap">
-<div class="tl-title">Career Milestones</div>
+<h2 class="tl-title" id="career-title">Career Milestones</h2>
 <div class="tl-track">
 <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">1983</div><div class="tl-txt">Arrived in Australia from Fiji</div></div>
 <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">1990</div><div class="tl-txt">MBBS — University of Queensland</div></div>

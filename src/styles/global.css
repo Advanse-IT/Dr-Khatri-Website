@@ -8,6 +8,9 @@ html,body{overflow-x:hidden;width:100%;max-width:100%;}
 
 /* ═══ H3 resets — prevents browser default margins breaking card layouts ══ */
 h3.svc-h,h3.str-h,h3.rc-h{margin:0;padding:0;font-size:inherit;font-weight:inherit;line-height:inherit;color:inherit}
+h2.tl-title{margin:0;padding:0;font-size:inherit;font-weight:inherit;line-height:inherit;color:inherit;letter-spacing:inherit;text-transform:inherit}
+/* Footer heading resets */
+footer h2,footer h3{margin:0 0 8px;padding:0}
 
 /* ═══ Active nav link (scroll-spy) ════════════════════════════════════════ */
 .nav-links a.active,.nav-links a[aria-current]{color:var(--gold)!important;opacity:1}

@@ -5,7 +5,7 @@ const markup = `
 <section class="sec bg-white" id="patient-journey" aria-labelledby="patient-journey-title">
 <div class="wrap">
 <div style="text-align:center;margin-bottom:6px"><span class="kicker center a up">Your Care Pathway</span></div>
-<h2 class="sec-title a up d1" id="patient-journey-title" style="text-align:center;margin-bottom:0">How to See <em>Dr Khatri</em></h2>
+<h2 class="sec-title a up d1" id="patient-journey-title" style="text-align:center;margin-bottom:0">How to See <em>Dr Khatri</em> on the Gold Coast</h2>
 <div class="journey-steps">
 <div class="jstep a up d1">
 <div class="jstep-n" aria-hidden="true">1</div>

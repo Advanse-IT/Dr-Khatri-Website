@@ -5,7 +5,7 @@ const markup = `
 <section class="sec-sm bg2" id="core-strengths" aria-labelledby="strengths-title">
 <div class="wrap">
 <div style="text-align:center;margin-bottom:6px"><span class="kicker center a up">Core Strengths</span></div>
-<h2 class="sec-title a up d1" id="strengths-title" style="text-align:center;margin-bottom:0">What Sets Dr Khatri <em>Apart</em></h2>
+<h2 class="sec-title a up d1" id="strengths-title" style="text-align:center;margin-bottom:0">What Sets Dr Khatri <em>Apart</em> as a Gold Coast Cardiologist</h2>
 <div class="strength-grid">
 <div class="str-card a up d1"><svg aria-hidden="true" class="card-icon"><use href="#ic-globe"></use></svg><svg aria-hidden="true" class="card-wm"><use href="#ic-globe"></use></svg><h3 class="str-h">International Training Pedigree</h3><p class="str-p">In 2001, Dr Khatri undertook a Fellowship at St Paul's Hospital, Vancouver under Professor John Webb, an internationally renowned interventional cardiologist — completing over 1,200 procedures. This world-class training underpins every procedure he performs today.</p></div>
 <div class="str-card a up d2"><svg aria-hidden="true" class="card-icon"><use href="#ic-chart"></use></svg><svg aria-hidden="true" class="card-wm"><use href="#ic-chart"></use></svg><h3 class="str-h">High-Volume, High-Expertise Practice</h3><p class="str-p">Over 15,000 procedures performed since settling on the Gold Coast in 2001 — including 400+ TAVI and 1,500+ emergency Primary PCI procedures. Experience at this volume translates directly into superior patient safety and outcomes.</p></div>

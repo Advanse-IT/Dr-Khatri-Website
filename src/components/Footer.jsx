@@ -25,10 +25,10 @@ const markup = `
 <text fill="#c49a38" font-family="Inter,sans-serif" font-size="12" font-weight="900" letter-spacing="-1" text-anchor="middle" x="23" y="27">SK</text>
 </svg>
 </div>
-<h3>Dr Shailesh Khatri</h3>
+<h2>Dr Shailesh Khatri</h2>
 <p>Interventional Cardiologist — Coronary Angiography, Angioplasty &amp; Stenting, TAVI<br/>Serving the Gold Coast community for over 25 years</p>
 </div>
-<div class="fg-col"><h4>Navigation</h4><nav aria-label="Footer navigation"><ul>
+<div class="fg-col"><h3>Navigation</h3><nav aria-label="Footer navigation"><ul>
 <li><a href="/">Home</a></li>
 <li><a href="#about">About Dr Khatri</a></li>
 <li><a href="#services">Cardiology Services</a></li>
@@ -39,14 +39,14 @@ const markup = `
 <li><a href="#contact">Contact &amp; Location</a></li>
 <li><a href="#legal-information">Privacy Policy, Terms &amp; Disclaimer</a></li>
 </ul></nav></div>
-<div class="fg-col"><h4>Location</h4>
+<div class="fg-col"><h3>Location</h3>
 <p><strong style="color:rgba(255,255,255,.7);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase">Consulting Rooms</strong><br/>
         <address style="font-style:normal">John Flynn Specialist Suites<br/>Level 3, Suites 301–303<br/>42 Inland Drive, Tugun QLD 4224<br/><br/>
 <strong style="color:rgba(255,255,255,.7);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase">Admitting Hospitals</strong><br/>
         John Flynn Private Hospital, Tugun<br/>Pindara Private Hospital, Benowa<br/><br/>
 <a href="tel:+61755980322" style="color:var(--gold2);font-weight:600">(07) 5598 0322</a></address></p>
 </div>
-<div class="fg-col"><h4>Emergency</h4><p>Dr Khatri has provided a 24-hour cardiology service to the Gold Coast for over two decades. Cardiac emergencies are prioritised at both hospitals at any time.<br/><br/>Life-threatening emergency: call <strong style="color:#fff">000</strong> immediately.</p></div>
+<div class="fg-col"><h3>Emergency</h3><p>Dr Khatri has provided a 24-hour cardiology service to the Gold Coast for over two decades. Cardiac emergencies are prioritised at both hospitals at any time.<br/><br/>Life-threatening emergency: call <strong style="color:#fff">000</strong> immediately.</p></div>
 </div>
 <div class="footer-base">
 <p>© 2026 Dr Shailesh Khatri — Interventional Cardiologist. All rights reserved. AHPRA compliant.</p>
@@ -55,7 +55,7 @@ const markup = `
 </div>
 
   <div class="footer-credit-center">
-    <a class="site-credit" href="https://ausprostudios.com.au" target="_blank" rel="noopener noreferrer" aria-label="Auspro Studios website">
+    <a class="site-credit" href="https://ausprostudios.com.au" target="_blank" rel="noopener noreferrer ugc" aria-label="Auspro Studios website">
       <img src="/images/auspro-logo.svg" alt="Auspro Studios" loading="lazy" width="120" height="32"/>
       <span>Digital experience crafted by <strong>Auspro Studios</strong></span>
     </a>

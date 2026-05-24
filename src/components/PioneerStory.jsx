@@ -7,8 +7,8 @@ const markup = `
 <div class="pio-grid">
 <div class="pio-text a lft">
 <span class="kicker">A Pioneer's Legacy</span>
-<h2 class="sec-title" id="pioneer-title">The Service That Changed <em>Northern Rivers</em> Cardiac Care</h2>
-<p class="sec-lead">Over 20 years ago, Dr Khatri identified a critical gap: patients experiencing heart attacks in the <strong>Northern Rivers region of NSW</strong> — many uninsured — had no access to emergency angioplasty close to home.</p>
+<h2 class="sec-title" id="pioneer-title">A Gold Coast Pioneer: The Service That Changed <em>Northern Rivers</em> Cardiac Care</h2>
+<p class="sec-lead">Over 20 years ago, Dr Khatri — already established as a Gold Coast interventional cardiologist — identified a critical gap: patients experiencing heart attacks in the <strong>Northern Rivers region of NSW</strong>, many uninsured, had no access to emergency angioplasty close to home.</p>
 <p class="sec-lead" style="margin-top:12px">Without mandate or financial incentive, he established the <strong>Primary PCI service at Tweed Hospital</strong> entirely for uninsured patients from across the NSW border. That service operates to this day, saving lives that would otherwise be lost.</p>
 <p class="sec-lead" style="margin-top:12px">This is the measure of Dr Khatri's commitment — not just to his private patients, but to anyone in the community whose heart needs urgent care, regardless of circumstance.</p>
 <div class="pio-pull">

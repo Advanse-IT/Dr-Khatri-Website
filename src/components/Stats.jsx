@@ -2,7 +2,7 @@ import RawHtml from './RawHtml.jsx';
 
 const markup = `
 <!-- ═══ STATS ══════════════════════════════════════════════════ -->
-<div class="stats-band">
+<section class="stats-band" id="stats" aria-labelledby="stats-title">
 <div class="stats-ecg-bg">
 <svg preserveaspectratio="none" style="width:100%;height:60px;display:block" viewbox="0 0 1440 60">
 <path d="M0,30 L140,30 L156,30 L161,28 L166,6 L171,54 L176,18 L181,30 L300,30 L316,30 L321,28 L326,6 L331,54 L336,18 L341,30 L460,30 L476,30 L481,28 L486,6 L491,54 L496,18 L501,30 L620,30 L636,30 L641,28 L646,6 L651,54 L656,18 L661,30 L780,30 L796,30 L801,28 L806,6 L811,54 L816,18 L821,30 L940,30 L956,30 L961,28 L966,6 L971,54 L976,18 L981,30 L1100,30 L1260,30 L1440,30" fill="none" stroke="white" stroke-linecap="round" stroke-width="1.5"></path>
@@ -30,7 +30,7 @@ const markup = `
 <svg preserveaspectratio="none" viewbox="0 0 1440 32">
 <path d="M0,16 L180,16 L196,16 L200,14 L204,4 L208,28 L212,10 L216,16 L380,16 L400,16 L600,16 L800,16 L1000,16 L1200,16 L1440,16" fill="none" opacity=".2" stroke="var(--gold)" stroke-linecap="round" stroke-width="1.3"></path>
 </svg>
-</div>
+</section>
 `;
 
 export default function Stats() {
