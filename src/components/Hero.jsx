@@ -49,9 +49,8 @@ const markup = `
 <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
 </div>
 <div aria-hidden="true" class="hero-award-tooltip">
-Recognised Excellence
-              Voted Best Cardiologist on the Gold Coast — two years running
-            </div>
+Recognised Excellence: Voted Best Cardiologist on the Gold Coast
+</div>
 <div class="hero-award-inner">
 <svg aria-hidden="true" fill="none" height="18" stroke="rgba(255,255,255,0.9)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="18">
 <circle cx="12" cy="15" r="5"></circle>
