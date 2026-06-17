@@ -130,7 +130,7 @@ export default function App() {
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
-      <Route path="/about" element={<SectionPage sectionId="about" title="About Dr Shailesh Khatri | Gold Coast Cardiologist" description="Learn about Dr Shailesh Khatri's background, training, and commitment to cardiac care on the Gold Coast." path="/about" />} />
+      <Route path="/about" element={<SectionPage sectionId="about" title="Abouts Dr Shailesh Khatri | Gold Coast Cardiologist" description="Learn about Dr Shailesh Khatri's background, training, and commitment to cardiac care on the Gold Coast." path="/about" />} />
       <Route path="/services" element={<SectionPage sectionId="services" title="Cardiac Services | Dr Shailesh Khatri | Gold Coast" description="Explore Dr Khatri's specialist services including TAVI, coronary angiography, angioplasty, and 24/7 emergency cardiac care." path="/services" />} />
       <Route path="/recognition" element={<SectionPage sectionId="recognition" title="Recognition & Credentials | Dr Shailesh Khatri" description="Dr Shailesh Khatri's professional achievements, awards, and international training credentials." path="/recognition" />} />
       <Route path="/reviews" element={<SectionPage sectionId="reviews" title="Patient Reviews | Dr Shailesh Khatri | Gold Coast Cardiologist" description="Read independent patient reviews of Dr Shailesh Khatri on RateMDs and other trusted medical review platforms." path="/reviews" />} />
