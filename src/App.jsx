@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { useEffect } from 'react';
 import SvgIcons from './components/SvgIcons.jsx';
 import Header from './components/Header.jsx';
-import Hero from './components/Hero.jsx';
+import Hero from './components/Hero.jsx'; 
 import CareerTimeline from './components/CareerTimeline.jsx';
 import About from './components/About.jsx';
 import CoreStrengths from './components/CoreStrengths.jsx';
