@@ -1,0 +1,201 @@
+diff --git a/src/App.jsx b/src/App.jsx
+index 7600b0b..18cf623 100644
+--- a/src/App.jsx
++++ b/src/App.jsx
+@@ -20,6 +20,7 @@ import MobileBottomBar from './components/MobileBottomBar.jsx';
+ import DirectionsPicker from './components/DirectionsPicker.jsx';
+ import LegalInformation from './components/LegalInformation.jsx';
+ import CookieConsent from './components/CookieConsent.jsx';
++import LeaveReview from './components/LeaveReview.jsx';
+ import useSiteEffects from './hooks/useSiteEffects.js';
+ 
+ // Full page component (home)
+@@ -126,6 +127,32 @@ function SectionPage({ sectionId, title, description, path }) {
+   );
+ }
+ 
++// Standalone review-collection page — shared via QR code / direct link
++function LeaveReviewPage() {
++  useSiteEffects();
++
++  useEffect(() => {
++    window.scrollTo(0, 0);
++  }, []);
++
++  return (
++    <>
++      <Helmet>
++        <title>Leave a Review | Dr Shailesh Khatri | Gold Coast Cardiologist</title>
++        <meta name="description" content="Share feedback on your visit with Dr Shailesh Khatri and leave a review on Google or RateMDs." />
++        <meta name="robots" content="noindex, follow" />
++        <link rel="canonical" href="https://drskhatri.com.au/leave-a-review" />
++      </Helmet>
++      <SvgIcons />
++      <Header />
++      <LeaveReview />
++      <Footer />
++      <MobileBottomBar />
++      <CookieConsent />
++    </>
++  );
++}
++
+ export default function App() {
+   return (
+     <Routes>
+@@ -137,6 +164,7 @@ export default function App() {
+       <Route path="/faq" element={<SectionPage sectionId="faq" title="FAQ | Dr. Shailesh Khatri | Cardiologist Gold Coast" description="Frequently asked questions about cardiology, procedures, referrals, and Dr. Khatri's practice." path="/faq" />} />
+       <Route path="/contact" element={<SectionPage sectionId="contact" title="Book an Urgent Heart Specialist Appointment" description="Book an urgent appointment with Dr. Shailesh Khatri, an experienced cardiologist providing prompt cardiac consultations on the Gold Coast." path="/contact" />} />
+       <Route path="/legal" element={<SectionPage sectionId="legal-information" title="Legal Information | Dr. Shailesh Khatri" description="Website information, privacy policy, terms of use, and AHPRA compliance details." path="/legal" />} />
++      <Route path="/leave-a-review" element={<LeaveReviewPage />} />
+       {/* Catch-all for undefined routes - redirect to home */}
+       <Route path="*" element={<Navigate to="/" replace />} />
+     </Routes>
+diff --git a/src/components/Footer.jsx b/src/components/Footer.jsx
+index 1569fc3..c1ab04a 100644
+--- a/src/components/Footer.jsx
++++ b/src/components/Footer.jsx
+@@ -33,6 +33,7 @@ const markup = `
+ <li><a href="/services">Services</a></li>
+ <li><a href="/recognition">Recognition</a></li>
+ <li><a href="/reviews">Patient Reviews</a></li>
++<li><a href="/leave-a-review">Leave a Review</a></li>
+ <li><a href="/faq">FAQ</a></li>
+ <li><a href="/contact">Contact</a></li>
+ <li><a href="/legal">Privacy Policy, Terms of Use &amp; Medical Disclaimer</a></li>
+diff --git a/src/components/LeaveReview.jsx b/src/components/LeaveReview.jsx
+new file mode 100644
+index 0000000..f33e0fd
+--- /dev/null
++++ b/src/components/LeaveReview.jsx
+@@ -0,0 +1,104 @@
++import { useState } from 'react';
++
++// ─── CONFIG — update these before deploying ──────────────────────────────
++// Find your Google Place ID: https://developers.google.com/maps/documentation/places/web-service/place-id
++const GOOGLE_PLACE_ID = 'REPLACE_WITH_GOOGLE_PLACE_ID';
++const GOOGLE_REVIEW_URL = `https://search.google.com/local/writereview?placeid=${GOOGLE_PLACE_ID}`;
++const RATEMDS_URL = 'https://www.ratemds.com/doctor-ratings/114846/Dr-Shailesh-Khatri-Gold+Coast-QLD.html/';
++const PRACTICE_PHONE_DISPLAY = '(07) 5598 0322';
++const PRACTICE_PHONE_TEL = 'tel:+61755980322';
++
++const LABELS = ['', 'Poor', 'Below Average', 'Average', 'Good', 'Excellent'];
++
++export default function LeaveReview() {
++  const [rating, setRating] = useState(0);
++  const [hover, setHover] = useState(0);
++
++  const active = hover || rating;
++  const isPositive = rating >= 4;
++  const isNegative = rating > 0 && rating <= 3;
++
++  return (
++    <section className="sec bg2 review-page" id="leave-a-review">
++      <div className="wrap review-wrap">
++        <div style={{ textAlign: 'center', marginBottom: 6 }}>
++          <span className="kicker center">Share Your Experience</span>
++        </div>
++        <h1 className="sec-title" style={{ textAlign: 'center', marginBottom: 6 }}>
++          How Was Your Visit With <em>Dr Khatri?</em>
++        </h1>
++        <p className="sec-lead" style={{ textAlign: 'center', margin: '0 auto 32px', maxWidth: 640 }}>
++          Your feedback helps other patients on the Gold Coast find the right cardiologist,
++          and helps our team keep improving your care experience.
++        </p>
++
++        <div className="review-card">
++          <div className="star-rating" role="radiogroup" aria-label="Rate your experience out of 5 stars">
++            {[1, 2, 3, 4, 5].map((n) => (
++              <button
++                key={n}
++                type="button"
++                className={`star-btn${n <= active ? ' filled' : ''}`}
++                role="radio"
++                aria-checked={rating === n}
++                aria-label={`${n} star${n > 1 ? 's' : ''}`}
++                onClick={() => setRating(n)}
++                onMouseEnter={() => setHover(n)}
++                onMouseLeave={() => setHover(0)}
++              >
++                ★
++              </button>
++            ))}
++          </div>
++          <div className="star-label">{active ? LABELS[active] : 'Tap a star to rate your experience'}</div>
++
++          {isPositive && (
++            <div className="review-result review-result-positive">
++              <p>
++                Wonderful to hear! Would you be willing to share a quick review on one of the
++                platforms below? It only takes a minute and genuinely helps other patients find
++                trusted cardiac care.
++              </p>
++              <div className="review-cta-row">
++                <a className="btn btn-gold" href={GOOGLE_REVIEW_URL} target="_blank" rel="noopener noreferrer">
++                  Leave a Google Review →
++                </a>
++                <a className="btn btn-outline" href={RATEMDS_URL} target="_blank" rel="noopener noreferrer">
++                  Leave a RateMDs Review →
++                </a>
++              </div>
++            </div>
++          )}
++
++          {isNegative && (
++            <div className="review-result review-result-negative">
++              <p>
++                We're sorry your experience wasn't what it should have been. We'd genuinely like
++                the chance to understand what happened and make it right — please call our team
++                directly so we can help.
++              </p>
++              <a className="btn btn-navy review-call-btn" href={PRACTICE_PHONE_TEL}>
++                Call the Practice — {PRACTICE_PHONE_DISPLAY}
++              </a>
++              <p className="review-secondary-note">
++                You're also welcome to share your feedback publicly on{' '}
++                <a href={GOOGLE_REVIEW_URL} target="_blank" rel="noopener noreferrer">Google</a>
++                {' '}or{' '}
++                <a href={RATEMDS_URL} target="_blank" rel="noopener noreferrer">RateMDs</a>.
++              </p>
++            </div>
++          )}
++        </div>
++
++        <div className="reviews-notice review-ahpra-notice">
++          <p className="rn-p">
++            <strong>AHPRA Compliance:</strong> In accordance with Australian Health Practitioner
++            Regulation Agency advertising guidelines, this page does not collect, store, or display
++            patient testimonials. It only directs you to independent third-party review platforms,
++            or to our practice directly.
++          </p>
++        </div>
++      </div>
++    </section>
++  );
++}
+diff --git a/src/styles/global.css b/src/styles/global.css
+index ba9ca25..83f0ed8 100644
+--- a/src/styles/global.css
++++ b/src/styles/global.css
+@@ -1061,3 +1061,21 @@ li{
+   }
+ }
+ 
++
++/* ═══ LEAVE A REVIEW PAGE ═══════════════════════════════════════ */
++.review-wrap{max-width:640px}
++.review-card{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:40px 32px;text-align:center;box-shadow:0 14px 40px rgba(0,0,0,.06);margin-bottom:28px}
++@media(max-width:480px){.review-card{padding:28px 18px}}
++.star-rating{display:flex;justify-content:center;gap:6px;margin-bottom:10px}
++.star-btn{font-size:2.6rem;line-height:1;color:var(--border);transition:transform .15s,color .15s;padding:2px}
++.star-btn:hover{transform:scale(1.12)}
++.star-btn.filled{color:var(--gold)}
++.star-label{font-size:.85rem;font-weight:600;color:var(--text2);letter-spacing:.02em;margin-bottom:6px;min-height:20px}
++.review-result{margin-top:24px;padding-top:24px;border-top:1px solid var(--border);animation:reviewFadeIn .35s ease}
++@keyframes reviewFadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
++.review-result p{font-size:.94rem;color:var(--text2);line-height:1.65;margin-bottom:18px}
++.review-cta-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
++.review-call-btn{width:100%;justify-content:center;box-sizing:border-box}
++.review-secondary-note{font-size:.78rem !important;color:var(--text3) !important;margin-top:14px;margin-bottom:0 !important}
++.review-secondary-note a{color:var(--navy);text-decoration:underline}
++.review-ahpra-notice{margin-bottom:0}
