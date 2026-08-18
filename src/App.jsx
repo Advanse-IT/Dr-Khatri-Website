@@ -20,6 +20,7 @@ import MobileBottomBar from './components/MobileBottomBar.jsx';
 import DirectionsPicker from './components/DirectionsPicker.jsx';
 import LegalInformation from './components/LegalInformation.jsx';
 import CookieConsent from './components/CookieConsent.jsx';
+import LeaveReview from './components/LeaveReview.jsx';
 import useSiteEffects from './hooks/useSiteEffects.js';
 
 // Full page component (home)
@@ -126,6 +127,32 @@ function SectionPage({ sectionId, title, description, path }) {
   );
 }
 
+// Standalone review-collection page — shared via QR code / direct link
+function LeaveReviewPage() {
+  useSiteEffects();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  return (
+    <>
+      <Helmet>
+        <title>Leave a Review | Dr Shailesh Khatri | Gold Coast Cardiologist</title>
+        <meta name="description" content="Share feedback on your visit with Dr Shailesh Khatri and leave a review on Google or RateMDs." />
+        <meta name="robots" content="noindex, follow" />
+        <link rel="canonical" href="https://drskhatri.com.au/leave-a-review" />
+      </Helmet>
+      <SvgIcons />
+      <Header />
+      <LeaveReview />
+      <Footer />
+      <MobileBottomBar />
+      <CookieConsent />
+    </>
+  );
+}
+
 export default function App() {
   return (
     <Routes>
@@ -137,6 +164,7 @@ export default function App() {
       <Route path="/faq" element={<SectionPage sectionId="faq" title="FAQ | Dr. Shailesh Khatri | Cardiologist Gold Coast" description="Frequently asked questions about cardiology, procedures, referrals, and Dr. Khatri's practice." path="/faq" />} />
       <Route path="/contact" element={<SectionPage sectionId="contact" title="Book an Urgent Heart Specialist Appointment" description="Book an urgent appointment with Dr. Shailesh Khatri, an experienced cardiologist providing prompt cardiac consultations on the Gold Coast." path="/contact" />} />
       <Route path="/legal" element={<SectionPage sectionId="legal-information" title="Legal Information | Dr. Shailesh Khatri" description="Website information, privacy policy, terms of use, and AHPRA compliance details." path="/legal" />} />
+      <Route path="/leave-a-review" element={<LeaveReviewPage />} />
       {/* Catch-all for undefined routes - redirect to home */}
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
