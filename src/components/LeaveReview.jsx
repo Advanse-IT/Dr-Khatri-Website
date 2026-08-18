@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 // ─── CONFIG — update these before deploying ──────────────────────────────
 // Find your Google Place ID: https://developers.google.com/maps/documentation/places/web-service/place-id
-const GOOGLE_PLACE_ID = '14890540639921552564';
+const GOOGLE_PLACE_ID = 'ChIJffwNJPcBkWsRjfjFUZVZyp0';
 const GOOGLE_REVIEW_URL = `https://search.google.com/local/writereview?placeid=${GOOGLE_PLACE_ID}`;
 const RATEMDS_URL = 'https://www.ratemds.com/doctor-ratings/114846/Dr-Shailesh-Khatri-Gold+Coast-QLD.html/';
 const PRACTICE_PHONE_DISPLAY = '(07) 5598 0322';
