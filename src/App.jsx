@@ -21,6 +21,7 @@ import DirectionsPicker from './components/DirectionsPicker.jsx';
 import LegalInformation from './components/LegalInformation.jsx';
 import CookieConsent from './components/CookieConsent.jsx';
 import LeaveReview from './components/LeaveReview.jsx';
+import ReviewQrKiosk from './components/ReviewQrKiosk.jsx';
 import useSiteEffects from './hooks/useSiteEffects.js';
 
 // Full page component (home)
@@ -133,6 +134,13 @@ function LeaveReviewPage() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    // This page has no dark hero behind the nav, so the nav must stay in its
+    // solid/scrolled ("up") state at all times -- not just on mount. The
+    // site-wide scroll handler in useSiteEffects toggles 'up' off whenever
+    // scrollY <= 56, which would otherwise make the nav go transparent again
+    // every time this page is scrolled back to the top. Attaching this
+    // listener AFTER useSiteEffects' means it runs second on every scroll
+    // event, so it always has the final say and keeps 'up' forced on.
     const nav = document.getElementById('nav');
     const forceNavSolid = () => nav?.classList.add('up');
     forceNavSolid();
@@ -158,6 +166,21 @@ function LeaveReviewPage() {
   );
 }
 
+// Unlisted, full-screen kiosk display -- point a clinic iPad/reception
+// screen at /review-qr. No header, footer, or nav chrome on purpose: it's
+// meant to sit on a stand and just show the code.
+function ReviewQrKioskPage() {
+  return (
+    <>
+      <Helmet>
+        <title>Leave a Review | Dr Shailesh Khatri</title>
+        <meta name="robots" content="noindex, nofollow" />
+      </Helmet>
+      <ReviewQrKiosk />
+    </>
+  );
+}
+
 export default function App() {
   return (
     <Routes>
@@ -170,6 +193,7 @@ export default function App() {
       <Route path="/contact" element={<SectionPage sectionId="contact" title="Book an Urgent Heart Specialist Appointment" description="Book an urgent appointment with Dr. Shailesh Khatri, an experienced cardiologist providing prompt cardiac consultations on the Gold Coast." path="/contact" />} />
       <Route path="/legal" element={<SectionPage sectionId="legal-information" title="Legal Information | Dr. Shailesh Khatri" description="Website information, privacy policy, terms of use, and AHPRA compliance details." path="/legal" />} />
       <Route path="/leave-a-review" element={<LeaveReviewPage />} />
+      <Route path="/review-qr" element={<ReviewQrKioskPage />} />
       {/* Catch-all for undefined routes - redirect to home */}
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
