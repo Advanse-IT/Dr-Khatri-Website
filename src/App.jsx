@@ -133,7 +133,11 @@ function LeaveReviewPage() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.getElementById('nav')?.classList.add('up');
+    const nav = document.getElementById('nav');
+    const forceNavSolid = () => nav?.classList.add('up');
+    forceNavSolid();
+    window.addEventListener('scroll', forceNavSolid, { passive: true });
+    return () => window.removeEventListener('scroll', forceNavSolid);
   }, []);
 
   return (
