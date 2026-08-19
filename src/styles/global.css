@@ -1063,9 +1063,11 @@ li{
 
 
 /* ═══ LEAVE A REVIEW PAGE ═══════════════════════════════════════ */
-.review-wrap{max-width:640px}
+/* Fixed nav is 70px tall on every breakpoint; pad well past it so the
+   heading is never clipped, regardless of how the logo text wraps. */
 .review-page{padding-top:150px}
 @media(max-width:480px){.review-page{padding-top:130px}}
+.review-wrap{max-width:640px}
 .review-card{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:40px 32px;text-align:center;box-shadow:0 14px 40px rgba(0,0,0,.06);margin-bottom:28px}
 @media(max-width:480px){.review-card{padding:28px 18px}}
 .star-rating{display:flex;justify-content:center;gap:6px;margin-bottom:10px}
@@ -1081,3 +1083,8 @@ li{
 .review-secondary-note{font-size:.78rem !important;color:var(--text3) !important;margin-top:14px;margin-bottom:0 !important}
 .review-secondary-note a{color:var(--navy);text-decoration:underline}
 .review-ahpra-notice{margin-bottom:0}
+
+/* ═══ KIOSK — full-screen QR display for iPad/reception screen ═══ */
+.kiosk-qr-page{min-height:100vh;min-height:100dvh;display:flex;align-items:center;justify-content:center;background:var(--bg2);padding:24px;box-sizing:border-box}
+.kiosk-qr-img{width:100%;max-width:560px;height:auto;border-radius:28px;box-shadow:0 24px 70px rgba(11,34,64,.16)}
+@media(min-width:1024px){.kiosk-qr-img{max-width:640px}}
