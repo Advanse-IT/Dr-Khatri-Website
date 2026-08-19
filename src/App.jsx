@@ -133,6 +133,7 @@ function LeaveReviewPage() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    document.getElementById('nav')?.classList.add('up');
   }, []);
 
   return (
