@@ -1064,6 +1064,8 @@ li{
 
 /* ═══ LEAVE A REVIEW PAGE ═══════════════════════════════════════ */
 .review-wrap{max-width:640px}
+.review-page{padding-top:150px}
+@media(max-width:480px){.review-page{padding-top:130px}}
 .review-card{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:40px 32px;text-align:center;box-shadow:0 14px 40px rgba(0,0,0,.06);margin-bottom:28px}
 @media(max-width:480px){.review-card{padding:28px 18px}}
 .star-rating{display:flex;justify-content:center;gap:6px;margin-bottom:10px}
