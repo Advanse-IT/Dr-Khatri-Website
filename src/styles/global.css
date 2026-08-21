@@ -1083,6 +1083,11 @@ li{
 .review-secondary-note{font-size:.78rem !important;color:var(--text3) !important;margin-top:14px;margin-bottom:0 !important}
 .review-secondary-note a{color:var(--navy);text-decoration:underline}
 .review-ahpra-notice{margin-bottom:0}
+.review-step{border:0;margin:0;padding:0}
+.review-submit-btn{margin-top:18px;width:100%;justify-content:center;box-sizing:border-box}
+.review-submit-btn:disabled{opacity:.4;cursor:not-allowed}
+.review-confirm{display:flex;align-items:center;justify-content:center;gap:10px;font-weight:700;color:var(--navy);font-size:1rem;margin-bottom:14px}
+.review-confirm-tick{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:var(--gold);color:var(--navy);font-size:.85rem;flex:none}
 
 /* ═══ KIOSK — full-screen QR display for iPad/reception screen ═══ */
 .kiosk-qr-page{min-height:100vh;min-height:100dvh;display:flex;align-items:center;justify-content:center;background:var(--bg2);padding:24px;box-sizing:border-box}

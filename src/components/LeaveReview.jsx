@@ -1,10 +1,8 @@
 import { useState } from 'react';
 
 // ─── CONFIG — update these before deploying ──────────────────────────────
-// Find your Google Place ID: https://developers.google.com/maps/documentation/places/web-service/place-id
 const GOOGLE_PLACE_ID = 'ChIJffwNJPcBkWsRjfjFUZVZyp0';
 const GOOGLE_REVIEW_URL = `https://search.google.com/local/writereview?placeid=${GOOGLE_PLACE_ID}`;
-const RATEMDS_URL = 'https://www.ratemds.com/doctor-ratings/114846/Dr-Shailesh-Khatri-Gold+Coast-QLD.html/';
 const PRACTICE_PHONE_DISPLAY = '(07) 5598 0322';
 const PRACTICE_PHONE_TEL = 'tel:+61755980322';
 
@@ -13,6 +11,8 @@ const LABELS = ['', 'Poor', 'Below Average', 'Average', 'Good', 'Excellent'];
 export default function LeaveReview() {
   const [rating, setRating] = useState(0);
   const [hover, setHover] = useState(0);
+  const [submitted, setSubmitted] = useState(false);
+  const [closed, setClosed] = useState(false);
 
   const active = hover || rating;
   const isPositive = rating >= 4;
@@ -33,59 +33,88 @@ export default function LeaveReview() {
         </p>
 
         <div className="review-card">
-          <div className="star-rating" role="radiogroup" aria-label="Rate your experience out of 5 stars">
-            {[1, 2, 3, 4, 5].map((n) => (
-              <button
-                key={n}
-                type="button"
-                className={`star-btn${n <= active ? ' filled' : ''}`}
-                role="radio"
-                aria-checked={rating === n}
-                aria-label={`${n} star${n > 1 ? 's' : ''}`}
-                onClick={() => setRating(n)}
-                onMouseEnter={() => setHover(n)}
-                onMouseLeave={() => setHover(0)}
-              >
-                ★
-              </button>
-            ))}
-          </div>
-          <div className="star-label">{active ? LABELS[active] : 'Tap a star to rate your experience'}</div>
+          {/* ── Step 1: pick a rating and explicitly submit it ── */}
+          <fieldset className="review-step" disabled={submitted}>
+            <div className="star-rating" role="radiogroup" aria-label="Rate your experience out of 5 stars">
+              {[1, 2, 3, 4, 5].map((n) => (
+                <button
+                  key={n}
+                  type="button"
+                  className={`star-btn${n <= active ? ' filled' : ''}`}
+                  role="radio"
+                  aria-checked={rating === n}
+                  aria-label={`${n} star${n > 1 ? 's' : ''}`}
+                  onClick={() => setRating(n)}
+                  onMouseEnter={() => setHover(n)}
+                  onMouseLeave={() => setHover(0)}
+                >
+                  ★
+                </button>
+              ))}
+            </div>
+            <div className="star-label">{active ? LABELS[active] : 'Tap a star to rate your experience'}</div>
 
-          {isPositive && (
-            <div className="review-result review-result-positive">
-              <p>
-                Wonderful to hear! Would you be willing to share a quick review on one of the
-                platforms below? It only takes a minute and genuinely helps other patients find
-                trusted cardiac care.
-              </p>
-              <div className="review-cta-row">
-                <a className="btn btn-gold" href={GOOGLE_REVIEW_URL} target="_blank" rel="noopener noreferrer">
-                  Leave a Google Review →
-                </a>
-                <a className="btn btn-outline" href={RATEMDS_URL} target="_blank" rel="noopener noreferrer">
-                  Leave a RateMDs Review →
-                </a>
+            {!submitted && (
+              <button
+                type="button"
+                className="btn btn-navy review-submit-btn"
+                disabled={rating === 0}
+                onClick={() => setSubmitted(true)}
+              >
+                Submit Rating
+              </button>
+            )}
+          </fieldset>
+
+          {/* ── Step 2: confirmation the rating was received, then an explicit,
+               separate offer to also leave a public review — never both at once ── */}
+          {submitted && !closed && (
+            <div className="review-result">
+              <div className="review-confirm">
+                <span className="review-confirm-tick">✓</span>
+                <span>Thanks — your rating has been submitted.</span>
               </div>
+
+              {isPositive && (
+                <>
+                  <p>Would you also like to share a quick public review on Google? It only takes a minute and genuinely helps other patients find trusted cardiac care.</p>
+                  <div className="review-cta-row">
+                    <a className="btn btn-gold" href={GOOGLE_REVIEW_URL} target="_blank" rel="noopener noreferrer">
+                      Leave a Google Review →
+                    </a>
+                    <button type="button" className="btn btn-outline" onClick={() => setClosed(true)}>
+                      No Thanks, I'm Done
+                    </button>
+                  </div>
+                </>
+              )}
+
+              {isNegative && (
+                <>
+                  <p>
+                    We're sorry your experience wasn't what it should have been. We'd genuinely
+                    like the chance to understand what happened and make it right — please call
+                    our team directly so we can help.
+                  </p>
+                  <a className="btn btn-navy review-call-btn" href={PRACTICE_PHONE_TEL}>
+                    Call the Practice — {PRACTICE_PHONE_DISPLAY}
+                  </a>
+                  <p className="review-secondary-note">
+                    You're also welcome to share your feedback publicly on{' '}
+                    <a href={GOOGLE_REVIEW_URL} target="_blank" rel="noopener noreferrer">Google</a>.
+                  </p>
+                </>
+              )}
             </div>
           )}
 
-          {isNegative && (
-            <div className="review-result review-result-negative">
-              <p>
-                We're sorry your experience wasn't what it should have been. We'd genuinely like
-                the chance to understand what happened and make it right — please call our team
-                directly so we can help.
-              </p>
-              <a className="btn btn-navy review-call-btn" href={PRACTICE_PHONE_TEL}>
-                Call the Practice — {PRACTICE_PHONE_DISPLAY}
-              </a>
-              <p className="review-secondary-note">
-                You're also welcome to share your feedback publicly on{' '}
-                <a href={GOOGLE_REVIEW_URL} target="_blank" rel="noopener noreferrer">Google</a>
-                {' '}or{' '}
-                <a href={RATEMDS_URL} target="_blank" rel="noopener noreferrer">RateMDs</a>.
-              </p>
+          {/* ── Final closing state, only reached via "No Thanks, I'm Done" ── */}
+          {closed && (
+            <div className="review-result">
+              <div className="review-confirm">
+                <span className="review-confirm-tick">✓</span>
+                <span>All done — thank you for your feedback!</span>
+              </div>
             </div>
           )}
         </div>
@@ -94,7 +123,7 @@ export default function LeaveReview() {
           <p className="rn-p">
             <strong>AHPRA Compliance:</strong> In accordance with Australian Health Practitioner
             Regulation Agency advertising guidelines, this page does not collect, store, or display
-            patient testimonials. It only directs you to independent third-party review platforms,
+            patient testimonials. It only directs you to an independent third-party review platform,
             or to our practice directly.
           </p>
         </div>
