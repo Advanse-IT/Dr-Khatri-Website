@@ -8,6 +8,15 @@ const PRACTICE_PHONE_TEL = 'tel:+61755980322';
 
 const LABELS = ['', 'Poor', 'Below Average', 'Average', 'Good', 'Excellent'];
 
+// Fires a GA4 event if gtag is available (it may not be, e.g. blocked by an
+// ad/tracker blocker, or if the person declined the cookie notice) -- never
+// throws, since analytics should never be able to break the page.
+function trackEvent(name, params) {
+  if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+    window.gtag('event', name, params);
+  }
+}
+
 export default function LeaveReview() {
   const [rating, setRating] = useState(0);
   const [hover, setHover] = useState(0);
@@ -59,7 +68,13 @@ export default function LeaveReview() {
                 type="button"
                 className="btn btn-navy review-submit-btn"
                 disabled={rating === 0}
-                onClick={() => setSubmitted(true)}
+                onClick={() => {
+                  trackEvent('review_rating_submitted', {
+                    rating_value: rating,
+                    rating_category: isPositive ? 'positive' : 'negative',
+                  });
+                  setSubmitted(true);
+                }}
               >
                 Submit Rating
               </button>
@@ -79,10 +94,23 @@ export default function LeaveReview() {
                 <>
                   <p>Would you also like to share a quick public review on Google? It only takes a minute and genuinely helps other patients find trusted cardiac care.</p>
                   <div className="review-cta-row">
-                    <a className="btn btn-gold" href={GOOGLE_REVIEW_URL} target="_blank" rel="noopener noreferrer">
+                    <a
+                      className="btn btn-gold"
+                      href={GOOGLE_REVIEW_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => trackEvent('review_google_click', { rating_value: rating, source: 'primary' })}
+                    >
                       Leave a Google Review →
                     </a>
-                    <button type="button" className="btn btn-outline" onClick={() => setClosed(true)}>
+                    <button
+                      type="button"
+                      className="btn btn-outline"
+                      onClick={() => {
+                        trackEvent('review_google_declined', { rating_value: rating });
+                        setClosed(true);
+                      }}
+                    >
                       No Thanks, I'm Done
                     </button>
                   </div>
@@ -96,12 +124,21 @@ export default function LeaveReview() {
                     like the chance to understand what happened and make it right — please call
                     our team directly so we can help.
                   </p>
-                  <a className="btn btn-navy review-call-btn" href={PRACTICE_PHONE_TEL}>
+                  <a
+                    className="btn btn-navy review-call-btn"
+                    href={PRACTICE_PHONE_TEL}
+                    onClick={() => trackEvent('review_call_click', { rating_value: rating })}
+                  >
                     Call the Practice — {PRACTICE_PHONE_DISPLAY}
                   </a>
                   <p className="review-secondary-note">
                     You're also welcome to share your feedback publicly on{' '}
-                    <a href={GOOGLE_REVIEW_URL} target="_blank" rel="noopener noreferrer">Google</a>.
+                    <a
+                      href={GOOGLE_REVIEW_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => trackEvent('review_google_click', { rating_value: rating, source: 'secondary' })}
+                    >Google</a>.
                   </p>
                 </>
               )}
