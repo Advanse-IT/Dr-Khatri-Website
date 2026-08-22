@@ -1,0 +1,13 @@
+name = "dr-khatri-website"
+compatibility_date = "2024-09-23"
+pages_build_output_dir = "dist"
+
+# D1 database binding used by functions/ (Pages Functions).
+# The database_id below is a placeholder — replace it with the real ID
+# after running `wrangler d1 create dr-khatri-blog` (see SETUP_INSTRUCTIONS.md).
+# This file only affects local `wrangler pages dev` — the deployed Pages
+# project's binding is configured separately in the Cloudflare dashboard.
+[[d1_databases]]
+binding = "DB"
+database_name = "dr-khatri-blog"
+database_id = "6d4232d2-661c-4c83-a7f1-32e7e7631932"
