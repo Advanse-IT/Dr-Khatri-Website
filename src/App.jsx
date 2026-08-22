@@ -22,6 +22,11 @@ import LegalInformation from './components/LegalInformation.jsx';
 import CookieConsent from './components/CookieConsent.jsx';
 import LeaveReview from './components/LeaveReview.jsx';
 import ReviewQrKiosk from './components/ReviewQrKiosk.jsx';
+import BlogList from './components/blog/BlogList.jsx';
+import BlogPost from './components/blog/BlogPost.jsx';
+import AdminLogin from './components/blog/AdminLogin.jsx';
+import AdminDashboard from './components/blog/AdminDashboard.jsx';
+import PostEditor from './components/blog/PostEditor.jsx';
 import useSiteEffects from './hooks/useSiteEffects.js';
 
 // Full page component (home)
@@ -194,6 +199,12 @@ export default function App() {
       <Route path="/legal" element={<SectionPage sectionId="legal-information" title="Legal Information | Dr. Shailesh Khatri" description="Website information, privacy policy, terms of use, and AHPRA compliance details." path="/legal" />} />
       <Route path="/leave-a-review" element={<LeaveReviewPage />} />
       <Route path="/review-qr" element={<ReviewQrKioskPage />} />
+      <Route path="/blog" element={<BlogList />} />
+      <Route path="/blog/:slug" element={<BlogPost />} />
+      <Route path="/admin/login" element={<AdminLogin />} />
+      <Route path="/admin" element={<AdminDashboard />} />
+      <Route path="/admin/posts/new" element={<PostEditor />} />
+      <Route path="/admin/posts/:id/edit" element={<PostEditor />} />
       {/* Catch-all for undefined routes - redirect to home */}
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
