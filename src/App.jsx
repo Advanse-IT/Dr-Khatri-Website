@@ -1,6 +1,6 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { useEffect } from 'react';
+import { useEffect, Suspense, lazy } from 'react';
 import SvgIcons from './components/SvgIcons.jsx';
 import Header from './components/Header.jsx';
 import Hero from './components/Hero.jsx'; 
@@ -26,7 +26,9 @@ import BlogList from './components/blog/BlogList.jsx';
 import BlogPost from './components/blog/BlogPost.jsx';
 import AdminLogin from './components/blog/AdminLogin.jsx';
 import AdminDashboard from './components/blog/AdminDashboard.jsx';
-import PostEditor from './components/blog/PostEditor.jsx';
+// Lazy-loaded: pulls in the Tiptap rich text editor, only needed on this
+// one admin route — keeps it out of the public site's main bundle.
+const PostEditor = lazy(() => import('./components/blog/PostEditor.jsx'));
 import useSiteEffects from './hooks/useSiteEffects.js';
 
 // Full page component (home)
@@ -203,8 +205,8 @@ export default function App() {
       <Route path="/blog/:slug" element={<BlogPost />} />
       <Route path="/admin/login" element={<AdminLogin />} />
       <Route path="/admin" element={<AdminDashboard />} />
-      <Route path="/admin/posts/new" element={<PostEditor />} />
-      <Route path="/admin/posts/:id/edit" element={<PostEditor />} />
+      <Route path="/admin/posts/new" element={<Suspense fallback={null}><PostEditor /></Suspense>} />
+      <Route path="/admin/posts/:id/edit" element={<Suspense fallback={null}><PostEditor /></Suspense>} />
       {/* Catch-all for undefined routes - redirect to home */}
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>

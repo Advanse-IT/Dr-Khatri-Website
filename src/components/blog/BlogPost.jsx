@@ -64,15 +64,22 @@ export default function BlogPost() {
     );
   }
 
-  const html = DOMPurify.sanitize(marked.parse(post.content || ''));
+  // New posts (rich text editor) store HTML; detect and sanitize directly.
+  // Any future markdown-authored content still renders correctly via marked.
+  const isHtmlContent = /^\s*</.test(post.content || '');
+  const html = isHtmlContent
+    ? DOMPurify.sanitize(post.content || '')
+    : DOMPurify.sanitize(marked.parse(post.content || ''));
+  const seoTitle = post.meta_title || post.title;
+  const seoDescription = post.meta_description || post.excerpt || post.title;
 
   return (
     <>
       <Helmet>
-        <title>{post.title} | Dr Shailesh Khatri</title>
-        <meta name="description" content={post.excerpt || post.title} />
-        <meta property="og:title" content={post.title} />
-        <meta property="og:description" content={post.excerpt || ''} />
+        <title>{seoTitle} | Dr Shailesh Khatri</title>
+        <meta name="description" content={seoDescription} />
+        <meta property="og:title" content={seoTitle} />
+        <meta property="og:description" content={seoDescription} />
         {post.cover_image && <meta property="og:image" content={post.cover_image} />}
         <meta property="og:url" content={`https://drskhatri.com.au/blog/${post.slug}`} />
         <link rel="canonical" href={`https://drskhatri.com.au/blog/${post.slug}`} />
@@ -84,7 +91,16 @@ export default function BlogPost() {
           <img src={post.cover_image} alt={post.title} style={{ width: '100%', borderRadius: 8, marginBottom: 24 }} />
         )}
         <h1 style={{ marginBottom: 8 }}>{post.title}</h1>
-        <p style={{ color: '#888', fontSize: 14, marginBottom: 32 }}>{formatDate(post.published_at)}</p>
+        <p style={{ color: '#888', fontSize: 14, marginBottom: post.tags?.length ? 12 : 32 }}>{formatDate(post.published_at)}</p>
+        {post.tags?.length > 0 && (
+          <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 32 }}>
+            {post.tags.map((tag) => (
+              <span key={tag} style={{ fontSize: 12, background: '#f0f0f0', color: '#666', padding: '4px 10px', borderRadius: 999 }}>
+                {tag}
+              </span>
+            ))}
+          </div>
+        )}
         <div className="blog-content" dangerouslySetInnerHTML={{ __html: html }} />
       </main>
       <Footer />

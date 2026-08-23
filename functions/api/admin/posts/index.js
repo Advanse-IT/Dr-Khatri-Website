@@ -23,7 +23,7 @@ export async function onRequestGet(context) {
 export async function onRequestPost(context) {
   const { request, env } = context;
   const body = await request.json().catch(() => ({}));
-  const { title, content, excerpt, cover_image, status } = body;
+  const { title, content, excerpt, cover_image, tags, status, meta_title, meta_description } = body;
 
   if (!title || !content) {
     return new Response(JSON.stringify({ error: 'Title and content are required' }), { status: 400 });
@@ -32,17 +32,20 @@ export async function onRequestPost(context) {
   let slug = body.slug ? slugify(body.slug) : slugify(title);
   const finalStatus = status === 'published' ? 'published' : 'draft';
   const publishedAt = finalStatus === 'published' ? new Date().toISOString() : null;
+  const tagsJson = Array.isArray(tags) ? JSON.stringify(tags) : null;
 
-  // Ensure slug uniqueness
   const existing = await env.DB.prepare('SELECT id FROM posts WHERE slug = ?').bind(slug).first();
   if (existing) {
     slug = `${slug}-${Date.now().toString(36)}`;
   }
 
   const result = await env.DB.prepare(
-    `INSERT INTO posts (title, slug, excerpt, content, cover_image, status, published_at, updated_at)
-     VALUES (?, ?, ?, ?, ?, ?, ?, datetime('now'))`
-  ).bind(title, slug, excerpt || null, content, cover_image || null, finalStatus, publishedAt).run();
+    `INSERT INTO posts (title, slug, excerpt, content, cover_image, tags, meta_title, meta_description, status, published_at, updated_at)
+     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, datetime('now'))`
+  ).bind(
+    title, slug, excerpt || null, content, cover_image || null,
+    tagsJson, meta_title || null, meta_description || null, finalStatus, publishedAt
+  ).run();
 
   return new Response(JSON.stringify({ ok: true, id: result.meta.last_row_id, slug }), {
     status: 201,
