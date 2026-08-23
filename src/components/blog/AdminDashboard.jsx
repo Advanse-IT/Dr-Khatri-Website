@@ -50,58 +50,80 @@ export default function AdminDashboard() {
   return (
     <>
       <Helmet>
-        <title>Admin Dashboard</title>
+        <title>Blog Admin | Dr Shailesh Khatri</title>
         <meta name="robots" content="noindex, nofollow" />
       </Helmet>
-      <div style={{ maxWidth: 960, margin: '0 auto', padding: '48px 24px' }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 32 }}>
-          <h1>Blog Posts</h1>
-          <div style={{ display: 'flex', gap: 12 }}>
-            <Link to="/admin/posts/new" style={{ padding: '10px 16px', background: '#0a5c3f', color: '#fff', borderRadius: 6, textDecoration: 'none' }}>
-              + New Post
-            </Link>
-            <button onClick={handleLogout} style={{ padding: '10px 16px', borderRadius: 6, border: '1px solid #ddd', background: '#fff', cursor: 'pointer' }}>
-              Log out
-            </button>
+      <div style={{ minHeight: '100vh', background: 'var(--bg)' }}>
+        <div style={{ background: 'var(--navy)', padding: '26px 0' }}>
+          <div style={{ maxWidth: 1040, margin: '0 auto', padding: '0 28px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 16 }}>
+            <div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 6 }}>
+                <span style={{ width: 20, height: 2, background: 'var(--gold)', flexShrink: 0 }} />
+                <span style={{ fontSize: '.68rem', fontWeight: 700, letterSpacing: '.18em', textTransform: 'uppercase', color: 'var(--gold)' }}>
+                  Blog Admin
+                </span>
+              </div>
+              <h1 style={{ fontSize: '1.4rem', fontWeight: 800, color: '#fff', letterSpacing: '-.02em', margin: 0 }}>
+                Posts
+              </h1>
+            </div>
+            <div style={{ display: 'flex', gap: 10 }}>
+              <Link to="/admin/posts/new" className="btn btn-gold" style={{ padding: '11px 20px', fontSize: '.85rem', minHeight: 42 }}>
+                + New Post
+              </Link>
+              <button onClick={handleLogout} className="btn btn-ghost" style={{ padding: '11px 20px', fontSize: '.85rem', minHeight: 42 }}>
+                Log out
+              </button>
+            </div>
           </div>
         </div>
 
-        {loading && <p>Loading…</p>}
-        {!loading && posts.length === 0 && <p>No posts yet. Create your first one.</p>}
+        <div style={{ maxWidth: 1040, margin: '0 auto', padding: '40px 28px 80px' }}>
+          {loading && <p style={{ color: 'var(--text3)' }}>Loading…</p>}
+          {!loading && posts.length === 0 && (
+            <div style={{ background: '#fff', border: '1px solid var(--border)', borderRadius: 8, padding: '48px 24px', textAlign: 'center', color: 'var(--text3)' }}>
+              No posts yet. Create your first one.
+            </div>
+          )}
 
-        <table style={{ width: '100%', borderCollapse: 'collapse' }}>
-          <thead>
-            <tr style={{ textAlign: 'left', borderBottom: '2px solid #eee' }}>
-              <th style={{ padding: '12px 8px' }}>Title</th>
-              <th style={{ padding: '12px 8px' }}>Status</th>
-              <th style={{ padding: '12px 8px' }}>Updated</th>
-              <th style={{ padding: '12px 8px' }}></th>
-            </tr>
-          </thead>
-          <tbody>
-            {posts.map((post) => (
-              <tr key={post.id} style={{ borderBottom: '1px solid #f0f0f0' }}>
-                <td style={{ padding: '12px 8px' }}>{post.title}</td>
-                <td style={{ padding: '12px 8px' }}>
-                  <span style={{
-                    padding: '2px 10px', borderRadius: 12, fontSize: 12,
-                    background: post.status === 'published' ? '#e3f5ec' : '#f0f0f0',
-                    color: post.status === 'published' ? '#0a5c3f' : '#777',
-                  }}>
-                    {post.status}
-                  </span>
-                </td>
-                <td style={{ padding: '12px 8px', color: '#888', fontSize: 14 }}>{formatDate(post.updated_at)}</td>
-                <td style={{ padding: '12px 8px', textAlign: 'right' }}>
-                  <Link to={`/admin/posts/${post.id}/edit`} style={{ marginRight: 16 }}>Edit</Link>
-                  <button onClick={() => handleDelete(post.id, post.title)} style={{ color: '#c00', background: 'none', border: 'none', cursor: 'pointer' }}>
-                    Delete
-                  </button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+          {!loading && posts.length > 0 && (
+            <div style={{ background: '#fff', border: '1px solid var(--border)', borderRadius: 8, overflow: 'hidden' }}>
+              <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '.9rem' }}>
+                <thead>
+                  <tr style={{ textAlign: 'left', background: 'var(--bg2)', borderBottom: '1px solid var(--border)' }}>
+                    <th style={{ padding: '13px 18px', fontSize: '.72rem', fontWeight: 700, letterSpacing: '.06em', textTransform: 'uppercase', color: 'var(--text3)' }}>Title</th>
+                    <th style={{ padding: '13px 18px', fontSize: '.72rem', fontWeight: 700, letterSpacing: '.06em', textTransform: 'uppercase', color: 'var(--text3)' }}>Status</th>
+                    <th style={{ padding: '13px 18px', fontSize: '.72rem', fontWeight: 700, letterSpacing: '.06em', textTransform: 'uppercase', color: 'var(--text3)' }}>Updated</th>
+                    <th style={{ padding: '13px 18px' }}></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {posts.map((post) => (
+                    <tr key={post.id} style={{ borderBottom: '1px solid var(--bg2)' }}>
+                      <td style={{ padding: '14px 18px', fontWeight: 600, color: 'var(--navy)' }}>{post.title}</td>
+                      <td style={{ padding: '14px 18px' }}>
+                        <span style={{
+                          padding: '3px 11px', borderRadius: 20, fontSize: '.72rem', fontWeight: 700,
+                          background: post.status === 'published' ? 'rgba(196,154,56,.14)' : 'var(--bg2)',
+                          color: post.status === 'published' ? '#9c7a20' : 'var(--text3)',
+                        }}>
+                          {post.status}
+                        </span>
+                      </td>
+                      <td style={{ padding: '14px 18px', color: 'var(--text3)' }}>{formatDate(post.updated_at)}</td>
+                      <td style={{ padding: '14px 18px', textAlign: 'right' }}>
+                        <Link to={`/admin/posts/${post.id}/edit`} style={{ marginRight: 18, color: 'var(--navy2)', fontWeight: 600 }}>Edit</Link>
+                        <button onClick={() => handleDelete(post.id, post.title)} style={{ color: '#b83232', background: 'none', border: 'none', cursor: 'pointer', fontWeight: 600, fontFamily: 'inherit', fontSize: 'inherit' }}>
+                          Delete
+                        </button>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
+        </div>
       </div>
     </>
   );

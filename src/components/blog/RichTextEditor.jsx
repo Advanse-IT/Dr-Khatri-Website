@@ -19,8 +19,8 @@ function ToolbarButton({ onClick, active, disabled, title, children }) {
         padding: 8,
         borderRadius: 6,
         border: 'none',
-        background: active ? '#e3f0ec' : 'transparent',
-        color: active ? '#0a5c3f' : '#555',
+        background: active ? 'rgba(196,154,56,.14)' : 'transparent',
+        color: active ? '#9c7a20' : '#5a6b7d',
         cursor: disabled ? 'not-allowed' : 'pointer',
         opacity: disabled ? 0.35 : 1,
         display: 'flex',
@@ -46,7 +46,7 @@ export default function RichTextEditor({ content, onChange }) {
     content,
     editorProps: {
       attributes: {
-        style: 'min-height:320px; padding:14px 16px; outline:none; font-size:15px; line-height:1.6;',
+        style: 'min-height:320px; padding:14px 16px; outline:none; font-size:15px; line-height:1.6; font-family:Inter,sans-serif; color:#0b1a2e;',
       },
     },
     onUpdate: ({ editor }) => onChange(editor.getHTML()),
@@ -78,8 +78,8 @@ export default function RichTextEditor({ content, onChange }) {
   }
 
   return (
-    <div style={{ border: '1px solid #ddd', borderRadius: 8, overflow: 'hidden', background: '#fff' }}>
-      <div style={{ display: 'flex', flexWrap: 'wrap', gap: 2, borderBottom: '1px solid #eee', background: '#fafafa', padding: '6px 8px' }}>
+    <div style={{ border: '1px solid var(--border, #d4dde8)', borderRadius: 8, overflow: 'hidden', background: '#fff' }}>
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: 2, borderBottom: '1px solid var(--bg2, #edf1f7)', background: 'var(--bg2, #edf1f7)', padding: '6px 8px' }}>
         <ToolbarButton title="Heading 1" active={editor.isActive('heading', { level: 1 })} onClick={() => editor.chain().focus().toggleHeading({ level: 1 }).run()}>
           <Heading1 size={16} />
         </ToolbarButton>
