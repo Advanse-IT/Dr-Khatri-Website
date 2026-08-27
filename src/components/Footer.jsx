@@ -34,6 +34,7 @@ const markup = `
 <li><a href="/recognition">Recognition</a></li>
 <li><a href="/reviews">Patient Reviews</a></li>
 <li><a href="/leave-a-review">Leave a Review</a></li>
+<li><a href="/blog">Blog</a></li>
 <li><a href="/faq">FAQ</a></li>
 <li><a href="/contact">Contact</a></li>
 <li><a href="/legal">Privacy Policy, Terms of Use &amp; Medical Disclaimer</a></li>
