@@ -1,5 +1,6 @@
 import RawHtml from './RawHtml.jsx';
 import RelocationBanner from './RelocationBanner.jsx';
+import RelocationSplash from './RelocationSplash.jsx';
 
 const markup = `
 <!-- ═══ NAV ══════════════════════════════════════════════════════ -->
@@ -68,6 +69,7 @@ export default function Header() {
   return (
     <>
       <RelocationBanner />
+      <RelocationSplash />
       <RawHtml html={markup} />
       {/* Occupies real document-flow space equal to the banner's height (0
           when the banner isn't shown), pushing all page content below the

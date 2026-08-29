@@ -19,19 +19,21 @@ const relocationNotice = !relocated
   ? `<div class="cc"><svg aria-hidden="true" class="cc-icon"><use href="#ic-pin"/></svg><div><div class="cc-lbl">Consulting Rooms Are Moving</div><div class="cc-val">From <strong>${RELOCATION_DATE_DISPLAY}</strong>, consultations move to <strong>${NEW_LOCATION.name}</strong>, ${NEW_LOCATION.addressLine}. <a class="cc-lnk" href="/new-location">Learn more →</a></div></div></div>`
   : '';
 
-const bundallMapBlock = relocated
-  ? `<div class="map-block">
-<div class="map-lbl">${NEW_LOCATION.name} · Consulting Rooms</div>
+const bundallMapLabel = relocated
+  ? `${NEW_LOCATION.name} · Consulting Rooms`
+  : `${NEW_LOCATION.name} · Consulting Rooms — Coming ${RELOCATION_DATE_DISPLAY}`;
+
+const bundallMapBlock = `<div class="map-block">
+<div class="map-lbl">${bundallMapLabel}</div>
 <div class="map-box">
 <iframe allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=${encodeURIComponent(NEW_LOCATION.mapEmbedQuery)}&z=16&output=embed" title="${NEW_LOCATION.name}"></iframe>
 </div>
 <a class="map-cta" href="https://maps.google.com/?q=${encodeURIComponent(NEW_LOCATION.mapDirectionsQuery)}" rel="noopener" target="_blank"><svg aria-hidden="true" style="width:16px;height:16px;flex-shrink:0"><use href="#ic-pin"></use></svg> Get Directions — ${NEW_LOCATION.name}</a>
-</div>`
-  : '';
+</div>`;
 
 const bottomNote = relocated
   ? `Consulting Rooms are at ${NEW_LOCATION.name}. John Flynn and Pindara are Dr Khatri's admitting hospitals for inpatient care and procedures — use the maps above for directions to any of the three.`
-  : `Consulting rooms are within the John Flynn and Pindara precincts. Use the maps above for directions to either admitting hospital.`;
+  : `The map above previews the new Bundall consulting rooms opening ${RELOCATION_DATE_DISPLAY}. Until then, consulting rooms remain within the John Flynn and Pindara precincts — use the hospital maps above for directions.`;
 
 const markup = `
 <!-- ═══ CONTACT ════════════════════════════════════════════════ -->
