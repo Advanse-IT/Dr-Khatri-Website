@@ -1,62 +1,97 @@
-# Blog Theme Update — Setup Instructions
+# Practice Relocation — Bundall Consulting Rooms
 
-This is a pure visual/styling pass — no schema, migration, API, or route
-changes. All 6 files are drop-in replacements.
+This adds an automatic, date-triggered switch-over for Dr Khatri's new
+consulting rooms at Nuevo Medical Bundall, effective **5 October 2026**.
 
-## What changed
+## The key distinction this respects
 
-Pulled your site's real design system straight from `src/styles/global.css`
-(navy `#0b2240` / gold `#c49a38`, Inter font, the same card/button/kicker
-conventions used across the rest of the site) and applied it consistently:
+- **Consulting Rooms** (where patients see him for appointments) → moves to
+  Nuevo Medical Bundall, 100 Bundall Road, Bundall QLD 4217, on 5 Oct 2026
+- **Hospitals** (where he operates and treats inpatients — admitting rights)
+  → John Flynn Private Hospital (Tugun) and Pindara Private Hospital
+  (Benowa) — **completely unaffected**, unchanged everywhere on the site
 
-- **AdminLogin.jsx** — dark navy background matching the site's hero, gold
-  "Blog Admin" kicker label, practice name/title branding, gold primary
-  button (reuses the site's real `.btn-gold` class)
-- **AdminDashboard.jsx** — navy header bar, gold "+ New Post" button, cleaner
-  card-based table with gold status pills for published posts
-- **PostEditor.jsx** — navy header bar, sidebar cards (Tags, Featured Image,
-  SEO) with gold section labels, gold Publish button, outlined Save Draft
-  button — both using the site's real button classes
-- **RichTextEditor.jsx** — toolbar active-state now gold-tinted instead of
-  generic green, editor typography set to Inter to match the site
-- **BlogList.jsx** — proper kicker + heading treatment matching other site
-  sections, card-style post rows with hover lift, gold tag labels
-- **BlogPost.jsx** — matching heading/typography treatment, gold tag pills,
-  styled blog body content (headings, links, blockquotes, lists all themed)
+Every place this is mentioned across the site (About, FAQ, Contact, Footer,
+mobile call bar, directions picker, legal page, patient journey, and the
+site's SEO schema markup) now draws from one file —
+`src/config/relocation.js` — and displays the correct combination
+automatically based on the visitor's current date. No manual edit needed on
+the day itself.
 
-All of this reuses the site's existing CSS custom properties (`var(--navy)`,
-`var(--gold)`, `var(--border)`, etc.) and existing utility classes
-(`.btn-gold`, `.btn-outline`, `.btn-ghost`, `.kicker`, `.sec-lead`) from
-`global.css` — nothing new was added to that file, so there's no risk of
-conflicting with the rest of the site's styling.
+## What's new
+
+- **`src/config/relocation.js`** — single source of truth: the relocation
+  date, old/new phone numbers, and the new + existing location details
+- **Announcement banner** (`RelocationBanner.jsx`) — a dismissible bar above
+  the nav, visible site-wide until 5 Oct, linking to `/new-location`. Uses a
+  subtle pulsing accent rather than literal flashing text (better for both
+  professionalism and accessibility — actual flashing content can be a real
+  problem for some visitors). Dismissing it hides it for that browser
+  session; it reappears on the next visit.
+- **`/new-location` page** — the dedicated announcement page, with the new
+  address, an explicit "this is a consulting-rooms move only" callout
+  (per Dr Khatri's request for clarity), both hospitals listed separately,
+  and a map
+- **SEO structured data** (`StructuredData.jsx`) — replaces the static
+  schema previously hardcoded in `index.html`; now auto-switches with
+  everything else, and correctly *adds* the Bundall address alongside the
+  two hospitals rather than replacing them
+
+## What changed in existing content
+
+Each of these now shows the current, accurate combination automatically:
+
+- **About** — the bio paragraph splits into "consults from Bundall" +
+  "holds admitting rights at both hospitals for inpatient care"
+- **FAQ** — "Where does Dr Khatri consult?" and the referral question
+  updated; the emergency-care answer is unaffected (hospitals don't change)
+- **Contact page** — now shows a distinct "Consulting Rooms" card (Bundall)
+  alongside the existing "Hospitals — Inpatient Care & Procedures" card,
+  plus a third map for Bundall once active; before the date, a "Consulting
+  Rooms Are Moving" notice links to `/new-location`
+- **Footer** — location column splits into "Consulting Rooms" and
+  "Admitting Hospitals"
+- **Mobile call button** and **directions picker** — phone number and a new
+  "Bundall Consulting Rooms" directions option, alongside the unchanged
+  hospital options
+- **Legal Information page** and **Patient Journey step** — phone number
+  and consulting/hospital wording updated consistently
 
 ## Setup steps
 
-Just replace these 6 files in your repo (paths match exactly):
-
 ```
-src/components/blog/AdminLogin.jsx
-src/components/blog/AdminDashboard.jsx
-src/components/blog/PostEditor.jsx
-src/components/blog/RichTextEditor.jsx
-src/components/blog/BlogList.jsx
-src/components/blog/BlogPost.jsx
-```
-
-Then:
-```
-git checkout -b feature/blog-theme
-# copy the files in, preserving paths
+git checkout -b feature/bundall-relocation
+# copy the zip contents into your local clone, preserving paths
 git add .
-git commit -m "Match blog admin and public blog pages to site theme"
-git push origin feature/blog-theme
+git commit -m "Add automatic relocation switch-over for Bundall consulting rooms"
+git push origin feature/bundall-relocation
 ```
-Merge as usual. No migrations, no new environment variables, no D1 changes —
-this is styling only.
+Merge and deploy as usual. **No migrations, no environment variables, no D1
+changes** — this is entirely front-end logic based on the visitor's date.
+
+## Open items worth your attention
+
+1. **Geo-coordinates for Bundall**: the structured data includes precise
+   lat/long for the two hospitals (already on the site) but *not* for
+   Nuevo Medical Bundall — I didn't have a verified coordinate and didn't
+   want to guess one into your SEO markup. Once you have the exact
+   coordinates (e.g. from Google's own listing for the building), let me
+   know and I'll add them.
+2. **Clock-based, not server-based**: the switch relies on each visitor's
+   own device clock reaching 5 Oct 2026, re-checked fresh on every page
+   load. This is standard practice for this kind of site-wide content
+   change and needs no server component, but it's worth knowing the
+   mechanism if anything ever looks off on that day.
+3. **Static OG/Twitter preview tags** in `index.html` (used by non-JS
+   social-media link-preview bots, e.g. when someone pastes the site URL
+   into Facebook/LinkedIn) still mention the hospitals — left as-is since
+   that's accurate both before and after the move, so no change was needed
+   there.
 
 ## Verified locally
 
-- `vite build` passes clean
-- Every CSS variable and class referenced (`--navy`, `--gold`, `--border`,
-  `.btn-gold`, `.btn-outline`, `.btn-ghost`, `.kicker`, `.sec-lead`) confirmed
-  to exist in your actual `src/styles/global.css` — not guessed colors
+- `npm run build` passes clean
+- Date-switch logic tested explicitly: fires exactly at midnight AEST on
+  5 October 2026, not a moment before
+- The conditionally-assembled Contact page HTML was checked for balanced
+  tags in both states (before/after) to rule out a malformed layout

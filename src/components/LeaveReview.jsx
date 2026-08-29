@@ -1,10 +1,11 @@
 import { useState } from 'react';
+import { currentPhone } from '../config/relocation.js';
 
 // ─── CONFIG — update these before deploying ──────────────────────────────
 const GOOGLE_PLACE_ID = 'ChIJffwNJPcBkWsRjfjFUZVZyp0';
 const GOOGLE_REVIEW_URL = `https://search.google.com/local/writereview?placeid=${GOOGLE_PLACE_ID}`;
-const PRACTICE_PHONE_DISPLAY = '(07) 5598 0322';
-const PRACTICE_PHONE_TEL = 'tel:+61755980322';
+const PRACTICE_PHONE_DISPLAY = currentPhone().display;
+const PRACTICE_PHONE_TEL = `tel:${currentPhone().tel}`;
 
 const LABELS = ['', 'Poor', 'Below Average', 'Average', 'Good', 'Excellent'];
 

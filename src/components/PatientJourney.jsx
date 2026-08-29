@@ -1,4 +1,11 @@
 import RawHtml from './RawHtml.jsx';
+import { isRelocated, currentPhone, NEW_LOCATION } from '../config/relocation.js';
+
+const relocated = isRelocated();
+const phone = currentPhone();
+const bookingSentence = relocated
+  ? `Contact Dr Khatri with your GP referral on <a href="tel:${phone.tel}" style="color:var(--navy2);font-weight:700">${phone.display}</a> to schedule a consultation at ${NEW_LOCATION.name}. For inpatient care and procedures, Dr Khatri holds admitting rights at both <strong>John Flynn Private Hospital</strong> (Tugun) and <strong>Pindara Private Hospital</strong> (Benowa).`
+  : `Contact Dr Khatri with your GP referral on <a href="tel:${phone.tel}" style="color:var(--navy2);font-weight:700">${phone.display}</a> to schedule a consultation at either <strong>John Flynn Private Hospital</strong> (Tugun) or <strong>Pindara Private Hospital</strong> (Benowa). Dr Khatri provides both consultations and admitting rights at both locations, allowing you to choose the hospital most convenient to you.`;
 
 const markup = `
 <!-- ═══ JOURNEY / HOW TO SEE DR KHATRI ══════════════════════ -->
@@ -16,7 +23,7 @@ const markup = `
 <div class="jstep a up d2">
 <div class="jstep-n">2</div>
 <div class="jstep-h">Book Your Appointment</div>
-<p class="jstep-p">Contact Dr Khatri with your GP referral on <a href="tel:+61755980322" style="color:var(--navy2);font-weight:700">(07) 5598 0322</a> to schedule a consultation at either <strong>John Flynn Private Hospital</strong> (Tugun) or <strong>Pindara Private Hospital</strong> (Benowa). Dr Khatri provides both consultations and admitting rights at both locations, allowing you to choose the hospital most convenient to you.</p>
+<p class="jstep-p">${bookingSentence}</p>
 <div class="jstep-arr">→</div>
 </div>
 <div class="jstep a up d3">

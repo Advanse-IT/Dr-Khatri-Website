@@ -84,9 +84,21 @@ h2.sec-title.light em{color:var(--gold2)}
 .heart-bg{position:absolute;pointer-events:none;fill:currentColor;opacity:.035}
 
 /* ═══ NAVBAR ════════════════════════════════════════════════════ */
-.nav{position:fixed;inset:0 0 auto;z-index:9000;transition:background .35s,box-shadow .35s}
+:root{--rb-offset:0px}
+.nav{position:fixed;top:var(--rb-offset,0);right:0;left:0;z-index:9000;transition:background .35s,box-shadow .35s,top .3s}
 .nav.up{background:rgba(255,255,255,.97);box-shadow:0 1px 24px rgba(0,0,0,.09);backdrop-filter:blur(14px)}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;height:70px;max-width:1140px;margin:0 auto;padding:0 28px}
+
+/* ═══ RELOCATION BANNER ═════════════════════════════════════════ */
+.reloc-banner{position:fixed;top:0;left:0;right:0;z-index:9500;display:flex;align-items:center;justify-content:center;gap:10px;background:var(--navy);color:#fff;padding:11px 46px;font-size:.82rem;font-weight:600;letter-spacing:-.005em;text-align:center;cursor:pointer;line-height:1.4}
+.reloc-banner:hover{background:var(--navy2)}
+.reloc-banner strong{color:var(--gold3)}
+.reloc-dot{width:7px;height:7px;border-radius:50%;background:var(--gold);flex-shrink:0;animation:reloc-pulse 1.8s ease-in-out infinite}
+@keyframes reloc-pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(1.4)}}
+@media (prefers-reduced-motion:reduce){.reloc-dot{animation:none}}
+.reloc-close{position:absolute;right:12px;top:50%;transform:translateY(-50%);background:none;border:none;color:rgba(255,255,255,.65);font-size:1.15rem;line-height:1;cursor:pointer;padding:6px 8px}
+.reloc-close:hover{color:#fff}
+@media (max-width:640px){.reloc-banner{font-size:.76rem;padding:10px 40px;gap:8px}}
 
 .logo{display:flex;align-items:center;gap:12px;text-decoration:none}
 .logo-txt span{display:block}

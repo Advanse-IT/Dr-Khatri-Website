@@ -26,6 +26,8 @@ import BlogList from './components/blog/BlogList.jsx';
 import BlogPost from './components/blog/BlogPost.jsx';
 import AdminLogin from './components/blog/AdminLogin.jsx';
 import AdminDashboard from './components/blog/AdminDashboard.jsx';
+import StructuredData from './components/StructuredData.jsx';
+import NewLocation from './pages/NewLocation.jsx';
 // Lazy-loaded: pulls in the Tiptap rich text editor, only needed on this
 // one admin route — keeps it out of the public site's main bundle.
 const PostEditor = lazy(() => import('./components/blog/PostEditor.jsx'));
@@ -46,12 +48,13 @@ function HomePage() {
         <title>Trusted Cardiologist Gold Coast | Dr Shailesh Khatri</title>
         <meta name="description" content="Looking for a trusted Cardiologist on the Gold Coast? Dr Shailesh Khatri provides expert heart care, angioplasty, stenting, TAVI, and cardiac consultations" />
         <meta property="og:title" content="Dr Shailesh Khatri | Senior Interventional Cardiologist | Gold Coast" />
-        <meta property="og:description" content="Senior Interventional Cardiologist in Gold Coast with 25+ years experience. Specialising in TAVI and Angioplasty with admitting rights at John Flynn and Pindara Private Hospitals." />
+        <meta property="og:description" content="Senior Interventional Cardiologist in Gold Coast with 25+ years experience, specialising in TAVI, coronary angiography and angioplasty." />
         <meta property="og:url" content="https://drskhatri.com.au/" />
         <meta property="twitter:title" content="Dr Shailesh Khatri | Senior Interventional Cardiologist | Gold Coast" />
-        <meta property="twitter:description" content="Senior Interventional Cardiologist in Gold Coast with 25+ years experience. Specialising in TAVI and Angioplasty with admitting rights at John Flynn and Pindara Private Hospitals." />
+        <meta property="twitter:description" content="Senior Interventional Cardiologist in Gold Coast with 25+ years experience, specialising in TAVI, coronary angiography and angioplasty." />
         <link rel="canonical" href="https://drskhatri.com.au/" />
       </Helmet>
+      <StructuredData />
       <SvgIcons />
       <Header />
       <Hero />
@@ -84,8 +87,10 @@ function SectionPage({ sectionId, title, description, path }) {
     const timer = setTimeout(() => {
       const element = document.getElementById(sectionId);
       if (element) {
-        // Scroll to the element with a slight offset for fixed headers
-        const headerOffset = 80;
+        // Scroll to the element with a slight offset for fixed headers,
+        // plus the relocation banner's height when it's showing.
+        const bannerOffset = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--rb-offset')) || 0;
+        const headerOffset = 80 + bannerOffset;
         const elementPosition = element.getBoundingClientRect().top + window.scrollY;
         const offsetPosition = elementPosition - headerOffset;
         window.scrollTo({
@@ -200,6 +205,7 @@ export default function App() {
       <Route path="/contact" element={<SectionPage sectionId="contact" title="Book an Urgent Heart Specialist Appointment" description="Book an urgent appointment with Dr. Shailesh Khatri, an experienced cardiologist providing prompt cardiac consultations on the Gold Coast." path="/contact" />} />
       <Route path="/legal" element={<SectionPage sectionId="legal-information" title="Legal Information | Dr. Shailesh Khatri" description="Website information, privacy policy, terms of use, and AHPRA compliance details." path="/legal" />} />
       <Route path="/leave-a-review" element={<LeaveReviewPage />} />
+      <Route path="/new-location" element={<NewLocation />} />
       <Route path="/review-qr" element={<ReviewQrKioskPage />} />
       <Route path="/blog" element={<BlogList />} />
       <Route path="/blog/:slug" element={<BlogPost />} />

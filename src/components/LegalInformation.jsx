@@ -1,4 +1,11 @@
 import RawHtml from './RawHtml.jsx';
+import { isRelocated, currentPhone, NEW_LOCATION } from '../config/relocation.js';
+
+const relocated = isRelocated();
+const phone = currentPhone();
+const consultingLocationSentence = relocated
+  ? `Consultations are provided at ${NEW_LOCATION.name}, ${NEW_LOCATION.addressLine}. Inpatient care and procedures are provided at John Flynn Private Hospital (Tugun) and Pindara Private Hospital (Benowa).`
+  : `Consultations are provided at John Flynn Specialist Suites (Tugun) and Pindara Private Hospital (Benowa).`;
 
 const markup = `
 <section class="legal-info" id="legal-information" aria-labelledby="legal-info-title">
@@ -27,7 +34,7 @@ const markup = `
             As a specialist cardiologist, Dr Khatri requires a valid GP referral for all consultations. Your GP will assess your symptoms, arrange initial diagnostic tests, and provide a referral to Dr Shailesh Khatri. This is a legal requirement under the Medicare Benefits Schedule (MBS) to access specialist services.
           </p>
           <p>
-            To schedule an appointment, contact the practice on <strong>(07) 5598 0322</strong> with your GP referral. Consultations are provided at John Flynn Specialist Suites (Tugun) and Pindara Private Hospital (Benowa).
+            To schedule an appointment, contact the practice on <strong>${phone.display}</strong> with your GP referral. ${consultingLocationSentence}
           </p>
         </article>
 
@@ -66,7 +73,7 @@ const markup = `
             Your personal information is handled in accordance with the <strong>Privacy Act 1988 (Cth)</strong> and the <strong>Australian Privacy Principles (APPs)</strong>. We do not share your information with third parties without your consent, except where required by law.
           </p>
           <p>
-            <strong>Important:</strong> Do not submit urgent, highly sensitive or detailed clinical information through website forms. For clinical matters, contact the practice directly on (07) 5598 0322. For emergencies, call 000.
+            <strong>Important:</strong> Do not submit urgent, highly sensitive or detailed clinical information through website forms. For clinical matters, contact the practice directly on ${phone.display}. For emergencies, call 000.
           </p>
         </article>
 
