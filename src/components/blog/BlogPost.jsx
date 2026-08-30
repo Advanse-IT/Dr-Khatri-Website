@@ -6,6 +6,8 @@ import DOMPurify from 'dompurify';
 import Header from '../Header.jsx';
 import Footer from '../Footer.jsx';
 import MobileBottomBar from '../MobileBottomBar.jsx';
+import DirectionsPicker from '../DirectionsPicker.jsx';
+import useSiteEffects from '../../hooks/useSiteEffects.js';
 
 function formatDate(iso) {
   if (!iso) return '';
@@ -13,10 +15,22 @@ function formatDate(iso) {
 }
 
 export default function BlogPost() {
+  useSiteEffects();
   const { slug } = useParams();
   const [post, setPost] = useState(null);
   const [notFound, setNotFound] = useState(false);
   const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // This page has no dark hero behind the nav, so the nav must stay in its
+    // solid/scrolled ("up") state at all times -- see the identical pattern
+    // and explanation in LeaveReviewPage (src/App.jsx).
+    const nav = document.getElementById('nav');
+    const forceNavSolid = () => nav?.classList.add('up');
+    forceNavSolid();
+    window.addEventListener('scroll', forceNavSolid, { passive: true });
+    return () => window.removeEventListener('scroll', forceNavSolid);
+  }, []);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -43,6 +57,7 @@ export default function BlogPost() {
         </main>
         <Footer />
         <MobileBottomBar />
+        <DirectionsPicker />
       </>
     );
   }
@@ -60,6 +75,7 @@ export default function BlogPost() {
         </main>
         <Footer />
         <MobileBottomBar />
+        <DirectionsPicker />
       </>
     );
   }
@@ -123,6 +139,7 @@ export default function BlogPost() {
       `}</style>
       <Footer />
       <MobileBottomBar />
+      <DirectionsPicker />
     </>
   );
 }

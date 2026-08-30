@@ -4,6 +4,8 @@ import { Helmet } from 'react-helmet-async';
 import Header from '../Header.jsx';
 import Footer from '../Footer.jsx';
 import MobileBottomBar from '../MobileBottomBar.jsx';
+import DirectionsPicker from '../DirectionsPicker.jsx';
+import useSiteEffects from '../../hooks/useSiteEffects.js';
 
 function formatDate(iso) {
   if (!iso) return '';
@@ -11,12 +13,24 @@ function formatDate(iso) {
 }
 
 export default function BlogList() {
+  useSiteEffects();
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    // This page has no dark hero behind the nav, so the nav must stay in its
+    // solid/scrolled ("up") state at all times -- see the identical pattern
+    // and explanation in LeaveReviewPage (src/App.jsx).
+    const nav = document.getElementById('nav');
+    const forceNavSolid = () => nav?.classList.add('up');
+    forceNavSolid();
+    window.addEventListener('scroll', forceNavSolid, { passive: true });
+    return () => window.removeEventListener('scroll', forceNavSolid);
+  }, []);
+
+  useEffect(() => {
     fetch('/api/posts')
       .then((res) => res.json())
       .then((data) => setPosts(data.posts || []))
@@ -96,6 +110,7 @@ export default function BlogList() {
       `}</style>
       <Footer />
       <MobileBottomBar />
+      <DirectionsPicker />
     </>
   );
 }

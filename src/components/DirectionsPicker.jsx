@@ -4,17 +4,19 @@ import { isRelocated, NEW_LOCATION, OLD_LOCATIONS } from '../config/relocation.j
 const relocated = isRelocated();
 const [johnFlynn, pindara] = OLD_LOCATIONS;
 
-const consultingRoomsOption = relocated
-  ? `<a class="dir-btn dir-btn--primary" href="https://maps.google.com/?q=${encodeURIComponent(NEW_LOCATION.mapDirectionsQuery)}" onclick="hideDirectionsPicker()" rel="noopener" target="_blank">
+const consultingRoomsSubtitle = relocated
+  ? `Consulting Rooms — ${NEW_LOCATION.addressLine}`
+  : `Consulting Rooms (from 5 Oct 2026) — ${NEW_LOCATION.addressLine}`;
+
+const consultingRoomsOption = `<a class="${relocated ? 'dir-btn dir-btn--primary' : 'dir-btn'}" href="https://maps.google.com/?q=${encodeURIComponent(NEW_LOCATION.mapDirectionsQuery)}" onclick="hideDirectionsPicker()" rel="noopener" target="_blank">
 <svg aria-hidden="true" style="width:28px;height:28px;color:var(--gold);flex-shrink:0"><use href="#ic-pin"></use></svg>
 <div class="dir-btn-text">
 <strong>${NEW_LOCATION.name}</strong>
-<span>Consulting Rooms — ${NEW_LOCATION.addressLine}</span>
+<span>${consultingRoomsSubtitle}</span>
 </div>
 <svg aria-hidden="true" class="arr-ic" fill="none" viewbox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
 </a>
-`
-  : '';
+`;
 
 const johnFlynnClass = relocated ? 'dir-btn' : 'dir-btn dir-btn--primary';
 

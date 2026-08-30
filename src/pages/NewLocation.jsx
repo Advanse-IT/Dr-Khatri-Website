@@ -3,9 +3,13 @@ import { Helmet } from 'react-helmet-async';
 import Header from '../components/Header.jsx';
 import Footer from '../components/Footer.jsx';
 import MobileBottomBar from '../components/MobileBottomBar.jsx';
+import DirectionsPicker from '../components/DirectionsPicker.jsx';
+import useSiteEffects from '../hooks/useSiteEffects.js';
 import { isRelocated, currentPhone, RELOCATION_DATE_DISPLAY, NEW_LOCATION, OLD_LOCATIONS, OLD_PHONE } from '../config/relocation.js';
 
 export default function NewLocation() {
+  useSiteEffects();
+
   useEffect(() => {
     window.scrollTo(0, 0);
     // No dark hero behind the nav on this page — keep it solid at all times.
@@ -126,6 +130,7 @@ export default function NewLocation() {
       </main>
       <Footer />
       <MobileBottomBar />
+      <DirectionsPicker />
     </>
   );
 }
