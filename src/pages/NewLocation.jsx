@@ -7,7 +7,7 @@ import MobileBottomBar from '../components/MobileBottomBar.jsx';
 import DirectionsPicker from '../components/DirectionsPicker.jsx';
 import CookieConsent from '../components/CookieConsent.jsx';
 import useSiteEffects from '../hooks/useSiteEffects.js';
-import { isRelocated, currentPhone, RELOCATION_DATE_DISPLAY, NEW_LOCATION, OLD_LOCATIONS, OLD_PHONE } from '../config/relocation.js';
+import { isRelocated, RELOCATION_DATE_DISPLAY, NEW_LOCATION, OLD_LOCATIONS, OLD_PHONE, NEW_PHONE } from '../config/relocation.js';
 
 export default function NewLocation() {
   useSiteEffects();
@@ -23,7 +23,6 @@ export default function NewLocation() {
   }, []);
 
   const relocated = isRelocated();
-  const phone = currentPhone();
   const [johnFlynn, pindara] = OLD_LOCATIONS;
 
   return (
@@ -80,7 +79,7 @@ export default function NewLocation() {
             <p style={{ fontWeight: 700, color: 'var(--navy)', fontSize: '1.05rem', marginBottom: 4 }}>{NEW_LOCATION.name}</p>
             <p style={{ color: 'var(--text2)', marginBottom: 16 }}>{NEW_LOCATION.addressLine}</p>
             <p style={{ color: 'var(--text2)' }}>
-              Phone: <a href={`tel:${phone.tel}`} style={{ color: 'var(--navy2)', fontWeight: 700 }}>{phone.display}</a>
+              Phone: <a href={`tel:${NEW_PHONE.tel}`} style={{ color: 'var(--navy2)', fontWeight: 700 }}>{NEW_PHONE.display}</a>
               {!relocated && <span style={{ color: 'var(--text3)', fontSize: '.85rem' }}> (active from {RELOCATION_DATE_DISPLAY})</span>}
             </p>
           </div>
