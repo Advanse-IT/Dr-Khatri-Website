@@ -173,6 +173,7 @@ function LeaveReviewPage() {
       <LeaveReview />
       <Footer />
       <MobileBottomBar />
+      <DirectionsPicker />
       <CookieConsent />
     </>
   );

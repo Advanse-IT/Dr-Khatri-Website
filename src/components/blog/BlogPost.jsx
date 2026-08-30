@@ -3,10 +3,12 @@ import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { marked } from 'marked';
 import DOMPurify from 'dompurify';
+import SvgIcons from '../SvgIcons.jsx';
 import Header from '../Header.jsx';
 import Footer from '../Footer.jsx';
 import MobileBottomBar from '../MobileBottomBar.jsx';
 import DirectionsPicker from '../DirectionsPicker.jsx';
+import CookieConsent from '../CookieConsent.jsx';
 import useSiteEffects from '../../hooks/useSiteEffects.js';
 
 function formatDate(iso) {
@@ -51,6 +53,7 @@ export default function BlogPost() {
   if (loading) {
     return (
       <>
+        <SvgIcons />
         <Header />
         <main style={{ maxWidth: 760, margin: '0 auto', padding: '160px 24px 80px' }}>
           <p>Loading…</p>
@@ -58,6 +61,7 @@ export default function BlogPost() {
         <Footer />
         <MobileBottomBar />
         <DirectionsPicker />
+        <CookieConsent />
       </>
     );
   }
@@ -68,6 +72,7 @@ export default function BlogPost() {
         <Helmet>
           <meta name="robots" content="noindex" />
         </Helmet>
+        <SvgIcons />
         <Header />
         <main style={{ maxWidth: 760, margin: '0 auto', padding: '160px 24px 80px' }}>
           <h1>Post not found</h1>
@@ -76,6 +81,7 @@ export default function BlogPost() {
         <Footer />
         <MobileBottomBar />
         <DirectionsPicker />
+        <CookieConsent />
       </>
     );
   }
@@ -100,6 +106,7 @@ export default function BlogPost() {
         <meta property="og:url" content={`https://drskhatri.com.au/blog/${post.slug}`} />
         <link rel="canonical" href={`https://drskhatri.com.au/blog/${post.slug}`} />
       </Helmet>
+      <SvgIcons />
       <Header />
       <main style={{ background: 'var(--bg)' }}>
         <div className="wrap" style={{ maxWidth: 760, padding: '150px 28px 90px' }}>
@@ -140,6 +147,7 @@ export default function BlogPost() {
       <Footer />
       <MobileBottomBar />
       <DirectionsPicker />
+      <CookieConsent />
     </>
   );
 }

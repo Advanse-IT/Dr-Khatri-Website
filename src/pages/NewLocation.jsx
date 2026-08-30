@@ -1,9 +1,11 @@
 import { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
+import SvgIcons from '../components/SvgIcons.jsx';
 import Header from '../components/Header.jsx';
 import Footer from '../components/Footer.jsx';
 import MobileBottomBar from '../components/MobileBottomBar.jsx';
 import DirectionsPicker from '../components/DirectionsPicker.jsx';
+import CookieConsent from '../components/CookieConsent.jsx';
 import useSiteEffects from '../hooks/useSiteEffects.js';
 import { isRelocated, currentPhone, RELOCATION_DATE_DISPLAY, NEW_LOCATION, OLD_LOCATIONS, OLD_PHONE } from '../config/relocation.js';
 
@@ -31,6 +33,7 @@ export default function NewLocation() {
         <meta name="description" content={`Dr Shailesh Khatri's consulting rooms are relocating to ${NEW_LOCATION.addressLine} from ${RELOCATION_DATE_DISPLAY}. Hospital admitting rights at John Flynn and Pindara are unaffected.`} />
         <link rel="canonical" href="https://drskhatri.com.au/new-location" />
       </Helmet>
+      <SvgIcons />
       <Header />
       <main style={{ background: 'var(--bg)' }}>
         <div className="wrap" style={{ maxWidth: 760, padding: '150px 28px 90px' }}>
@@ -131,6 +134,7 @@ export default function NewLocation() {
       <Footer />
       <MobileBottomBar />
       <DirectionsPicker />
+      <CookieConsent />
     </>
   );
 }

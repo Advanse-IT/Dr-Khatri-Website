@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+import SvgIcons from '../SvgIcons.jsx';
 import Header from '../Header.jsx';
 import Footer from '../Footer.jsx';
 import MobileBottomBar from '../MobileBottomBar.jsx';
 import DirectionsPicker from '../DirectionsPicker.jsx';
+import CookieConsent from '../CookieConsent.jsx';
 import useSiteEffects from '../../hooks/useSiteEffects.js';
 
 function formatDate(iso) {
@@ -45,6 +47,7 @@ export default function BlogList() {
         <meta name="description" content="Heart health articles, patient guidance, and updates from Dr Shailesh Khatri, Senior Interventional Cardiologist on the Gold Coast." />
         <link rel="canonical" href="https://drskhatri.com.au/blog" />
       </Helmet>
+      <SvgIcons />
       <Header />
       <main style={{ background: 'var(--bg)', minHeight: '70vh' }}>
         <div className="wrap" style={{ maxWidth: 900, padding: '150px 28px 90px' }}>
@@ -111,6 +114,7 @@ export default function BlogList() {
       <Footer />
       <MobileBottomBar />
       <DirectionsPicker />
+      <CookieConsent />
     </>
   );
 }
