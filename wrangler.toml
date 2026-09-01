@@ -11,3 +11,9 @@ pages_build_output_dir = "dist"
 binding = "DB"
 database_name = "dr-khatri-blog"
 database_id = "6d4232d2-661c-4c83-a7f1-32e7e7631932"
+
+# R2 bucket for uploaded blog images (featured images + in-content images).
+# Replace bucket_name after running: wrangler r2 bucket create dr-khatri-blog-images
+[[r2_buckets]]
+binding = "IMAGES"
+bucket_name = "dr-khatri-blog-images"

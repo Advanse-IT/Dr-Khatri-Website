@@ -2,10 +2,10 @@ import { useEditor, EditorContent } from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';
 import Link from '@tiptap/extension-link';
 import Image from '@tiptap/extension-image';
-import { useEffect } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import {
-  Bold, Italic, List, ListOrdered, Link as LinkIcon, Image as ImageIcon,
-  Heading1, Heading2, Heading3, Quote, Undo, Redo,
+  Bold, Italic, List, ListOrdered, Link as LinkIcon, Image as ImageIcon, Upload,
+  Heading1, Heading2, Heading3, Quote, Undo, Redo, Loader2,
 } from 'lucide-react';
 
 function ToolbarButton({ onClick, active, disabled, title, children }) {
@@ -32,7 +32,26 @@ function ToolbarButton({ onClick, active, disabled, title, children }) {
   );
 }
 
+export async function uploadImage(file) {
+  const formData = new FormData();
+  formData.append('file', file);
+  const res = await fetch('/api/admin/upload', {
+    method: 'POST',
+    credentials: 'include',
+    body: formData,
+  });
+  if (!res.ok) {
+    const data = await res.json().catch(() => ({}));
+    throw new Error(data.error || 'Upload failed');
+  }
+  const data = await res.json();
+  return data.url;
+}
+
 export default function RichTextEditor({ content, onChange }) {
+  const fileInputRef = useRef(null);
+  const [uploading, setUploading] = useState(false);
+
   const editor = useEditor({
     extensions: [
       StarterKit,
@@ -72,13 +91,40 @@ export default function RichTextEditor({ content, onChange }) {
     editor.chain().focus().extendMarkRange('link').setLink({ href: url }).run();
   }
 
-  function insertImage() {
+  function insertImageFromUrl() {
     const url = window.prompt('Image URL');
     if (url) editor.chain().focus().setImage({ src: url }).run();
   }
 
+  function triggerUpload() {
+    fileInputRef.current?.click();
+  }
+
+  async function handleFileSelected(e) {
+    const file = e.target.files?.[0];
+    e.target.value = ''; // allow re-selecting the same file later
+    if (!file) return;
+
+    setUploading(true);
+    try {
+      const url = await uploadImage(file);
+      editor.chain().focus().setImage({ src: url }).run();
+    } catch (err) {
+      window.alert(err.message || 'Image upload failed. Try again.');
+    } finally {
+      setUploading(false);
+    }
+  }
+
   return (
     <div style={{ border: '1px solid var(--border, #d4dde8)', borderRadius: 8, overflow: 'hidden', background: '#fff' }}>
+      <input
+        ref={fileInputRef}
+        type="file"
+        accept="image/jpeg,image/png,image/webp,image/gif"
+        style={{ display: 'none' }}
+        onChange={handleFileSelected}
+      />
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: 2, borderBottom: '1px solid var(--bg2, #edf1f7)', background: 'var(--bg2, #edf1f7)', padding: '6px 8px' }}>
         <ToolbarButton title="Heading 1" active={editor.isActive('heading', { level: 1 })} onClick={() => editor.chain().focus().toggleHeading({ level: 1 }).run()}>
           <Heading1 size={16} />
@@ -116,7 +162,10 @@ export default function RichTextEditor({ content, onChange }) {
         <ToolbarButton title="Link" active={editor.isActive('link')} onClick={setLink}>
           <LinkIcon size={16} />
         </ToolbarButton>
-        <ToolbarButton title="Insert image" onClick={insertImage}>
+        <ToolbarButton title="Upload image" onClick={triggerUpload} disabled={uploading}>
+          {uploading ? <Loader2 size={16} style={{ animation: 'spin 0.8s linear infinite' }} /> : <Upload size={16} />}
+        </ToolbarButton>
+        <ToolbarButton title="Insert image from URL" onClick={insertImageFromUrl} disabled={uploading}>
           <ImageIcon size={16} />
         </ToolbarButton>
 
@@ -131,6 +180,7 @@ export default function RichTextEditor({ content, onChange }) {
       </div>
 
       <EditorContent editor={editor} />
+      <style>{'@keyframes spin{to{transform:rotate(360deg)}}'}</style>
     </div>
   );
 }

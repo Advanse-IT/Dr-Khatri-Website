@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import RichTextEditor from './RichTextEditor.jsx';
+import RichTextEditor, { uploadImage } from './RichTextEditor.jsx';
 
 function slugify(title) {
   return title
@@ -24,6 +24,8 @@ export default function PostEditor() {
   const [excerpt, setExcerpt] = useState('');
   const [content, setContent] = useState('');
   const [coverImage, setCoverImage] = useState('');
+  const [coverUploading, setCoverUploading] = useState(false);
+  const coverFileInputRef = useRef(null);
   const [tagsInput, setTagsInput] = useState('');
   const [metaTitle, setMetaTitle] = useState('');
   const [metaDescription, setMetaDescription] = useState('');
@@ -65,6 +67,26 @@ export default function PostEditor() {
   function handleTitleChange(value) {
     setTitle(value);
     if (!slugTouched) setSlug(slugify(value));
+  }
+
+  function triggerCoverUpload() {
+    coverFileInputRef.current?.click();
+  }
+
+  async function handleCoverFileSelected(e) {
+    const file = e.target.files?.[0];
+    e.target.value = '';
+    if (!file) return;
+
+    setCoverUploading(true);
+    try {
+      const url = await uploadImage(file);
+      setCoverImage(url);
+    } catch (err) {
+      window.alert(err.message || 'Image upload failed. Try again.');
+    } finally {
+      setCoverUploading(false);
+    }
   }
 
   async function handleSave(publishStatus) {
@@ -184,8 +206,23 @@ export default function PostEditor() {
 
               <div style={cardStyle}>
                 <h3 style={cardHeading}>Featured Image</h3>
+                <input
+                  ref={coverFileInputRef}
+                  type="file"
+                  accept="image/jpeg,image/png,image/webp,image/gif"
+                  style={{ display: 'none' }}
+                  onChange={handleCoverFileSelected}
+                />
+                <button
+                  type="button"
+                  onClick={triggerCoverUpload}
+                  disabled={coverUploading}
+                  style={{ width: '100%', padding: '10px 14px', borderRadius: 7, border: '1.5px dashed var(--border)', background: 'var(--bg)', color: 'var(--navy2)', fontWeight: 600, fontSize: '.85rem', cursor: coverUploading ? 'not-allowed' : 'pointer', marginBottom: 12 }}
+                >
+                  {coverUploading ? 'Uploading…' : '⬆ Upload Image'}
+                </button>
                 <label style={{ display: 'block', marginBottom: coverImage ? 12 : 0 }}>
-                  <span style={labelStyle}>Image URL</span>
+                  <span style={labelStyle}>or paste an Image URL</span>
                   <input value={coverImage} onChange={(e) => setCoverImage(e.target.value)} placeholder="https://..." style={inputStyle} />
                 </label>
                 {coverImage && (
