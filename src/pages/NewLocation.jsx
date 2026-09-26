@@ -29,7 +29,10 @@ export default function NewLocation() {
     <>
       <Helmet>
         <title>{relocated ? 'Our New Consulting Rooms' : "We're Moving"} | Dr Shailesh Khatri | Gold Coast Cardiologist</title>
-        <meta name="description" content={`Dr Shailesh Khatri's consulting rooms are relocating to ${NEW_LOCATION.addressLine} from ${RELOCATION_DATE_DISPLAY}. Hospital admitting rights at John Flynn and Pindara are unaffected.`} />
+        <meta name="description" content={relocated
+          ? `Dr Shailesh Khatri's consulting rooms are now located at ${NEW_LOCATION.addressLine}. Hospital admitting rights at John Flynn and Pindara are unaffected.`
+          : `Dr Shailesh Khatri's consulting rooms are relocating to ${NEW_LOCATION.addressLine} from ${RELOCATION_DATE_DISPLAY}. Hospital admitting rights at John Flynn and Pindara are unaffected.`
+        } />
         <link rel="canonical" href="https://drskhatri.com.au/new-location" />
       </Helmet>
       <SvgIcons />

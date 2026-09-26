@@ -5,13 +5,15 @@
 
 // Queensland does not observe daylight saving, so this is a fixed AEST
 // (UTC+10) offset year-round.
-export const RELOCATION_DATE = new Date('2026-10-05T00:00:00+10:00');
+// Dr Khatri moved earlier than originally planned (was 5 Oct 2026) —
+// dated today so the switch is immediate and permanent.
+export const RELOCATION_DATE = new Date('2026-09-25T00:00:00+10:00');
 
 export function isRelocated(now = new Date()) {
   return now.getTime() >= RELOCATION_DATE.getTime();
 }
 
-export const RELOCATION_DATE_DISPLAY = '5 October 2026';
+export const RELOCATION_DATE_DISPLAY = '25 September 2026';
 
 export const OLD_PHONE = { display: '(07) 5598 0322', tel: '+61755980322' };
 export const NEW_PHONE = { display: '1300 068 386', tel: '1300068386' };
