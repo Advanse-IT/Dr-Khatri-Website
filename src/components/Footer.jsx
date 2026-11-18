@@ -107,15 +107,23 @@ export default function Footer() {
     // logo uses different teals, so matching the exact star colour leaves it alone.
     const STAR = 'rgb(0, 229, 208)';
     const GOLD = '#c49a38';
-    const recolour = () => {
-      slot.querySelectorAll('*').forEach((el) => {
-        const cs = window.getComputedStyle(el);
-        if (cs.fill === STAR) el.style.setProperty('fill', GOLD, 'important');
-        if (cs.stroke === STAR) el.style.setProperty('stroke', GOLD, 'important');
-        if (cs.color === STAR) el.style.setProperty('color', GOLD, 'important');
-        if (cs.backgroundColor === STAR) el.style.setProperty('background-color', GOLD, 'important');
+    // Walk the widget DOM, including any open shadow roots.
+    const walk = (root, fn) => {
+      root.querySelectorAll('*').forEach((el) => {
+        fn(el);
+        if (el.shadowRoot) walk(el.shadowRoot, fn);
       });
     };
+    const paint = (el) => {
+      const cs = window.getComputedStyle(el);
+      if (cs.fill === STAR) el.style.setProperty('fill', GOLD, 'important');
+      if (cs.stroke === STAR) el.style.setProperty('stroke', GOLD, 'important');
+      if (cs.color === STAR) el.style.setProperty('color', GOLD, 'important');
+      if (cs.backgroundColor === STAR) el.style.setProperty('background-color', GOLD, 'important');
+      const f = (el.getAttribute && el.getAttribute('fill') || '').toLowerCase();
+      if (f === '#00e5d0') el.setAttribute('fill', GOLD);
+    };
+    const recolour = () => walk(slot, paint);
     const observer = new MutationObserver(recolour);
     observer.observe(slot, { childList: true, subtree: true, attributes: true, attributeFilter: ['style', 'class', 'fill'] });
     recolour();
