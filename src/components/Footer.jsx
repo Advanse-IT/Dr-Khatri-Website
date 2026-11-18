@@ -102,7 +102,25 @@ export default function Footer() {
     script.src = DOCTIFY_SCRIPT_SRC;
     script.async = true;
     slot.appendChild(script);
-    return () => { slot.innerHTML = ''; };
+
+    // Recolour the widget's teal stars (#00e5d0) to the site's gold. The Doctify
+    // logo uses different teals, so matching the exact star colour leaves it alone.
+    const STAR = 'rgb(0, 229, 208)';
+    const GOLD = '#c49a38';
+    const recolour = () => {
+      slot.querySelectorAll('*').forEach((el) => {
+        const cs = window.getComputedStyle(el);
+        if (cs.fill === STAR) el.style.setProperty('fill', GOLD, 'important');
+        if (cs.stroke === STAR) el.style.setProperty('stroke', GOLD, 'important');
+        if (cs.color === STAR) el.style.setProperty('color', GOLD, 'important');
+        if (cs.backgroundColor === STAR) el.style.setProperty('background-color', GOLD, 'important');
+      });
+    };
+    const observer = new MutationObserver(recolour);
+    observer.observe(slot, { childList: true, subtree: true, attributes: true, attributeFilter: ['style', 'class', 'fill'] });
+    recolour();
+
+    return () => { observer.disconnect(); slot.innerHTML = ''; };
   }, []);
 
   return <RawHtml html={markup} />;

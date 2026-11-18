@@ -416,10 +416,10 @@ h2.sec-title.light em{color:var(--gold2)}
 .fg-col a{font-size:.81rem;color:rgba(255,255,255,.42);transition:color .2s}
 .fg-col a:hover{color:var(--gold2)}
 .fg-col p{font-size:.79rem;color:rgba(255,255,255,.35);line-height:1.68}
-.footer-doctify{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:20px 28px;margin-bottom:28px}
+.footer-doctify{display:flex;align-items:stretch;justify-content:center;flex-wrap:wrap;gap:16px 20px;margin-bottom:28px}
 .doctify-badge{display:block;line-height:0}
 .doctify-badge img{display:block;width:140px;height:auto;border-radius:8px}
-.doctify-widget{background:#fff;border-radius:10px;padding:10px 18px;min-height:56px;display:flex;align-items:center;justify-content:center;max-width:100%;overflow:hidden}
+.doctify-widget{background:rgba(255,255,255,.96);border-radius:8px;padding:6px 16px;min-height:82px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;max-width:100%;overflow:hidden}
 .footer-base{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
 .footer-base p{font-size:.73rem;color:rgba(255,255,255,.22)}
 
