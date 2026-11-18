@@ -1124,3 +1124,8 @@ li{
 .kiosk-qr-page{min-height:100vh;min-height:100dvh;display:flex;align-items:center;justify-content:center;background:var(--bg2);padding:24px;box-sizing:border-box}
 .kiosk-qr-img{width:100%;max-width:560px;height:auto;border-radius:28px;box-shadow:0 24px 70px rgba(11,34,64,.16)}
 @media(min-width:1024px){.kiosk-qr-img{max-width:640px}}
+
+/* Doctify widget: gold stars to match the site theme (rating stays live) */
+.doctify-widget [class*="doctify_stars_item"]{flex:none;width:26px;height:26px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23c49a38' fill-opacity='.3' d='M12 1.8l3.1 6.9 7.5.8-5.6 5.1 1.6 7.4L12 18.2l-6.6 3.8 1.6-7.4L1.4 9.5l7.5-.8z'/%3E%3C/svg%3E") center/contain no-repeat !important;-webkit-mask:none !important;mask:none !important}
+.doctify-widget [class*="doctify_stars_item"][class*="--filled"]{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23c49a38' d='M12 1.8l3.1 6.9 7.5.8-5.6 5.1 1.6 7.4L12 18.2l-6.6 3.8 1.6-7.4L1.4 9.5l7.5-.8z'/%3E%3C/svg%3E") !important}
+.doctify-widget [class*="doctify_stars_item"] > *{display:none !important}
