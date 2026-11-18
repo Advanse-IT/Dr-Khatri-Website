@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import RawHtml from './RawHtml.jsx';
 import { isRelocated, currentPhone, NEW_LOCATION, OLD_LOCATIONS } from '../config/relocation.js';
 
@@ -61,6 +62,12 @@ const markup = `
 </div>
 <div class="fg-col"><h4>Emergency</h4><p>Dr Khatri has provided a 24-hour cardiology service to the Gold Coast for over two decades. Cardiac emergencies are prioritised at both hospitals at any time.<br/><br/>Life-threatening emergency: call <strong style="color:#fff">000</strong> immediately.</p></div>
 </div>
+<div class="footer-doctify">
+<a class="doctify-badge" href="https://www.doctify.com/au/practice/nuevo-medical" target="_blank" rel="noopener noreferrer" aria-label="Nuevo Medical on Doctify — verified patient reviews">
+<img src="/images/verified-by-doctify.png" alt="Verified by Doctify" width="175" height="103" loading="lazy" />
+</a>
+<div class="doctify-widget" id="doctify-widget-slot"></div>
+</div>
 <div class="footer-base">
 <p>© 2026 Dr Shailesh Khatri — Interventional Cardiologist. All rights reserved. AHPRA compliant.</p>
 <p><a href="/legal">Privacy Policy, Terms of Use &amp; Medical Disclaimer</a></p>
@@ -77,6 +84,26 @@ const markup = `
 </footer>
 `;
 
+const DOCTIFY_CONTAINER_ID = '0jvu4pnw';
+const DOCTIFY_SCRIPT_SRC =
+  'https://www.doctify.com/get-script/au?widget_container_id=' + DOCTIFY_CONTAINER_ID +
+  '&type=horizontal-widget&tenant=athena-au&language=en&profileType=specialist' +
+  '&layoutType=layoutM&slugs=shailesh-khatri&background=transparent' +
+  '&linkUrl=https://www.doctify.com/au/specialist/shailesh-khatri';
+
 export default function Footer() {
+  // Footer markup is injected as raw HTML, and scripts inside innerHTML never
+  // execute, so the Doctify widget is mounted here after render instead.
+  useEffect(() => {
+    const slot = document.getElementById('doctify-widget-slot');
+    if (!slot) return undefined;
+    slot.innerHTML = '<div id="' + DOCTIFY_CONTAINER_ID + '"></div>';
+    const script = document.createElement('script');
+    script.src = DOCTIFY_SCRIPT_SRC;
+    script.async = true;
+    slot.appendChild(script);
+    return () => { slot.innerHTML = ''; };
+  }, []);
+
   return <RawHtml html={markup} />;
 }
